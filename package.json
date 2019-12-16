@@ -1,0 +1,11 @@
+{
+  "author": "Dean Harris",
+  "description": "The Upstart component library",
+  "license": "MIT",
+  "name": "upstart-workspace",
+  "private": true,
+  "version": "0.0.1",
+  "workspaces": [
+    "packages/*"
+  ]
+}

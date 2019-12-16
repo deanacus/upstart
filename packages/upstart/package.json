@@ -1,0 +1,12 @@
+{
+  "name": "@deanacus/upstart",
+  "version": "0.0.1",
+  "author": "Dean Harris",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-testing-library": "^8.0.1",
+    "styled-components": "^4.4.1"
+  }
+}

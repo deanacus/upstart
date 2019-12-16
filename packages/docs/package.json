@@ -1,0 +1,19 @@
+{
+  "name": "@deanacus/upstart-docs",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "@mdx-js/mdx": "^1.5.1",
+    "@mdx-js/react": "^1.5.1",
+    "gatsby": "^2.18.12",
+    "gatsby-plugin-mdx": "^1.0.62",
+    "gatsby-source-filesystem": "^2.1.42",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop"
+  }
+}
