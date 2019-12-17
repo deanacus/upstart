@@ -1,10 +1,15 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-
-import { getSpacing } from '../../Utils/getSpacing'
+import PropTypes from 'prop-types';
 
 const StyledContainer = styled.div`
-  ${(props) => props.fixed ? `max-width: 1200px`: ''}
+  ${
+    ({fixed, size, theme}) => {
+      if (fixed) {
+        return (size ? `max-width: ${theme.widths[size] / 10}rem`: `max-width: 1200px`)
+      }
+    }
+  }
 `;
 
 const StyledRow = styled.div`
@@ -12,13 +17,13 @@ const StyledRow = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: ${({wrap}) => wrap ? 'wrap' : 'no-wrap'};
   justify-content: start;
 
   ${(props) => props.reverse && css`flex-direction: row-reverse;`}
 
   ${(props) => props.padding && css`
-    padding: ${getSpacing(props.padding)};
+    padding: ${({theme}) => theme.space[props.padding]/10}rem;
   `}
 
   ${(props) => props.justifyContent && css`
@@ -45,7 +50,7 @@ const StyledColumn = styled.div`
   `}
 
   ${(props) => props.padding && css`
-    padding: ${getSpacing(props.padding)};
+    padding: ${({theme}) => theme.space[props.padding]/10}rem;
   `}
 
   ${(props) => props.alignItems && css`
@@ -77,8 +82,8 @@ const alignmentMap = {
   baseline:'baseline'
 };
 
-export const Container = ({ type, children }) => (
-  <StyledContainer type={type}>
+export const Container = ({ fixed, size = null, children }) => (
+  <StyledContainer fixed={fixed} size={size}>
     {children}
   </StyledContainer>
 );
@@ -99,6 +104,47 @@ export const Row = ({ reverse, align, justify, padding, children, wrap }) => {
       {children}
     </StyledRow>
   );
+};
+
+Row.propTypes = {
+  align: PropTypes.oneOf([
+    'stretch',
+    'start',
+    'end',
+    'center',
+    'baseline',
+  ]),
+  justify: PropTypes.oneOf([
+    'start',
+    'end',
+    'center',
+    'between',
+    'around',
+    'evenly',
+    'left',
+    'right',
+  ]),
+  padding: PropTypes.oneOf([
+    'xs',
+    'sm',
+    'md',
+    'lg',
+    'xl',
+    'xxl',
+    'xxxl',
+    'xxxxl',
+  ]),
+  reverse: PropTypes.bool,
+  wrap: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
+}
+
+Row.defaultProps = {
+  wrap: false,
+  reverse: false,
 };
 
 export const Column = ({ cols, reverse, align, justify, padding, children }) => {

@@ -2,13 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import styled from 'styled-components';
 
-import { getSpacing } from '../../Utils/getSpacing'
-
 const StyledQuote = styled.blockquote`
   border-left: 3px solid #ccc;
-  margin-left: ${getSpacing(3)};
-  margin-right: ${getSpacing(3)};
-  padding: ${getSpacing(3)};
+  margin-left: ${({theme}) => theme.space.sm};
+  margin-right: ${({theme}) => theme.space.sm};
+  padding: ${({theme}) => theme.space.sm};
 
   > p {
     font-size: 18px;

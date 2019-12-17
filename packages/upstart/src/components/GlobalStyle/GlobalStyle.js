@@ -26,7 +26,7 @@ const GlobalStyleCSS = css`
   body {
     color: #333;
     font-family: ${({theme}) => theme.fonts.sans};
-    font-size: ${({theme}) => theme.fontSizes.body.m/10}rem;
+    font-size: ${({theme}) => theme.fontSizes.body.md/10}rem;
   }
 
   h1 {
@@ -77,10 +77,11 @@ const GlobalStyleCSS = css`
 
 const GlobalStyles = createGlobalStyle`${GlobalStyleCSS}`
 
-export const GlobalStyle = () => (
+export const Upstart = ({children}) => (
   <UpstartTheme>
     <GlobalStyles />
+    {children}
   </UpstartTheme>
 );
 
-export default GlobalStyle;
+export default Upstart;

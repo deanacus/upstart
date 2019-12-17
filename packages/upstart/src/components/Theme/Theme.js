@@ -1,8 +1,8 @@
 const space = {
   xs: 8,
-  s: 16,
-  m: 24,
-  l: 32,
+  sm: 16,
+  md: 24,
+  lg: 32,
   xl: 40,
   xxl: 48,
   xxxl: 54,
@@ -26,16 +26,16 @@ const fontWeights = {
 const fontSizes = {
   body: {
     xs: 12,
-    s: 14,
-    m: 16,
-    l: 20,
+    sm: 14,
+    md: 16,
+    lg: 20,
     xl: 24,
   },
   heading: {
     xs: 32,
-    s: 48,
-    m: 64,
-    l: 96,
+    sm: 48,
+    md: 64,
+    lg: 96,
     xl: 144,
   },
 };
@@ -82,9 +82,9 @@ const colors = {
 };
 
 const radii = {
-  s: 3,
-  m: 5,
-  l: 7,
+  sm: 3,
+  md: 5,
+  lg: 7,
 }
 
 const breakpoints = {
@@ -98,6 +98,16 @@ const breakpoints = {
   xxxl: 1920,
 }
 
+const widths = {
+  xs: 320,
+  sm: 480,
+  md: 768,
+  lg: 1024,
+  xl: 1200,
+  xxl: 1440,
+  xxxl: 1680,
+}
+
 export const theme = {
   space,
   fonts,
@@ -107,6 +117,7 @@ export const theme = {
   colors,
   breakpoints,
   radii,
+  widths,
 }
 
 export default theme
