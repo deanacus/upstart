@@ -1,8 +1,5 @@
 const root = 10;
 const values = [0, 4, 8, 12, 16, 20, 24, 40, 56, 72];
-const space = [];
-const padding = [];
-const margin = [];
 
 const sizeNames = [
   { alias: 'zero', index: '0' },
@@ -111,25 +108,25 @@ const marginAlias = [
   },
 ];
 
-let temp = sizeNames.map(({alias, index}) => space[alias] = `${values[index]/root}rem`)
+const buildSpacingAliasArray = (aliasArray, valueArray, rootValue = 10) => {
+  const tempArr = [];
+  aliasArray.map(({alias, values: outputs}) =>
+    valuesArray.map((value, index) =>
+      tempArr[`${alias}-${index}`] = outputs.map( output =>
+        `${output}: ${$value / rootValue}rem;`
+      ).join(' ')
+    )
+  );
+  return tempArr;
+}
 
-temp = paddingAlias.map(({alias, values: aliasVals}) =>
-  values.map((value, ind) => {
-    padding[`${alias}-${ind}`] = aliasVals.map( val =>
-      `${val}: ${value/root}rem;`
-    ).join(' ')
-  })
-)
-temp = marginAlias.map(({alias, values: aliasVals}) =>
-  values.map((value, ind) => {
-    margin[`${alias}-${ind}`] = aliasVals.map( val =>
-      `${val}: ${value/root}rem;`
-    ).join(' ')
-  })
-);
+// Build aliases
+sizeNames.map(({alias, index}) => space[alias] = `${values[index]/root}rem`)
+padding = buildSpacingAliasArray(paddingAlias, values, root);
+margin = buildSpacingAliasArray(marginAlias, values, root);
 
-// export default {
-//   space,
-//   margin,
-//   padding,
-// }
+export default {
+  space,
+  margin,
+  padding,
+}
