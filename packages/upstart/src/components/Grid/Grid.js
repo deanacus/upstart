@@ -17,7 +17,7 @@ const StyledRow = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  flex-wrap: ${({wrap}) => wrap ? 'wrap' : 'no-wrap'};
+  flex-wrap: ${(props) => props.nowrap ? 'nowrap' : 'wrap' };
   justify-content: start;
 
   ${(props) => props.reverse && css`flex-direction: row-reverse;`}
@@ -88,7 +88,7 @@ export const Container = ({ fixed, size = null, children }) => (
   </StyledContainer>
 );
 
-export const Row = ({ reverse, align, justify, padding, children, wrap }) => {
+export const Row = ({ reverse, align, justify, padding, children, nowrap }) => {
 
   const alignItems = align ? alignmentMap[align] : false;
   const justifyContent = justify ? justifyMap[justify] : false;
@@ -99,7 +99,7 @@ export const Row = ({ reverse, align, justify, padding, children, wrap }) => {
       justifyContent={justifyContent}
       padding={padding}
       reverse={reverse}
-      wrap={wrap}
+      nowrap={nowrap}
     >
       {children}
     </StyledRow>
@@ -135,15 +135,15 @@ Row.propTypes = {
     'xxxxl',
   ]),
   reverse: PropTypes.bool,
-  wrap: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),
+  nowrap: PropTypes.bool,
 }
 
 Row.defaultProps = {
-  wrap: false,
+  nowrap: true,
   reverse: false,
 };
 
