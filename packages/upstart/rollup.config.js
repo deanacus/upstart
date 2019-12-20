@@ -6,10 +6,10 @@ import commonjs from 'rollup-plugin-commonjs'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 const template = (fileName) => ({
-  input: `src/components/${fileName}/${fileName}.js`,
+  input: fileName,
   output: {
     exports: 'named',
-    file: `dist/${fileName}.js`,
+    file: fileName.replace(/src\/components(\/\w+)*/gi, 'dist$1'),
     format: 'cjs',
     globals: {
       react: 'React',
@@ -32,6 +32,6 @@ const template = (fileName) => ({
 })
 
 
-const config = ['index.js', ...glob.sync('src/components/**/*.js')].map( file => template(file));
+const config = ['src/components/index.js', ...glob.sync('src/components/**/*.js')].map( file => template(file));
 
 export default config;

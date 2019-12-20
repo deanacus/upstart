@@ -38,7 +38,7 @@ const StyledColumn = styled.div`
   display: flex;
   flex-basis: 100%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   max-width: 100%;
 
   ${(props) => props.reverse && css`flex-direction: column-reverse;`}

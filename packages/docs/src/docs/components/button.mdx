@@ -5,12 +5,22 @@ menu: Typography
 route: /components/button
 ---
 
+import { PropsTable } from '../../components/PropsTable'
 import { Button } from '@deanacus/upstart'
 
 Buttons are an incredibly frequently used UI component. Too often, people use
 a button where a link would be appropriate, and a link where a button would be
 appropriate. For this reason, it is prudent to provide the ability to render any
 button style as a `button` or a `link`.
+
+<PropsTable component={Button} />
+
+## Variants
+
+A number of variants are provided for use. By default, a `primary` variant will
+be returned, unless another is specified.
+
+### Primary
 
 <Button>
   Primary
@@ -21,19 +31,6 @@ button style as a `button` or a `link`.
 >
   Primary Ghost
 </Button>
-
-<Button 
-  variant="secondary"
->Secondary
-</Button>
-
-<Button 
-  variant="secondary" 
-  ghost
->
-  Secondary Ghost
-</Button>
-
 
 <Button>
   Primary Button
@@ -55,6 +52,8 @@ button style as a `button` or a `link`.
 >
   Primary Ghost Link
 </Button>
+
+### Secondary
 
 <Button
   variant="secondary"
@@ -84,6 +83,10 @@ button style as a `button` or a `link`.
   Secondary Ghost Link
 </Button>
 
+## Sizes
+
+A number of sizes have been defined: `sm`, `md`, `lg`.
+
 <Button
   size="sm"
 >
@@ -103,41 +106,22 @@ button style as a `button` or a `link`.
 </Button>
 
 <Button
-  size="lg"
-  ghost
+  size="sm"
+  variant="secondary"
 >
-  Primary Ghost Button Small
+  Secondary Button Small
 </Button>
 
 <Button
   size="md"
-  ghost
+  variant="secondary"
 >
-  Primary Ghost Button Medium
+  Secondary Button Medium
 </Button>
 
 <Button
   size="lg"
-  ghost
+  variant="secondary"
 >
-  Primary Ghost Button Large
+  Secondary Button Large
 </Button>
-
-
-## Variants
-
-A number of variants are provided for use. By default, a `primary` variant will
-be returned, unless another is specified.
-
-### Primary
-
-
-
-### Secondary
-
-
-
-
-## Sizes
-
-A number of sizes have been defined: `sm`, `md`, `lg`.

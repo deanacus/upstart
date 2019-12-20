@@ -1,6 +1,6 @@
 import React from 'react';
 import { css, createGlobalStyle } from 'styled-components'
-import { UpstartTheme } from '../ThemeProvider/ThemeProvider';
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 
 const GlobalStyleCSS = css`
 
@@ -78,10 +78,10 @@ const GlobalStyleCSS = css`
 const GlobalStyles = createGlobalStyle`${GlobalStyleCSS}`
 
 export const Upstart = ({children}) => (
-  <UpstartTheme>
+  <ThemeProvider>
     <GlobalStyles />
     {children}
-  </UpstartTheme>
+  </ThemeProvider>
 );
 
 export default Upstart;

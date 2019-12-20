@@ -1,12 +1,12 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider as SCThemeProvider } from 'styled-components';
 
 import theme from '../Theme/Theme';
 
-export const UpstartTheme = ({children}) => {
+export const ThemeProvider = ({children}) => {
   return (
-    <ThemeProvider theme={theme}>
+    <SCThemeProvider theme={theme}>
       {children}
-    </ThemeProvider>
+    </SCThemeProvider>
   )
 }
