@@ -1,16 +1,128 @@
 ---
 title: Button
+description: A general description of the content of the document
 menu: Typography
 route: /components/button
 ---
 
-
-# Button
+import { Button } from '@deanacus/upstart'
 
 Buttons are an incredibly frequently used UI component. Too often, people use
 a button where a link would be appropriate, and a link where a button would be
 appropriate. For this reason, it is prudent to provide the ability to render any
 button style as a `button` or a `link`.
+
+<Button>
+  Primary
+</Button>
+
+<Button 
+  ghost
+>
+  Primary Ghost
+</Button>
+
+<Button 
+  variant="secondary"
+>Secondary
+</Button>
+
+<Button 
+  variant="secondary" 
+  ghost
+>
+  Secondary Ghost
+</Button>
+
+
+<Button>
+  Primary Button
+</Button>
+
+<Button ghost>
+  Primary Ghost Button
+</Button>
+
+<Button
+  href="http://google.com"
+>
+  Primary Link
+</Button>
+
+<Button
+  href="http://google.com"
+  ghost
+>
+  Primary Ghost Link
+</Button>
+
+<Button
+  variant="secondary"
+>
+  Secondary
+</Button>
+
+<Button
+  variant="secondary"
+  ghost
+>
+  Secondary Ghost
+</Button>
+
+<Button
+  href="http://google.com"
+  variant="secondary"
+>
+  Secondary Link
+</Button>
+
+<Button
+  href="http://google.com"
+  variant="secondary"
+  ghost
+>
+  Secondary Ghost Link
+</Button>
+
+<Button
+  size="sm"
+>
+  Primary Button Small
+</Button>
+
+<Button
+  size="md"
+>
+  Primary Button Medium
+</Button>
+
+<Button
+  size="lg"
+>
+  Primary Button Large
+</Button>
+
+<Button
+  size="lg"
+  ghost
+>
+  Primary Ghost Button Small
+</Button>
+
+<Button
+  size="md"
+  ghost
+>
+  Primary Ghost Button Medium
+</Button>
+
+<Button
+  size="lg"
+  ghost
+>
+  Primary Ghost Button Large
+</Button>
+
 
 ## Variants
 

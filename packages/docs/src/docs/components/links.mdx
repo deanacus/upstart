@@ -4,8 +4,12 @@ menu: Typography
 route: /components/link/
 ---
 
+import { Link } from '@deanacus/upstart'
 
 # Link
 
 As well as simple links, we have created a component that will return a range of
 differently styled and behaving link elements.
+
+<Link to="http://google.com" target="_blank">Google</Link>
+<Link to="http://google.com" target="_blank" type="button">Google</Link>
