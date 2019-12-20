@@ -15,5 +15,3 @@ export const Card = styled.div`
     border: .1rem solid ${theme.colors.grey[700]};
   `)}
 `;
-
-export default Card;

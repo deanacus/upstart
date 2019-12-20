@@ -1,6 +1,6 @@
 import React from 'react';
 import { css, createGlobalStyle } from 'styled-components'
-import UpstartTheme from '../Theme/ThemeProvider';
+import { UpstartTheme } from '../ThemeProvider/ThemeProvider';
 
 const GlobalStyleCSS = css`
 
