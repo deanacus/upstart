@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import theme from './Theme';
+import theme from '../Theme/Theme';
 
 export const UpstartTheme = ({children}) => {
   return (
@@ -10,5 +10,3 @@ export const UpstartTheme = ({children}) => {
     </ThemeProvider>
   )
 }
-
-export default UpstartTheme;

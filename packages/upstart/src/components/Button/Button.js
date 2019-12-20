@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
-import UpstartTheme from '../Theme/ThemeProvider';
+import { UpstartTheme } from '../ThemeProvider/ThemeProvider';
 
 const baseStyles = css`
   border: none;
