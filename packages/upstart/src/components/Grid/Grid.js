@@ -2,6 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
+import { upstartProps } from '../../propTypes';
+
 const StyledContainer = styled.div`
   ${
     ({fixed, size, theme}) => {
@@ -82,13 +84,37 @@ const alignmentMap = {
   baseline:'baseline'
 };
 
-export const Container = ({ fixed, size = null, children }) => (
+export const Container = ({ fixed, size, children }) => (
   <StyledContainer fixed={fixed} size={size}>
     {children}
   </StyledContainer>
 );
 
-export const Row = ({ reverse, align, justify, padding, children, canWrap }) => {
+Container.propTypes = {
+  /** Whether or not the grid container has a fixed max-width or not */
+  fixed: PropTypes.bool,
+
+  /** The max-width to apply to the container if it is fixed */
+  size: PropTypes.oneOf([
+    'xs',
+    'sm',
+    'md',
+    'lg',
+    'xl',
+    'xxl',
+    'xxxl',
+  ]),
+
+  /** The children of the grid container */
+  children: upstartProps.shared.children,
+}
+
+Container.defaultProps = {
+  fixed: false,
+  size: null,
+}
+
+export const Row = ({ align,  canWrap, justify, padding, reverse, children }) => {
 
   const alignItems = align ? alignmentMap[align] : false;
   const justifyContent = justify ? justifyMap[justify] : false;
@@ -107,6 +133,7 @@ export const Row = ({ reverse, align, justify, padding, children, canWrap }) => 
 };
 
 Row.propTypes = {
+  /** The align-items value, mapped internally to the correct CSS value */
   align: PropTypes.oneOf([
     'stretch',
     'start',
@@ -114,6 +141,11 @@ Row.propTypes = {
     'center',
     'baseline',
   ]),
+
+  /** The state of whether or not the row can wrap its children onto a second or third line */
+  canWrap: PropTypes.bool,
+
+  /** The justify-content value, mapped internally to the correct CSS value */
   justify: PropTypes.oneOf([
     'start',
     'end',
@@ -124,6 +156,11 @@ Row.propTypes = {
     'left',
     'right',
   ]),
+
+  /** Whether or not to reverse the flex-direction of the row */
+  reverse: PropTypes.bool,
+
+  /** The padding value to be used on the Row. Based on the bootstrap padding classes */
   padding: PropTypes.oneOf([
     'xs',
     'sm',
@@ -134,17 +171,17 @@ Row.propTypes = {
     'xxxl',
     'xxxxl',
   ]),
-  reverse: PropTypes.bool,
-  wrap: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
+
+  /** The children nodes of the grid row */
+  children: upstartProps.shared.children,
 }
 
 Row.defaultProps = {
-  wrap: false,
+  canWrap: false,
   reverse: false,
+  padding: null,
+  justify: 'start',
+  align: 'start',
 };
 
 export const Column = ({ cols, reverse, align, justify, padding, children }) => {
@@ -164,6 +201,59 @@ export const Column = ({ cols, reverse, align, justify, padding, children }) => 
       {children}
     </StyledColumn>
   );
+}
+
+Column.propTypes = {
+
+  /** The align-items value, mapped internally to the correct CSS value */
+  align: PropTypes.oneOf([
+    'stretch',
+    'start',
+    'end',
+    'center',
+    'baseline',
+  ]),
+
+  /** The number of grid columns the current column should render in */
+  cols: PropTypes.number,
+
+  /** Whether or not to reverse the flex direction of the Column */
+  reverse: PropTypes.bool,
+
+  /** The justify-content value, mapped internally to the correct CSS value */
+  justify: PropTypes.oneOf([
+    'start',
+    'end',
+    'center',
+    'between',
+    'around',
+    'evenly',
+    'left',
+    'right',
+  ]),
+
+  /** The padding value to be used on the Row. Based on the bootstrap padding classes */
+  padding: PropTypes.oneOf([
+    'xs',
+    'sm',
+    'md',
+    'lg',
+    'xl',
+    'xxl',
+    'xxxl',
+    'xxxxl',
+  ]),
+
+  /** The contents of the column */
+  children: upstartProps.shared.children,
+}
+
+Column.defaultProps = {
+  cols: null,
+  reverse: false,
+  justify: 'start',
+  align: 'start',
+  padding: null,
 }
 
 export const Grid = { Container, Row, Column }

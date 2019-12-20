@@ -1,9 +1,10 @@
 ---
 title: Link
 menu: Typography
-route: /components/link/
+route: /components/link
 ---
 
+import { PropsTable } from '../../components/PropsTable'
 import { Link } from '@deanacus/upstart'
 
 # Link
@@ -13,3 +14,5 @@ differently styled and behaving link elements.
 
 <Link to="http://google.com" target="_blank">Google</Link>
 <Link to="http://google.com" target="_blank" type="button">Google</Link>
+
+<PropsTable component={Link} />
