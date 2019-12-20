@@ -1,3 +1,5 @@
+const rootVal = 10;
+
 const space = {
   xs: 8,
   sm: 16,
@@ -8,6 +10,17 @@ const space = {
   xxxl: 54,
   xxxxl: 62,
 };
+
+const spaceArr = [
+  8,
+  16,
+  24,
+  32,
+  40,
+  48,
+  54,
+  62,
+];
 
 const fonts = {
   serif: '',
@@ -108,6 +121,47 @@ const widths = {
   xxxl: 1680,
 }
 
+const mediaQueries = (size, content) => `@media (min-width: ${breakpoints[size]}) {
+  ${content}
+}`
+
+const getSpacing = (spaceString) => {
+  const [axis, index] = spaceString.split('-');
+  const cssKey = axis.charAt(0) === 'm' ? 'margin' : 'padding';
+
+  switch (axis) {
+    case 'm':
+    case 'p':
+      return `${cssKey}: ${spaceArr[index]/rootVal}rem;`;
+    case 'mx':
+    case 'px':
+      return `
+        ${cssKey}-right: ${spaceArr[index]/rootVal}rem;
+        ${cssKey}-left: ${spaceArr[index]/rootVal}rem;
+      `;
+    case 'my':
+    case 'py':
+      return `
+        ${cssKey}-top: ${spaceArr[index]/rootVal}rem;
+        ${cssKey}-bottom: ${spaceArr[index]/rootVal}rem;
+      `;
+    case 'mt':
+    case 'pt':
+      return `${cssKey}-top: ${spaceArr[index]/rootVal}rem;`;
+    case 'mr':
+    case 'pr':
+      return `${cssKey}-right: ${spaceArr[index]/rootVal}rem;`;
+    case 'mb':
+    case 'pb':
+      return `${cssKey}-bottom: ${spaceArr[index]/rootVal}rem;`;
+    case 'ml':
+    case 'pl':
+      return `${cssKey}-left: ${spaceArr[index]/rootVal}rem;`;
+    default:
+      return null;
+  }
+}
+
 export const theme = {
   space,
   fonts,
@@ -118,6 +172,10 @@ export const theme = {
   breakpoints,
   radii,
   widths,
+  utils: {
+    getSpacing,
+    mediaQueries,
+  }
 }
 
 export default theme
