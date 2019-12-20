@@ -32,6 +32,6 @@ const template = (fileName) => ({
 })
 
 
-const config = ['index.js', ...glob.sync('src/components/**/*.js')].map( file => template(file));
+const config = ['index.js', ...glob.sync('src/**/*.js')].map( file => template(file));
 
 export default config;
