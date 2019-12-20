@@ -4,9 +4,8 @@ import styled from 'styled-components';
 
 const StyledQuote = styled.blockquote`
   border-left: 3px solid #ccc;
-  margin-left: ${({theme}) => theme.space.sm};
-  margin-right: ${({theme}) => theme.space.sm};
-  padding: ${({theme}) => theme.space.sm};
+  ${({theme}) => theme.utils.getSpacing('mx-3')};
+  ${({theme}) => theme.utils.getSpacing('p-3')};
 
   > p {
     font-size: 18px;
