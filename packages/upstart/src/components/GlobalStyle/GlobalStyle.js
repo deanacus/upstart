@@ -2,6 +2,8 @@ import React from 'react';
 import { css, createGlobalStyle } from 'styled-components'
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 
+import { upstartProps } from '../../propTypes';
+
 const GlobalStyleCSS = css`
 
   /* RESET... OF SORTS */
@@ -83,5 +85,10 @@ export const Upstart = ({children}) => (
     {children}
   </ThemeProvider>
 );
+
+Upstart.propTypes = {
+  /** The actual application components to receive the ThemeProvider and GlobalsStyles */
+  children: upstartProps.shared.children,
+}
 
 export default Upstart;

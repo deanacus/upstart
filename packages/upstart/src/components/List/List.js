@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { upstartProps } from '../../propTypes';
+
 export const ListItem = ({children}) => (
   <li>
     {children}
@@ -49,10 +51,7 @@ List.propTypes = {
   ordered: PropTypes.bool,
 
   /** The children to be rendered inside the list */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ])
+  children: upstartProps.shared.children,
 }
 
 List.defaultProps = {

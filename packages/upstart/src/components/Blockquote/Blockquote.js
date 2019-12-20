@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import styled from 'styled-components';
 
+import { upstartProps } from '../../propTypes';
+
 const StyledQuote = styled.blockquote`
   border-left: 3px solid #ccc;
   ${({theme}) => theme.utils.getSpacing('mx-3')};
@@ -28,7 +30,9 @@ export const Blockquote = ({children, cite}) => {
 }
 
 Blockquote.propTypes = {
-  children: PropTypes.node.isRequired,
+  /** The children to be rendered inside the list */
+  children: upstartProps.shared.children,
+  /** The (optional) author or work to be cited in the blockquote */
   cite: PropTypes.string
 }
 
