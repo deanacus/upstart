@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Upstart, Container, Row, Column } from '@deanacus/upstart/src/components/';
+import { Upstart, Container, Row, Column } from '@deanacus/upstart';
 
 import {SideMenu} from './SideMenu'
 
