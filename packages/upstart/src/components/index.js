@@ -7,5 +7,5 @@ export { Link } from './Link/Link';
 export { ListItem, UnorderedList, OrderedList, List } from './List/List';
 export { TR, TD, THead, TH, Table } from './Table/Table';
 export { theme } from './Theme/Theme';
-export { UpstartTheme } from './ThemeProvider/ThemeProvider';
+export { ThemeProvider } from './ThemeProvider/ThemeProvider';
 export { Card } from './Card/Card';
