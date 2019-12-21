@@ -1,162 +1,247 @@
 const rootVal = 10;
 
-const space = {
-  xs: 8,
-  sm: 16,
-  md: 24,
-  lg: 32,
-  xl: 40,
-  xxl: 48,
-  xxxl: 54,
-  xxxxl: 62,
-};
-
-const spaceArr = [
+const space = [
+  0,
+  4,
   8,
   16,
-  24,
   32,
-  40,
-  48,
-  54,
-  62,
+  64,
+  128,
+  256,
+  512,
 ];
 
 const fonts = {
-  serif: '',
-  sans: 'Lato, system-ui, sans-serif',
-  monospace: 'Menlo, monospace',
-  body: '',
+  body: 'system-ui, sans-serif',
   heading: 'inherit',
+  monospace: 'Menlo, monospace'
 };
+
+const fontSizes = [
+  12,
+  14,
+  16,
+  20,
+  24,
+  32,
+  48,
+  64,
+  96,
+];
 
 const fontWeights = {
   body: 400,
   heading: 700,
-  bold: 700,
-};
-
-const fontSizes = {
-  body: {
-    xs: 12,
-    sm: 14,
-    md: 16,
-    lg: 20,
-    xl: 24,
-  },
-  heading: {
-    xs: 32,
-    sm: 48,
-    md: 64,
-    lg: 96,
-    xl: 144,
-  },
+  bold: 700
 };
 
 const lineHeights = {
-  body: 1.5,
-  heading: 1.125,
+  body: 1.6,
+  heading: 1.125
 };
 
 const colors = {
-  black: '#191919',
-  white: '#fcfcfc',
-  grey: {
-    200: '#bfbfbf',
-    300: '#a6a6a6',
-    400: '#8c8c8c',
-    500: '#737373',
-    600: '#595959',
-    700: '#404040',
-    800: '#262626',
+  "white": "#ffffff",
+  "black": "#000000",
+  "primary":  {
+    "50": "#e3fafc",
+    "100": "#c5f6fa",
+    "200": "#99e9f2",
+    "300": "#66d9e8",
+    "400": "#3bc9db",
+    "500": "#22b8cf",
+    "600": "#15aabf",
+    "700": "#1098ad",
+    "800": "#0c8599",
+    "900": "#0b7285"
   },
-  primary: {
-    200: '#bce8f6',
-    300: '#8fd9f0',
-    400: '#62caea',
-    500: '#35bbe3',
-    600: '#1ca1ca',
-    700: '#157e9d',
-    800: '#0f5a70',
+  "secondary": {
+    "50": "#fff4e6",
+    "100": "#ffe8cc",
+    "200": "#ffd8a8",
+    "300": "#ffc078",
+    "400": "#ffa94d",
+    "500": "#ff922b",
+    "600": "#fd7e14",
+    "700": "#f76707",
+    "800": "#e8590c",
+    "900": "#d9480f"
   },
-  secondary: {
-    200: '#cae7d3',
-    300: '#a7d7b5',
-    400: '#84c798',
-    500: '#61b87a',
-    600: '#479e60',
-    700: '#387b4b',
-    800: '#285836',
+  "danger": "#ff6b6b",
+  "success": "#51cf66",
+  "warn": "#fcc419",
+  "info": "#5c7cfa",
+  "grey": {
+    "50": "#f8f9fa",
+    "100": "#f1f3f5",
+    "200": "#e9ecef",
+    "300": "#dee2e6",
+    "400": "#ced4da",
+    "500": "#adb5bd",
+    "600": "#868e96",
+    "700": "#495057",
+    "800": "#343a40",
+    "900": "#212529"
   },
-  success: '',
-  info: '',
-  warning: '',
-  danger: '',
-};
-
-const radii = {
-  sm: 3,
-  md: 5,
-  lg: 7,
+  "red": {
+    "50": "#fff5f5",
+    "100": "#ffe3e3",
+    "200": "#ffc9c9",
+    "300": "#ffa8a8",
+    "400": "#ff8787",
+    "500": "#ff6b6b",
+    "600": "#fa5252",
+    "700": "#f03e3e",
+    "800": "#e03131",
+    "900": "#c92a2a"
+  },
+  "indigo": {
+    "50": "#edf2ff",
+    "100": "#dbe4ff",
+    "200": "#bac8ff",
+    "300": "#91a7ff",
+    "400": "#748ffc",
+    "500": "#5c7cfa",
+    "600": "#4c6ef5",
+    "700": "#4263eb",
+    "800": "#3b5bdb",
+    "900": "#364fc7"
+  },
+  "blue": {
+    "50": "#e7f5ff",
+    "100": "#d0ebff",
+    "200": "#a5d8ff",
+    "300": "#74c0fc",
+    "400": "#4dabf7",
+    "500": "#339af0",
+    "600": "#228be6",
+    "700": "#1c7ed6",
+    "800": "#1971c2",
+    "900": "#1864ab"
+  },
+  "cyan": {
+    "50": "#e3fafc",
+    "100": "#c5f6fa",
+    "200": "#99e9f2",
+    "300": "#66d9e8",
+    "400": "#3bc9db",
+    "500": "#22b8cf",
+    "600": "#15aabf",
+    "700": "#1098ad",
+    "800": "#0c8599",
+    "900": "#0b7285"
+  },
+  "teal": {
+    "50": "#e6fcf5",
+    "100": "#c3fae8",
+    "200": "#96f2d7",
+    "300": "#63e6be",
+    "400": "#38d9a9",
+    "500": "#20c997",
+    "600": "#12b886",
+    "700": "#0ca678",
+    "800": "#099268",
+    "900": "#087f5b"
+  },
+  "green": {
+    "50": "#ebfbee",
+    "100": "#d3f9d8",
+    "200": "#b2f2bb",
+    "300": "#8ce99a",
+    "400": "#69db7c",
+    "500": "#51cf66",
+    "600": "#40c057",
+    "700": "#37b24d",
+    "800": "#2f9e44",
+    "900": "#2b8a3e"
+  },
+  "yellow": {
+    "50": "#fff9db",
+    "100": "#fff3bf",
+    "200": "#ffec99",
+    "300": "#ffe066",
+    "400": "#ffd43b",
+    "500": "#fcc419",
+    "600": "#fab005",
+    "700": "#f59f00",
+    "800": "#f08c00",
+    "900": "#e67700"
+  },
+  "orange": {
+    "50": "#fff4e6",
+    "100": "#ffe8cc",
+    "200": "#ffd8a8",
+    "300": "#ffc078",
+    "400": "#ffa94d",
+    "500": "#ff922b",
+    "600": "#fd7e14",
+    "700": "#f76707",
+    "800": "#e8590c",
+    "900": "#d9480f"
+  }
 }
 
-const breakpoints = {
-  xxs: 320,
-  xs: 480,
-  sm: 768,
-  md: 1024,
-  lg: 1200,
-  xl: 1440,
-  xxl: 1680,
-  xxxl: 1920,
-}
 
-const widths = {
-  xs: 320,
-  sm: 480,
-  md: 768,
-  lg: 1024,
-  xl: 1200,
-  xxl: 1440,
-  xxxl: 1680,
-}
+const radii = [
+  3,
+  5,
+  7,
+]
+
+const breakpoints = [
+  320,
+  480,
+  768,
+  992,
+  1200,
+  1680,
+];
+
+const widths = [
+  320,
+  480,
+  768,
+  1024,
+  1200,
+  1440,
+  1680,
+];
 
 const mediaQueries = (size, content) => `@media (min-width: ${breakpoints[size]}) {
   ${content}
 }`
 
-const getSpacing = (spaceString) => {
-  const [axis, index] = spaceString.split('-');
-  const cssKey = axis.charAt(0) === 'm' ? 'margin' : 'padding';
+const getSpacing = (shorthand) => {
+  const [key, index] = shorthand.split('-');
+  const propID = key.charAt(0)
+  const prop = propID === 'm' ? 'margin' : 'padding';
 
-  switch (axis) {
-    case 'm':
-    case 'p':
-      return `${cssKey}: ${spaceArr[index]/rootVal}rem;`;
-    case 'mx':
-    case 'px':
+  if ( index > 4 ) {
+    console.warn(`Requesting ${key} will result in a very large amount of padding`);
+  }
+
+  switch (key) {
+    case `${propID}`:
+      return `${prop}: ${space[index] / rootVal}rem;`;
+    case `${propID}x`:
       return `
-        ${cssKey}-right: ${spaceArr[index]/rootVal}rem;
-        ${cssKey}-left: ${spaceArr[index]/rootVal}rem;
+        ${prop}-right: ${space[index] / rootVal}rem;
+        ${prop}-left: ${space[index] / rootVal}rem;
       `;
-    case 'my':
-    case 'py':
+    case `${propID}y`:
       return `
-        ${cssKey}-top: ${spaceArr[index]/rootVal}rem;
-        ${cssKey}-bottom: ${spaceArr[index]/rootVal}rem;
+        ${prop}-top: ${space[index] / rootVal}rem;
+        ${prop}-bottom: ${space[index] / rootVal}rem;
       `;
-    case 'mt':
-    case 'pt':
-      return `${cssKey}-top: ${spaceArr[index]/rootVal}rem;`;
-    case 'mr':
-    case 'pr':
-      return `${cssKey}-right: ${spaceArr[index]/rootVal}rem;`;
-    case 'mb':
-    case 'pb':
-      return `${cssKey}-bottom: ${spaceArr[index]/rootVal}rem;`;
-    case 'ml':
-    case 'pl':
-      return `${cssKey}-left: ${spaceArr[index]/rootVal}rem;`;
+    case `${propID}t`:
+      return `${prop}-top: ${space[index] / rootVal}rem;`;
+    case `${propID}r`:
+      return `${prop}-right: ${space[index] / rootVal}rem;`;
+    case `${propID}b`:
+      return `${prop}-bottom: ${space[index] / rootVal}rem;`;
+    case `${propID}l`:
+      return `${prop}-left: ${space[index] / rootVal}rem;`;
     default:
       return null;
   }

@@ -19,7 +19,7 @@ const template = (fileName) => ({
   external: [
     'react',
     'react-dom',
-    'prop-types',
+    'styled-components'
   ],
   plugins: [
     peerDepsExternal(),

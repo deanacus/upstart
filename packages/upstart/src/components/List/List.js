@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { upstartProps } from '../../propTypes';
-
 export const ListItem = ({children}) => (
   <li>
     {children}
   </li>
 )
+
+ListItem.propTypes = {
+  /** The children to be rendered inside the list */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
+}
 
 export const UnorderedList = ({children}) => (
   <ul>
@@ -15,11 +21,27 @@ export const UnorderedList = ({children}) => (
   </ul>
 )
 
+UnorderedList.propTypes = {
+  /** The children to be rendered inside the list */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
+}
+
 export const OrderedList = ({children}) => (
   <ol>
     {children}
   </ol>
 )
+
+OrderedList.propTypes = {
+  /** The children to be rendered inside the list */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
+}
 
 export const List = ({children, ordered, type}) => {
   const isOrdered = ordered || type === 'ordered' || type === 'ol';
@@ -51,7 +73,10 @@ List.propTypes = {
   ordered: PropTypes.bool,
 
   /** The children to be rendered inside the list */
-  children: upstartProps.shared.children,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
 }
 
 List.defaultProps = {

@@ -1,69 +1,7 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { upstartProps } from '../../propTypes';
-
-const StyledContainer = styled.div`
-  ${
-    ({fixed, size, theme}) => {
-      if (fixed) {
-        return (size ? `max-width: ${theme.widths[size] / 10}rem`: `max-width: 1200px`)
-      }
-    }
-  }
-`;
-
-const StyledRow = styled.div`
-  align-items: ${(props) => props.alignment};
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: ${({canWrap}) => canWrap ? 'wrap' : 'no-wrap'};
-  justify-content: start;
-
-  ${(props) => props.reverse && css`flex-direction: row-reverse;`}
-
-  ${(props) => props.padding && css`
-    padding: ${({theme}) => theme.space[props.padding]/10}rem;
-  `}
-
-  ${(props) => props.justifyContent && css`
-    justify-content: ${props.justifyContent};
-  `}
-`;
-
-const StyledColumn = styled.div`
-  align-content: stretch;
-  align-items: stretch;
-  box-sizing: border-box;
-  display: flex;
-  flex-basis: 100%;
-  flex-direction: column;
-  justify-content: flex-start;
-  max-width: 100%;
-
-  ${(props) => props.reverse && css`flex-direction: column-reverse;`}
-
-  ${(props) => props.flexBasis && css`
-    flex-basis: ${props.flexBasis};
-    max-width: ${props.flexBasis};
-    width: ${props.flexBasis};
-  `}
-
-  ${(props) => props.padding && css`
-    padding: ${({theme}) => theme.space[props.padding]/10}rem;
-  `}
-
-  ${(props) => props.alignItems && css`
-    align-items: ${props.alignItems};
-  `}
-
-  ${(props) => props.justifyContent && css`
-    justify-content: ${props.justifyContent};
-  `}
-
-`
+import { StyledContainer, StyledRow, StyledColumn } from './styled'
 
 const justifyMap = {
   start: 'flex-start',
@@ -106,7 +44,10 @@ Container.propTypes = {
   ]),
 
   /** The children of the grid container */
-  children: upstartProps.shared.children,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
 }
 
 Container.defaultProps = {
@@ -114,23 +55,17 @@ Container.defaultProps = {
   size: null,
 }
 
-export const Row = ({ align,  canWrap, justify, padding, reverse, children }) => {
-
-  const alignItems = align ? alignmentMap[align] : false;
-  const justifyContent = justify ? justifyMap[justify] : false;
-
-  return (
-    <StyledRow
-      alignItems={alignItems}
-      justifyContent={justifyContent}
-      padding={padding}
-      reverse={reverse}
-      canWrap={canWrap}
-    >
-      {children}
-    </StyledRow>
-  );
-};
+export const Row = ({ align,  canWrap, justify, padding, reverse, children }) => (
+  <StyledRow
+    alignItems={alignmentMap[align]}
+    justifyContent={justifyMap[justify]}
+    padding={padding}
+    reverse={reverse}
+    canWrap={canWrap}
+  >
+    {children}
+  </StyledRow>
+)
 
 Row.propTypes = {
   /** The align-items value, mapped internally to the correct CSS value */
@@ -161,19 +96,13 @@ Row.propTypes = {
   reverse: PropTypes.bool,
 
   /** The padding value to be used on the Row. Based on the bootstrap padding classes */
-  padding: PropTypes.oneOf([
-    'xs',
-    'sm',
-    'md',
-    'lg',
-    'xl',
-    'xxl',
-    'xxxl',
-    'xxxxl',
-  ]),
+  padding: PropTypes.string,
 
   /** The children nodes of the grid row */
-  children: upstartProps.shared.children,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
 }
 
 Row.defaultProps = {
@@ -185,16 +114,13 @@ Row.defaultProps = {
 };
 
 export const Column = ({ cols, reverse, align, justify, padding, children }) => {
-
-  const flexBasis = (cols / 12 * 100) + '%';
-  const alignItems = align ? alignmentMap[align] : false;
-  const justifyContent = justify ? justifyMap[justify] : false;
+  const flexBasis = cols ? (cols / 12 * 100) : '100' + '%';
 
   return (
     <StyledColumn
       flexBasis={flexBasis}
-      alignItems={alignItems}
-      justifyContent={justifyContent}
+      alignItems={alignmentMap[align]}
+      justifyContent={justifyMap[justify]}
       padding={padding}
       reverse={reverse}
     >
@@ -233,19 +159,13 @@ Column.propTypes = {
   ]),
 
   /** The padding value to be used on the Row. Based on the bootstrap padding classes */
-  padding: PropTypes.oneOf([
-    'xs',
-    'sm',
-    'md',
-    'lg',
-    'xl',
-    'xxl',
-    'xxxl',
-    'xxxxl',
-  ]),
+  padding: PropTypes.string,
 
   /** The contents of the column */
-  children: upstartProps.shared.children,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
 }
 
 Column.defaultProps = {

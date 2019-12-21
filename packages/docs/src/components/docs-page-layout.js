@@ -5,13 +5,14 @@ import { MDXContext } from '@mdx-js/react'
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Container, Row, Column, Upstart } from '@deanacus/upstart';
 
+import Layout from './layout';
 import {SideMenu} from './SideMenu'
 
 const Hero = styled.header`
   align-items: center;
   background: ${({theme}) => theme.colors.grey[800]};
   /* I need more colors on the theme */
-  color: #fdfdfd;
+  color: ${({theme}) => theme.colors.grey[200]};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,17 +35,21 @@ export default function PageTemplate({ data: { mdx } }) {
           <Column cols={3}>
             <SideMenu/>
           </Column>
-          <Column>
+          <Column cols={9}>
             <article>
               <Hero>
                 <h1>{mdx.frontmatter.title}</h1>
                 <p>{mdx.frontmatter.description}</p>
               </Hero>
-              <ArticleBody>
-                <MDXRenderer>
-                  {mdx.body}
-                </MDXRenderer>
-              </ArticleBody>
+              <Row justify="center">
+                <Column cols={6}>
+                  <ArticleBody>
+                    <MDXRenderer>
+                      {mdx.body}
+                    </MDXRenderer>
+                  </ArticleBody>
+                </Column>
+              </Row>
             </article>
           </Column>
         </Row>
