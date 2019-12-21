@@ -23,105 +23,75 @@ be returned, unless another is specified.
 ### Primary
 
 <Button>
-  Primary
-</Button>
-
-<Button 
-  ghost
->
-  Primary Ghost
-</Button>
-
-<Button>
   Primary Button
 </Button>
 
-<Button ghost>
-  Primary Ghost Button
+<Button outline>
+  Primary Outline Button
 </Button>
 
-<Button
-  href="http://google.com"
->
+<Button href="http://google.com">
   Primary Link
 </Button>
 
-<Button
-  href="http://google.com"
-  ghost
->
-  Primary Ghost Link
+<Button href="http://google.com" outline>
+  Primary Outline Link
 </Button>
 
 ### Secondary
 
-<Button
-  variant="secondary"
->
+<Button variant="secondary">
   Secondary
 </Button>
 
-<Button
-  variant="secondary"
-  ghost
->
-  Secondary Ghost
+<Button variant="secondary" outline>
+  Secondary outline
 </Button>
 
-<Button
-  href="http://google.com"
-  variant="secondary"
->
+<Button href="http://google.com" variant="secondary">
   Secondary Link
 </Button>
 
-<Button
-  href="http://google.com"
-  variant="secondary"
-  ghost
->
-  Secondary Ghost Link
+<Button href="http://google.com" variant="secondary" outline>
+  Secondary Outline Link
 </Button>
 
 ## Sizes
 
 A number of sizes have been defined: `sm`, `md`, `lg`.
 
-<Button
-  size="sm"
->
+<Button size="sm">
   Primary Button Small
 </Button>
 
-<Button
-  size="md"
->
+<Button size="md">
   Primary Button Medium
 </Button>
 
-<Button
-  size="lg"
->
+<Button size="lg">
   Primary Button Large
 </Button>
 
-<Button
-  size="sm"
-  variant="secondary"
->
+<Button size="sm" variant="secondary">
   Secondary Button Small
 </Button>
 
-<Button
-  size="md"
-  variant="secondary"
->
+<Button size="md" variant="secondary">
   Secondary Button Medium
 </Button>
 
-<Button
-  size="lg"
-  variant="secondary"
->
+<Button size="lg" variant="secondary">
   Secondary Button Large
+</Button>
+
+## Disabled
+
+Disabled buttons need to look different, too.
+
+<Button size="md" disabled>
+  Disabled Primary Button
+</Button>
+
+<Button size="md" variant="secondary" disabled outline>
+  Disabled Secondary Outline Button
 </Button>

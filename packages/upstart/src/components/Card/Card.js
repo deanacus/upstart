@@ -2,7 +2,7 @@
 import styled, { css } from 'styled-components';
 
 export const Card = styled.div`
-  padding: ${({theme}) => theme.space.md / 10}rem;
+  ${({padding, theme}) => padding && theme.utils.getSpacing(padding)};
 
   ${({darkMode, theme}) => darkMode && css`
     background: ${theme.colors.grey[700]};
