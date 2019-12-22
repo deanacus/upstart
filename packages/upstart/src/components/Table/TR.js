@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledTable } from './styled'
+import { StyledTRow } from './styled'
 
-export const Table = ({children}) => {
+export const TR = ({children}) => {
   return (
-    <StyledTable>
+    <StyledTRow>
       {children}
-    </StyledTable>
+    </StyledTRow>
   )
 }
 
-Table.propTypes = {
-  /** The children of the Table */
+TR.propTypes = {
+  /** The children of the TR */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)

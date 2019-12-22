@@ -2,7 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { StyledRow } from './styled'
-import { alignmentMap, justifyMap } from '../../utils';
+
+const justifyMap = {
+  start: 'flex-start',
+  end: 'flex-end',
+  center: 'center',
+  between: 'space-between',
+  around: 'space-around',
+  evenly: 'space-evenly',
+  left: 'left',
+  right: 'right',
+}
+
+const alignmentMap = {
+  stretch:'stretch',
+  start:'flex-start',
+  end:'flex-end',
+  center:'center',
+  baseline:'baseline'
+};
 
 export const Row = ({ align, canWrap, justify, padding, reverse, children }) => (
   <StyledRow

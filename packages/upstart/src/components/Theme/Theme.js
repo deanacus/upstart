@@ -38,15 +38,29 @@ borderWidths.md = borderWidths[2];
 borderWidths.lg = borderWidths[3];
 borderWidths.xl = borderWidths[4];
 
-const radii = [ 3, 5, 7, 20, 50 ];
+const radii = [ 3, 5, 7 ];
 
 radii.sm = radii[0];
 radii.md = radii[1];
 radii.lg = radii[2];
-radii.pill = radii[3];
-radii.circle = radii[4];
+radii.pill = 20;
+radii.circle = 50;
 
-const zIndices = {}
+const zIndices = {
+  hide: -1,
+  base: 0,
+  docked: 10,
+  dropdown: 1000,
+  sticky: 1100,
+  banner: 1200,
+  overlay: 1300,
+  modal: 1400,
+  popover: 1500,
+  skipLink: 1600,
+  toast: 1700,
+  tooltip: 1800,
+};
+
 const shadows = {}
 
 export const theme = {

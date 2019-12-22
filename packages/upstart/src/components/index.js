@@ -1,11 +1,23 @@
 export { Blockquote } from './Blockquote/Blockquote'
-export { Button } from './Button/Button'
 export { Upstart } from './GlobalStyle/GlobalStyle';
-export { Grid, Container, Row, Column } from './Grid/Grid';
-export { Image } from './Image/Image'
-export { Link } from './Link/Link';
-export { ListItem, UnorderedList, OrderedList, List } from './List/List';
-export { TR, TD, THead, TH, Table } from './Table/Table';
 export { theme } from './Theme/Theme';
 export { ThemeProvider } from './ThemeProvider/ThemeProvider';
+
+export { Button } from './Button/Button';
+export { Container } from './Container/Container';
+export { Row } from './Row/Row';
+export { Column } from './Column/Column';
+export { Image } from './Image/Image'
+export { Link } from './Link/Link';
+export { List } from './List/List';
+export { ListItem } from './List/ListItem';
+export { UnorderedList } from './List/UnorderedList';
+export { OrderedList } from './List/OrderedList';
+export { Table } from './Table/Table';
+export { TR } from './Table/TR';
+export { TD } from './Table/TD';
+export { TH } from './Table/TH';
+export { THead } from './Table/THead';
 export { Card } from './Card/Card';
+export { Flex } from './Flex/Flex';
+export { Separator } from './Separator/Separator';

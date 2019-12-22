@@ -1,5 +1,24 @@
 import {theme} from '../components/Theme/Theme';
 
+const justifyMap = {
+  start: 'flex-start',
+  end: 'flex-end',
+  center: 'center',
+  between: 'space-between',
+  around: 'space-around',
+  evenly: 'space-evenly',
+  left: 'left',
+  right: 'right',
+}
+
+const alignmentMap = {
+  stretch:'stretch',
+  start:'flex-start',
+  end:'flex-end',
+  center:'center',
+  baseline:'baseline'
+};
+
 const getUnit = (value) => {
   switch (theme.preferredUnit) {
     case 'rem':
@@ -57,10 +76,13 @@ export const fontWeight = (weight) => `font-weight: ${theme.fontWeights[weight]}
 
 export const lineHeight = (height) => `line-height: ${theme.lineHeights[height]}`;
 
-export const color = (color, strength = 500) => {
-  return ( !theme.colors[color][strength] && typeof theme.colors[color] === 'string') ?
-    theme.colors[color] : theme.colors[color][strength]
-};
+export const color = (color, strength = 500) =>  theme.colors[color][strength] || theme.colors[color];
+
+export const alignItems = (align) => `align-items: ${alignmentMap[align]}`;
+
+export const alignContent = (align) => `align-content: ${alignmentMap[align]}`;
+
+export const justifyContent = (justify) => `justify-content: ${justifyMap[justify]}`;
 
 export const width = (width) => getUnit(theme.widths[width]);
 
