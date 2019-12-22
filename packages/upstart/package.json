@@ -36,5 +36,9 @@
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "styled-components": "^4.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deanacus/upstart.git"
   }
 }
