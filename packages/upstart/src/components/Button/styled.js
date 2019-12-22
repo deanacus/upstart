@@ -17,7 +17,6 @@ const baseStyles = css`
 const primary = {
   fill: css`
     background: ${color('primary', 500)};
-    border: .1rem solid ${color('primary', 500)};
   `,
   outline: css`
     background: transparent;
@@ -29,7 +28,6 @@ const primary = {
 const secondary = {
   fill: css`
     background: ${color('secondary', 500)};
-    border: .1rem solid ${color('secondary', 500)};
   `,
   outline: css`
     background: transparent;
@@ -78,7 +76,7 @@ export const StyledLink = styled.a`
     }
   }}
 
-  ${({disabled}) => disabled && disabledStyles}
+  ${({isDisabled}) => isDisabled && disabledStyles}
 
 
   ${({size}) => sizeStyles[size]}

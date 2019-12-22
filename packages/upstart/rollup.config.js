@@ -5,17 +5,22 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 const glob = require('glob');
 
-const template = (fileName) => ({
-  input: fileName,
+const components = [...glob.sync('src/components/**/*.js')]
+  .filter(file => !file.includes('index') && !file.includes('styled'))
+  .reduce( (acc, file) => {
+    acc[file.replace('src/components/', '').replace(/([\w]+)\/([\w]+).js/, '$2')] = file;
+    return acc;
+  }, {index: 'src/components/index.js'})
+
+console.log(components);
+
+const config = {
+  input: components,
   output: {
     exports: 'named',
-    file: fileName.replace(/src\/components(\/\w+)*/gi, 'dist$1'),
+    dir: 'dist',
     format: 'cjs',
-    globals: {
-      react: 'React',
-      'prop-types': 'PropTypes',
     },
-  },
   external: [
     'react',
     'react-dom',
@@ -29,9 +34,6 @@ const template = (fileName) => ({
     resolve(),
     commonjs()
   ],
-})
-
-
-const config = ['src/components/index.js', ...glob.sync('src/components/**/*.js')].map( file => template(file));
+}
 
 export default config;

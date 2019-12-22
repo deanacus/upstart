@@ -2,16 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { StyledColumn } from './styled'
-import { alignmentMap, justifyMap } from '../../utils';
-
 export const Column = ({ cols, reverse, align, justify, padding, children }) => {
   const flexBasis = cols ? (cols / 12 * 100) + '%' : '100%';
 
   return (
     <StyledColumn
       flexBasis={flexBasis}
-      alignItems={alignmentMap[align]}
-      justifyContent={justifyMap[justify]}
+      alignItems={align}
+      justifyContent={justify}
       padding={padding}
       reverse={reverse}
     >
