@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   posts.forEach(({ node }, index) => {
     createPage({
       path: `${node.frontmatter.route}`,
-      component: path.resolve(`./src/components/docs-page-layout.js`),
+      component: path.resolve(`./src/components/Layout.js`),
       context: { id: node.id },
     })
   })
