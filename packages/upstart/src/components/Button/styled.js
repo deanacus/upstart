@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 const baseStyles = css`
   border: none;
-  border-radius: ${({theme}) => theme.radii.sm/10}rem;
+  border-radius: ${({theme}) => theme.radii[1]/10}rem;
   box-sizing: border-box;
   color: ${({theme}) => theme.colors.white};
   cursor: pointer;
@@ -55,6 +55,7 @@ const disabledStyles = css`
   background: ${({theme}) => theme.colors.grey[400]};
   border: .1rem solid ${({theme}) => theme.colors.grey[400]};
   color: ${({theme}) => theme.colors.white};
+  cursor: not-allowed;
 `;
 
 export const StyledLink = styled.a`

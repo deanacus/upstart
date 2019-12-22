@@ -1,61 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const ListItem = ({children}) => (
-  <li>
-    {children}
-  </li>
-)
-
-ListItem.propTypes = {
-  /** The children to be rendered inside the list */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
-
-export const UnorderedList = ({children}) => (
-  <ul>
-    {children}
-  </ul>
-)
-
-UnorderedList.propTypes = {
-  /** The children to be rendered inside the list */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
-
-export const OrderedList = ({children}) => (
-  <ol>
-    {children}
-  </ol>
-)
-
-OrderedList.propTypes = {
-  /** The children to be rendered inside the list */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+import { UnorderedList } from './UnorderedList';
+import { OrderedList } from './OrderedList'
+import { ListItem } from './ListItem'
 
 export const List = ({children, ordered, type}) => {
   const isOrdered = ordered || type === 'ordered' || type === 'ol';
 
   return isOrdered ?
-    (
-      <OrderedList>
-        {children}
-      </OrderedList>
-    ) :  (
-      <UnorderedList>
-        {children}
-      </UnorderedList>
-    )
+  (
+    <OrderedList>
+      {children}
+    </OrderedList>
+  ) :  (
+    <UnorderedList>
+      {children}
+    </UnorderedList>
+  )
 }
 
 List.propTypes = {
@@ -84,4 +46,6 @@ List.defaultProps = {
   ordered: false,
   children: null,
 }
+
+export { List, UnorderedList, OrderedList, ListItem}
 
