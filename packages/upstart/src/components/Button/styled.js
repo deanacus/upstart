@@ -52,10 +52,8 @@ const sizeStyles = {
 }
 
 const disabledStyles = css`
-  background: ${({theme}) => theme.colors.grey[400]};
-  border: .1rem solid ${({theme}) => theme.colors.grey[400]};
-  color: ${({theme}) => theme.colors.white};
   cursor: not-allowed;
+  opacity: 0.4;
 `;
 
 export const StyledLink = styled.a`
