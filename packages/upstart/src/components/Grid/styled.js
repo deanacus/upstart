@@ -1,10 +1,12 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+
+import { space, width } from '../../utils/styled-utils'
 
 export const StyledContainer = styled.div`
   ${
-    ({fixed, size, theme}) => {
+    ({fixed, size}) => {
       if (fixed) {
-        return (size ? `max-width: ${theme.widths[size] / 10}rem`: `max-width: 1200px`)
+        return (size ? `max-width: ${width(size)}`: `max-width: 1200px`)
       }
     }
   }
@@ -20,9 +22,7 @@ export const StyledRow = styled.div`
   justify-content: ${({justifyContent}) => justifyContent};
   width: 100%;
 
-  ${({padding, theme}) => padding && css`
-    ${theme.utils.getSpacing(padding)};
-  `}
+  ${({padding}) => padding && space(padding)}
 `;
 
 export const StyledColumn = styled.div`
@@ -30,10 +30,10 @@ export const StyledColumn = styled.div`
   align-items: ${({alignItems}) => alignItems};
   box-sizing: border-box;
   display: flex;
-  flex-basis: ${({flexBasis}) => flexBasis}%;
+  flex-basis: ${({flexBasis}) => flexBasis};
   flex-direction: ${({reverse}) => reverse ? 'column-reverse' : 'column'};
   justify-content: ${({justifyContent}) => justifyContent};
-  max-width: ${({flexBasis}) => flexBasis}%;
+  max-width: ${({flexBasis}) => flexBasis};
 
-  ${({padding, theme}) => padding && theme.utils.getSpacing(padding)};
+  ${({padding}) => padding && space(padding)};
 `

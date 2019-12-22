@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import styled from 'styled-components';
 
+import { margin, padding, color } from '../../utils/styled-utils'
+
 const StyledQuote = styled.blockquote`
-  border-left: 3px solid ${({theme}) => theme.colors.grey[300]};
-  ${({theme}) => theme.utils.getSpacing('mx-3')};
-  ${({theme}) => theme.utils.getSpacing('p-3')};
+  border-left: 3px solid ${color('grey', 300)};
+  ${margin('mx-3')};
+  ${padding('p-3')};
 
   > p {
     font-size: 18px;

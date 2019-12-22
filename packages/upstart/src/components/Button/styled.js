@@ -1,59 +1,66 @@
 import styled, { css } from 'styled-components';
 
+import { color, fontFamily, fontSize, padding, radius, lineHeight } from '../../utils/styled-utils';
+
 const baseStyles = css`
   border: none;
-  border-radius: ${({theme}) => theme.radii[1]/10}rem;
+  border-radius: ${radius('sm')};
   box-sizing: border-box;
-  color: ${({theme}) => theme.colors.white};
+  color: ${color('white')};
   cursor: pointer;
-  display: inline-block;
-  font-family: ${({theme}) => theme.fonts.body};
-  line-height: ${({theme}) => theme.lineHeights.body};
+  display: inline-flex;
+  text-align: center;
+  ${fontFamily('body')};
+  ${lineHeight('body')};
 `;
 
 const primary = {
   fill: css`
-    background: ${({theme}) => theme.colors.primary[500]};
-    border: .1rem solid ${({theme}) => theme.colors.primary[500]};
+    background: ${color('primary', 500)};
+    border: .1rem solid ${color('primary', 500)};
   `,
   outline: css`
     background: transparent;
-    border: .1rem solid ${({theme}) => theme.colors.primary[500]};
-    color: ${({theme}) => theme.colors.primary[500]};
+    border: .1rem solid ${color('primary', 500)};
+    color: ${color('primary', 500)};
   `,
 }
 
 const secondary = {
   fill: css`
-    background: ${({theme}) => theme.colors.secondary[500]};
-    border: .1rem solid ${({theme}) => theme.colors.secondary[500]};
+    background: ${color('secondary', 500)};
+    border: .1rem solid ${color('secondary', 500)};
   `,
   outline: css`
     background: transparent;
-    border: .1rem solid ${({theme}) => theme.colors.secondary[500]};
-    color: ${({theme}) => theme.colors.secondary[500]};
+    border: .1rem solid ${color('secondary', 500)};
+    color: ${color('secondary', 500)};
   `,
 }
 
 
 const sizeStyles = {
   sm: css`
-    font-size: ${({theme}) => theme.fontSizes[1]/10}rem;
-    padding: ${({theme}) => `${(theme.space[1] - 2) / 10}rem ${(theme.space[2] - 2) / 10}rem`};
+    ${fontSize('xs')}
+    ${padding('py-1')}
+    ${padding('px-2')}
   `,
   md: css`
-    font-size: ${({theme}) => theme.fontSizes[2]/10}rem;
-    padding: ${({theme}) => `${(theme.space[2] - 2) / 10}rem ${(theme.space[3] - 2) / 10}rem`};
+    ${fontSize('sm')}
+    ${padding('py-2')}
+    ${padding('px-3')}
   `,
   lg: css`
-    font-size: ${({theme}) => theme.fontSizes[3]/10}rem;
-    padding: ${({theme}) => `${(theme.space[3] - 2) / 10}rem ${(theme.space[4] - 2) / 10}rem`};
+    ${fontSize('base')}
+    ${padding('py-3')}
+    ${padding('px-4')}
   `,
 }
 
 const disabledStyles = css`
   cursor: not-allowed;
   opacity: 0.4;
+  pointer-events: none;
 `;
 
 export const StyledLink = styled.a`
@@ -70,6 +77,9 @@ export const StyledLink = styled.a`
         return outline ? primary.outline : primary.fill
     }
   }}
+
+  ${({disabled}) => disabled && disabledStyles}
+
 
   ${({size}) => sizeStyles[size]}
 `;
