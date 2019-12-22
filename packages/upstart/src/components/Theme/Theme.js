@@ -1,4 +1,5 @@
 const rootVal = 10;
+const preferredUnit = 'rem';
 
 const space = [
   0,
@@ -248,6 +249,8 @@ const getSpacing = (shorthand) => {
 }
 
 export const theme = {
+  rootVal,
+  preferredUnit,
   space,
   fonts,
   fontSizes,

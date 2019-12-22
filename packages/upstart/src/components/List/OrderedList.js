@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-StyledList = styled.ol`
+const StyledList = styled.ol`
   list-style-type: ${({listStyle, listStyleMarker}) => listStyle};
 `
 

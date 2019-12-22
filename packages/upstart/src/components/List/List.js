@@ -5,7 +5,7 @@ import { UnorderedList } from './UnorderedList';
 import { OrderedList } from './OrderedList'
 import { ListItem } from './ListItem'
 
-export const List = ({children, ordered, type}) => {
+const List = ({children, ordered, type}) => {
   const isOrdered = ordered || type === 'ordered' || type === 'ol';
 
   return isOrdered ?
@@ -36,16 +36,15 @@ List.propTypes = {
 
   /** The children to be rendered inside the list */
   children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
+    PropTypes.elementType,
+    PropTypes.arrayOf(PropTypes.elementType)
+  ]).isRequired,
 }
 
 List.defaultProps = {
   type: 'unordered',
   ordered: false,
-  children: null,
 }
 
-export { List, UnorderedList, OrderedList, ListItem}
+export { List, UnorderedList, OrderedList, ListItem }
 
