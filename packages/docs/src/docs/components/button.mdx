@@ -6,7 +6,7 @@ route: /components/button
 ---
 
 import { PropsTable } from '../../components/PropsTable'
-import { Button } from '@deanacus/upstart'
+import { Button, Row, Column } from '@deanacus/upstart'
 
 Buttons are an incredibly frequently used UI component. Too often, people use
 a button where a link would be appropriate, and a link where a button would be
@@ -22,21 +22,28 @@ be returned, unless another is specified.
 
 ### Primary
 
-<Button>
-  Primary Button
-</Button>
-
-<Button outline>
-  Primary Outline Button
-</Button>
-
-<Button href="http://google.com">
-  Primary Link
-</Button>
-
-<Button href="http://google.com" outline>
-  Primary Outline Link
-</Button>
+<Row>
+  <Column>
+    <Button>
+      Primary Button
+    </Button>
+  </Column>
+  <Column>
+    <Button outline>
+      Primary Outline Button
+    </Button>
+  </Column>
+  <Column>
+    <Button href="http://google.com">
+      Primary Link
+    </Button>
+  </Column>
+  <Column>
+    <Button href="http://google.com" outline>
+      Primary Outline Link
+    </Button>
+  </Column>
+</Row>
 
 ### Secondary
 
