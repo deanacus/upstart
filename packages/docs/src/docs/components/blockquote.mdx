@@ -1,8 +1,23 @@
 ---
 title: Blockquote
 menu: Typography
-route: /components/blockquote/
+route: /components/blockquote
+description: When you quote someone else, it's only fair that you make their words look as nice as possible
 ---
 
-# Blockquote
+import { PropsTable } from '../../components/PropsTable'
+import { Blockquote, Card } from '@deanacus/upstart';
 
+Blockquotes are a really nice way of quoting someone else's words, and making 
+them stand out against the rest of the content. Used effectively, they can
+really make an article seem much more readable.
+
+#### Example
+
+<Card border rounded padding="p-2" margin="my-4">
+  <Blockquote cite="Bruce Lee">
+    <p>Don't get set into one form, adapt it and build your own, and let it grow, be like water. Empty your mind, be formless, shapeless — like water. Now you put water in a cup, it becomes the cup; You put water into a bottle it becomes the bottle; You put it in a teapot it becomes the teapot. Now water can flow or it can crash. Be water, my friend</p>
+  </Blockquote>
+</Card>
+
+<PropsTable component={Blockquote} />

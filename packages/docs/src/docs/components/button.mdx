@@ -1,16 +1,19 @@
 ---
 title: Button
+description: A general description of the content of the document
 menu: Typography
 route: /components/button
 ---
 
-
-# Button
+import { PropsTable } from '../../components/PropsTable'
+import { Button } from '@deanacus/upstart'
 
 Buttons are an incredibly frequently used UI component. Too often, people use
 a button where a link would be appropriate, and a link where a button would be
 appropriate. For this reason, it is prudent to provide the ability to render any
 button style as a `button` or a `link`.
+
+<PropsTable component={Button} />
 
 ## Variants
 
@@ -19,13 +22,76 @@ be returned, unless another is specified.
 
 ### Primary
 
+<Button>
+  Primary Button
+</Button>
 
+<Button outline>
+  Primary Outline Button
+</Button>
+
+<Button href="http://google.com">
+  Primary Link
+</Button>
+
+<Button href="http://google.com" outline>
+  Primary Outline Link
+</Button>
 
 ### Secondary
 
+<Button variant="secondary">
+  Secondary
+</Button>
 
+<Button variant="secondary" outline>
+  Secondary outline
+</Button>
 
+<Button href="http://google.com" variant="secondary">
+  Secondary Link
+</Button>
+
+<Button href="http://google.com" variant="secondary" outline>
+  Secondary Outline Link
+</Button>
 
 ## Sizes
 
 A number of sizes have been defined: `sm`, `md`, `lg`.
+
+<Button size="sm">
+  Primary Button Small
+</Button>
+
+<Button size="md">
+  Primary Button Medium
+</Button>
+
+<Button size="lg">
+  Primary Button Large
+</Button>
+
+<Button size="sm" variant="secondary">
+  Secondary Button Small
+</Button>
+
+<Button size="md" variant="secondary">
+  Secondary Button Medium
+</Button>
+
+<Button size="lg" variant="secondary">
+  Secondary Button Large
+</Button>
+
+## Disabled
+
+Disabled buttons need to look different, too.
+
+<Button size="md" disabled>
+  Disabled Primary Button
+</Button>
+
+<Button size="md" variant="secondary" disabled outline>
+  Disabled Secondary Outline Button
+</Button>

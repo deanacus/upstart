@@ -2,17 +2,17 @@
 title: Lists
 menu: Typography
 route: /components/list
+description: It's a me, mario.
 ---
 
-
-
-<GlobalStyle />
-
-# Lists
+import { PropsTable } from '../../components/PropsTable'
+import { List, UnorderedList, OrderedList, ListItem, GlobalStyle } from '@deanacus/upstart';
 
 Lists are a very important part of any document or application. As such, special
 attention has been paid to them, and a comprehensive API for building them has been
 provided.
+
+<PropsTable component={List} />
 
 ## List
 
@@ -20,10 +20,34 @@ A generic `List` component has been provided to wrap both `UnorderedList` and
 `OrderedList` components in order to provide a unified API. By default it, with
 no props provided, it will return an unstyled `UnorderedList` component
 
-
+<List>
+  <ListItem>List item 1</ListItem>
+  <ListItem>List item 2</ListItem>
+  <ListItem>List item 3</ListItem>
+  <ListItem>List item 4</ListItem>
+</List>
 
 To make it return an ordered list, you can provide the boolean prop `ordered`,
-or a type property with a value of `ol` or `oredered`:
+or a type property with a value of `ol` or `ordered`:
+
+<List ordered>
+  <ListItem>List item 1</ListItem>
+  <ListItem>List item 2</ListItem>
+  <ListItem>List item 3</ListItem>
+  <ListItem>List item 4</ListItem>
+</List>
+<List type="ol">
+  <ListItem>List item 1</ListItem>
+  <ListItem>List item 2</ListItem>
+  <ListItem>List item 3</ListItem>
+  <ListItem>List item 4</ListItem>
+</List>
+<List type="ordered">
+  <ListItem>List item 1</ListItem>
+  <ListItem>List item 2</ListItem>
+  <ListItem>List item 3</ListItem>
+  <ListItem>List item 4</ListItem>
+</List>
 
 
 ## Unordered List
@@ -32,11 +56,24 @@ In addition to the unified `List` component, you also have direct access to the
 `UnorderedList` component. This ensures that you will receive the unordered list
 that you want, without running the risk of not passing in the right props:
 
+<UnorderedList>
+  <ListItem>List item 1</ListItem>
+  <ListItem>List item 2</ListItem>
+  <ListItem>List item 3</ListItem>
+  <ListItem>List item 4</ListItem>
+</UnorderedList>
+
 
 ## OrderedList
 
 As with the `UnorderedList`, the `OrderedList` component is directly exposed as well:
 
+<OrderedList>
+  <ListItem>List item 1</ListItem>
+  <ListItem>List item 2</ListItem>
+  <ListItem>List item 3</ListItem>
+  <ListItem>List item 4</ListItem>
+</OrderedList>
 
 
 ## ListItem
@@ -44,3 +81,6 @@ As with the `UnorderedList`, the `OrderedList` component is directly exposed as 
 The fundamental buuilding block of a list is, of course, the `ListItem`. Accepting
 no props at this stage, this component is simply a wrapper.
 
+<ListItem>Google</ListItem>
+<ListItem>Facebook</ListItem>
+<ListItem>Twitter</ListItem>

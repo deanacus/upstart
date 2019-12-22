@@ -1,6 +1,24 @@
 ---
 title: Image
+route: /components/image
+menu: Media
+description: Random text doesn't really belong here
 ---
 
-# Image
+import { PropsTable } from '../../components/PropsTable'
+import { Image } from '@deanacus/upstart'
 
+<Image
+  alt="Man on a skateboard"
+  src="https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e"
+/>
+
+<PropsTable component={Image} />
+
+## With caption
+
+<Image
+  alt="Man on a skateboard"
+  src="https://images.unsplash.com/photo-1520045892732-304bc3ac5d8e"
+  caption="Image via Unsplash"
+/>

@@ -3,10 +3,9 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components';
 
 const StyledQuote = styled.blockquote`
-  border-left: 3px solid #ccc;
-  margin-left: ${({theme}) => theme.space.sm};
-  margin-right: ${({theme}) => theme.space.sm};
-  padding: ${({theme}) => theme.space.sm};
+  border-left: 3px solid ${({theme}) => theme.colors.grey[300]};
+  ${({theme}) => theme.utils.getSpacing('mx-3')};
+  ${({theme}) => theme.utils.getSpacing('p-3')};
 
   > p {
     font-size: 18px;
@@ -29,7 +28,12 @@ export const Blockquote = ({children, cite}) => {
 }
 
 Blockquote.propTypes = {
-  children: PropTypes.node.isRequired,
+  /** The children to be rendered inside the list */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
+  /** The (optional) author or work to be cited in the blockquote */
   cite: PropTypes.string
 }
 
