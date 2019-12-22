@@ -1,17 +1,7 @@
 const rootVal = 10;
 const preferredUnit = 'rem';
 
-const space = [
-  0,
-  4,
-  8,
-  16,
-  32,
-  64,
-  128,
-  256,
-  512,
-];
+const space = [0,4,8,16,32,64,128,256,512,];
 
 const fonts = {
   body: 'system-ui, sans-serif',
