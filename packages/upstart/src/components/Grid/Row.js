@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { StyledRow } from './styled'
 import { alignmentMap, justifyMap } from '../../utils';
 
-export const Row = ({ align,  canWrap, justify, padding, reverse, children }) => (
+export const Row = ({ align, canWrap, justify, padding, reverse, children }) => (
   <StyledRow
     alignItems={alignmentMap[align]}
     justifyContent={justifyMap[justify]}

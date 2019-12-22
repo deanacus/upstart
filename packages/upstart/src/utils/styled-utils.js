@@ -1,6 +1,4 @@
-import { useTheme } from '../hooks/useTheme'
-
-const theme = useTheme();
+import {theme} from '../components/Theme/Theme';
 
 const getUnit = (value) => {
   switch (theme.preferredUnit) {
@@ -12,7 +10,9 @@ const getUnit = (value) => {
   }
 }
 
-export const space = (alias) => {
+export const space = (alias) => getUnit(theme.space[alias]);
+
+export const padding = (alias) => {
   const [key, index] = alias.split('-');
   const propID = key.charAt(0)
   const prop = propID === 'm' ? 'margin' : 'padding';
@@ -47,6 +47,8 @@ export const space = (alias) => {
   }
 }
 
+export const margin = (alias) => padding(alias);
+
 export const fontFamily = (family) => `font-family: ${theme.fonts[family]}`;
 
 export const fontSize = (size) => `font-size: ${getUnit(theme.fontSizes[size])}`
@@ -55,7 +57,10 @@ export const fontWeight = (weight) => `font-weight: ${theme.fontWeights[weight]}
 
 export const lineHeight = (height) => `line-height: ${theme.lineHeights[height]}`;
 
-export const color = (color, strength = 500) => theme.colors[color][strength];
+export const color = (color, strength = 500) => {
+  return ( !theme.colors[color][strength] && typeof theme.colors[color] === 'string') ?
+    theme.colors[color] : theme.colors[color][strength]
+};
 
 export const width = (width) => getUnit(theme.widths[width]);
 

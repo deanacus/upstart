@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import { space, color } from '../../utils/styled-utils'
+
 const StyledTable = styled.table`
   border-collapse: collapse;
   max-width: 100%;
@@ -10,11 +12,11 @@ const StyledTable = styled.table`
 
 const StyledTCell = styled.td`
   text-align: ${({alignment}) => alignment};
-  ${({padding, theme}) => padding && theme.utils.getSpacing(padding)};
+  ${({padding}) => padding && space(padding)};
 `;
 
 const StyledTHead = styled.thead`
-  border-bottom: 2px solid ${({theme}) => theme.colors.grey[400]};
+  border-bottom: 2px solid ${color('grey', 400)};
   max-width: 100%;
   width: 100%;
 `;
@@ -22,11 +24,11 @@ const StyledTHead = styled.thead`
 const StyledTHeadCell = styled.th`
   font-weight: bold;
   text-align: ${({alignment}) => alignment};
-  ${({padding, theme}) => padding && theme.utils.getSpacing(padding)};
+  ${({padding}) => padding && space(padding)};
 `;
 
 const StyledTRow = styled.tr`
-  border-bottom: 1px solid ${({theme}) => theme.colors.grey[300]};
+  border-bottom: 1px solid ${color('grey', 300)};
   max-width: 100%;
   width: 100%;
 `;

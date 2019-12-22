@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 
+import { space } from '../../utils/styled-utils';
+
 const StyledFigure = styled.figure`
   margin: 0;
   position: relative;
@@ -14,8 +16,8 @@ const StyledImage = styled.img`
 `;
 
 const StyledCaption = styled.figcaption`
-  bottom: ${({theme}) => theme.space[2] / 10 }rem;
-  left: ${({theme}) => theme.space[2] / 10 }rem;
+  bottom: ${space('xs')};
+  left: ${space('xs')};
   position: absolute;
 `;
 
