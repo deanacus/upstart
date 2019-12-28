@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "license": "MIT",
   "author": "Dean Harris",
+  "private": false,
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "dev": "rollup -c rollup.config.js -w",
