@@ -12,8 +12,8 @@ export const TopNav = () => (
       [LOGO]
     </Column>
     <Flex spacing={2}>
-      <Button href="https://github.com/deanacus/upstart" outline>Github</Button>
-      <Button type="button" outline>DarkMode</Button>
+      <Button href="https://github.com/deanacus/upstart" isOutline>Github</Button>
+      <Button type="button" isOutline>DarkMode</Button>
     </Flex>
   </HeaderRow>
 )
