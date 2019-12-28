@@ -1,6 +1,6 @@
 export { Blockquote } from './Blockquote/Blockquote'
 export { Upstart } from './GlobalStyle/GlobalStyle';
-export { theme } from './Theme/Theme';
+export { Theme } from './Theme/Theme';
 export { ThemeProvider } from './ThemeProvider/ThemeProvider';
 
 export { Button } from './Button/Button';

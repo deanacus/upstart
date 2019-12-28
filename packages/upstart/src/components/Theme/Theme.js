@@ -62,7 +62,7 @@ const zIndices = {
 
 const shadows = {}
 
-export const theme = {
+export const Theme = {
   preferredUnit,
   rootVal,
   fonts,
@@ -80,4 +80,4 @@ export const theme = {
   space,
 }
 
-export default theme;
+export default Theme;
