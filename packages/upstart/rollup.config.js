@@ -16,11 +16,19 @@ console.log(components);
 
 const config = {
   input: components,
-  output: {
-    exports: 'named',
-    dir: 'dist',
-    format: 'cjs',
+
+  output: [
+    {
+      exports: 'named',
+      dir: 'dist',
+      format: 'cjs',
     },
+    {
+      exports: 'named',
+      dir: 'esm',
+      format: 'esm',
+    },
+  ],
   external: [
     'react',
     'react-dom',
