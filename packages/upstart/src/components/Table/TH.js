@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import { StyledTHeadCell } from './styled'
+import { padding as getPadding } from '../../utils/styled-utils'
+
+export const StyledTHeadCell = styled.th`
+  font-weight: bold;
+  text-align: ${({alignment}) => alignment};
+  ${({padding}) => padding && getPadding(padding)};
+`;
 
 export const TH = ({children, align, padding }) => {
   return (

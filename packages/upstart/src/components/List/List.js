@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { UnorderedList } from './UnorderedList';
 import { OrderedList } from './OrderedList'
-import { ListItem } from './ListItem'
 
 const List = ({children, ordered, type}) => {
   const isOrdered = ordered || type === 'ordered' || type === 'ol';
@@ -46,5 +44,5 @@ List.defaultProps = {
   ordered: false,
 }
 
-export { List, UnorderedList, OrderedList, ListItem }
+export { List }
 

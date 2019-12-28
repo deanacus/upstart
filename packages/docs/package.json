@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "license": "MIT",
   "dependencies": {
-    "@deanacus/upstart": "^0.0.1",
+    "@deanacus/upstart": "^0.0.4",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
     "gatsby": "^2.18.12",
@@ -18,5 +18,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop"
+  },
+  "devDependencies": {
+    "prop-types": "^15.7.2"
   }
 }

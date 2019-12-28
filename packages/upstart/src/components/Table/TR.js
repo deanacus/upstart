@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import { StyledTRow } from './styled'
+import { color } from '../../utils/styled-utils'
+
+export const StyledTRow = styled.tr`
+  border-bottom: 1px solid ${color('grey', 300)};
+  max-width: 100%;
+  width: 100%;
+`;
 
 export const TR = ({children}) => {
   return (

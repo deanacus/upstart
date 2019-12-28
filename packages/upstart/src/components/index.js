@@ -1,8 +1,4 @@
 export { Blockquote } from './Blockquote/Blockquote'
-export { Upstart } from './GlobalStyle/GlobalStyle';
-export { Theme } from './Theme/Theme';
-export { ThemeProvider } from './ThemeProvider/ThemeProvider';
-
 export { Button } from './Button/Button';
 export { Container } from './Container/Container';
 export { Row } from './Row/Row';
@@ -21,3 +17,29 @@ export { THead } from './Table/THead';
 export { Card } from './Card/Card';
 export { Flex } from './Flex/Flex';
 export { Separator } from './Separator/Separator';
+
+export { Upstart } from './GlobalStyle/GlobalStyle';
+export { Theme } from './Theme/Theme';
+export { ThemeProvider } from './ThemeProvider/ThemeProvider';
+export {
+  space,
+  padding,
+  margin,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  lineHeight,
+  color,
+  alignItems,
+  alignContent,
+  justifyContent,
+  width,
+  breakpoint,
+  border,
+  borderWidth,
+  borderStyle,
+  mq,
+  radius,
+  elevation,
+  shadow,
+} from '../utils/styled-utils'

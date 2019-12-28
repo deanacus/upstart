@@ -103,3 +103,28 @@ export const radius = (rad) => getUnit(Theme.radii[rad]);
 export const elevation = (layer) => Theme.zIndices[layer];
 
 export const shadow = (type) => Theme.shadows[type];
+
+const styledUtils = {
+  space,
+  padding,
+  margin,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  lineHeight,
+  color,
+  alignItems,
+  alignContent,
+  justifyContent,
+  width,
+  breakpoint,
+  border,
+  borderWidth,
+  borderStyle,
+  mq,
+  radius,
+  elevation,
+  shadow,
+};
+
+export default styledUtils;
