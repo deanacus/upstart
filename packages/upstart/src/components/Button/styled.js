@@ -66,13 +66,13 @@ export const StyledLink = styled.a`
 
   text-decoration: none;
 
-  ${({variant, outline}) => {
+  ${({variant, isOutline}) => {
     switch (variant) {
       case 'secondary':
-        return outline ? secondary.outline : secondary.fill
+        return isOutline ? secondary.outline : secondary.fill
       case 'primary':
       default:
-        return outline ? primary.outline : primary.fill
+        return isOutline ? primary.outline : primary.fill
     }
   }}
 
@@ -85,17 +85,17 @@ export const StyledLink = styled.a`
 export const StyledButton = styled.button`
   ${baseStyles}
 
-  ${({variant, outline}) => {
+  ${({variant, isOutline}) => {
     switch (variant) {
       case 'secondary':
-        return outline ? secondary.outline : secondary.fill
+        return isOutline ? secondary.outline : secondary.fill
       case 'primary':
       default:
-        return outline ? primary.outline : primary.fill
+        return isOutline ? primary.outline : primary.fill
     }
   }}
 
-  ${({disabled}) => disabled && disabledStyles}
+  ${({isDisabled}) => isDisabled && disabledStyles}
 
   ${({size}) => sizeStyles[size]}
 `;

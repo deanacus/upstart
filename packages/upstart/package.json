@@ -5,6 +5,7 @@
   "author": "Dean Harris",
   "scripts": {
     "build": "rollup -c rollup.config.js",
+    "dev": "rollup -c rollup.config.js -w",
     "lint": "eslint -c ./.eslintrc.json ./**/*.js"
   },
   "main": "dist/index.js",

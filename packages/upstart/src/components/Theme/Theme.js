@@ -4,8 +4,7 @@ import { fonts, fontSizes, fontWeights } from '../../tokens/type';
 import { colors } from '../../tokens/colors';
 
 const lineHeights = {
-  body: 1.6,
-  heading: 1.125
+  body: 1.5
 };
 
 const widths = [ 320, 480, 768, 1024, 1200, 1440, 1680 ]

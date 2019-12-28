@@ -3,11 +3,16 @@ import { css, createGlobalStyle } from 'styled-components'
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import PropTypes from 'prop-types';
 
-import { color, fontFamily, fontSize, fontWeight } from '../../utils/styled-utils'
+import { color, fontFamily, fontSize, fontWeight, lineHeight, padding, margin } from '../../utils/styled-utils'
 
 const GlobalStyleCSS = css`
 
   /* RESET... OF SORTS */
+  *, * + * {
+    box-sizing: border-box;
+    text-decoration-skip-ink: auto;
+  }
+
   html {
     font-size: 10px;
   }
@@ -15,14 +20,10 @@ const GlobalStyleCSS = css`
   body {
     background: ${color('grey', 50)};
     color: ${color('grey', 900)};
+    ${lineHeight('body')}
     margin: 0;
     min-height: 100%;
     padding: 0;
-  }
-
-  *, * + * {
-    box-sizing: border-box;
-    text-decoration-skip-ink: auto;
   }
 
   /* GLOBAL TYPOGRAPHY */
@@ -33,40 +34,39 @@ const GlobalStyleCSS = css`
     color: #333;
     ${fontFamily('body')};
     ${fontSize('base')};
+    font-variant-ligatures: common-ligatures;
   }
 
   h1 {
-    ${fontSize('display')};
-    margin-top: 0;
+    ${fontSize('title')};
+    ${margin('mb-3')};
+    ${margin('mt-5')};
   }
 
   h2 {
-    ${fontSize('title')};
-    margin-top: 0;
+    ${fontSize('xxl')};
+    ${margin('mb-3')};
+    ${margin('mt-4')};
   }
 
   h3 {
-    ${fontSize('xxl')};
-    margin-top: 0;
+    ${fontSize('xl')};
+    ${margin('mb-3')};
+    ${margin('mt-4')};
   }
 
   h4 {
-    ${fontSize('xl')};
-    margin-top: 0;
+    ${fontSize('lg')};
+    ${margin('my-3')};
   }
 
   h5 {
-    ${fontSize('lg')};
-    margin-top: 0;
-  }
-
-  h6 {
     ${fontSize('md')};
-    margin-top: 0;
+    ${margin('my-3')};
   }
 
   p {
-    margin-top: 0;
+    ${margin('my-3')};
   }
 
   strong,
@@ -95,6 +95,35 @@ const GlobalStyleCSS = css`
     color: ${color('primary', 700)};
     text-decoration: underline;
     outline: none;
+  }
+
+  table {
+    border-collapse: collapse;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  tr {
+    border-bottom: 1px solid ${color('grey', 300)};
+    max-width: 100%;
+    width: 100%;
+  }
+
+  td {
+    text-align: ${({alignment}) => alignment};
+    ${padding('py-2')};
+  }
+
+  thead {
+    border-bottom: 2px solid ${color('grey', 400)};
+    max-width: 100%;
+    width: 100%;
+  }
+
+  th {
+    font-weight: bold;
+    text-align: ${({alignment}) => alignment};
+    ${padding('py-2')};
   }
 
 `;

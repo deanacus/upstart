@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledContainer } from '../Grid/styled'
+import { StyledContainer } from './styled'
 
 export const Container = ({ fixed, size, children }) => (
   <StyledContainer fixed={fixed} size={size}>

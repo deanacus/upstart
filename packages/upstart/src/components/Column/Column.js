@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { StyledColumn } from './styled'
 export const Column = ({ cols, reverse, align, justify, padding, children }) => {
-  const flexBasis = cols ? (cols / 12 * 100) + '%' : '100%';
+  const flexBasis = cols ? (cols / 12 * 100) + '%' : 'auto';
 
   return (
     <StyledColumn
@@ -61,6 +61,6 @@ Column.defaultProps = {
   cols: null,
   reverse: false,
   justify: 'start',
-  align: 'start',
+  align: 'stretch',
   padding: null,
 }

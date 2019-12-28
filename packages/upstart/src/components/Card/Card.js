@@ -1,7 +1,7 @@
 // import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { space, color, radius } from '../../utils/styled-utils'
+import { padding as getPadding, margin as getMargin, space, color, radius } from '../../utils/styled-utils'
 
 export const Card = styled.div`
   ${({padding}) => padding && space(padding)};
@@ -20,10 +20,10 @@ export const Card = styled.div`
   ${({rounded}) => rounded && css`border-radius: ${radius('md')};`}
 
   ${({padding}) => padding && css`
-    ${space(padding)};
+    ${getPadding(padding)};
   `}
 
   ${({margin}) => margin && css`
-    ${space(margin)};
+    ${getMargin(margin)};
   `}
 `;

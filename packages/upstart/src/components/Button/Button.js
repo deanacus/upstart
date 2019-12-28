@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledLink, StyledButton } from './styled';
 
-export const Button = ({children, type, variant, size, href, isDisabled, handleClick, ...rest}) => {
+export const Button = ({children, type, variant, size, href, isDisabled, isOutline, isRounded, handleClick, ...rest}) => {
   return (
     <ThemeProvider>
       { href ?
@@ -15,6 +15,8 @@ export const Button = ({children, type, variant, size, href, isDisabled, handleC
             size={size}
             onClick={handleClick}
             isDisabled={isDisabled}
+            isOutline={isOutline}
+            isRounded={isRounded}
             className="btn btn-link"
             {...rest}
           >
@@ -27,6 +29,8 @@ export const Button = ({children, type, variant, size, href, isDisabled, handleC
             size={size}
             onClick={handleClick}
             isDisabled={isDisabled}
+            isOutline={isOutline}
+            isRounded={isRounded}
             {...rest}
           >
             {children}
@@ -38,8 +42,6 @@ export const Button = ({children, type, variant, size, href, isDisabled, handleC
 }
 
 Button.propTypes = {
-  /** The content of the button */
-  children: PropTypes.node.isRequired,
 
   /** The type attribute to be passed through to the final button element */
   type: PropTypes.oneOf(['button', 'submit']),
@@ -50,8 +52,8 @@ Button.propTypes = {
   /** The color variant of the button */
   variant: PropTypes.oneOf(['primary', 'secondary']),
 
-  /** Whether or not the button should be outlined/reversed */
-  outline: PropTypes.bool,
+  /** Whether or not the button should be outlined */
+  isOutline: PropTypes.bool,
 
   /** The size of button to render */
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
@@ -64,12 +66,12 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  href: null,
-  type: 'button',
   variant: 'primary',
   size: 'md',
-  outline: false,
+  type: 'button',
+  href: null,
   isDisabled: false,
+  isOutline: false,
   handleClick: null,
 }
 

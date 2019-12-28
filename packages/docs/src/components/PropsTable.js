@@ -1,6 +1,11 @@
 import React, { Fragment } from 'react';
 import {Table, TH, TD, THead, TR} from '@deanacus/upstart';
 
+const capitalise = (str) => {
+  return str.charAt(0).toUpperCase() + str.substr(1)
+};
+
+
 const Enum = ({values}) => (
   <Fragment>
     Enum:
@@ -27,21 +32,23 @@ const getType = ({name, value}) => {
     case 'union':
       return <Union values={value} />
     default:
-      return <>{name}</>
+      return <>{capitalise(name)}</>
   }
 }
 
 const Row = ({name, description, required, type, defaultValue}) => {
-  console.log(name, description, required, type, defaultValue)
+  // console.log(name, description, required, type, defaultValue)
   return (
 <TR>
-  <TD>{name}</TD>
+  <TD>
+    <p>{name}</p>
+    <p>{description}</p>
+  </TD>
   <TD>
       {getType(type)}
   </TD>
-  <TD>{required ? 'true' : 'false'}</TD>
   <TD>{defaultValue ? defaultValue.value : ''}</TD>
-  <TD>{description}</TD>
+  <TD>{required ? 'Yes' : '' }</TD>
 </TR>
 )
   };
@@ -49,14 +56,14 @@ const Row = ({name, description, required, type, defaultValue}) => {
 export const PropsTable = ({component}) => {
   const componentProps = component.__docgenInfo.props;
   const propsKeys = componentProps && Object.keys(componentProps);
+  const requiredProps = propsKeys.filter( prop => componentProps[prop].required )
   return(
     <Table>
       <THead>
         <TH>Prop</TH>
         <TH>Type</TH>
+        <TH>Default Value</TH>
         <TH>Required</TH>
-        <TH>DefaultValue</TH>
-        <TH>Description</TH>
       </THead>
       <tbody>
         {

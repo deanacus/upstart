@@ -3,29 +3,10 @@ import PropTypes from 'prop-types';
 
 import { StyledRow } from './styled'
 
-const justifyMap = {
-  start: 'flex-start',
-  end: 'flex-end',
-  center: 'center',
-  between: 'space-between',
-  around: 'space-around',
-  evenly: 'space-evenly',
-  left: 'left',
-  right: 'right',
-}
-
-const alignmentMap = {
-  stretch:'stretch',
-  start:'flex-start',
-  end:'flex-end',
-  center:'center',
-  baseline:'baseline'
-};
-
 export const Row = ({ align, canWrap, justify, padding, reverse, children }) => (
   <StyledRow
-    alignItems={alignmentMap[align]}
-    justifyContent={justifyMap[justify]}
+    alignItems={align}
+    justifyContent={justify}
     padding={padding}
     reverse={reverse}
     canWrap={canWrap}
