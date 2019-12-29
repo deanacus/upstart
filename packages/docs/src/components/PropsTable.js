@@ -5,45 +5,21 @@ const capitalise = (str) => {
   return str.charAt(0).toUpperCase() + str.substr(1)
 };
 
-const Enum = ({values}) => (
-  <>
-    Enum: <br />
-    {values.map(value => <><small><code>{value.value}</code></small>, </>)}
-  </>
-)
-
-const Union = ({values}) => {
-  console.log(values);
-  return (
-    <>
-      One of:
-        (still coding)
-    </>
-  )
-}
-
-const getType = ({name, value}) => {
-  switch (name) {
-    case 'enum':
-      return <Enum values={value} />
-    case 'union':
-      return <Union values={value} />
-    default:
-      return <>{capitalise(name)}</>
-  }
-}
-
-const Row = ({name, description, required, type, defaultValue}) => {
+const Row = ({name, description, type, defaultValue}) => {
   return (
     <TR>
       <TD padding="px-1">
-        <p>{name}{required ? '*' : '' }</p>
+        <code><small>{name}</small></code>
       </TD>
       <TD padding="px-1">
-          {getType(type)}
-          {defaultValue ? <><br /><small>Default: <code>{defaultValue.value}</code></small></> : ''}
+        <code><small>{type.name}</small></code>
       </TD>
-      <TD padding="px-1">{description}</TD>
+      <TD padding="px-1">
+        <code><small>{defaultValue ? defaultValue.value : 'Required'}</small></code>
+      </TD>
+      <TD padding="px-1">
+        <small>{description}</small>
+      </TD>
     </TR>
   )
 };
@@ -55,9 +31,10 @@ export const PropsTable = ({component}) => {
   return(
     <Table>
       <THead>
-        <TH padding="px-1">Prop</TH>
-        <TH padding="px-1">Type</TH>
-        <TH padding="px-1">Description</TH>
+        <TH padding="px-1"><small>Prop name</small></TH>
+        <TH padding="px-1"><small>Type</small></TH>
+        <TH padding="px-1"><small>Default</small></TH>
+        <TH padding="px-1"><small>Description</small></TH>
       </THead>
       <tbody>
         {

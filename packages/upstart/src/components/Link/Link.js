@@ -12,25 +12,26 @@ export const Link = ({children, href, newTab, external}) => (
 )
 
 Link.propTypes = {
-  /** The URL the link should point to. */
-  href: PropTypes.string.isRequired,
 
-  /** Whether or not to launch the link in a new tab/window */
-  newTab: PropTypes.bool,
-
-  /** Whether or not the link points to an external domain */
-  external: PropTypes.bool,
-
-  /** The content of the link */
+  /** The content of the Link */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),
+
+  /** Whether or not the Link points to an external site */
+  external: PropTypes.bool,
+
+  /** The URL the Link points to. */
+  href: PropTypes.string.isRequired,
+
+  /** Whether or not to launch the Link in a new tab/window */
+  newTab: PropTypes.bool,
 }
 
 Link.defaultProps = {
-  newTab: false,
   external: false,
+  newTab: false,
 }
 
 export default Link;

@@ -13,7 +13,7 @@ export const OrderedList = ({children, listStyle, listStyleMarker}) => (
 )
 
 OrderedList.propTypes = {
-  /** The style of list marker to be used. If custom is used, you need to also provide a listStyleMarker prop value */
+  /** The style of list marker to be used */
   listStyle: PropTypes.oneOf([
     'none',
     'decimal',
@@ -26,7 +26,7 @@ OrderedList.propTypes = {
   /** A custom listStyleMarker to use */
   listStyleMarker: PropTypes.string,
 
-  /** The children to be rendered inside the list */
+  /** The content of the OrderedList */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
@@ -35,4 +35,5 @@ OrderedList.propTypes = {
 
 OrderedList.defaultProps = {
   listStyle: 'decimal',
+  listStyleMarker: null,
 }

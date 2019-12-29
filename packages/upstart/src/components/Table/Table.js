@@ -17,7 +17,7 @@ export const Table = ({children}) => {
 }
 
 Table.propTypes = {
-  /** The children of the Table */
+  /** The content of the Table */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)

@@ -4,20 +4,20 @@ import PropTypes from 'prop-types';
 
 import { padding as getPadding } from '../../utils/styled-utils'
 
-export const StyledTCell = styled.td`
+export const StyledTableCell = styled.td`
   text-align: ${({alignment}) => alignment};
   ${({padding}) => padding &&  getPadding(padding)};
 `;
 
-export const TD = ({children, align, padding}) => {
+export const TableCell = ({children, align}) => {
   return (
-    <StyledTCell alignment={align}  padding={padding}>
+    <StyledTableCell alignment={align}>
       {children}
-    </StyledTCell>
+    </StyledTableCell>
   )
 }
 
-TD.propTypes = {
+TableCell.propTypes = {
   /** Text alignment for the cell */
   align: PropTypes.oneOf([
     "left",
@@ -25,17 +25,13 @@ TD.propTypes = {
     "right"
   ]),
 
-  /** The padding value to be used on the Row. Based on the bootstrap padding classes */
-  padding: PropTypes.string,
-
-  /** The children of the TD */
+  /** The content of the TableCell */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),
 }
 
-TD.defaultProps = {
+TableCell.defaultProps = {
   align: "left",
-  padding: "p-2",
 }

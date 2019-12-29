@@ -43,36 +43,42 @@ export const Button = ({children, type, variant, size, href, isDisabled, isOutli
 
 Button.propTypes = {
 
-  /** The type attribute to be passed through to the final button element */
+  /** The HTML type attribute for the button */
   type: PropTypes.oneOf(['button', 'submit']),
 
-  /** The href for a link button to point to. This turns the button element into an anchor element */
+  /** The href for Button to point to. Renders an anchor tag */
   href: PropTypes.string,
 
-  /** The color variant of the button */
+  /** The color variant of the Button */
   variant: PropTypes.oneOf(['primary', 'secondary']),
 
-  /** Whether or not the button should be outlined */
+  /** Whether or not the Button should be outlined */
   isOutline: PropTypes.bool,
 
-  /** The size of button to render */
+  /** The size of Button to render */
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
 
-  /** Whether or not the button is disabled */
+  /** Whether or not the Button is disabled */
   isDisabled: PropTypes.bool,
 
-  /** The function to be called when the button is clicked */
+  /** The function to be called when the Button is clicked */
   handleClick: PropTypes.func,
+
+  /** Content of the Button */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
 }
 
 Button.defaultProps = {
   variant: 'primary',
+  href: null,
+  handleClick: null,
   size: 'md',
   type: 'button',
-  href: null,
   isDisabled: false,
   isOutline: false,
-  handleClick: null,
 }
 
 export default Button;

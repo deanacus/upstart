@@ -18,8 +18,8 @@ const GlobalStyleCSS = css`
   }
 
   body {
-    background: ${color('grey', 50)};
-    color: ${color('grey', 900)};
+    background: ${color('background')};
+    color: ${color('foreground')};
     ${lineHeight('body')}
     margin: 0;
     min-height: 100%;
@@ -81,18 +81,18 @@ const GlobalStyleCSS = css`
 
   a:link:not(.btn-link),
   a:visited:not(.btn-link) {
-    color: ${color('primary', 500)};
+    color: ${color('primary', 5)};
     text-decoration: none;
   }
 
   a:active:not(.btn-link) {
-    color: ${color('primary', 600)};
+    color: ${color('primary', 6)};
     text-decoration: underline;
   }
 
   a:hover:not(.btn-link),
   a:focus:not(.btn-link) {
-    color: ${color('primary', 700)};
+    color: ${color('primary', 7)};
     text-decoration: underline;
     outline: none;
   }
@@ -104,7 +104,7 @@ const GlobalStyleCSS = css`
   }
 
   tr {
-    border-bottom: 1px solid ${color('grey', 300)};
+    border-bottom: 1px solid ${color('grey', 3)};
     max-width: 100%;
     width: 100%;
   }
@@ -115,7 +115,7 @@ const GlobalStyleCSS = css`
   }
 
   thead {
-    border-bottom: 2px solid ${color('grey', 400)};
+    border-bottom: 2px solid ${color('grey', 4)};
     max-width: 100%;
     width: 100%;
   }

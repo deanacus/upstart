@@ -8,7 +8,7 @@ export const ListItem = ({children}) => (
 )
 
 ListItem.propTypes = {
-  /** The children to be rendered inside the list */
+  /** The content of the ListItem */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)

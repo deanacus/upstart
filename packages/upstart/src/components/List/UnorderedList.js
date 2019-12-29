@@ -18,7 +18,7 @@ export const UnorderedList = ({children, listStyle, listStyleMarker}) => (
 )
 
 UnorderedList.propTypes = {
-  /** The style of list marker to be used. If custom is used, you need to also provide a listStyleMarker prop value */
+  /** The style of list marker to be used. */
   listStyle: PropTypes.oneOf([
     'none',
     'disc',
@@ -30,7 +30,7 @@ UnorderedList.propTypes = {
   /** A custom listStyleMarker to use */
   listStyleMarker: PropTypes.string,
 
-  /** The children to be rendered inside the list */
+  /** The content of the UnorderedList */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
@@ -39,5 +39,5 @@ UnorderedList.propTypes = {
 
 UnorderedList.defaultProps = {
   listStyle: 'disc',
-  listStyleMarker: 'disc',
+  listStyleMarker: null,
 }

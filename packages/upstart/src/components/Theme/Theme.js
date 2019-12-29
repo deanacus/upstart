@@ -1,7 +1,7 @@
 import { rootVal, preferredUnit } from '../../tokens/root';
 import { space } from '../../tokens/space';
 import { fonts, fontSizes, fontWeights } from '../../tokens/type';
-import { colors } from '../../tokens/colors';
+import { colors } from '../../tokens/colors-mk2';
 
 const lineHeights = {
   body: 1.5
@@ -62,6 +62,27 @@ const zIndices = {
 
 const shadows = {}
 
+
+const headingStyle = {
+  fontFamily: fonts.heading,
+  fontWeight: fontWeights.heading,
+}
+
+const fontStyles = {
+  title: {
+    fontSize: fontSizes.title,
+    ...headingStyle,
+  },
+  subtitle: {
+    fontSize: fontSizes.xxl,
+    ...headingStyle,
+  },
+  sectionTitle: {
+    fontSize: fontSizes.xl,
+    ...headingStyle,
+  }
+}
+
 export const Theme = {
   preferredUnit,
   rootVal,
@@ -78,6 +99,9 @@ export const Theme = {
   zIndices,
   shadows,
   space,
+  variants: {
+    ...fontStyles,
+  }
 }
 
 export default Theme;

@@ -7,14 +7,14 @@ export const Card = styled.div`
   ${({padding}) => padding && space(padding)};
 
   ${({darkMode}) => darkMode && css`
-    background: ${color('grey',800)};
-    color: ${color('grey',100)};}
+    background: ${color('grey',8)};
+    color: ${color('grey',1)};}
   `}
 
   ${({border, darkMode}) => border && (darkMode ? css`
-    border: .1rem solid ${color('grey',700)};
+    border: .1rem solid ${color('grey',7)};
   ` : css`
-    border: .1rem solid ${color('grey',300)};
+    border: .1rem solid ${color('grey',3)};
   `)}
 
   ${({rounded}) => rounded && css`border-radius: ${radius('md')};`}

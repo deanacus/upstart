@@ -31,7 +31,7 @@ const getUnit = (value) => {
 
 export const space = (alias) => getUnit(Theme.space[alias]);
 
-export const padding = (alias) => {
+export const spacing = (alias) => {
   const [key, index] = alias.split('-');
   const propID = key.charAt(0)
   const prop = propID === 'm' ? 'margin' : 'padding';
@@ -66,7 +66,9 @@ export const padding = (alias) => {
   }
 }
 
-export const margin = (alias) => padding(alias);
+export const padding = (alias) => spacing(alias);
+
+export const margin = (alias) => spacing(alias);
 
 export const fontFamily = (family) => `font-family: ${Theme.fonts[family]}`;
 
@@ -76,7 +78,7 @@ export const fontWeight = (weight) => `font-weight: ${Theme.fontWeights[weight]}
 
 export const lineHeight = (height) => `line-height: ${Theme.lineHeights[height]}`;
 
-export const color = (color, strength = 500) =>  Theme.colors[color][strength] || Theme.colors[color];
+export const color = (color, strength) => Theme.colors[color][strength] || Theme.colors[color];
 
 export const alignItems = (align) => `align-items: ${alignmentMap[align]}`;
 

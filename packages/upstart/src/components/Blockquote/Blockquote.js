@@ -30,17 +30,17 @@ export const Blockquote = ({children, cite}) => {
 }
 
 Blockquote.propTypes = {
-  /** The children to be rendered inside the list */
+  /** Content of the blockquote */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),
-  /** The (optional) author or work to be cited in the blockquote */
+  /** The author or work to be cited in the blockquote */
   cite: PropTypes.string
 }
 
 Blockquote.defaultProps = {
-  cite: '',
+  cite: null,
 }
 
 export default Blockquote
