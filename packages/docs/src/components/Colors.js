@@ -1,27 +1,20 @@
 import React, { useContext } from 'react';
-import styled, { ThemeContext } from 'styled-components';
+import { ThemeContext } from 'styled-components';
 
-import { Flex } from '@deanacus/upstart';
+import { Row } from '@deanacus/upstart';
+import { ColorBlock } from './ColorBlock';
 
-const ColorChip = styled.div`
-  background: ${({color}) => color};
-  height: 5rem;
-  width: 5rem;
-`
 
 export const Colors = ({color}) => {
   const { colors } = useContext(ThemeContext);
 
   return (
-    <Flex margin="mx-2">
+    <Row canWrap>
       {
         colors[color].reverse().map(color => (
-          <div>
-            <ColorChip color={color} />
-            {color}
-          </div>
+          <ColorBlock color={color} key={color} />
         ))
       }
-    </Flex>
+    </Row>
   )
 }

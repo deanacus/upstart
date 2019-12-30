@@ -1,26 +1,22 @@
 import React from 'react';
-import {Table, TH, TD, THead, TR} from '@deanacus/upstart';
-
-const capitalise = (str) => {
-  return str.charAt(0).toUpperCase() + str.substr(1)
-};
+import {Table, TableHeadCell, TableCell, TableHead, TableRow } from '@deanacus/upstart';
 
 const Row = ({name, description, type, defaultValue}) => {
   return (
-    <TR>
-      <TD padding="px-1">
+    <TableRow>
+      <TableCell padding="px-1">
         <code><small>{name}</small></code>
-      </TD>
-      <TD padding="px-1">
+      </TableCell>
+      <TableCell padding="px-1">
         <code><small>{type.name}</small></code>
-      </TD>
-      <TD padding="px-1">
+      </TableCell>
+      <TableCell padding="px-1">
         <code><small>{defaultValue ? defaultValue.value : 'Required'}</small></code>
-      </TD>
-      <TD padding="px-1">
+      </TableCell>
+      <TableCell padding="px-1">
         <small>{description}</small>
-      </TD>
-    </TR>
+      </TableCell>
+    </TableRow>
   )
 };
 
@@ -30,12 +26,12 @@ export const PropsTable = ({component}) => {
 
   return(
     <Table>
-      <THead>
-        <TH padding="px-1"><small>Prop name</small></TH>
-        <TH padding="px-1"><small>Type</small></TH>
-        <TH padding="px-1"><small>Default</small></TH>
-        <TH padding="px-1"><small>Description</small></TH>
-      </THead>
+      <TableHead>
+        <TableHeadCell padding="px-1"><small>Prop name</small></TableHeadCell>
+        <TableHeadCell padding="px-1"><small>Type</small></TableHeadCell>
+        <TableHeadCell padding="px-1"><small>Default</small></TableHeadCell>
+        <TableHeadCell padding="px-1"><small>Description</small></TableHeadCell>
+      </TableHead>
       <tbody>
         {
           propsKeys && propsKeys.map( prop => <Row key={prop} {...componentProps[prop]} name={prop} />)

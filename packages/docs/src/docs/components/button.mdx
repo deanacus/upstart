@@ -7,7 +7,7 @@ route: /components/button
 
 import { Playground } from '../../components/Playground';
 import { PropsTable } from '../../components/PropsTable'
-import { Button, Flex, Separator } from '@deanacus/upstart'
+import { Button, Flex } from '@deanacus/upstart'
 
 Buttons are an incredibly frequently used UI component. Too often, people use
 a button where a link would be appropriate, and a link where a button would be
@@ -65,19 +65,22 @@ be returned, unless another is specified.
 
 A number of sizes have been defined: `sm`, `md`, `lg`.
 
+
+
 <Flex margin="mx-1">  
   <Button size="sm">
     Small
   </Button>
-
+  
   <Button size="md">
     Medium
   </Button>
-
+  
   <Button size="lg">
     Large
   </Button>
 </Flex>
+
 
 ## Disabled
 

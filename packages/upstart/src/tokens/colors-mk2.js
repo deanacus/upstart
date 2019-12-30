@@ -1,13 +1,38 @@
+// const grey = [
+//   // '#ffffff', // Attempt to uniformise the grey palette
+//   // '#dddddd', // Attempt to uniformise the grey palette
+//   // '#bbbbbb', // Attempt to uniformise the grey palette
+//   '#fafafa', // Original colors
+//   '#eaeaea', // Original colors
+//   '#999999',
+//   // '#777777', // Attempt to uniformise the grey palette
+//   // '#555555', // Attempt to uniformise the grey palette
+//   '#888888', // Original colors
+//   '#666666', // Original colors
+//   '#444444', // Original colors
+//   '#333333',
+//   '#111111',
+// ];
 const grey = [
-  '#fafafa',
-  '#eaeaea',
-  '#999999',
-  '#888888',
-  '#666666',
-  '#444444',
-  '#333333',
-  '#111111',
+  '#F7FAFC',
+  '#EDF2F7',
+  '#E2E8F0',
+  '#CBD5E0',
+  '#A0AEC0',
+  '#718096',
+  '#4A5568',
+  '#2D3748',
+  '#1A202C',
+  '#171923',
 ];
+
+// Various levels of alpha from rgb(11,31,53) on #fff
+export const slate = [
+  '#0B1F35',
+  '#6D7986',
+  '#B6BCC3',
+  '#F3F4F5',
+]
 
 const error = [
   "#fff5f5",

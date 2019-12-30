@@ -1,0 +1,172 @@
+---
+title: Grid
+description: A very simple, naive CSS Grid implementation
+menu: Core
+route: /core/grid
+---
+
+import { PropsTable } from '../../components/PropsTable'
+import { Grid, GridItem } from '@deanacus/upstart';
+
+The Upstart Grid is a naïve implementation of CSS grid, that allows an arbitrary
+number of grid columns, each `1fr` in width. There is no grid-row handling, due
+to the added complexity that would add, plus the fact that if you need a specific
+number of rows and columns, you are probably better off defining your own grid.
+
+## Default Grid
+
+By default, the Grid has 4 columns, and a grid-gap of 1.6rem. Here it is:
+
+<Grid>
+  <GridItem>
+    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
+      Auto
+    </div>
+  </GridItem>
+  <GridItem>
+    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
+      Auto
+    </div>
+  </GridItem>
+  <GridItem>
+    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
+      Auto
+    </div>
+  </GridItem>
+  <GridItem>
+    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
+      Auto
+    </div>
+  </GridItem>
+  <GridItem span={2}>
+    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
+      Span 2
+    </div>
+  </GridItem>
+  <GridItem span={3}>
+    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
+      Span 3
+    </div>
+  </GridItem>
+  <GridItem>
+    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
+      Auto
+    </div>
+  </GridItem>
+</Grid>
+
+<PropsTable component={Grid} />
+
+## 6 Column Grid
+
+<Grid cols={6}>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 6',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 6
+  </div>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 5',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 5
+  </div>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 1',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 1
+  </div>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 4',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 4
+  </div>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 2',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 2
+  </div>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 3',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 3
+  </div>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 3',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 3
+  </div>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 2',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 2
+  </div>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 4',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 4
+  </div>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 1',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 1
+  </div>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 5',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 5
+  </div>
+  <div style={{ 
+    padding: '2rem 0',
+    gridColumn: 'span 6',
+    textAlign:'center',
+    background: '#111',
+    color: '#eaeaea'
+  }}>
+    Span 6
+  </div>
+</Grid>
+
