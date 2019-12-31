@@ -1,0 +1,44 @@
+---
+title: Philosophy
+description: The philosophies behind the development of Upstart
+menu: 
+route: /philosophy
+---
+
+There is a simple philosophy behind Upstart. One that should hopefully pave the way towards success.
+
+## Match The Library
+
+Wherever possible, do things that match the way React does, or would do them.
+
+By way of example, consider custom events. The event itself should be prefixed with `on` to match the React API, e.g. `onToggle`, whilst the event handler passed to the event should be prefixed with `handle`, e.g. `handleToggle`.
+
+## Composition over Inheritance
+
+Upstart embraces the React philosophy of composition over inheritance, which allows us to start with very small components that have a single concern, and compose them together is such a way that we end up with a complex UI, made of simple components.
+
+## Booleans wherever possible.
+
+Many time, props can be boiled down to a simple boolean statement of true or false, on or off, yes or no. Wherever possible, I try to get every property to this level of simplicity, as I feel it makes APIs much simpler. 
+
+An example may be a `Button` component that has a number of different styles including:
+
+* rectangular,
+* pill,
+* filled,
+* outlined,
+* primary,
+* secondary,
+* and more.
+
+An initial thought may be to add a prop of something like `variant` that takes in all of those options as strings and renders the output based on them, however it can really be broken down to three different booleans: `isPill`, `isOutlined`, and `isSecondary`, each of which can override a default variant, making the API simpler, as well as the implementation.
+
+When creating a boolean prop, it's good practice to name your prop so that it is clear it is a boolean. This can be achieved by using the most appropriate of `is`/`can`/`has` as a prefix, e.g. `isDisabled`, `canWrap`, `hasIcon`. This can significantly decrease the effort involved with reading and understanding code bases and component APIs.
+
+## Everything has a default
+
+I don't believe in required props. If a prop is required, there had better be a very good reason for it. Instead, props should all be optional, with a default value (or, even better, props should be simple booleans). This not only enables users to use components much more easily, but it also simplifies implementation by reducing the number of logic paths that need to be accounted for.
+
+## Children all the way down
+
+Unless there is a good reason for it, content should be provided to a component in the form of child components. Once again, this makes the usage of components simpler, while also freeing the developer to simplify the rendering logic in their components.
