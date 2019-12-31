@@ -6,7 +6,7 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 const glob = require('glob');
 
 const components = [...glob.sync('src/components/**/*.js')]
-  .filter(file => !file.includes('index') && !file.includes('styled'))
+  .filter(file => !file.includes('index') && !file.includes('styled') && !file.includes('.test.js'))
   .reduce( (acc, file) => {
     acc[file.replace('src/components/', '').replace(/([\w]+)\/([\w]+).js/, '$2')] = file;
     return acc;

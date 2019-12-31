@@ -14,7 +14,7 @@ export const Button = ({children, type, variant, size, href, isDisabled, isOutli
             variant={variant}
             size={size}
             onClick={handleClick}
-            isDisabled={isDisabled}
+            disabled={isDisabled}
             isOutline={isOutline}
             isRounded={isRounded}
             className="btn btn-link"
@@ -28,7 +28,7 @@ export const Button = ({children, type, variant, size, href, isDisabled, isOutli
             type={type}
             size={size}
             onClick={handleClick}
-            isDisabled={isDisabled}
+            disabled={isDisabled}
             isOutline={isOutline}
             isRounded={isRounded}
             {...rest}

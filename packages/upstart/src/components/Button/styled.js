@@ -76,7 +76,7 @@ export const StyledLink = styled.a`
     }
   }}
 
-  ${({isDisabled}) => isDisabled && disabledStyles}
+  ${({disabled}) => disabled && disabledStyles}
 
 
   ${({size}) => sizeStyles[size]}
@@ -95,7 +95,7 @@ export const StyledButton = styled.button`
     }
   }}
 
-  ${({isDisabled}) => isDisabled && disabledStyles}
+  ${({disabled}) => disabled && disabledStyles}
 
   ${({size}) => sizeStyles[size]}
 `;
