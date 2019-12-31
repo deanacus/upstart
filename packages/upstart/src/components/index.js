@@ -7,6 +7,7 @@ export { Flex } from './Flex/Flex';
 export { Grid } from './Grid/Grid';
 export { GridItem } from './GridItem/GridItem';
 export { Image } from './Image/Image'
+export { Input } from './Input/Input';
 export { Link } from './Link/Link';
 export { List } from './List/List';
 export { ListItem } from './List/ListItem';

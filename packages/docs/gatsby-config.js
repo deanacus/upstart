@@ -19,6 +19,10 @@ module.exports = {
             label: 'Grid',
             route: '/core/grid',
           },
+          {
+            label: 'Flex',
+            route: '/core/flex',
+          },
         ]
       },
       {
@@ -50,28 +54,8 @@ module.exports = {
             route: '/components/image',
           },
           {
-            label: 'TextInput',
-            route: '/components/textinput',
-          },
-          {
-            label: 'NumberInput',
-            route: '/components/numberinput',
-          },
-          {
-            label: 'CurrencyInput',
-            route: '/components/currencyinput',
-          },
-          {
-            label: 'PhoneInput',
-            route: '/components/phoneinput',
-          },
-          {
-            label: 'EmailInput',
-            route: '/components/emailinput',
-          },
-          {
-            label: 'DateInput',
-            route: '/components/dateinput',
+            label: 'Input',
+            route: '/components/input',
           },
           {
             label: 'ValidatedInput',
