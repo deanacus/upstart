@@ -15,7 +15,11 @@ module.exports = {
             label: 'Type',
             route: '/core/type',
           },
-        ],
+          {
+            label: 'Flex',
+            route: '/core/flex',
+          },
+        ]
       },
       {
         label: 'Base',
@@ -46,34 +50,8 @@ module.exports = {
             route: '/base/separator',
           },
           {
-            label: 'Table',
-            route: '/base/table',
-          },
-          {
-            label: 'Tooltip',
-            route: '/base/tooltip',
-          },
-        ],
-      },
-      {
-        label: 'Forms',
-        route: '/forms',
-        children: [
-          {
-            label: 'Autocomplete',
-            route: '/forms/autocomplete',
-          },
-          {
-            label: 'Button',
-            route: '/forms/button',
-          },
-          {
-            label: 'Checkbox',
-            route: '/forms/checkbox',
-          },
-          {
             label: 'Input',
-            route: '/forms/input',
+            route: '/components/input',
           },
           {
             label: 'Radio',
