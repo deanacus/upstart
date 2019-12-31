@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Link = ({children, href, newTab, external}) => (
+export const Link = ({children, href, newTab, isExternal}) => (
   <a
     href={href}
-    target={newTab ? '_blank' : ''}
+    target={newTab || isExternal ? '_blank' : ''}
   >
     {children}
-    {external && <small>ext</small>}
+    {isExternal && <small>ext</small>}
   </a>
 )
 
@@ -20,7 +20,7 @@ Link.propTypes = {
   ]),
 
   /** Whether or not the Link points to an external site */
-  external: PropTypes.bool,
+  isExternal: PropTypes.bool,
 
   /** The URL the Link points to. */
   href: PropTypes.string.isRequired,
@@ -30,7 +30,7 @@ Link.propTypes = {
 }
 
 Link.defaultProps = {
-  external: false,
+  isExternal: false,
   newTab: false,
 }
 
