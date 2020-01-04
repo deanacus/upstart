@@ -19,8 +19,6 @@ const getValues = (type) => {
 }
 
 const Row = ({name, description, type, defaultValue}) => {
-  const hasTitle = type.name === 'enum' || type.name === 'union';
-
   const title = getValues(type);
   return (
     <TableRow>

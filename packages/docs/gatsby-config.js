@@ -15,10 +15,6 @@ module.exports = {
             label: 'Type',
             route: '/core/type',
           },
-          {
-            label: 'Flex',
-            route: '/core/flex',
-          },
         ]
       },
       {
