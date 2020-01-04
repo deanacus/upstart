@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { UnorderedList } from './UnorderedList';
 import { OrderedList } from './OrderedList'
 
-const List = ({children, ordered, type}) => {
+const List = ({children, ordered}) => {
   const isOrdered = ordered;
 
   return isOrdered ?
@@ -22,8 +22,8 @@ List.propTypes = {
 
   /** The content of the List */
   children: PropTypes.oneOfType([
-    PropTypes.elementType,
-    PropTypes.arrayOf(PropTypes.elementType)
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
   ]).isRequired,
 
   /** Render an ordered list */

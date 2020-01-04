@@ -61,43 +61,43 @@ module.exports = {
         children: [
           {
             label: 'Autocomplete',
-            route: '/components/autocomplete',
+            route: '/forms/autocomplete',
           },
           {
             label: 'Button',
-            route: '/components/button',
+            route: '/forms/button',
           },
           {
             label: 'Checkbox',
-            route: '/components/checkbox',
+            route: '/forms/checkbox',
           },
           {
             label: 'Input',
-            route: '/components/input',
+            route: '/forms/input',
           },
           {
             label: 'Radio',
-            route: '/components/radio',
+            route: '/forms/radio',
           },
           {
             label: 'RadioGroup',
-            route: '/components/radioGroup',
+            route: '/forms/radioGroup',
           },
           {
             label: 'Select',
-            route: '/components/select',
+            route: '/forms/select',
           },
           {
             label: 'Switch',
-            route: '/components/switch',
+            route: '/forms/switch',
           },
           {
             label: 'TextArea',
-            route: '/components/textarea',
+            route: '/forms/textarea',
           },
           {
             label: 'ValidatedInput',
-            route: '/components/validatedinput',
+            route: '/forms/validatedinput',
           },
         ],
       },
