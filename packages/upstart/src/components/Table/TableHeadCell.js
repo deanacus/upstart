@@ -5,11 +5,12 @@ import styled from 'styled-components';
 export const StyledTableHeadCell = styled.th`
   font-weight: bold;
   text-align: ${({alignment}) => alignment};
+  width: ${({width}) => width};
 `;
 
-export const TableHeadCell = ({children, align }) => {
+export const TableHeadCell = ({children, align, width }) => {
   return (
-    <StyledTableHeadCell alignment={align}>
+    <StyledTableHeadCell width={width} alignment={align}>
       {children}
     </StyledTableHeadCell>
   )
@@ -24,6 +25,9 @@ TableHeadCell.propTypes = {
     "right"
   ]),
 
+  /** Width of the cell/column */
+  width: PropTypes.string,
+
   /** The content of the TableHeadCell */
   children: PropTypes.oneOfType([
     PropTypes.node,
@@ -33,4 +37,5 @@ TableHeadCell.propTypes = {
 
 TableHeadCell.defaultProps = {
   align: "left",
+  width: 'auto',
 }

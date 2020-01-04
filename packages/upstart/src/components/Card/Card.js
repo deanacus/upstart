@@ -4,8 +4,6 @@ import styled, { css } from 'styled-components';
 import { padding as getPadding, margin as getMargin, space, color, radius } from '../../utils/styled-utils'
 
 export const Card = styled.div`
-  ${({padding}) => padding && space(padding)};
-
   ${({darkMode}) => darkMode && css`
     background: ${color('grey',8)};
     color: ${color('grey',1)};}

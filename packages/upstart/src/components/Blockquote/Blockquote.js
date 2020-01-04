@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { margin, padding, color } from '../../utils/styled-utils'
 
 const StyledQuote = styled.blockquote`
-  border-left: 3px solid ${color('grey', 300)};
+  border-left: 3px solid ${color('grey', 3)};
   ${margin('mx-3')};
   ${padding('p-3')};
 

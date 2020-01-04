@@ -1,11 +1,11 @@
 ---
 title: Button
 description: A general description of the content of the document
-menu: Typography
-route: /components/button
+menu: Forms
+route: /forms/button
 ---
 
-import { Playground } from '../../components/Playground';
+import { Preview } from '../../components/Preview';
 import { PropsTable } from '../../components/PropsTable'
 import { Button, Flex } from '@deanacus/upstart'
 
@@ -14,23 +14,23 @@ a button where a link would be appropriate, and a link where a button would be
 appropriate. For this reason, it is prudent to provide the ability to render any
 button style as a `button` or a `link`.
 
-<Flex margin="mx-1">
-  <Button>
-    Primary Button
-  </Button>
-  
-  <Button isOutline>
-      Primary Outline
-    </Button>
-  
-  <Button variant="secondary">
-    Secondary
-  </Button>
-  
-  <Button variant="secondary" isOutline>
-    Secondary outline
-  </Button>
-</Flex>
+```jsx
+<Button>
+  Primary Button
+</Button>
+
+<Button isOutline>
+  Primary Outline
+</Button>
+
+<Button variant="secondary">
+  Secondary
+</Button>
+
+<Button variant="secondary" isOutline>
+  Secondary outline
+</Button>
+```
 
 <PropsTable component={Button} />
 
