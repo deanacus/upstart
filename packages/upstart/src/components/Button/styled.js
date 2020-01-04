@@ -5,7 +5,6 @@ import { color, fontFamily, fontSize, padding, radius, lineHeight } from '../../
 const baseStyles = css`
   border: none;
   border-radius: ${radius('sm')};
-  box-sizing: border-box;
   color: ${color('background')};
   cursor: pointer;
   display: inline-flex;

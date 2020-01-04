@@ -8,9 +8,12 @@ import { color, fontFamily, fontSize, fontWeight, lineHeight, padding, margin } 
 const GlobalStyleCSS = css`
 
   /* RESET... OF SORTS */
-  *, * + * {
+  html {
     box-sizing: border-box;
-    text-decoration-skip-ink: auto;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
   }
 
   html {

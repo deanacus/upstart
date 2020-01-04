@@ -1,6 +1,8 @@
 import React from 'react';
 import { StaticQuery, Link, graphql } from 'gatsby';
 
+import { UnorderedList, ListItem } from '@deanacus/upstart';
+
 const query = graphql`
   query{
     allSitePage {
@@ -33,19 +35,19 @@ const Menu = ({allSitePage: {nodes}, site: {siteMetadata: {menu}}}) => {
             ({label, children}) => (
             <section key={label}>
               <h5>{label}</h5>
-              <ul>
+              <UnorderedList listStyle="none">
                 {
                   children.map(
                     ({label, route}) => (
                       activeItems.includes(route) ? (
-                      <li key={route}><Link to={route}>{label}</Link></li>
+                      <ListItem key={route}><Link to={route}>{label}</Link></ListItem>
                       ):(
-                        <li key={route}>{label}</li>
+                        <ListItem key={route}>{label}</ListItem>
                       )
                     )
                   )
                 }
-              </ul>
+              </UnorderedList>
             </section>
           )
         )

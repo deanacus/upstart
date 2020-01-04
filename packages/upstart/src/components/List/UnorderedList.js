@@ -3,16 +3,14 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledList = styled.ul`
-  ${({listStyle, listStyleMarker}) => {
-    if ( listStyle === 'custom' ) {
-      return `list-style-type: ${listStyleMarker};`
-    }
+  padding-left: ${({indent}) => indent};
+  ${({listStyle}) => {
     return `list-style-type: ${listStyle};`
   }}
 `
 
-export const UnorderedList = ({children, listStyle, listStyleMarker}) => (
-  <StyledList listStyle={listStyle} listStyleMarker={listStyleMarker}>
+export const UnorderedList = ({children, listStyle, indent}) => (
+  <StyledList listStyle={listStyle}>
     {children}
   </StyledList>
 )
@@ -24,11 +22,10 @@ UnorderedList.propTypes = {
     'disc',
     'circle',
     'square',
-    'custom'
+    PropTypes.string, // Custom marker
   ]),
 
-  /** A custom listStyleMarker to use */
-  listStyleMarker: PropTypes.string,
+  indent: PropTypes.string,
 
   /** The content of the UnorderedList */
   children: PropTypes.oneOfType([
@@ -39,5 +36,5 @@ UnorderedList.propTypes = {
 
 UnorderedList.defaultProps = {
   listStyle: 'disc',
-  listStyleMarker: null,
+  indent: '1.6rem',
 }

@@ -18,7 +18,7 @@ export default function Layout({ data: { mdx } }) {
       <Base>
         <TopNav />
         <Row>
-          <Column cols={2}>
+          <Column cols={2} padding="px-3">
             <SideMenu/>
           </Column>
           <Column cols={10} align="center">
