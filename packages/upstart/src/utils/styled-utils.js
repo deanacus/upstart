@@ -1,4 +1,4 @@
-import {theme} from '../components/Theme/Theme';
+import { Theme } from '../components/Theme/Theme';
 
 const justifyMap = {
   start: 'flex-start',
@@ -20,18 +20,18 @@ const alignmentMap = {
 };
 
 const getUnit = (value) => {
-  switch (theme.preferredUnit) {
+  switch (Theme.preferredUnit) {
     case 'rem':
-      return `${value / theme.rootVal}rem`;
+      return `${value / Theme.rootVal}rem`;
     case 'px':
     default:
       return `${value}px`;
   }
 }
 
-export const space = (alias) => getUnit(theme.space[alias]);
+export const space = (alias) => getUnit(Theme.space[alias]);
 
-export const padding = (alias) => {
+export const spacing = (alias) => {
   const [key, index] = alias.split('-');
   const propID = key.charAt(0)
   const prop = propID === 'm' ? 'margin' : 'padding';
@@ -42,41 +42,43 @@ export const padding = (alias) => {
 
   switch (key) {
     case `${propID}`:
-      return `${prop}: ${theme.space[index] / theme.rootVal}rem;`;
+      return `${prop}: ${Theme.space[index] / Theme.rootVal}rem;`;
     case `${propID}x`:
       return `
-        ${prop}-right: ${theme.space[index] / theme.rootVal}rem;
-        ${prop}-left: ${theme.space[index] / theme.rootVal}rem;
+        ${prop}-right: ${Theme.space[index] / Theme.rootVal}rem;
+        ${prop}-left: ${Theme.space[index] / Theme.rootVal}rem;
       `;
     case `${propID}y`:
       return `
-        ${prop}-top: ${theme.space[index] / theme.rootVal}rem;
-        ${prop}-bottom: ${theme.space[index] / theme.rootVal}rem;
+        ${prop}-top: ${Theme.space[index] / Theme.rootVal}rem;
+        ${prop}-bottom: ${Theme.space[index] / Theme.rootVal}rem;
       `;
     case `${propID}t`:
-      return `${prop}-top: ${theme.space[index] / theme.rootVal}rem;`;
+      return `${prop}-top: ${Theme.space[index] / Theme.rootVal}rem;`;
     case `${propID}r`:
-      return `${prop}-right: ${theme.space[index] / theme.rootVal}rem;`;
+      return `${prop}-right: ${Theme.space[index] / Theme.rootVal}rem;`;
     case `${propID}b`:
-      return `${prop}-bottom: ${theme.space[index] / theme.rootVal}rem;`;
+      return `${prop}-bottom: ${Theme.space[index] / Theme.rootVal}rem;`;
     case `${propID}l`:
-      return `${prop}-left: ${theme.space[index] / theme.rootVal}rem;`;
+      return `${prop}-left: ${Theme.space[index] / Theme.rootVal}rem;`;
     default:
       return null;
   }
 }
 
-export const margin = (alias) => padding(alias);
+export const padding = (alias) => spacing(alias);
 
-export const fontFamily = (family) => `font-family: ${theme.fonts[family]}`;
+export const margin = (alias) => spacing(alias);
 
-export const fontSize = (size) => `font-size: ${getUnit(theme.fontSizes[size])}`
+export const fontFamily = (family) => `font-family: ${Theme.fonts[family]}`;
 
-export const fontWeight = (weight) => `font-weight: ${theme.fontWeights[weight]}`;
+export const fontSize = (size) => `font-size: ${getUnit(Theme.fontSizes[size])}`
 
-export const lineHeight = (height) => `line-height: ${theme.lineHeights[height]}`;
+export const fontWeight = (weight) => `font-weight: ${Theme.fontWeights[weight]}`;
 
-export const color = (color, strength = 500) =>  theme.colors[color][strength] || theme.colors[color];
+export const lineHeight = (height) => `line-height: ${Theme.lineHeights[height]}`;
+
+export const color = (color, strength) => Theme.colors[color][strength] || Theme.colors[color];
 
 export const alignItems = (align) => `align-items: ${alignmentMap[align]}`;
 
@@ -84,22 +86,47 @@ export const alignContent = (align) => `align-content: ${alignmentMap[align]}`;
 
 export const justifyContent = (justify) => `justify-content: ${justifyMap[justify]}`;
 
-export const width = (width) => getUnit(theme.widths[width]);
+export const width = (width) => getUnit(Theme.widths[width]);
 
-export const breakpoint = (bp) => getUnit(theme.breakpoints[bp]);
+export const breakpoint = (bp) => getUnit(Theme.breakpoints[bp]);
 
-export const border = (border) => theme.borders[border];
+export const border = (border) => Theme.borders[border];
 
-export const borderWidth = (width) => getUnit(theme.borderWidths[width]);
+export const borderWidth = (width) => getUnit(Theme.borderWidths[width]);
 
-export const borderStyle = (style) => theme.borderStyles[style];
+export const borderStyle = (style) => Theme.borderStyles[style];
 
-export const mq = (size, content) => `@media (min-width: ${getUnit(theme.breakpoints[size])}) {
+export const mq = (size, content) => `@media (min-width: ${getUnit(Theme.breakpoints[size])}) {
   ${content}
 }`
 
-export const radius = (rad) => getUnit(theme.radii[rad]);
+export const radius = (rad) => getUnit(Theme.radii[rad]);
 
-export const elevation = (layer) => theme.zIndices[layer];
+export const elevation = (layer) => Theme.zIndices[layer];
 
-export const shadow = (type) => theme.shadows[type];
+export const shadow = (type) => Theme.shadows[type];
+
+const styledUtils = {
+  space,
+  padding,
+  margin,
+  fontFamily,
+  fontSize,
+  fontWeight,
+  lineHeight,
+  color,
+  alignItems,
+  alignContent,
+  justifyContent,
+  width,
+  breakpoint,
+  border,
+  borderWidth,
+  borderStyle,
+  mq,
+  radius,
+  elevation,
+  shadow,
+};
+
+export default styledUtils;

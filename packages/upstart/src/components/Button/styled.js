@@ -5,8 +5,7 @@ import { color, fontFamily, fontSize, padding, radius, lineHeight } from '../../
 const baseStyles = css`
   border: none;
   border-radius: ${radius('sm')};
-  box-sizing: border-box;
-  color: ${color('white')};
+  color: ${color('background')};
   cursor: pointer;
   display: inline-flex;
   text-align: center;
@@ -16,23 +15,23 @@ const baseStyles = css`
 
 const primary = {
   fill: css`
-    background: ${color('primary', 500)};
+    background: ${color('primary', 5)};
   `,
   outline: css`
     background: transparent;
-    border: .1rem solid ${color('primary', 500)};
-    color: ${color('primary', 500)};
+    border: .1rem solid ${color('primary', 5)};
+    color: ${color('primary', 5)};
   `,
 }
 
 const secondary = {
   fill: css`
-    background: ${color('secondary', 500)};
+    background: ${color('secondary', 5)};
   `,
   outline: css`
     background: transparent;
-    border: .1rem solid ${color('secondary', 500)};
-    color: ${color('secondary', 500)};
+    border: .1rem solid ${color('secondary', 5)};
+    color: ${color('secondary', 5)};
   `,
 }
 
@@ -66,17 +65,17 @@ export const StyledLink = styled.a`
 
   text-decoration: none;
 
-  ${({variant, outline}) => {
+  ${({variant, isOutline}) => {
     switch (variant) {
       case 'secondary':
-        return outline ? secondary.outline : secondary.fill
+        return isOutline ? secondary.outline : secondary.fill
       case 'primary':
       default:
-        return outline ? primary.outline : primary.fill
+        return isOutline ? primary.outline : primary.fill
     }
   }}
 
-  ${({isDisabled}) => isDisabled && disabledStyles}
+  ${({disabled}) => disabled && disabledStyles}
 
 
   ${({size}) => sizeStyles[size]}
@@ -85,13 +84,13 @@ export const StyledLink = styled.a`
 export const StyledButton = styled.button`
   ${baseStyles}
 
-  ${({variant, outline}) => {
+  ${({variant, isOutline}) => {
     switch (variant) {
       case 'secondary':
-        return outline ? secondary.outline : secondary.fill
+        return isOutline ? secondary.outline : secondary.fill
       case 'primary':
       default:
-        return outline ? primary.outline : primary.fill
+        return isOutline ? primary.outline : primary.fill
     }
   }}
 

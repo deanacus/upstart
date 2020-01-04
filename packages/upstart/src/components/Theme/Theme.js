@@ -1,11 +1,10 @@
 import { rootVal, preferredUnit } from '../../tokens/root';
 import { space } from '../../tokens/space';
 import { fonts, fontSizes, fontWeights } from '../../tokens/type';
-import { colors } from '../../tokens/colors';
+import { colors } from '../../tokens/colors-mk2';
 
 const lineHeights = {
-  body: 1.6,
-  heading: 1.125
+  body: 1.5
 };
 
 const widths = [ 320, 480, 768, 1024, 1200, 1440, 1680 ]
@@ -28,6 +27,7 @@ breakpoints.xl = breakpoints[4];
 breakpoints.xxl = breakpoints[5];
 
 const borders = {
+  separator: `1px solid ${colors.grey[2]}`
 }
 
 const borderWidths = [ 1, 2, 3, 4, 8 ]
@@ -63,7 +63,28 @@ const zIndices = {
 
 const shadows = {}
 
-export const theme = {
+
+const headingStyle = {
+  fontFamily: fonts.heading,
+  fontWeight: fontWeights.heading,
+}
+
+const fontStyles = {
+  title: {
+    fontSize: fontSizes.title,
+    ...headingStyle,
+  },
+  subtitle: {
+    fontSize: fontSizes.xxl,
+    ...headingStyle,
+  },
+  sectionTitle: {
+    fontSize: fontSizes.xl,
+    ...headingStyle,
+  }
+}
+
+export const Theme = {
   preferredUnit,
   rootVal,
   fonts,
@@ -79,6 +100,9 @@ export const theme = {
   zIndices,
   shadows,
   space,
+  variants: {
+    ...fontStyles,
+  }
 }
 
-export default theme;
+export default Theme;

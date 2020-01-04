@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { UnorderedList } from './UnorderedList';
 import { OrderedList } from './OrderedList'
-import { ListItem } from './ListItem'
 
-const List = ({children, ordered, type}) => {
-  const isOrdered = ordered || type === 'ordered' || type === 'ol';
+const List = ({children, ordered}) => {
+  const isOrdered = ordered;
 
   return isOrdered ?
   (
@@ -21,30 +19,20 @@ const List = ({children, ordered, type}) => {
 }
 
 List.propTypes = {
-  /** The type of list you would like to be rendered */
-  type: PropTypes.oneOf([
-    'ordered',
-    'ol',
-    'numbered',
-    'unordered',
-    'ul',
-    'bulleted',
-  ]),
 
-  /** Whether or not you want an ordered list or a bullet list. */
-  ordered: PropTypes.bool,
-
-  /** The children to be rendered inside the list */
+  /** The content of the List */
   children: PropTypes.oneOfType([
-    PropTypes.elementType,
-    PropTypes.arrayOf(PropTypes.elementType)
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
   ]).isRequired,
+
+  /** Render an ordered list */
+  ordered: PropTypes.bool,
 }
 
 List.defaultProps = {
-  type: 'unordered',
   ordered: false,
 }
 
-export { List, UnorderedList, OrderedList, ListItem }
+export { List }
 

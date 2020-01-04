@@ -1,63 +1,55 @@
-import React, { Fragment } from 'react';
-import {Table, TH, TD, THead, TR} from '@deanacus/upstart';
+import React from 'react';
+import {Table, TableHeadCell, TableCell, TableHead, TableRow } from '@deanacus/upstart';
 
-const Enum = ({values}) => (
-  <Fragment>
-    Enum:
-    <ul>
-      {values.map(value => <li key={value.name}>{value.value}</li>)}
-    </ul>
-  </Fragment>
-)
-
-const Union = ({values}) => {
-  console.log(values);
-  return (
-    <Fragment>
-      One of:
-        (still coding)
-    </Fragment>
-  )
-}
-
-const getType = ({name, value}) => {
-  switch (name) {
-    case 'enum':
-      return <Enum values={value} />
-    case 'union':
-      return <Union values={value} />
-    default:
-      return <>{name}</>
+const getValues = (type) => {
+  if ( type.name === 'enum' ) {
+    return type.value.map(val => val.value).join(', ')
   }
+
+  if (type.name === 'union') {
+    return type.value.map(val => {
+      if (!val.value) {
+        return val.name
+      }
+      return `${val.name} ${val.value.name}`;
+    }).join(', ');
+  }
+
+  return null;
 }
 
-const Row = ({name, description, required, type, defaultValue}) => {
-  console.log(name, description, required, type, defaultValue)
+const Row = ({name, description, type, defaultValue}) => {
+  const title = getValues(type);
   return (
-<TR>
-  <TD>{name}</TD>
-  <TD>
-      {getType(type)}
-  </TD>
-  <TD>{required ? 'true' : 'false'}</TD>
-  <TD>{defaultValue ? defaultValue.value : ''}</TD>
-  <TD>{description}</TD>
-</TR>
-)
-  };
+    <TableRow>
+      <TableCell padding="px-1">
+        <code><small>{name}</small></code>
+      </TableCell>
+      <TableCell padding="px-1">
+        <code><small title={title}>{type.name}</small></code>
+      </TableCell>
+      <TableCell padding="px-1">
+        <code><small>{defaultValue ? defaultValue.value : 'Required'}</small></code>
+      </TableCell>
+      <TableCell padding="px-1">
+        <small>{description}</small>
+      </TableCell>
+    </TableRow>
+  )
+};
 
 export const PropsTable = ({component}) => {
   const componentProps = component.__docgenInfo.props;
   const propsKeys = componentProps && Object.keys(componentProps);
+
   return(
     <Table>
-      <THead>
-        <TH>Prop</TH>
-        <TH>Type</TH>
-        <TH>Required</TH>
-        <TH>DefaultValue</TH>
-        <TH>Description</TH>
-      </THead>
+      <TableHead>
+        <TableHeadCell width="15%" padding="px-1"><small>Prop name</small></TableHeadCell>
+        <TableHeadCell width="15%" padding="px-1"><small>Type</small></TableHeadCell>
+        <TableHeadCell width="15%" padding="px-1"><small>Default</small></TableHeadCell>
+        <TableHeadCell width="55%" padding="px-1"><small>Description</small></TableHeadCell>
+      </TableHead>
       <tbody>
         {
           propsKeys && propsKeys.map( prop => <Row key={prop} {...componentProps[prop]} name={prop} />)

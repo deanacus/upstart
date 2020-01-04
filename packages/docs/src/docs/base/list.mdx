@@ -1,18 +1,34 @@
 ---
 title: Lists
-menu: Typography
-route: /components/list
-description: It's a me, mario.
+description: A flexible wrapper for rendering any kind of list you can think of.
+menu: Base
+route: /base/list
 ---
 
 import { PropsTable } from '../../components/PropsTable'
-import { List, UnorderedList, OrderedList, ListItem, GlobalStyle } from '@deanacus/upstart';
+import { List, UnorderedList, OrderedList, ListItem } from '@deanacus/upstart';
 
 Lists are a very important part of any document or application. As such, special
 attention has been paid to them, and a comprehensive API for building them has been
 provided.
 
+## Props
+
+### List Props
+
 <PropsTable component={List} />
+
+### UnorderedList Props
+
+<PropsTable component={UnorderedList} />
+
+### OrderedList Props
+
+<PropsTable component={OrderedList} />
+
+### ListItem Props
+
+<PropsTable component={ListItem} />
 
 ## List
 
@@ -27,22 +43,9 @@ no props provided, it will return an unstyled `UnorderedList` component
   <ListItem>List item 4</ListItem>
 </List>
 
-To make it return an ordered list, you can provide the boolean prop `ordered`,
-or a type property with a value of `ol` or `ordered`:
+To make it return an ordered list, provide the boolean prop `ordered`:
 
 <List ordered>
-  <ListItem>List item 1</ListItem>
-  <ListItem>List item 2</ListItem>
-  <ListItem>List item 3</ListItem>
-  <ListItem>List item 4</ListItem>
-</List>
-<List type="ol">
-  <ListItem>List item 1</ListItem>
-  <ListItem>List item 2</ListItem>
-  <ListItem>List item 3</ListItem>
-  <ListItem>List item 4</ListItem>
-</List>
-<List type="ordered">
   <ListItem>List item 1</ListItem>
   <ListItem>List item 2</ListItem>
   <ListItem>List item 3</ListItem>

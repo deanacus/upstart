@@ -1,17 +1,24 @@
 {
   "name": "@deanacus/upstart",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "license": "MIT",
   "author": "Dean Harris",
+  "private": false,
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "lint": "eslint -c ./.eslintrc.json ./**/*.js"
+    "dev": "rollup -c rollup.config.js -w",
+    "lint": "eslint -c ./.eslintrc.json ./**/*.js",
+    "test": "jest ./src --watch"
   },
   "main": "dist/index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-react": "^7.7.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
     "babel-plugin-react-docgen": "^3.2.0",
     "babel-plugin-styled-components": "^1.10.6",
     "eslint": "^6.8.0",
@@ -22,6 +29,7 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "glob": "^7.1.6",
     "jest": "^24.9.0",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-testing-library": "^8.0.1",
@@ -33,9 +41,10 @@
     "styled-components": "^4.4.1"
   },
   "peerDependencies": {
+    "prop-types": ">=15.7.0",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "styled-components": "^4.4.1"
+    "styled-components": ">=4.4.0"
   },
   "repository": {
     "type": "git",

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {
-  margin,
+  margin as getMargin,
   alignItems as getAlignItems,
   alignContent as getAlignContent,
   justifyContent as getJustifyContent
@@ -19,16 +19,15 @@ export const StyledFlex = styled.div`
   ${({justify}) => getJustifyContent(justify)};
 
   > * {
-    ${({spacing}) => margin(spacing)};
+    ${({margin}) => margin && getMargin(margin)};
   }
 `
 
-export const Flex = ({ direction, spacing, justify, align, canWrap, children }) => {
-  const spaceKey = direction === 'row' ? 'mx' : 'my';
+export const Flex = ({ direction, spacing, margin, justify, align, canWrap, children }) => {
   return (
     <StyledFlex
       direction={direction}
-      spacing={`${spaceKey}-${spacing}`}
+      margin={margin}
       justifyContent={justify}
       alignment={align}
       canWrap={canWrap}
@@ -82,9 +81,9 @@ Flex.propTypes = {
 }
 
 Flex.defaultProps = {
-  direction: 'row',
   spacing: 0,
+  canWrap: false,
+  direction: 'row',
   justify: 'start',
   align: 'center',
-  canWrap: false,
 }

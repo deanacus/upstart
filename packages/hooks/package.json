@@ -1,6 +1,6 @@
 {
   "name": "@deanacus/upstart-hooks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build": "rollup -c rollup.config.js"
   },
@@ -20,6 +20,7 @@
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
+    "prop-types": "^15.7.2",
     "styled-components": "^4.4.1"
   }
 }

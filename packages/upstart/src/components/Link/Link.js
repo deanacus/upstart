@@ -1,36 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Link = ({children, href, newTab, external}) => (
+export const Link = ({children, href, newTab, isExternal}) => (
   <a
     href={href}
-    target={newTab ? '_blank' : ''}
+    target={newTab || isExternal ? '_blank' : ''}
   >
     {children}
-    {external && <small>ext</small>}
+    {isExternal && <small>ext</small>}
   </a>
 )
 
 Link.propTypes = {
-  /** The URL the link should point to. */
-  href: PropTypes.string.isRequired,
 
-  /** Whether or not to launch the link in a new tab/window */
-  newTab: PropTypes.bool,
-
-  /** Whether or not the link points to an external domain */
-  external: PropTypes.bool,
-
-  /** The content of the link */
+  /** The content of the Link */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]),
+
+  /** Whether or not the Link points to an external site */
+  isExternal: PropTypes.bool,
+
+  /** The URL the Link points to. */
+  href: PropTypes.string.isRequired,
+
+  /** Whether or not to launch the Link in a new tab/window */
+  newTab: PropTypes.bool,
 }
 
 Link.defaultProps = {
+  isExternal: false,
   newTab: false,
-  external: false,
 }
 
 export default Link;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Row, Column, Upstart } from '@deanacus/upstart';
+import Base from './base'
 
 import { SideMenu } from './SideMenu'
 import { TopNav } from "./TopNav";
@@ -14,25 +15,27 @@ const ArticleBody = styled.div`
 export default function Layout({ data: { mdx } }) {
   return (
     <Upstart>
-      <TopNav />
-      <Row>
-        <Column cols={2}>
-          <SideMenu/>
-        </Column>
-        <Column cols={10} align="center">
-          <Column cols={6}>
-            <article>
-              <h1>{mdx.frontmatter.title}</h1>
-              <p>{mdx.frontmatter.description}</p>
-              <ArticleBody>
-                <MDXRenderer>
-                  {mdx.body}
-                </MDXRenderer>
-              </ArticleBody>
-            </article>
+      <Base>
+        <TopNav />
+        <Row>
+          <Column cols={2} padding="px-3">
+            <SideMenu/>
           </Column>
-        </Column>
-      </Row>
+          <Column cols={10} align="center">
+            <Column cols={6}>
+              <article>
+                <h1>{mdx.frontmatter.title}</h1>
+                <p>{mdx.frontmatter.description}</p>
+                <ArticleBody>
+                  <MDXRenderer>
+                    {mdx.body}
+                  </MDXRenderer>
+                </ArticleBody>
+              </article>
+            </Column>
+          </Column>
+        </Row>
+      </Base>
     </Upstart>
   )
 }
