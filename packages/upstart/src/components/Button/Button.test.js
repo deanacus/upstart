@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react'
-import '@testing-library/jest-dom/extend-expect'
-import Button from './Button';
+import { render, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
+import { Button } from './Button';
 
 describe('<Blockquote />', () => {
   it('should render', () => {
@@ -9,7 +9,7 @@ describe('<Blockquote />', () => {
 
     const button = container.querySelector('button');
 
-    expect(button).not.toBe(null)
+    expect(button).not.toBe(null);
   });
 
   it('should use the default button type', () => {
@@ -47,7 +47,7 @@ describe('<Blockquote />', () => {
   });
 
   it('should be disabled when that is passed in', () => {
-    const { container }  = render(<Button isDisabled>Test</Button>);
+    const { container } = render(<Button isDisabled>Test</Button>);
 
     const button = container.querySelector('button');
 
@@ -56,11 +56,10 @@ describe('<Blockquote />', () => {
 
   it('should call the handleClick function that is passed in', () => {
     const clickHandler = jest.fn();
-    const { container } = render(<Button handleClick={clickHandler}>Test</Button>)
+    const { container } = render(<Button handleClick={clickHandler}>Test</Button>);
 
     const button = container.querySelector('button');
     fireEvent.click(button);
     expect(clickHandler).toHaveBeenCalled();
-  })
-
+  });
 });

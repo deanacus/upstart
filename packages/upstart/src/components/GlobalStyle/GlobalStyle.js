@@ -1,9 +1,11 @@
 import React from 'react';
-import { css, createGlobalStyle } from 'styled-components'
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+import { css, createGlobalStyle } from 'styled-components';
 import PropTypes from 'prop-types';
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 
-import { color, fontFamily, fontSize, fontWeight, lineHeight, padding, margin } from '../../utils/styled-utils'
+import {
+  color, fontFamily, fontSize, fontWeight, lineHeight, padding, margin,
+} from '../../utils/styled-utils';
 
 const GlobalStyleCSS = css`
 
@@ -113,7 +115,7 @@ const GlobalStyleCSS = css`
   }
 
   td {
-    text-align: ${({alignment}) => alignment};
+    text-align: ${({ alignment }) => alignment};
     ${padding('py-2')};
   }
 
@@ -125,15 +127,15 @@ const GlobalStyleCSS = css`
 
   th {
     font-weight: bold;
-    text-align: ${({alignment}) => alignment};
+    text-align: ${({ alignment }) => alignment};
     ${padding('py-2')};
   }
 
 `;
 
-const GlobalStyles = createGlobalStyle`${GlobalStyleCSS}`
+const GlobalStyles = createGlobalStyle`${GlobalStyleCSS}`;
 
-export const Upstart = ({children}) => (
+export const Upstart = ({ children }) => (
   <ThemeProvider>
     <GlobalStyles />
     {children}
@@ -144,8 +146,8 @@ Upstart.propTypes = {
   /** The actual application components to receive the ThemeProvider and GlobalsStyles */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 export default Upstart;
