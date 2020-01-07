@@ -186,6 +186,9 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-styled-components`,
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `docs`,
