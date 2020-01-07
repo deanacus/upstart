@@ -8,18 +8,18 @@ export const StyledTable = styled.table`
   width: 100%;
 `;
 
-export const Table = ({children}) => {
-  return (
-    <StyledTable>
-      {children}
-    </StyledTable>
-  )
-}
+export const Table = ({ children }) => (
+  <StyledTable>
+    {children}
+  </StyledTable>
+);
 
 Table.propTypes = {
   /** The content of the Table */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
+
+export default Table;

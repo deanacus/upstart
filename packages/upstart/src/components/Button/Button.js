@@ -4,42 +4,39 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledLink, StyledButton } from './styled';
 
-export const Button = ({children, type, variant, size, href, isDisabled, isOutline, isRounded, handleClick, ...rest}) => {
-  return (
-    <ThemeProvider>
-      { href ?
-        (
-          <StyledLink
-            href={href}
-            variant={variant}
-            size={size}
-            onClick={handleClick}
-            disabled={isDisabled}
-            isOutline={isOutline}
-            isRounded={isRounded}
-            className="btn btn-link"
-            {...rest}
-          >
-            {children}
-          </StyledLink>
-        ) : (
-          <StyledButton
-            variant={variant}
-            type={type}
-            size={size}
-            onClick={handleClick}
-            disabled={isDisabled}
-            isOutline={isOutline}
-            isRounded={isRounded}
-            {...rest}
-          >
-            {children}
-          </StyledButton>
-        )
-      }
-    </ThemeProvider>
-  )
-}
+export const Button = ({
+  children, type, variant, size, href, isDisabled, isOutline, isRounded, handleClick, ...rest
+}) => (
+  <ThemeProvider>
+    { href
+      ? (
+        <StyledLink
+          href={href}
+          variant={variant}
+          size={size}
+          onClick={handleClick}
+          disabled={isDisabled}
+          isOutline={isOutline}
+          isRounded={isRounded}
+          className="btn btn-link"
+        >
+          {children}
+        </StyledLink>
+      ) : (
+        <StyledButton
+          variant={variant}
+          type={type}
+          size={size}
+          onClick={handleClick}
+          disabled={isDisabled}
+          isOutline={isOutline}
+          isRounded={isRounded}
+        >
+          {children}
+        </StyledButton>
+      )}
+  </ThemeProvider>
+);
 
 Button.propTypes = {
 
@@ -61,15 +58,18 @@ Button.propTypes = {
   /** Whether or not the Button is disabled */
   isDisabled: PropTypes.bool,
 
+  /** Whether or not to render a rounded button */
+  isRounded: PropTypes.bool,
+
   /** The function to be called when the Button is clicked */
   handleClick: PropTypes.func,
 
   /** Content of the Button */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 Button.defaultProps = {
   variant: 'primary',
@@ -78,7 +78,8 @@ Button.defaultProps = {
   size: 'md',
   type: 'button',
   isDisabled: false,
+  isRounded: false,
   isOutline: false,
-}
+};
 
 export default Button;
