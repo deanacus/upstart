@@ -11,25 +11,25 @@ function throttle(callback) {
 
 export const useBreakpoint = ({ breakpoints }) => {
   const getBreakpoint = (width) => {
-    if (window.innerWidth > breakpoints.xxl) {
+    if (width > breakpoints.xxl) {
       return 'xxxl';
     }
-    if (window.innerWidth > breakpoints.xl) {
+    if (width > breakpoints.xl) {
       return 'xxl';
     }
-    if (window.innerWidth > breakpoints.lg) {
+    if (width > breakpoints.lg) {
       return 'xl';
     }
-    if (window.innerWidth > breakpoints.md) {
+    if (width > breakpoints.md) {
       return 'lg';
     }
-    if (window.innerWidth > breakpoints.sm) {
+    if (width > breakpoints.sm) {
       return 'md';
     }
-    if (window.innerWidth > breakpoints.xs) {
+    if (width > breakpoints.xs) {
       return 'sm';
     }
-    if (window.innerWidth > breakpoints.xxs) {
+    if (width > breakpoints.xxs) {
       return 'xs';
     }
 

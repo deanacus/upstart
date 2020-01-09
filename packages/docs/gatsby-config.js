@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Upstart Documentation`,
-    description: `asdfadsf`,
+    title: 'Upstart Documentation',
+    description: 'asdfadsf',
     menu: [
       {
         label: 'Core',
@@ -15,7 +15,7 @@ module.exports = {
             label: 'Type',
             route: '/core/type',
           },
-        ]
+        ],
       },
       {
         label: 'Base',
@@ -23,7 +23,7 @@ module.exports = {
         children: [
           {
             label: 'Badge',
-            route: '/base/badge'
+            route: '/base/badge',
           },
           {
             label: 'Blockquote',
@@ -53,7 +53,7 @@ module.exports = {
             label: 'Tooltip',
             route: '/base/tooltip',
           },
-        ]
+        ],
       },
       {
         label: 'Forms',
@@ -155,7 +155,7 @@ module.exports = {
             label: 'Toasts',
             route: '/messaging/toasts',
           },
-        ]
+        ],
       },
       {
         label: 'Media',
@@ -176,24 +176,24 @@ module.exports = {
         ],
       },
 
-    ]
+    ],
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        extensions: [".mdx"],
-      }
+        extensions: ['.mdx'],
+      },
     },
     {
-      resolve: `gatsby-plugin-styled-components`,
+      resolve: 'gatsby-plugin-styled-components',
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `docs`,
+        name: 'docs',
         path: `${__dirname}/src/docs/`,
       },
     },
-  ]
-}
+  ],
+};

@@ -1,16 +1,16 @@
 import babel from 'rollup-plugin-babel';
-import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 const glob = require('glob');
 
 const components = [...glob.sync('src/components/**/*.js')]
-  .filter(file => !file.includes('index') && !file.includes('styled') && !file.includes('.test.js'))
-  .reduce( (acc, file) => {
+  .filter((file) => !file.includes('index') && !file.includes('styled') && !file.includes('.test.js'))
+  .reduce((acc, file) => {
     acc[file.replace('src/components/', '').replace(/([\w]+)\/([\w]+).js/, '$2')] = file;
     return acc;
-  }, {index: 'src/components/index.js'})
+  }, { index: 'src/components/index.js' });
 
 console.log(components);
 
@@ -33,16 +33,16 @@ const config = {
     'react',
     'react-dom',
     'prop-types',
-    'styled-components'
+    'styled-components',
   ],
   plugins: [
     peerDepsExternal(),
     babel({
-      exclude: "node_modules/**"
+      exclude: 'node_modules/**',
     }),
     resolve(),
-    commonjs()
+    commonjs(),
   ],
-}
+};
 
 export default config;
