@@ -2,41 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
-import { StyledLink, StyledButton } from './styled';
+import { StyledTag } from './styled';
 
 export const Button = ({
   children, type, variant, size, href, isDisabled, isOutline, isRounded, handleClick, ...rest
-}) => (
-  <ThemeProvider>
-    { href
-      ? (
-        <StyledLink
-          href={href}
-          variant={variant}
-          size={size}
-          onClick={handleClick}
-          disabled={isDisabled}
-          isOutline={isOutline}
-          isRounded={isRounded}
-          className="btn btn-link"
-        >
-          {children}
-        </StyledLink>
-      ) : (
-        <StyledButton
-          variant={variant}
-          type={type}
-          size={size}
-          onClick={handleClick}
-          disabled={isDisabled}
-          isOutline={isOutline}
-          isRounded={isRounded}
-        >
-          {children}
-        </StyledButton>
-      )}
-  </ThemeProvider>
-);
+}) => {
+
+  const isButton = href === null;
+
+  return (
+    <ThemeProvider>
+      <StyledTag
+        as={isButton ? 'button' : 'a'}
+        href={isButton ? null : href}
+        variant={variant}
+        size={size}
+        onClick={handleClick}
+        disabled={isDisabled}
+        isOutline={isOutline}
+        isRounded={isRounded}
+        className={isButton ? "" : "btn btn-link"}
+      >
+        {children}
+      </StyledTag>
+    </ThemeProvider>
+  )
+};
 
 Button.propTypes = {
 

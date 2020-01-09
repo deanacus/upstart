@@ -60,29 +60,10 @@ const disabledStyles = css`
   pointer-events: none;
 `;
 
-export const StyledLink = styled.a`
+export const StyledTag = styled.div`
   ${baseStyles}
 
   text-decoration: none;
-
-  ${({variant, isOutline}) => {
-    switch (variant) {
-      case 'secondary':
-        return isOutline ? secondary.outline : secondary.fill
-      case 'primary':
-      default:
-        return isOutline ? primary.outline : primary.fill
-    }
-  }}
-
-  ${({disabled}) => disabled && disabledStyles}
-
-
-  ${({size}) => sizeStyles[size]}
-`;
-
-export const StyledButton = styled.button`
-  ${baseStyles}
 
   ${({variant, isOutline}) => {
     switch (variant) {
