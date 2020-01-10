@@ -22,7 +22,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const posts = result.data.allMdx.edges
-  posts.forEach(({ node }, index) => {
+  posts.forEach(({ node }) => {
     createPage({
       path: `${node.frontmatter.route}`,
       component: path.resolve(`./src/components/Layout.js`),

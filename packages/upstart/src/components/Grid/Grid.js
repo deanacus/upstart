@@ -2,22 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { space } from '../../utils/styled-utils'
+import { space } from '../../utils/styled-utils';
 
 const GridContainer = styled.div`
   display: grid;
 
-  grid-template-columns: ${({cols}) => cols && `repeat(${cols}, 1fr)`};
-  grid-gap: ${({gap}) => gap && space(gap)};
+  grid-template-columns: ${({ cols }) => cols && `repeat(${cols}, 1fr)`};
+  grid-gap: ${({ gap }) => gap && space(gap)};
 `;
 
-export const Grid = ({cols, gap, children}) => {
-  return (
-    <GridContainer cols={cols} gap={gap}>
-      {children}
-    </GridContainer>
-  )
-}
+export const Grid = ({ cols, gap, children }) => (
+  <GridContainer cols={cols} gap={gap}>
+    {children}
+  </GridContainer>
+);
 
 Grid.propTypes = {
 
@@ -30,11 +28,13 @@ Grid.propTypes = {
   /** The children of the Grid */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 Grid.defaultProps = {
   cols: 4,
   gap: 3,
-}
+};
+
+export default Grid;

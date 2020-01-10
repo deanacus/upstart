@@ -4,16 +4,25 @@ import PropTypes from 'prop-types';
 
 const Item = styled.div`
   place-self: stretch;
-  grid-column-start: ${({start}) => start ? start : 'auto'};
-  grid-column-end: ${({end, span}) => (!end && !span) ? 'auto' : end && !span ? end : `span ${span}` };
+  grid-column-start: ${({ start }) => (start || 'auto')};
+  grid-column-end: ${({ end, span }) => {
+    if (!end && !span) {
+      return 'auto';
+    }
+    if (end && !span) {
+      return end;
+    }
+    return `span ${span}`;
+  }};
 `;
 
-export const GridItem = ({span, start, end, children}) => {
-  return (
+export const GridItem = ({
+  span, start, end, children,
+}) => (
   <Item span={span} start={start} end={end}>
     {children}
   </Item>
-)}
+);
 
 GridItem.propTypes = {
 
@@ -29,12 +38,14 @@ GridItem.propTypes = {
   /** The children of the Grid */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 GridItem.defaultProps = {
   span: null,
   start: null,
   end: null,
-}
+};
+
+export default GridItem;

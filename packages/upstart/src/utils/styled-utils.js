@@ -9,14 +9,14 @@ const justifyMap = {
   evenly: 'space-evenly',
   left: 'left',
   right: 'right',
-}
+};
 
 const alignmentMap = {
-  stretch:'stretch',
-  start:'flex-start',
-  end:'flex-end',
-  center:'center',
-  baseline:'baseline'
+  stretch: 'stretch',
+  start: 'flex-start',
+  end: 'flex-end',
+  center: 'center',
+  baseline: 'baseline',
 };
 
 const getUnit = (value) => {
@@ -27,16 +27,16 @@ const getUnit = (value) => {
     default:
       return `${value}px`;
   }
-}
+};
 
 export const space = (alias) => getUnit(Theme.space[alias]);
 
 export const spacing = (alias) => {
   const [key, index] = alias.split('-');
-  const propID = key.charAt(0)
+  const propID = key.charAt(0);
   const prop = propID === 'm' ? 'margin' : 'padding';
 
-  if ( index > 4 ) {
+  if (index > 4) {
     console.warn(`Requesting ${key} will result in a very large amount of ${prop}`);
   }
 
@@ -64,7 +64,7 @@ export const spacing = (alias) => {
     default:
       return null;
   }
-}
+};
 
 export const padding = (alias) => spacing(alias);
 
@@ -72,7 +72,7 @@ export const margin = (alias) => spacing(alias);
 
 export const fontFamily = (family) => `font-family: ${Theme.fonts[family]}`;
 
-export const fontSize = (size) => `font-size: ${getUnit(Theme.fontSizes[size])}`
+export const fontSize = (size) => `font-size: ${getUnit(Theme.fontSizes[size])}`;
 
 export const fontWeight = (weight) => `font-weight: ${Theme.fontWeights[weight]}`;
 
@@ -98,7 +98,7 @@ export const borderStyle = (style) => Theme.borderStyles[style];
 
 export const mq = (size, content) => `@media (min-width: ${getUnit(Theme.breakpoints[size])}) {
   ${content}
-}`
+}`;
 
 export const radius = (rad) => getUnit(Theme.radii[rad]);
 

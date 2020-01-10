@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledRow } from './styled'
+import { StyledRow } from './styled';
 
-export const Row = ({ align, canWrap, justify, padding, reverse, children }) => (
+export const Row = ({
+  align, canWrap, justify, padding, reverse, children,
+}) => (
   <StyledRow
     alignItems={align}
     justifyContent={justify}
@@ -13,7 +15,7 @@ export const Row = ({ align, canWrap, justify, padding, reverse, children }) => 
   >
     {children}
   </StyledRow>
-)
+);
 
 Row.propTypes = {
   /** The align-items value, mapped internally to the correct CSS value */
@@ -49,9 +51,9 @@ Row.propTypes = {
   /** The children nodes of the grid row */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 Row.defaultProps = {
   canWrap: false,
@@ -60,3 +62,5 @@ Row.defaultProps = {
   justify: 'start',
   align: 'start',
 };
+
+export default Row;
