@@ -149,8 +149,7 @@ module.exports = {
           },
         ],
       },
-
-    ],
+    ]
   },
   plugins: [
     {
