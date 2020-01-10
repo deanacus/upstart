@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledColumn } from './styled'
-export const Column = ({ cols, reverse, align, justify, padding, children }) => {
-  const flexBasis = cols ? (cols / 12 * 100) + '%' : 'auto';
+import { StyledColumn } from './styled';
+
+export const Column = ({
+  cols, reverse, align, justify, padding, children,
+}) => {
+  const flexBasis = cols ? `${cols / 12 * 100}%` : 'auto';
 
   return (
     <StyledColumn
@@ -16,7 +19,7 @@ export const Column = ({ cols, reverse, align, justify, padding, children }) => 
       {children}
     </StyledColumn>
   );
-}
+};
 
 Column.propTypes = {
 
@@ -53,9 +56,9 @@ Column.propTypes = {
   /** The contents of the column */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 Column.defaultProps = {
   cols: null,
@@ -63,4 +66,6 @@ Column.defaultProps = {
   justify: 'start',
   align: 'stretch',
   padding: null,
-}
+};
+
+export default Column;

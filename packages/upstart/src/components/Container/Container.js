@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledContainer } from './styled'
+import { StyledContainer } from './styled';
 
 export const Container = ({ fixed, size, children }) => (
   <StyledContainer fixed={fixed} size={size}>
@@ -27,11 +27,13 @@ Container.propTypes = {
   /** The children of the grid container */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 Container.defaultProps = {
   fixed: false,
   size: null,
-}
+};
+
+export default Container;

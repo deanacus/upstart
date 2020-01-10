@@ -1,3 +1,4 @@
+export { Badge } from './Badge/Badge';
 export { Blockquote } from './Blockquote/Blockquote';
 export { Button } from './Button/Button';
 export { Card } from './Card/Card';
@@ -6,7 +7,7 @@ export { Container } from './Container/Container';
 export { Flex } from './Flex/Flex';
 export { Grid } from './Grid/Grid';
 export { GridItem } from './GridItem/GridItem';
-export { Image } from './Image/Image'
+export { Image } from './Image/Image';
 export { Link } from './Link/Link';
 export { List } from './List/List';
 export { ListItem } from './List/ListItem';
@@ -44,4 +45,4 @@ export {
   radius,
   elevation,
   shadow,
-} from '../utils/styled-utils'
+} from '../utils/styled-utils';

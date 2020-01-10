@@ -4,25 +4,23 @@ import styled from 'styled-components';
 
 export const StyledTableHeadCell = styled.th`
   font-weight: bold;
-  text-align: ${({alignment}) => alignment};
-  width: ${({width}) => width};
+  text-align: ${({ alignment }) => alignment};
+  width: ${({ width }) => width};
 `;
 
-export const TableHeadCell = ({children, align, width }) => {
-  return (
-    <StyledTableHeadCell width={width} alignment={align}>
-      {children}
-    </StyledTableHeadCell>
-  )
-}
+export const TableHeadCell = ({ children, align, width }) => (
+  <StyledTableHeadCell width={width} alignment={align}>
+    {children}
+  </StyledTableHeadCell>
+);
 
 TableHeadCell.propTypes = {
 
   /** Text alignment for the cell */
   align: PropTypes.oneOf([
-    "left",
-    "center",
-    "right"
+    'left',
+    'center',
+    'right',
   ]),
 
   /** Width of the cell/column */
@@ -31,11 +29,13 @@ TableHeadCell.propTypes = {
   /** The content of the TableHeadCell */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 TableHeadCell.defaultProps = {
-  align: "left",
+  align: 'left',
   width: 'auto',
-}
+};
+
+export default TableHeadCell;

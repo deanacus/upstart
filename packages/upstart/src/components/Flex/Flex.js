@@ -6,36 +6,36 @@ import {
   margin as getMargin,
   alignItems as getAlignItems,
   alignContent as getAlignContent,
-  justifyContent as getJustifyContent
-} from '../../utils/styled-utils'
+  justifyContent as getJustifyContent,
+} from '../../utils/styled-utils';
 
 export const StyledFlex = styled.div`
   display: flex;
-  flex-wrap: ${({canWrap}) => canWrap ? 'wrap' : 'no-wrap'};
-  flex-direction: ${({direction}) => direction};
+  flex-wrap: ${({ canWrap }) => (canWrap ? 'wrap' : 'no-wrap')};
+  flex-direction: ${({ direction }) => direction};
 
-  ${({alignment}) => getAlignContent(alignment)};
-  ${({alignment}) => getAlignItems(alignment)};
-  ${({justify}) => getJustifyContent(justify)};
+  ${({ alignment }) => getAlignContent(alignment)};
+  ${({ alignment }) => getAlignItems(alignment)};
+  ${({ justify }) => getJustifyContent(justify)};
 
   > * {
-    ${({margin}) => margin && getMargin(margin)};
+    ${({ margin }) => margin && getMargin(margin)};
   }
-`
+`;
 
-export const Flex = ({ direction, spacing, margin, justify, align, canWrap, children }) => {
-  return (
-    <StyledFlex
-      direction={direction}
-      margin={margin}
-      justifyContent={justify}
-      alignment={align}
-      canWrap={canWrap}
-    >
-      {children}
-    </StyledFlex>
-  )
-}
+export const Flex = ({
+  direction, spacing, margin, justify, align, canWrap, children, reverse,
+}) => (
+  <StyledFlex
+    direction={direction}
+    margin={margin}
+    justifyContent={justify}
+    alignment={align}
+    canWrap={canWrap}
+  >
+    {children}
+  </StyledFlex>
+);
 
 Flex.propTypes = {
   /** The direction the Flex should flex in */
@@ -46,6 +46,9 @@ Flex.propTypes = {
 
   /** The theme spacing index the children should be separated buy */
   spacing: PropTypes.number,
+
+  /** The margin alias to be applied to flex children */
+  margin: PropTypes.string,
 
   /** The align-items value, mapped internally to the correct CSS value */
   align: PropTypes.oneOf([
@@ -70,20 +73,24 @@ Flex.propTypes = {
     'left',
     'right',
   ]),
-/** Whether or not to reverse the flex-direction of the row */
+  /** Whether or not to reverse the flex-direction of the row */
   reverse: PropTypes.bool,
 
   /** The children nodes of the grid row */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 Flex.defaultProps = {
   spacing: 0,
+  margin: null,
   canWrap: false,
   direction: 'row',
   justify: 'start',
   align: 'center',
-}
+  reverse: false,
+};
+
+export default Flex;

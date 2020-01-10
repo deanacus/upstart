@@ -2,36 +2,36 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { padding as getPadding } from '../../utils/styled-utils'
+import { padding as getPadding } from '../../utils/styled-utils';
 
 export const StyledTableCell = styled.td`
-  text-align: ${({alignment}) => alignment};
-  ${({padding}) => padding &&  getPadding(padding)};
+  text-align: ${({ alignment }) => alignment};
+  ${({ padding }) => padding && getPadding(padding)};
 `;
 
-export const TableCell = ({children, align}) => {
-  return (
-    <StyledTableCell alignment={align}>
-      {children}
-    </StyledTableCell>
-  )
-}
+export const TableCell = ({ children, align }) => (
+  <StyledTableCell alignment={align}>
+    {children}
+  </StyledTableCell>
+);
 
 TableCell.propTypes = {
   /** Text alignment for the cell */
   align: PropTypes.oneOf([
-    "left",
-    "center",
-    "right"
+    'left',
+    'center',
+    'right',
   ]),
 
   /** The content of the TableCell */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 TableCell.defaultProps = {
-  align: "left",
-}
+  align: 'left',
+};
+
+export default TableCell;
