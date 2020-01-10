@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { useBorder } from '../../hooks/useThemeValues';
+import { useBorder } from '../../hooks/useBorder';
 
 export const HorizontalSeparator = styled.hr`
   border: none;

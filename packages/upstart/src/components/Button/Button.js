@@ -21,7 +21,6 @@ export const Button = ({
         disabled={isDisabled}
         isOutline={isOutline}
         isRounded={isRounded}
-        className={isButton ? "" : "btn btn-link"}
       >
         {children}
       </StyledTag>
