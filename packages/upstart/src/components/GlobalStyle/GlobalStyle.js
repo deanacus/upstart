@@ -1,26 +1,35 @@
 import React from 'react';
-import { css, createGlobalStyle } from 'styled-components'
+import { css, createGlobalStyle } from 'styled-components';
+import PropTypes from 'prop-types';
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import PropTypes from 'prop-types';
+
+import {
+  color, fontFamily, fontSize, fontWeight, lineHeight, padding, margin,
+} from '../../utils/styled-utils';
 
 const GlobalStyleCSS = css`
 
   /* RESET... OF SORTS */
   html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  html {
     font-size: 10px;
   }
 
   body {
-    background: ${({theme}) => theme.colors.grey[50]};
-    color: ${({theme}) => theme.colors.grey[900]};
+    background: ${color('background')};
+    color: ${color('foreground')};
+    ${lineHeight('body')}
     margin: 0;
     min-height: 100%;
     padding: 0;
-  }
-
-  *, * + * {
-    box-sizing: border-box;
-    text-decoration-skip-ink: auto;
   }
 
   /* GLOBAL TYPOGRAPHY */
@@ -29,47 +38,46 @@ const GlobalStyleCSS = css`
   /* TODO: Get these values off a theme */
   body {
     color: #333;
-    font-family: ${({theme}) => theme.fonts.body};
-    font-size: ${({theme}) => theme.fontSizes[2]/10}rem;
+    ${fontFamily('body')};
+    ${fontSize('base')};
+    font-variant-ligatures: common-ligatures;
   }
 
   h1 {
-    font-size: ${({theme}) => theme.fontSizes[8]/10}rem;
-    margin-top: 0;
+    ${fontSize('title')};
+    ${margin('mb-3')};
+    ${margin('mt-5')};
   }
 
   h2 {
-    font-size: ${({theme}) => theme.fontSizes[7]/10}rem;
-    margin-top: 0;
+    ${fontSize('xxl')};
+    ${margin('mb-3')};
+    ${margin('mt-4')};
   }
 
   h3 {
-    font-size: ${({theme}) => theme.fontSizes[6]/10}rem;
-    margin-top: 0;
+    ${fontSize('xl')};
+    ${margin('mb-3')};
+    ${margin('mt-4')};
   }
 
   h4 {
-    font-size: ${({theme}) => theme.fontSizes[5]/10}rem;
-    margin-top: 0;
+    ${fontSize('lg')};
+    ${margin('my-3')};
   }
 
   h5 {
-    font-size: ${({theme}) => theme.fontSizes[4]/10}rem;
-    margin-top: 0;
-  }
-
-  h6 {
-    font-size: ${({theme}) => theme.fontSizes[3]/10}rem;
-    margin-top: 0;
+    ${fontSize('md')};
+    ${margin('my-3')};
   }
 
   p {
-    margin-top: 0;
+    ${margin('my-3')};
   }
 
   strong,
   b {
-    font-weight: ${({theme}) => theme.fontWeights.bold};
+    ${fontWeight('bold')};
   }
 
   em,
@@ -77,29 +85,58 @@ const GlobalStyleCSS = css`
     font-style: italic;
   }
 
-  a:link::not(.btn-link),
-  a:visited::not(.btn-link) {
-    color: ${({theme}) => theme.colors.primary[500]};
+  a:link:not(.btn-link),
+  a:visited:not(.btn-link) {
+    color: ${color('primary', 5)};
     text-decoration: none;
   }
 
-  a:active::not(.btn-link) {
-    color: ${({theme}) => theme.colors.primary[600]};
+  a:active:not(.btn-link) {
+    color: ${color('primary', 6)};
     text-decoration: underline;
   }
 
-  a:hover::not(.btn-link),
-  a:focus::not(.btn-link) {
-    color: ${({theme}) => theme.colors.primary[700]};
+  a:hover:not(.btn-link),
+  a:focus:not(.btn-link) {
+    color: ${color('primary', 7)};
     text-decoration: underline;
     outline: none;
   }
 
+  table {
+    border-collapse: collapse;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  tr {
+    border-bottom: 1px solid ${color('grey', 3)};
+    max-width: 100%;
+    width: 100%;
+  }
+
+  td {
+    text-align: ${({ alignment }) => alignment};
+    ${padding('py-2')};
+  }
+
+  thead {
+    border-bottom: 2px solid ${color('grey', 4)};
+    max-width: 100%;
+    width: 100%;
+  }
+
+  th {
+    font-weight: bold;
+    text-align: ${({ alignment }) => alignment};
+    ${padding('py-2')};
+  }
+
 `;
 
-const GlobalStyles = createGlobalStyle`${GlobalStyleCSS}`
+const GlobalStyles = createGlobalStyle`${GlobalStyleCSS}`;
 
-export const Upstart = ({children}) => (
+export const Upstart = ({ children }) => (
   <ThemeProvider>
     <GlobalStyles />
     {children}
@@ -110,8 +147,8 @@ Upstart.propTypes = {
   /** The actual application components to receive the ThemeProvider and GlobalsStyles */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 export default Upstart;

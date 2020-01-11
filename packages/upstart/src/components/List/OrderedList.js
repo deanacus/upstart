@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledList = styled.ol`
-  list-style-type: ${({listStyle, listStyleMarker}) => listStyle};
-`
+  list-style-type: ${({ listStyle, listStyleMarker }) => listStyle};
+`;
 
-export const OrderedList = ({children, listStyle, listStyleMarker}) => (
+export const OrderedList = ({ children, listStyle, listStyleMarker }) => (
   <StyledList listStyle={listStyle} listStyleMarker={listStyleMarker}>
     {children}
   </StyledList>
-)
+);
 
 OrderedList.propTypes = {
-  /** The style of list marker to be used. If custom is used, you need to also provide a listStyleMarker prop value */
+  /** The style of list marker to be used */
   listStyle: PropTypes.oneOf([
     'none',
     'decimal',
@@ -26,13 +26,16 @@ OrderedList.propTypes = {
   /** A custom listStyleMarker to use */
   listStyleMarker: PropTypes.string,
 
-  /** The children to be rendered inside the list */
+  /** The content of the OrderedList */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 OrderedList.defaultProps = {
   listStyle: 'decimal',
-}
+  listStyleMarker: null,
+};
+
+export default OrderedList;

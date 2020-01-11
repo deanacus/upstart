@@ -3,19 +3,81 @@ title: Upstart
 route: /
 ---
 
-# Upstart
+Why create another component library when there are so many out there? Simple - I want to.
 
-Upstart is a yet another component library that I've build from scratch. It's primarily
-an excercise in building a package for reuse in other projects, but also a fun
-project to work on to learn more about the tools I use on a daily basis.
+Using the component library that is being implemented at work has been illuminating on the issues that face people building a component library. I thought that perhaps by building my own, I may be able to better understand the issues that can lead to less than ideal implementations.
 
-## What it is
-
-It's a fairly unopinionated library of React components built with Styled Components
-that starts with a rhythm definition and builds outward from there. It includes
-a base theme, a grid, typography, some common UI elements and more.
+Also, I've never built a proper library before, so I thought it would be a good excuse to do so.
 
 ## What it isn't
 
-It's not particularly beautiful, or well styled, because that's not the purpose of the library,
-nor is it my strong suit.
+It's not a design system, nor is it particularly beautiful. It's not _really_ intended for anyone other than myself to use in earnest, however, seeing it in use would be awesome.
+
+## What it is
+
+It's a pretty simple UI component library built with React and styled-components. It's intended to be completely themeable, with the theme having been (loosely) based on the System-UI theme specification.
+
+It doesn't include complex components, mostly just a range of base UI components.
+
+In addition to basing the theme on System UI, I've also built a bunch of hooks to simplify retrieval of theme values within components.
+
+## What's included
+
+### Core
+
+| Component | Design | Dev | Documentation |
+|:--- |:--- |:--- |:--- |
+| Type | ✔️ | ✔️ |  |
+| Color | ✔️ | ✔️ |  |
+
+### Base
+
+| Component | Design | Dev | Documentation |
+|:--- |:--- |:--- |:--- |
+| Link | ✔️ | ✔️ |  |
+| List | ✔️ | ✔️ |  |
+| Table | ✔️ | ✔️ |  |
+| Blockquote | ✔️ | ✔️ |  |
+| Image |  |  |  |
+| Tooltip |  |  |  |
+| Progress |  |  |  |
+| Separator |  | ✔️ |  |
+
+### Forms
+
+| Component | Design | Dev | Documentation |
+|:--- |:--- |:--- |:--- |
+| Button | ✔️ |  |  |
+| Input |  |  |  |
+| Textarea |  |  |  |
+| Select |  |  |  |
+| Checkbox |  |  |  |
+| Radio |  |  |  |
+
+### Containers
+
+| Component | Design | Dev | Documentation |
+|:--- |:--- |:--- |:--- |
+| Drawer |  |  |  |
+| Modal |  |  |  |
+| Hero |  |  |  |
+| Card |  |  |  |
+| Tab |  |  |  |
+| Accordion |  |  |  |
+| Carousel |  |  |  |
+| Grid |  |  |  |
+| Flex | ✔️ | ✔️ |  |
+
+### Messaging
+
+| Component | Design | Dev | Documentation |
+|:--- |:--- |:--- |:--- |
+| Alert |  |  |  |
+| Toast |  |  |  |
+
+### Media
+
+| Component | Design | Dev | Documentation |
+|:--- |:--- |:--- |:--- |
+| Video |  |  |  |
+| Audio |  |  |  |

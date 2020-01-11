@@ -1,14 +1,15 @@
 {
   "author": "Dean Harris",
   "description": "The Upstart component library",
+  "version": "0.0.1",
   "license": "MIT",
   "name": "upstart-workspace",
   "private": true,
-  "version": "0.0.1",
   "scripts": {
     "upstart": "yarn workspace @deanacus/upstart",
     "docs": "yarn workspace @deanacus/upstart-docs",
-    "hooks": "yarn workspace @deanacus/upstart-hooks"
+    "hooks": "yarn workspace @deanacus/upstart-hooks",
+    "prebuild": "yarn"
   },
   "workspaces": [
     "packages/*"

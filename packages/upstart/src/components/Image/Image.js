@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 
+import { space } from '../../utils/styled-utils';
+
 const StyledFigure = styled.figure`
   margin: 0;
   position: relative;
@@ -14,21 +16,21 @@ const StyledImage = styled.img`
 `;
 
 const StyledCaption = styled.figcaption`
-  bottom: ${({theme}) => theme.space[2] / 10 }rem;
-  left: ${({theme}) => theme.space[2] / 10 }rem;
+  bottom: ${space('xs')};
+  left: ${space('xs')};
   position: absolute;
 `;
 
-export const Image = ({src, alt, title, caption}) => {
-  return (
-    <ThemeProvider>
-      <StyledFigure>
-        <StyledImage src={src} alt={alt} title={title} />
-        { caption && <StyledCaption>{caption}</StyledCaption>}
-      </StyledFigure>
-    </ThemeProvider>
-  )
-}
+export const Image = ({
+  src, alt, title, caption,
+}) => (
+  <ThemeProvider>
+    <StyledFigure>
+      <StyledImage src={src} alt={alt} title={title} />
+      { caption && <StyledCaption>{caption}</StyledCaption>}
+    </StyledFigure>
+  </ThemeProvider>
+);
 
 Image.propTypes = {
   /** The source path of the image */
@@ -39,9 +41,11 @@ Image.propTypes = {
   title: PropTypes.string,
   /** An optional caption to be rendered on top of the image */
   caption: PropTypes.string,
-}
+};
 
 Image.defaultProps = {
   title: null,
   caption: null,
-}
+};
+
+export default Image;

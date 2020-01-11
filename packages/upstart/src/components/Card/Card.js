@@ -1,27 +1,33 @@
 // import React from 'react';
 import styled, { css } from 'styled-components';
 
-export const Card = styled.div`
-  ${({padding, theme}) => padding && theme.utils.getSpacing(padding)};
+import { useColor } from '../../hooks/useColor';
 
-  ${({darkMode, theme}) => darkMode && css`
-    background: ${theme.colors.grey[800]};
-    color: ${theme.colors.grey[100]};}
+import {
+  padding as getPadding, margin as getMargin, color, radius,
+} from '../../utils/styled-utils';
+
+export const Card = styled.div`
+  ${({ darkMode }) => darkMode && css`
+    background: ${useColor('grey', 8)};
+    color: ${useColor('grey', 1)};}
   `}
 
-  ${({border, theme, darkMode}) => border && (darkMode ? css`
-    border: .1rem solid ${theme.colors.grey[700]};
+  ${({ border, darkMode }) => border && (darkMode ? css`
+    border: .1rem solid ${color('grey', 7)};
   ` : css`
-    border: .1rem solid ${theme.colors.grey[300]};
+    border: .1rem solid ${color('grey', 3)};
   `)}
 
-  ${({rounded, theme}) => rounded && css`border-radius: ${theme.radii[2] / 10}rem;`}
+  ${({ rounded }) => rounded && css`border-radius: ${radius('md')};`}
 
-  ${({padding, theme}) => padding && css`
-    ${theme.utils.getSpacing(padding)};
+  ${({ padding }) => padding && css`
+    ${getPadding(padding)};
   `}
 
-  ${({margin, theme}) => margin && css`
-    ${theme.utils.getSpacing(margin)};
+  ${({ margin }) => margin && css`
+    ${getMargin(margin)};
   `}
 `;
+
+export default Card;
