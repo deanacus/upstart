@@ -5,15 +5,9 @@ import styled from 'styled-components';
 import { margin, padding, color } from '../../utils/styled-utils';
 
 const StyledQuote = styled.blockquote`
-<<<<<<< HEAD
-  border-left: 3px solid ${({theme}) => theme.colors.grey[300]};
-  ${({theme}) => theme.utils.getSpacing('mx-3')};
-  ${({theme}) => theme.utils.getSpacing('p-3')};
-=======
   border-left: 3px solid ${color('grey', 3)};
   ${margin('mx-3')};
   ${padding('p-3')};
->>>>>>> 6f39db9aef581de2d856b95a2187bc5681cf2f79
 
   > p {
     font-size: 18px;
