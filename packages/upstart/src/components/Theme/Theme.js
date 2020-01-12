@@ -29,7 +29,8 @@ breakpoints.xxl = breakpoints[5];
 
 const borders = {
   separator: `1px solid ${colors.grey[2]}`,
-};
+  thin: `1px solid ${colors.grey[2]}`,
+}
 
 const borderWidths = [1, 2, 3, 4, 8];
 
