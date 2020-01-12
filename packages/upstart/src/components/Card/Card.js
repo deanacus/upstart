@@ -1,16 +1,14 @@
 // import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { useColor } from '../../hooks/useColor';
-
 import {
   padding as getPadding, margin as getMargin, color, radius,
 } from '../../utils/styled-utils';
 
 export const Card = styled.div`
   ${({ darkMode }) => darkMode && css`
-    background: ${useColor('grey', 8)};
-    color: ${useColor('grey', 1)};}
+    background: ${color('grey', 8)};
+    color: ${color('grey', 1)};}
   `}
 
   ${({ border, darkMode }) => border && (darkMode ? css`

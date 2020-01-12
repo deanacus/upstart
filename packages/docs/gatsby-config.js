@@ -46,6 +46,28 @@ module.exports = {
             route: '/base/separator',
           },
           {
+            label: 'Table',
+            route: '/base/table',
+          },
+        ],
+      },
+      {
+        label: 'Forms',
+        route: '/forms',
+        children: [
+          {
+            label: 'Autocomplete',
+            route: '/forms/autocomplete',
+          },
+          {
+            label: 'Button',
+            route: '/forms/button',
+          },
+          {
+            label: 'Checkbox',
+            route: '/forms/checkbox',
+          },
+          {
             label: 'Input',
             route: '/components/input',
           },
@@ -80,16 +102,8 @@ module.exports = {
         route: '/containers',
         children: [
           {
-            label: 'Accordion',
-            route: '/containers/accordion',
-          },
-          {
             label: 'Card',
             route: '/containers/card',
-          },
-          {
-            label: 'Carousel',
-            route: '/containers/carousel',
           },
           {
             label: 'Flex',
@@ -100,20 +114,8 @@ module.exports = {
             route: '/containers/grid',
           },
           {
-            label: 'Hero',
-            route: '/containers/hero',
-          },
-          {
             label: 'Modal',
             route: '/containers/modal',
-          },
-          {
-            label: 'Slider',
-            route: '/containers/slider',
-          },
-          {
-            label: 'Tabs',
-            route: '/containers/tabs',
           },
         ],
       },
@@ -124,10 +126,6 @@ module.exports = {
           {
             label: 'Alert',
             route: '/messaging/alert',
-          },
-          {
-            label: 'Toasts',
-            route: '/messaging/toasts',
           },
         ],
       },

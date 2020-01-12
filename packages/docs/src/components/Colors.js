@@ -10,7 +10,7 @@ export const Colors = ({ color }) => {
   return (
     <Row canWrap>
       {
-        colors[color].reverse().map((clr) => (
+        colors[color].map((clr) => (
           <ColorBlock color={clr} key={clr} />
         ))
       }

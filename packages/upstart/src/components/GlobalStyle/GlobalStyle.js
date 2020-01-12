@@ -1,6 +1,6 @@
 import React from 'react';
-import { css, createGlobalStyle } from 'styled-components';
 import PropTypes from 'prop-types';
+import { css, createGlobalStyle } from 'styled-components';
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 
 import {

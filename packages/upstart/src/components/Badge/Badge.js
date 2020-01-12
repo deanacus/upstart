@@ -8,10 +8,7 @@ import {
 
 const baseStyles = css`
   align-content: center;
-
-
   border-radius: ${radius('sm')};
-
   display: inline-flex;
   ${fontSize('xs')}
   ${padding('px-1')}
@@ -19,8 +16,8 @@ const baseStyles = css`
 
 const StyledBadge = styled.span`
   ${baseStyles}
-  background: ${({ variant }) => color(variant, 2)};
-  border: 1px solid ${({ variant }) => color(variant, 4)};
+  background: ${({ variant }) => color(variant, 0)};
+  border: 1px solid ${({ variant }) => color(variant, 6)};
   color: ${({ variant }) => color(variant, 8)};
 `;
 
