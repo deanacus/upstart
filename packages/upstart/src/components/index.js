@@ -1,5 +1,5 @@
 export { Badge } from './Badge/Badge';
-export { Blockquote } from './Blockquote/Blockquote';
+export { Blockquote } from './Blockquote/Blockquote'
 export { Button } from './Button/Button';
 export { Card } from './Card/Card';
 export { Column } from './Column/Column';
