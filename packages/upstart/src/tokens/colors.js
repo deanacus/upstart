@@ -1,174 +1,90 @@
-const primary = {
-  50: "#e3fafc",
-  100: "#c5f6fa",
-  200: "#99e9f2",
-  300: "#66d9e8",
-  400: "#3bc9db",
-  500: "#22b8cf",
-  600: "#15aabf",
-  700: "#1098ad",
-  800: "#0c8599",
-  900: "#0b7285",
-}
-primary.default = primary[500];
+const grey = [
+  '#F1F3F5',
+  '#D5DCE1',
+  '#B7C2CC',
+  '#93A1B0',
+  '#748494',
+  '#556575',
+  '#314351',
+  '#253642',
+  '#1d2b36',
+];
 
-const secondary = {
-  50: "#fff4e6",
-  100: "#ffe8cc",
-  200: "#ffd8a8",
-  300: "#ffc078",
-  400: "#ffa94d",
-  500: "#ff922b",
-  600: "#fd7e14",
-  700: "#f76707",
-  800: "#e8590c",
-  900: "#d9480f",
-};
-secondary.default = secondary[500];
+const primary = [
+  "#fff4e6",
+  "#ffe8cc",
+  "#ffd8a8",
+  "#ffc078",
+  "#ffa94d",
+  "#ff922b",
+  "#fd7e14",
+  "#f76707",
+  "#e8590c",
+  "#d9480f",
+];
 
-const grey = {
-  50: "#f8f9fa",
-  100: "#f1f3f5",
-  200: "#e9ecef",
-  300: "#dee2e6",
-  400: "#ced4da",
-  500: "#adb5bd",
-  600: "#868e96",
-  700: "#495057",
-  800: "#343a40",
-  900: "#212529",
-};
-grey.default = grey[500];
+const secondary = [
+  "#e3fafc",
+  "#c5f6fa",
+  "#99e9f2",
+  "#66d9e8",
+  "#3bc9db",
+  "#22b8cf",
+  "#15aabf",
+  "#1098ad",
+  "#0c8599",
+  "#0b7285",
+];
 
-const red = {
-  50: "#fff5f5",
-  100: "#ffe3e3",
-  200: "#ffc9c9",
-  300: "#ffa8a8",
-  400: "#ff8787",
-  500: "#ff6b6b",
-  600: "#fa5252",
-  700: "#f03e3e",
-  800: "#e03131",
-  900: "#c92a2a",
-};
-red.default = red[500];
+const success = [
+  "#ebfbee",
+  "#d3f9d8",
+  "#b2f2bb",
+  "#8ce99a",
+  "#69db7c",
+  "#51cf66",
+  "#40c057",
+  "#37b24d",
+  "#2f9e44",
+  "#2b8a3e",
+];
 
-const indigo = {
-  50: "#edf2ff",
-  100: "#dbe4ff",
-  200: "#bac8ff",
-  300: "#91a7ff",
-  400: "#748ffc",
-  500: "#5c7cfa",
-  600: "#4c6ef5",
-  700: "#4263eb",
-  800: "#3b5bdb",
-  900: "#364fc7",
-};
-indigo.default = indigo[500];
+const warning = [
+  "#fff9db",
+  "#fff3bf",
+  "#ffec99",
+  "#ffe066",
+  "#ffd43b",
+  "#fcc419",
+  "#fab005",
+  "#f59f00",
+  "#f08c00",
+  "#e67700",
+];
 
-const blue = {
-  50: "#e7f5ff",
-  100: "#d0ebff",
-  200: "#a5d8ff",
-  300: "#74c0fc",
-  400: "#4dabf7",
-  500: "#339af0",
-  600: "#228be6",
-  700: "#1c7ed6",
-  800: "#1971c2",
-  900: "#1864ab",
-};
-blue.default = blue[500];
+const error = [
+  "#fff5f5",
+  "#ffe3e3",
+  "#ffc9c9",
+  "#ffa8a8",
+  "#ff8787",
+  "#ff6b6b",
+  "#fa5252",
+  "#f03e3e",
+  "#e03131",
+  "#c92a2a",
+];
 
-const cyan = {
-  50: "#e3fafc",
-  100: "#c5f6fa",
-  200: "#99e9f2",
-  300: "#66d9e8",
-  400: "#3bc9db",
-  500: "#22b8cf",
-  600: "#15aabf",
-  700: "#1098ad",
-  800: "#0c8599",
-  900: "#0b7285",
-};
-cyan.default = cyan[500];
-
-const teal = {
-  50: "#e6fcf5",
-  100: "#c3fae8",
-  200: "#96f2d7",
-  300: "#63e6be",
-  400: "#38d9a9",
-  500: "#20c997",
-  600: "#12b886",
-  700: "#0ca678",
-  800: "#099268",
-  900: "#087f5b",
-};
-teal.default = teal[500];
-
-const green = {
-  50: "#ebfbee",
-  100: "#d3f9d8",
-  200: "#b2f2bb",
-  300: "#8ce99a",
-  400: "#69db7c",
-  500: "#51cf66",
-  600: "#40c057",
-  700: "#37b24d",
-  800: "#2f9e44",
-  900: "#2b8a3e",
-};
-green.default = green[500];
-
-const yellow = {
-  50: "#fff9db",
-  100: "#fff3bf",
-  200: "#ffec99",
-  300: "#ffe066",
-  400: "#ffd43b",
-  500: "#fcc419",
-  600: "#fab005",
-  700: "#f59f00",
-  800: "#f08c00",
-  900: "#e67700",
-};
-yellow.default = yellow[500];
-
-const orange = {
-  50: "#fff4e6",
-  100: "#ffe8cc",
-  200: "#ffd8a8",
-  300: "#ffc078",
-  400: "#ffa94d",
-  500: "#ff922b",
-  600: "#fd7e14",
-  700: "#f76707",
-  800: "#e8590c",
-  900: "#d9480f",
-};
-orange.default = orange[500];
-
+const foreground = grey[6];
+const background = grey[0];
 
 export const colors = {
-  white: grey[50],
-  black: grey[900],
-  danger: red[500],
-  success: green[500],
-  warn: yellow[500],
-  info: indigo[500],
   primary,
   secondary,
+  success,
+  error,
+  warning,
   grey,
-  red,
-  indigo,
-  blue,
-  cyan,
-  teal,
-  green,
-  yellow,
-  orange,
+  foreground,
+  background,
 };

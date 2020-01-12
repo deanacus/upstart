@@ -1,10 +1,11 @@
 import { rootVal, preferredUnit } from '../../tokens/root';
 import { space } from '../../tokens/space';
 import { fonts, fontSizes, fontWeights } from '../../tokens/type';
-import { colors } from '../../tokens/colors-mk2';
+import { colors } from '../../tokens/colors';
 
 const lineHeights = {
   body: 1.5,
+  heading: 1.125,
 };
 
 const widths = [320, 480, 768, 1024, 1200, 1440, 1680];

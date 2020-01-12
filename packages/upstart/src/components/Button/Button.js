@@ -5,7 +5,16 @@ import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledTag } from './styled';
 
 export const Button = ({
-  children, type, variant, size, href, isDisabled, isOutline, isRounded, handleClick, ...rest
+  children,
+  type,
+  variant,
+  size,
+  href,
+  isDisabled,
+  isOutline,
+  isRounded,
+  handleClick,
+  ...rest
 }) => {
 
   const isButton = href === null;
@@ -38,15 +47,11 @@ Button.propTypes = {
 
   /** The color variant of the Button */
   variant: PropTypes.oneOf(['primary', 'secondary']),
-<<<<<<< HEAD
-  outline: PropTypes.bool,
-=======
 
   /** Whether or not the Button should be outlined */
   isOutline: PropTypes.bool,
 
   /** The size of Button to render */
->>>>>>> 6f39db9aef581de2d856b95a2187bc5681cf2f79
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
 
   /** Whether or not the Button is disabled */
@@ -67,12 +72,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   variant: 'primary',
-<<<<<<< HEAD
-  size: 'md',
-  outline: false,
-=======
   href: null,
->>>>>>> 6f39db9aef581de2d856b95a2187bc5681cf2f79
   handleClick: null,
   size: 'md',
   type: 'button',

@@ -1,0 +1,48 @@
+---
+title: Status Definitions
+description: What do the component status' mean
+menu: 
+route: /component-status
+---
+
+import Status from '../components/Status';
+import { Separator } from '@deanacus/upstart';
+
+## Planned
+
+<Status planned />
+
+* A need for this component has been determined.
+* The components purpose and usage is understood.
+* A visual design has been sketched.
+* A basic API has is understood and documented in the ticket.
+* Any variants and component states have been identified and documented.
+
+<Separator />
+
+## In Progress
+
+<Status progress />
+
+* Development is underway.
+* It may or may not be available through NPM.
+* The API should be considered unstable.
+
+<Separator />
+
+<Status review />
+
+* The default implementation has been implemented to render with no (or minimal) props.
+* The identified variants have been implemented.
+* The API matches the API philosophy.
+* The props interface has been documented.
+* Test coverage meets the minimum requirements
+* Each variant and state identified has been implemented
+* Cross browser testing has occurred in the required browsers
+* Responsive testing has occured at the required viewports
+
+<Separator />
+
+<Status complete />
+
+* The component has passed review

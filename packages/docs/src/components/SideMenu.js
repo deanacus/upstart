@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { StaticQuery, Link, graphql } from 'gatsby';
 
 import { UnorderedList, ListItem } from '@deanacus/upstart';
@@ -25,6 +26,18 @@ const query = graphql`
   }
 `
 
+const Section = styled.section`
+  margin-bottom: 3.2rem;
+`;
+
+const SectionTitle = styled.h2`
+  font-size: ${({theme}) => `${theme.fontSizes.sm / theme.rootVal}${theme.preferredUnit}`};
+  font-weight: ${({theme}) => theme.fontWeights.body};
+  letter-spacing: .25rem;
+  margin: 0 0 .8rem;
+  text-transform: uppercase;
+`;
+
 const Menu = ({allSitePage: {nodes}, site: {siteMetadata: {menu}}}) => {
   const activeItems = nodes.map(node => node.path);
 
@@ -33,9 +46,9 @@ const Menu = ({allSitePage: {nodes}, site: {siteMetadata: {menu}}}) => {
       {
         menu.map(
             ({label, children}) => (
-            <section key={label}>
-              <h5>{label}</h5>
-              <UnorderedList listStyle="none">
+            <Section key={label}>
+              <SectionTitle>{label}</SectionTitle>
+              <UnorderedList listStyle="none" indent="0">
                 {
                   children.map(
                     ({label, route}) => (
@@ -48,7 +61,7 @@ const Menu = ({allSitePage: {nodes}, site: {siteMetadata: {menu}}}) => {
                   )
                 }
               </UnorderedList>
-            </section>
+            </Section>
           )
         )
       }

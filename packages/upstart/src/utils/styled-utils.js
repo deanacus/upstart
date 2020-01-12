@@ -36,10 +36,6 @@ export const spacing = (alias) => {
   const propID = key.charAt(0);
   const prop = propID === 'm' ? 'margin' : 'padding';
 
-  if (index > 4) {
-    console.warn(`Requesting ${key} will result in a very large amount of ${prop}`);
-  }
-
   switch (key) {
     case `${propID}`:
       return `${prop}: ${Theme.space[index] / Theme.rootVal}rem;`;
