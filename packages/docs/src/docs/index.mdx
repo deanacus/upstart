@@ -3,6 +3,8 @@ title: Upstart
 route: /
 ---
 
+import Status from '../components/Status';
+
 Why create another component library when there are so many out there? Simple - I want to.
 
 Using the component library that is being implemented at work has been illuminating on the issues that face people building a component library. I thought that perhaps by building my own, I may be able to better understand the issues that can lead to less than ideal implementations.
@@ -25,59 +27,53 @@ In addition to basing the theme on System UI, I've also built a bunch of hooks t
 
 ### Core
 
-| Component | Design | Dev | Documentation |
-|:--- |:--- |:--- |:--- |
-| Type | ✔️ | ✔️ |  |
-| Color | ✔️ | ✔️ |  |
+| Component | Status              | Notes         |
+| :-------- | :------------------ | :------------ |
+| Core Type | <Status complete /> |               |
+| Color     | <Status review />   |               |
 
 ### Base
 
-| Component | Design | Dev | Documentation |
-|:--- |:--- |:--- |:--- |
-| Link | ✔️ | ✔️ |  |
-| List | ✔️ | ✔️ |  |
-| Table | ✔️ | ✔️ |  |
-| Blockquote | ✔️ | ✔️ |  |
-| Image |  |  |  |
-| Tooltip |  |  |  |
-| Progress |  |  |  |
-| Separator |  | ✔️ |  |
+| Component  | Status                                         | Notes         |
+| :--------- | :--------------------------------------------- | :------------ |
+| Badge      | <Status progress /> |               |
+| Blockquote | <Status progress /> |               |
+| Link       | <Status progress /> |               |
+| List       | <Status progress /> |               |
+| Progress   | <Status progress /> |               |
+| Separator  |        |               |
+| Table      |        |               |
 
 ### Forms
 
-| Component | Design | Dev | Documentation |
-|:--- |:--- |:--- |:--- |
-| Button | ✔️ |  |  |
-| Input |  |  |  |
-| Textarea |  |  |  |
-| Select |  |  |  |
-| Checkbox |  |  |  |
-| Radio |  |  |  |
+| Component | Status                                         | Notes         |
+| :-------- | :--------------------------------------------- | :------------ |
+| Button    | <Status progress /> |               |
+| Input     | <Status progress /> |               |
+| Textarea  |                                                |               |
+| Select    |                                                |               |
+| Checkbox  |                                                |               |
+| Radio     |                                                |               |
 
 ### Containers
 
-| Component | Design | Dev | Documentation |
-|:--- |:--- |:--- |:--- |
-| Drawer |  |  |  |
-| Modal |  |  |  |
-| Hero |  |  |  |
-| Card |  |  |  |
-| Tab |  |  |  |
-| Accordion |  |  |  |
-| Carousel |  |  |  |
-| Grid |  |  |  |
-| Flex | ✔️ | ✔️ |  |
+| Component | Status                                         | Notes         |
+| :-------- | :--------------------------------------------- | :------------ |
+| Modal     |                                                |               |
+| Card      |                                                |               |
+| Grid      | <Status progress /> |               |
+| Flex      | <Status progress /> |               |
 
 ### Messaging
 
-| Component | Design | Dev | Documentation |
-|:--- |:--- |:--- |:--- |
-| Alert |  |  |  |
-| Toast |  |  |  |
+| Component | Status | Notes         |
+| :-------- | :----- | :------------ |
+| Alert     |        |               |
 
 ### Media
 
-| Component | Design | Dev | Documentation |
-|:--- |:--- |:--- |:--- |
-| Video |  |  |  |
-| Audio |  |  |  |
+| Component | Status                                         | Notes         |
+| :-------- | :--------------------------------------------- | :------------ |
+| Video     |                                                |               |
+| Audio     |                                                |               |
+| Image     | <Status progress /> |               |

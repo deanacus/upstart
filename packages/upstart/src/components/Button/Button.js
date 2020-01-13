@@ -5,7 +5,16 @@ import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledTag } from './styled';
 
 export const Button = ({
-  children, type, variant, size, href, isDisabled, isOutline, isRounded, handleClick, ...rest
+  children,
+  type,
+  variant,
+  size,
+  href,
+  isDisabled,
+  isOutline,
+  isRounded,
+  handleClick,
+  ...rest
 }) => {
 
   const isButton = href === null;

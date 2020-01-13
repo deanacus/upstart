@@ -15,7 +15,7 @@ module.exports = {
             label: 'Type',
             route: '/core/type',
           },
-        ],
+        ]
       },
       {
         label: 'Base',
@@ -49,10 +49,6 @@ module.exports = {
             label: 'Table',
             route: '/base/table',
           },
-          {
-            label: 'Tooltip',
-            route: '/base/tooltip',
-          },
         ],
       },
       {
@@ -73,7 +69,7 @@ module.exports = {
           },
           {
             label: 'Input',
-            route: '/forms/input',
+            route: '/components/input',
           },
           {
             label: 'Radio',
@@ -106,16 +102,8 @@ module.exports = {
         route: '/containers',
         children: [
           {
-            label: 'Accordion',
-            route: '/containers/accordion',
-          },
-          {
             label: 'Card',
             route: '/containers/card',
-          },
-          {
-            label: 'Carousel',
-            route: '/containers/carousel',
           },
           {
             label: 'Flex',
@@ -126,20 +114,8 @@ module.exports = {
             route: '/containers/grid',
           },
           {
-            label: 'Hero',
-            route: '/containers/hero',
-          },
-          {
             label: 'Modal',
             route: '/containers/modal',
-          },
-          {
-            label: 'Slider',
-            route: '/containers/slider',
-          },
-          {
-            label: 'Tabs',
-            route: '/containers/tabs',
           },
         ],
       },
@@ -150,10 +126,6 @@ module.exports = {
           {
             label: 'Alert',
             route: '/messaging/alert',
-          },
-          {
-            label: 'Toasts',
-            route: '/messaging/toasts',
           },
         ],
       },
@@ -175,8 +147,7 @@ module.exports = {
           },
         ],
       },
-
-    ],
+    ]
   },
   plugins: [
     {

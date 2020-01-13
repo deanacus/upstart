@@ -13,6 +13,10 @@ const ArticleBody = styled.div`
   margin: ${({ theme }) => theme.space[5] / 10}rem 0;
 `;
 
+const Title = styled.h1`
+  margin-top: 0;
+`;
+
 export default function Layout({ data: { mdx: { frontmatter: { title, description }, body } } }) {
   return (
     <Upstart>
@@ -25,7 +29,7 @@ export default function Layout({ data: { mdx: { frontmatter: { title, descriptio
           <Column cols={10} align="center">
             <Column cols={6}>
               <article>
-                <h1>{title}</h1>
+                <Title>{title}</Title>
                 <p>{description}</p>
                 <ArticleBody>
                   <MDXRenderer>

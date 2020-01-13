@@ -11,8 +11,8 @@ export const TopNav = () => (
     <Column padding="p-4">
       <div><span role="img" aria-label="Pointing up emoji">☝️</span>Upstart</div>
     </Column>
-    <Flex spacing={2}>
-      <Button href="https://github.com/deanacus/upstart" isOutline>Github</Button>
-    </Flex>
+    <Column padding="p-4">
+      <Button href="https://github.com/deanacus/upstart" size="sm" isOutline>Github</Button>
+    </Column>
   </HeaderRow>
 )

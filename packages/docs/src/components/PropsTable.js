@@ -19,8 +19,6 @@ const getValues = (type) => {
 }
 
 const Row = ({name, description, type, defaultValue}) => {
-  const hasTitle = type.name === 'enum' || type.name === 'union';
-
   const title = getValues(type);
   return (
     <TableRow>
@@ -43,7 +41,6 @@ const Row = ({name, description, type, defaultValue}) => {
 export const PropsTable = ({component}) => {
   const componentProps = component.__docgenInfo.props;
   const propsKeys = componentProps && Object.keys(componentProps);
-
   return(
     <Table>
       <TableHead>
