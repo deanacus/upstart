@@ -17,7 +17,7 @@ const baseStyles = css`
 
 const StyledBadge = styled.span`
   ${baseStyles}
-  background: ${({variant}) => color(variant, 2)};
+  background: ${({variant}) => color(variant, 1)};
   border: 1px solid ${({variant}) => color(variant, 4)};
   color: ${({variant}) => color(variant, 8)};
 `;
