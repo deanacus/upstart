@@ -1,8 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
 
-import { color, border, fontSize, space } from '../../utils/styled-utils';
+import {
+  color, border, fontSize, space,
+} from '../../utils/styled-utils';
 
 const baseStyles = css`
   background: ${color('background')};
@@ -20,21 +22,21 @@ const baseStyles = css`
 
 const StyledLabel = styled.label`
   display: inline-flex;
-  flex-direction: ${({ isInline }) => (isInline ? "row" : "column")};
+  flex-direction: ${({ isInline }) => (isInline ? 'row' : 'column')};
 `;
 
 const TextInput = styled.input`
   ${baseStyles}
 `;
 
-export const Input = ({ id, isInline, type, label, placeholder, ...props }) => {
-  return (
-    <StyledLabel isInline={isInline} htmlFor={id}>
-      {label}
-      <TextInput type={type} name={id} id={id} placeholder={placeholder} />
-    </StyledLabel>
-  );
-};
+export const Input = ({
+  id, isInline, type, label, placeholder, ...props
+}) => (
+  <StyledLabel isInline={isInline} htmlFor={id}>
+    {label}
+    <TextInput type={type} name={id} id={id} placeholder={placeholder} />
+  </StyledLabel>
+);
 
 Input.propTypes = {
   /** The unique identifier for the Input */
@@ -51,18 +53,20 @@ Input.propTypes = {
 
   /** The type of input field */
   type: PropTypes.oneOf([
-    "text",
-    "email",
-    "phone",
-    "number",
-    "currency",
-    "date",
-    "search",
-  ])
+    'text',
+    'email',
+    'phone',
+    'number',
+    'currency',
+    'date',
+    'search',
+  ]),
 };
 
 Input.defaultProps = {
-  type: "text",
+  type: 'text',
   isInline: false,
   placeholder: null,
 };
+
+export default Input;

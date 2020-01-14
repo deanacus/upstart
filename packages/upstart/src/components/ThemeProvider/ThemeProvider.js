@@ -11,7 +11,7 @@ export const ThemeProvider = ({ children }) => (
 );
 
 ThemeProvider.propTypes = {
-  /** The content of the TableRow */
+  /** The children of the ThemeProvider */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),

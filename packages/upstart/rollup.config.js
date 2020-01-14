@@ -12,8 +12,6 @@ const components = [...glob.sync('src/components/**/*.js')]
     return acc;
   }, { index: 'src/components/index.js' });
 
-console.log(components);
-
 const config = {
   input: components,
 

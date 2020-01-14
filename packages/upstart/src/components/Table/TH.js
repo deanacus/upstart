@@ -1,23 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StyledTHeadCell } from './styled'
+import { StyledTHeadCell } from './styled';
 
-export const TH = ({children, align, padding }) => {
-  return (
-    <StyledTHeadCell alignment={align} padding={padding}>
-      {children}
-    </StyledTHeadCell>
-  )
-}
+export const TH = ({ children, align, padding }) => (
+  <StyledTHeadCell alignment={align} padding={padding}>
+    {children}
+  </StyledTHeadCell>
+);
 
 TH.propTypes = {
 
   /** Text alignment for the cell */
   align: PropTypes.oneOf([
-    "left",
-    "center",
-    "right"
+    'left',
+    'center',
+    'right',
   ]),
 
   /** The padding value to be used on the Row. Based on the bootstrap padding classes */
@@ -26,11 +24,13 @@ TH.propTypes = {
   /** The children of the TH */
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ]),
-}
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+};
 
 TH.defaultProps = {
-  align: "left",
-  padding: "p-2",
-}
+  align: 'left',
+  padding: 'p-2',
+};
+
+export default TH;

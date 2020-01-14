@@ -8,43 +8,77 @@ const lineHeights = {
   heading: 1.125,
 };
 
-const widths = [320, 480, 768, 1024, 1200, 1440, 1680];
+const widths = [
+  320,
+  480,
+  768,
+  1024,
+  1200,
+  1440,
+  1680,
+];
 
-widths.xxs = widths[0];
-widths.xs = widths[1];
-widths.sm = widths[2];
-widths.md = widths[3];
-widths.lg = widths[4];
-widths.xl = widths[5];
-widths.xxl = widths[6];
+[
+  widths.xxs,
+  widths.xs,
+  widths.sm,
+  widths.md,
+  widths.lg,
+  widths.xl,
+  widths.xxl,
+] = widths;
 
-const breakpoints = [320, 480, 768, 992, 1200, 1680];
+const breakpoints = [
+  320,
+  480,
+  768,
+  992,
+  1200,
+  1680,
+];
 
-breakpoints.xs = breakpoints[0];
-breakpoints.sm = breakpoints[1];
-breakpoints.md = breakpoints[2];
-breakpoints.lg = breakpoints[3];
-breakpoints.xl = breakpoints[4];
-breakpoints.xxl = breakpoints[5];
+[
+  breakpoints.xs,
+  breakpoints.sm,
+  breakpoints.md,
+  breakpoints.lg,
+  breakpoints.xl,
+  breakpoints.xxl,
+] = breakpoints;
 
 const borders = {
   separator: `1px solid ${colors.grey[2]}`,
   thin: `1px solid ${colors.grey[2]}`,
-}
+};
 
-const borderWidths = [1, 2, 3, 4, 8];
+const borderWidths = [
+  1,
+  2,
+  3,
+  4,
+  8,
+];
 
-borderWidths.xs = borderWidths[0];
-borderWidths.sm = borderWidths[1];
-borderWidths.md = borderWidths[2];
-borderWidths.lg = borderWidths[3];
-borderWidths.xl = borderWidths[4];
+[
+  borderWidths.xs,
+  borderWidths.sm,
+  borderWidths.md,
+  borderWidths.lg,
+  borderWidths.xl,
+] = borderWidths;
 
-const radii = [3, 5, 7];
+const radii = [
+  3,
+  5,
+  7,
+];
 
-radii.sm = radii[0];
-radii.md = radii[1];
-radii.lg = radii[2];
+[
+  radii.sm,
+  radii.md,
+  radii.lg,
+] = radii;
+
 radii.pill = 20;
 radii.circle = 50;
 

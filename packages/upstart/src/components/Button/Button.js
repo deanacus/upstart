@@ -16,7 +16,6 @@ export const Button = ({
   handleClick,
   ...rest
 }) => {
-
   const isButton = href === null;
 
   return (
@@ -34,7 +33,7 @@ export const Button = ({
         {children}
       </StyledTag>
     </ThemeProvider>
-  )
+  );
 };
 
 Button.propTypes = {
