@@ -74,7 +74,7 @@ export const fontWeight = (weight) => `font-weight: ${Theme.fontWeights[weight]}
 
 export const lineHeight = (height) => `line-height: ${Theme.lineHeights[height]}`;
 
-export const color = (color, strength) => Theme.colors[color][strength] || Theme.colors[color];
+export const color = (name, strength) => Theme.colors[name][strength] || Theme.colors[name];
 
 export const alignItems = (align) => `align-items: ${alignmentMap[align]}`;
 
@@ -82,13 +82,13 @@ export const alignContent = (align) => `align-content: ${alignmentMap[align]}`;
 
 export const justifyContent = (justify) => `justify-content: ${justifyMap[justify]}`;
 
-export const width = (width) => getUnit(Theme.widths[width]);
+export const width = (widthIndex) => getUnit(Theme.widths[widthIndex]);
 
 export const breakpoint = (bp) => getUnit(Theme.breakpoints[bp]);
 
-export const border = (border) => Theme.borders[border];
+export const border = (borderIndex) => Theme.borders[borderIndex];
 
-export const borderWidth = (width) => getUnit(Theme.borderWidths[width]);
+export const borderWidth = (borderWidthIndex) => getUnit(Theme.borderWidths[borderWidthIndex]);
 
 export const borderStyle = (style) => Theme.borderStyles[style];
 

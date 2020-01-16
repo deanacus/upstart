@@ -5,7 +5,11 @@ import styled from 'styled-components';
 import { margin, padding, color } from '../../utils/styled-utils';
 
 const StyledQuote = styled.blockquote`
-  border-left: 3px solid ${color('grey', 3)};
+  ${({ rightBorder }) => (
+    rightBorder
+      ? `border-right: 3px solid ${color('grey', 3)}`
+      : `border-left: 3px solid ${color('grey', 3)}`
+  )};
   ${margin('mx-3')};
   ${padding('p-3')};
 
@@ -20,25 +24,30 @@ const StyledQuote = styled.blockquote`
   }
 `;
 
-export const Blockquote = ({ children, cite }) => (
-  <StyledQuote>
+export const Blockquote = ({ children, cite, rightBorder }) => (
+  <StyledQuote rightBorder>
     {children}
     {cite && <cite>&mdash; {cite}</cite>}
   </StyledQuote>
 );
 
 Blockquote.propTypes = {
+  /** Whether or not to render the border on the right */
+  rightBorder: PropTypes.bool,
+
   /** Content of the blockquote */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
+
   /** The author or work to be cited in the blockquote */
   cite: PropTypes.string,
 };
 
 Blockquote.defaultProps = {
   cite: null,
+  rightBorder: false,
 };
 
 export default Blockquote;

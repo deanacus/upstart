@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { space, color } from '../../utils/styled-utils'
+import { space, color } from '../../utils/styled-utils';
 
 export const StyledTable = styled.table`
   border-collapse: collapse;
@@ -9,8 +9,8 @@ export const StyledTable = styled.table`
 `;
 
 export const StyledTCell = styled.td`
-  text-align: ${({alignment}) => alignment};
-  ${({padding}) => padding && space(padding)};
+  text-align: ${({ alignment }) => alignment};
+  ${({ padding }) => padding && space(padding)};
 `;
 
 export const StyledTHead = styled.thead`
@@ -21,8 +21,8 @@ export const StyledTHead = styled.thead`
 
 export const StyledTHeadCell = styled.th`
   font-weight: bold;
-  text-align: ${({alignment}) => alignment};
-  ${({padding}) => padding && space(padding)};
+  text-align: ${({ alignment }) => alignment};
+  ${({ padding }) => padding && space(padding)};
 `;
 
 export const StyledTRow = styled.tr`

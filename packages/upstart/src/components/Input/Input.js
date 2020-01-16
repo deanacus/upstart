@@ -69,5 +69,4 @@ Input.defaultProps = {
   placeholder: null,
 };
 
-
 export default Input;
