@@ -7,6 +7,7 @@
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "dev": "rollup -c rollup.config.js -w",
+    "start": "yarn dev",
     "lint": "eslint -c ./.eslintrc.js ./**/*.js",
     "test": "jest ./src --watch"
   },

@@ -15,7 +15,7 @@ module.exports = {
             label: 'Type',
             route: '/core/type',
           },
-        ]
+        ],
       },
       {
         label: 'Base',
@@ -69,7 +69,7 @@ module.exports = {
           },
           {
             label: 'Input',
-            route: '/components/input',
+            route: '/forms/input',
           },
           {
             label: 'Radio',
@@ -147,7 +147,7 @@ module.exports = {
           },
         ],
       },
-    ]
+    ],
   },
   plugins: [
     {
