@@ -1,27 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { useBorder } from '../../hooks/useBorder';
+import { border as getBorder } from '../../utils/styled-utils';
 
 export const HorizontalSeparator = styled.hr`
   border: none;
-  border-bottom: ${({ border }) => border};
+  border-bottom: ${getBorder('separator')};
   width: 100%;
 `;
 
 export const VerticalSeparator = styled.div`
   border: none;
-  border-right: ${({ border }) => border};
+  border-right: ${getBorder('separator')};
   height: 100%;
   width: 1px;
 `;
 
 export const Separator = ({ vertical }) => {
-  const border = useBorder('separator');
   if (vertical) {
-    return <VerticalSeparator border={border} />;
+    return <VerticalSeparator />;
   }
-  return <HorizontalSeparator border={border} />;
+  return <HorizontalSeparator />;
 };
 
 Separator.propTypes = {
