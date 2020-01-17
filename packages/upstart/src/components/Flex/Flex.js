@@ -1,30 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import {
-  margin as getMargin,
-  alignItems as getAlignItems,
-  alignContent as getAlignContent,
-  justifyContent as getJustifyContent,
-} from '../../utils/styled-utils';
-
-export const StyledFlex = styled.div`
-  display: flex;
-  flex-wrap: ${({ canWrap }) => (canWrap ? 'wrap' : 'no-wrap')};
-  flex-direction: ${({ direction }) => direction};
-
-  ${({ alignment }) => getAlignContent(alignment)};
-  ${({ alignment }) => getAlignItems(alignment)};
-  ${({ justify }) => getJustifyContent(justify)};
-
-  > * {
-    ${({ margin }) => margin && getMargin(margin)};
-  }
-`;
+import { StyledFlex } from './styled';
 
 export const Flex = ({
-  direction, spacing, margin, justify, align, canWrap, children, reverse,
+  direction, margin, justify, align, canWrap, children, isReverse,
 }) => (
   <StyledFlex
     direction={direction}
@@ -32,6 +12,7 @@ export const Flex = ({
     justifyContent={justify}
     alignment={align}
     canWrap={canWrap}
+    isReverse={isReverse}
   >
     {children}
   </StyledFlex>
@@ -43,9 +24,6 @@ Flex.propTypes = {
     'row',
     'column',
   ]),
-
-  /** The theme spacing index the children should be separated buy */
-  spacing: PropTypes.number,
 
   /** The margin alias to be applied to flex children */
   margin: PropTypes.string,
@@ -74,7 +52,7 @@ Flex.propTypes = {
     'right',
   ]),
   /** Whether or not to reverse the flex-direction of the row */
-  reverse: PropTypes.bool,
+  isReverse: PropTypes.bool,
 
   /** The children nodes of the grid row */
   children: PropTypes.oneOfType([
@@ -84,13 +62,12 @@ Flex.propTypes = {
 };
 
 Flex.defaultProps = {
-  spacing: 0,
   margin: null,
   canWrap: false,
   direction: 'row',
   justify: 'start',
   align: 'center',
-  reverse: false,
+  isReverse: false,
 };
 
 export default Flex;
