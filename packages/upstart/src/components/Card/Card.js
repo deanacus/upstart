@@ -2,22 +2,22 @@
 import styled, { css } from 'styled-components';
 
 import {
-  padding as getPadding, margin as getMargin, color, radius,
+  getPadding, getMargin, getColor, getRadius,
 } from '../../utils/styled-utils';
 
 export const Card = styled.div`
   ${({ darkMode }) => darkMode && css`
-    background: ${color('grey', 8)};
-    color: ${color('grey', 1)};}
+    background: ${getColor('grey', 8)};
+    color: ${getColor('grey', 1)};}
   `}
 
   ${({ border, darkMode }) => border && (darkMode ? css`
-    border: .1rem solid ${color('grey', 7)};
+    border: .1rem solid ${getColor('grey', 7)};
   ` : css`
-    border: .1rem solid ${color('grey', 3)};
+    border: .1rem solid ${getColor('grey', 3)};
   `)}
 
-  ${({ rounded }) => rounded && css`border-radius: ${radius('md')};`}
+  ${({ rounded }) => rounded && css`border-radius: ${getRadius('md')};`}
 
   ${({ padding }) => padding && css`
     ${getPadding(padding)};

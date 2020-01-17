@@ -4,7 +4,7 @@ import { css, createGlobalStyle } from 'styled-components';
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 
 import {
-  color, fontFamily, fontSize, fontWeight, lineHeight, padding, margin,
+  getColor, getFontFamily, getFontSize, getFontWeight, getLineHeight, getPadding, getMargin,
 } from '../../utils/styled-utils';
 
 const GlobalStyleCSS = css`
@@ -23,9 +23,9 @@ const GlobalStyleCSS = css`
   }
 
   body {
-    background: ${color('background')};
-    color: ${color('foreground')};
-    ${lineHeight('body')}
+    background: ${getColor('background')};
+    color: ${getColor('foreground')};
+    ${getLineHeight('body')}
     margin: 0;
     min-height: 100%;
     padding: 0;
@@ -37,46 +37,46 @@ const GlobalStyleCSS = css`
   /* TODO: Get these values off a theme */
   body {
     color: #333;
-    ${fontFamily('body')};
-    ${fontSize('base')};
+    ${getFontFamily('body')};
+    ${getFontSize('base')};
     font-variant-ligatures: common-ligatures;
   }
 
   h1 {
-    ${fontSize('title')};
-    ${margin('mb-3')};
-    ${margin('mt-5')};
+    ${getFontSize('title')};
+    ${getMargin('mb-3')};
+    ${getMargin('mt-5')};
   }
 
   h2 {
-    ${fontSize('xxl')};
-    ${margin('mb-3')};
-    ${margin('mt-4')};
+    ${getFontSize('xxl')};
+    ${getMargin('mb-3')};
+    ${getMargin('mt-4')};
   }
 
   h3 {
-    ${fontSize('xl')};
-    ${margin('mb-3')};
-    ${margin('mt-4')};
+    ${getFontSize('xl')};
+    ${getMargin('mb-3')};
+    ${getMargin('mt-4')};
   }
 
   h4 {
-    ${fontSize('lg')};
-    ${margin('my-3')};
+    ${getFontSize('lg')};
+    ${getMargin('my-3')};
   }
 
   h5 {
-    ${fontSize('md')};
-    ${margin('my-3')};
+    ${getFontSize('md')};
+    ${getMargin('my-3')};
   }
 
   p {
-    ${margin('my-3')};
+    ${getMargin('my-3')};
   }
 
   strong,
   b {
-    ${fontWeight('bold')};
+    ${getFontWeight('bold')};
   }
 
   em,
@@ -86,18 +86,18 @@ const GlobalStyleCSS = css`
 
   a:link:not(.btn-link),
   a:visited:not(.btn-link) {
-    color: ${color('primary', 5)};
+    color: ${getColor('primary', 5)};
     text-decoration: none;
   }
 
   a:active:not(.btn-link) {
-    color: ${color('primary', 6)};
+    color: ${getColor('primary', 6)};
     text-decoration: underline;
   }
 
   a:hover:not(.btn-link),
   a:focus:not(.btn-link) {
-    color: ${color('primary', 7)};
+    color: ${getColor('primary', 7)};
     text-decoration: underline;
     outline: none;
   }
@@ -109,18 +109,18 @@ const GlobalStyleCSS = css`
   }
 
   tr {
-    border-bottom: 1px solid ${color('grey', 3)};
+    border-bottom: 1px solid ${getColor('grey', 3)};
     max-width: 100%;
     width: 100%;
   }
 
   td {
     text-align: ${({ alignment }) => alignment};
-    ${padding('py-2')};
+    ${getPadding('py-2')};
   }
 
   thead {
-    border-bottom: 2px solid ${color('grey', 4)};
+    border-bottom: 2px solid ${getColor('grey', 4)};
     max-width: 100%;
     width: 100%;
   }
@@ -128,7 +128,7 @@ const GlobalStyleCSS = css`
   th {
     font-weight: bold;
     text-align: ${({ alignment }) => alignment};
-    ${padding('py-2')};
+    ${getPadding('py-2')};
   }
 
 `;

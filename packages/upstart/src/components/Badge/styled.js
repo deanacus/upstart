@@ -1,25 +1,25 @@
 import styled, { css } from 'styled-components';
 
 import {
-  color, padding, fontSize, radius,
+  getColor, getPadding, getFontSize, getRadius,
 } from '../../utils/styled-utils';
 
 const baseStyles = css`
   align-content: center;
 
 
-  border-radius: ${radius('sm')};
+  border-radius: ${getRadius('sm')};
 
   display: inline-flex;
-  ${fontSize('xs')}
-  ${padding('px-1')}
+  ${getFontSize('xs')}
+  ${getPadding('px-1')}
 `;
 
 export const StyledBadge = styled.span`
   ${baseStyles}
-  background: ${({ variant }) => color(variant, 1)};
-  border: 1px solid ${({ variant }) => color(variant, 4)};
-  color: ${({ variant }) => color(variant, 8)};
+  background: ${({ variant }) => getColor(variant, 1)};
+  border: 1px solid ${({ variant }) => getColor(variant, 4)};
+  color: ${({ variant }) => getColor(variant, 8)};
 `;
 
 export default StyledBadge;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import {
-  padding as getPadding,
+  getPadding,
   alignItems as getAlignItems,
   justifyContent as getJustifyContent,
 } from '../../utils/styled-utils';
