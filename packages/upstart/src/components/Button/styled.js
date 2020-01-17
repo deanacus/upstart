@@ -1,58 +1,59 @@
 import styled, { css } from 'styled-components';
 
-import { color, fontFamily, fontSize, padding, radius, lineHeight } from '../../utils/styled-utils';
+import {
+  getColor, getFontFamily, getFontSize, getPadding, getRadius, getLineHeight,
+} from '../../utils/styled-utils';
 
 const baseStyles = css`
   border: none;
-  border-radius: ${radius('sm')};
-  color: ${color('background')};
+  border-radius: ${getRadius('sm')};
+  color: ${getColor('background')};
   cursor: pointer;
   display: inline-flex;
   text-align: center;
-  ${fontFamily('body')};
-  ${lineHeight('body')};
+  ${getFontFamily('body')};
+  ${getLineHeight('body')};
 `;
 
 const primary = {
   fill: css`
-    background: ${color('primary', 5)};
+    background: ${getColor('primary', 5)};
   `,
   outline: css`
     background: transparent;
-    border: .1rem solid ${color('primary', 5)};
-    color: ${color('primary', 5)};
+    border: .1rem solid ${getColor('primary', 5)};
+    color: ${getColor('primary', 5)};
   `,
-}
+};
 
 const secondary = {
   fill: css`
-    background: ${color('secondary', 5)};
+    background: ${getColor('secondary', 5)};
   `,
   outline: css`
     background: transparent;
-    border: .1rem solid ${color('secondary', 5)};
-    color: ${color('secondary', 5)};
+    border: .1rem solid ${getColor('secondary', 5)};
+    color: ${getColor('secondary', 5)};
   `,
-}
-
+};
 
 const sizeStyles = {
   sm: css`
-    ${fontSize('xs')}
-    ${padding('py-1')}
-    ${padding('px-2')}
+    ${getFontSize('xs')}
+    ${getPadding('py-1')}
+    ${getPadding('px-2')}
   `,
   md: css`
-    ${fontSize('sm')}
-    ${padding('py-2')}
-    ${padding('px-3')}
+    ${getFontSize('sm')}
+    ${getPadding('py-2')}
+    ${getPadding('px-3')}
   `,
   lg: css`
-    ${fontSize('base')}
-    ${padding('py-3')}
-    ${padding('px-4')}
+    ${getFontSize('base')}
+    ${getPadding('py-3')}
+    ${getPadding('px-4')}
   `,
-}
+};
 
 const disabledStyles = css`
   cursor: not-allowed;
@@ -65,17 +66,19 @@ export const StyledTag = styled.div`
 
   text-decoration: none;
 
-  ${({variant, isOutline}) => {
+  ${({ variant, isOutline }) => {
     switch (variant) {
       case 'secondary':
-        return isOutline ? secondary.outline : secondary.fill
+        return isOutline ? secondary.outline : secondary.fill;
       case 'primary':
       default:
-        return isOutline ? primary.outline : primary.fill
+        return isOutline ? primary.outline : primary.fill;
     }
   }}
 
-  ${({disabled}) => disabled && disabledStyles}
+  ${({ disabled }) => disabled && disabledStyles}
 
-  ${({size}) => sizeStyles[size]}
+  ${({ size }) => sizeStyles[size]}
 `;
+
+export default StyledTag;

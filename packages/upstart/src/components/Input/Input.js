@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 import {
-  color, border, fontSize, space,
+  getColor, getBorder, getFontSize, space,
 } from '../../utils/styled-utils';
 
 const baseStyles = css`
-  background: ${color('background')};
-  border: ${border('thin')};
+  background: ${getColor('background')};
+  border: ${getBorder('thin')};
   border-radius: 3px;
-  ${fontSize('base')};
+  ${getFontSize('base')};
   padding: ${space('xs')} ${space('sm')};
   transition: 0.2s border-color;
 
