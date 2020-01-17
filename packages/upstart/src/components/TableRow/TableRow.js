@@ -1,20 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-import { color, padding as getPadding } from '../../utils/styled-utils';
-
-export const StyledTableRow = styled.tr`
-  border-bottom: 1px solid ${color('grey', 2)};
-  max-width: 100%;
-  ${({ padding }) => padding && getPadding(padding)};
-  width: 100%;
-`;
+import { StyledTRow } from './styled';
 
 export const TableRow = ({ children, padding }) => (
-  <StyledTableRow padding={padding}>
+  <StyledTRow padding={padding}>
     {children}
-  </StyledTableRow>
+  </StyledTRow>
 );
 
 TableRow.propTypes = {

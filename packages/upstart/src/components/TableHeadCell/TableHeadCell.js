@@ -1,17 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-export const StyledTableHeadCell = styled.th`
-  font-weight: bold;
-  text-align: ${({ alignment }) => alignment};
-  width: ${({ width }) => width};
-`;
+import { StyledTHeadCell } from './styled';
 
 export const TableHeadCell = ({ children, align, width }) => (
-  <StyledTableHeadCell width={width} alignment={align}>
+  <StyledTHeadCell width={width} alignment={align}>
     {children}
-  </StyledTableHeadCell>
+  </StyledTHeadCell>
 );
 
 TableHeadCell.propTypes = {
