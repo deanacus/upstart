@@ -1,15 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { space } from '../../utils/styled-utils';
-
-const GridContainer = styled.div`
-  display: grid;
-
-  grid-template-columns: ${({ cols }) => cols && `repeat(${cols}, 1fr)`};
-  grid-gap: ${({ gap }) => gap && space(gap)};
-`;
+import { GridContainer } from './styled';
 
 export const Grid = ({ cols, gap, children }) => (
   <GridContainer cols={cols} gap={gap}>

@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
-const StyledList = styled.ol`
-  list-style-type: ${({ listStyle, listStyleMarker }) => listStyle};
-`;
+import { StyledList } from './styled';
 
 export const OrderedList = ({ children, listStyle, listStyleMarker }) => (
   <StyledList listStyle={listStyle} listStyleMarker={listStyleMarker}>

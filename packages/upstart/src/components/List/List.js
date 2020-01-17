@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { UnorderedList } from './UnorderedList';
-import { OrderedList } from './OrderedList';
+import { UnorderedList } from '../UnorderedList/UnorderedList';
+import { OrderedList } from '../OrderedList/OrderedList';
 
 export const List = ({ children, ordered }) => {
   const isOrdered = ordered;

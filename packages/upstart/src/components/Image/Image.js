@@ -1,25 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
-
-import { space } from '../../utils/styled-utils';
-
-const StyledFigure = styled.figure`
-  margin: 0;
-  position: relative;
-`;
-
-const StyledImage = styled.img`
-  max-width: 100%;
-`;
-
-const StyledCaption = styled.figcaption`
-  bottom: ${space('xs')};
-  left: ${space('xs')};
-  position: absolute;
-`;
+import { StyledCaption, StyledFigure, StyledImage } from './styled';
 
 export const Image = ({
   src, alt, title, caption,
