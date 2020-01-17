@@ -1,18 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import { padding as getPadding } from '../../utils/styled-utils';
-
-export const StyledTableCell = styled.td`
-  text-align: ${({ alignment }) => alignment};
-  ${({ padding }) => padding && getPadding(padding)};
-`;
+import { StyledTCell } from './styled';
 
 export const TableCell = ({ children, align }) => (
-  <StyledTableCell alignment={align}>
+  <StyledTCell alignment={align}>
     {children}
-  </StyledTableCell>
+  </StyledTCell>
 );
 
 TableCell.propTypes = {
