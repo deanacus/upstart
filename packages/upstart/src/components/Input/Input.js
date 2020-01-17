@@ -1,33 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
 
-import {
-  getColor, getBorder, getFontSize, space,
-} from '../../utils/styled-utils';
-
-const baseStyles = css`
-  background: ${getColor('background')};
-  border: ${getBorder('thin')};
-  border-radius: 3px;
-  ${getFontSize('base')};
-  padding: ${space('xs')} ${space('sm')};
-  transition: 0.2s border-color;
-
-  &:focus {
-    border-color: #1a202c;
-    outline: none;
-  }
-`;
-
-const StyledLabel = styled.label`
-  display: inline-flex;
-  flex-direction: ${({ isInline }) => (isInline ? 'row' : 'column')};
-`;
-
-const TextInput = styled.input`
-  ${baseStyles}
-`;
+import { StyledLabel, TextInput } from './styled';
 
 export const Input = ({
   id, isInline, type, label, placeholder, ...props

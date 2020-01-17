@@ -1,20 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Item = styled.div`
-  place-self: stretch;
-  grid-column-start: ${({ start }) => (start || 'auto')};
-  grid-column-end: ${({ end, span }) => {
-    if (!end && !span) {
-      return 'auto';
-    }
-    if (end && !span) {
-      return end;
-    }
-    return `span ${span}`;
-  }};
-`;
+import { Item } from './styled';
 
 export const GridItem = ({
   span, start, end, children,
