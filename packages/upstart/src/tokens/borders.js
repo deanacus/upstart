@@ -11,14 +11,18 @@ export const borderWidths = [1, 2, 3, 4, 8];
 ] = borderWidths;
 
 export const borders = [
-  `${borderWidths.xs} solid ${colors.grey[2]}`,
-  `${borderWidths.xs} solid ${colors.success[2]}`,
-  `${borderWidths.xs} solid ${colors.warning[2]}`,
-  `${borderWidths.xs} solid ${colors.error[2]}`,
+  `${borderWidths.xs}px solid ${colors.grey[4]}`,
+  `${borderWidths.xs}px solid ${colors.primary[4]}`,
+  `${borderWidths.xs}px solid ${colors.secondary[4]}`,
+  `${borderWidths.xs}px solid ${colors.success[4]}`,
+  `${borderWidths.xs}px solid ${colors.warning[4]}`,
+  `${borderWidths.xs}px solid ${colors.error[4]}`,
 ];
 
 [
   borders.grey,
+  borders.primary,
+  borders.secondary,
   borders.success,
   borders.warning,
   borders.error,

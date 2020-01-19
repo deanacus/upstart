@@ -7,23 +7,23 @@ export const Badge = ({ variant, children }) => (
 );
 
 Badge.propTypes = {
+
+  /** The color variant of the Button */
   variant: PropTypes.oneOf([
-    'grey',
+    'default',
     'success',
     'error',
     'warning',
     'primary',
     'secondary',
   ]),
-  /** Content of the blockquote */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
+
+  /** Content of the Badge */
+  children: PropTypes.node.isRequired,
 };
 
 Badge.defaultProps = {
-  variant: 'grey',
+  variant: 'default',
 };
 
 export default Badge;

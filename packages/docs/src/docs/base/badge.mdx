@@ -5,11 +5,16 @@ menu: Base
 route: /base/badge
 ---
 
+import { PropsTable } from '../../components/PropsTable';
 import { Badge } from '@deanacus/upstart';
 
-<Badge>13</Badge>
-<Badge variant="primary">13</Badge>
-<Badge variant="secondary">13</Badge>
-<Badge variant="success">13</Badge>
-<Badge variant="error">13</Badge>
-<Badge variant="warning">13</Badge>
+```jsx
+<Badge>Default</Badge>
+<Badge variant="primary">Primary</Badge>
+<Badge variant="secondary">Secondary</Badge>
+<Badge variant="success">Success</Badge>
+<Badge variant="error">Error</Badge>
+<Badge variant="warning">Warning</Badge>
+```
+
+<PropsTable component={Badge} />

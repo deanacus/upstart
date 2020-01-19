@@ -1,7 +1,5 @@
-// Font sizes
 export const fontSizes = [ 12, 14, 16, 20, 24, 32, 48, 64, 96 ];
 
-// Font size aliases
 [
   fontSizes.xs,
   fontSizes.sm,

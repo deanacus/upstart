@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import { getMargin, getPadding, getColor } from '../../utils/styled-utils';
+import {
+  getMargin, getPadding, getColor, getFontSize,
+} from '../../utils/styled-utils';
 
 export const StyledQuote = styled.blockquote`
   ${({ rightBorder }) => (
@@ -10,15 +12,16 @@ export const StyledQuote = styled.blockquote`
   )};
   ${getMargin('mx-3')};
   ${getPadding('p-3')};
+  ${getFontSize('md')}
 
-  > p {
-    font-size: 18px;
+  > :last-child {
     margin: 0;
   }
 
   cite {
     display: block;
     text-align: right;
+    ${getFontSize('sm')}
   }
 `;
 

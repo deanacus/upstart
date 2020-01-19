@@ -8,34 +8,58 @@ route: /base/list
 import { PropsTable } from '../../components/PropsTable'
 import { List, UnorderedList, OrderedList, ListItem } from '@deanacus/upstart';
 
-Lists are a very important part of any document or application. As such, special
-attention has been paid to them, and a comprehensive API for building them has been
-provided.
+There are 4 components that make up Lists in Upstart:
 
-## Props
+<List>
+  <ListItem>UnorderedList</ListItem>
+  <ListItem>OrderedList</ListItem>
+  <ListItem>List</ListItem>
+  <ListItem>ListItem</ListItem>
+</List>
 
-### List Props
+## Unordered List
 
-<PropsTable component={List} />
+The `UnorderedList` provides a simple interface to an unordered list, as well as
+an option to use a custom list icon, and indentation width.
 
-### UnorderedList Props
+```jsx
+<UnorderedList>
+  <ListItem>List item 1</ListItem>
+  <ListItem>List item 2</ListItem>
+  <ListItem>List item 3</ListItem>
+  <ListItem>List item 4</ListItem>
+</UnorderedList>
+```
+
+### Props
 
 <PropsTable component={UnorderedList} />
 
-### OrderedList Props
+## OrderedList
+
+As with the `UnorderedList`, the `OrderedList` component provides an interface
+to an ordered list, a way to define the ordering scheme, and indentation width.
+
+```jsx
+<OrderedList>
+  <ListItem>List item 1</ListItem>
+  <ListItem>List item 2</ListItem>
+  <ListItem>List item 3</ListItem>
+  <ListItem>List item 4</ListItem>
+</OrderedList>
+```
+
+### Props
 
 <PropsTable component={OrderedList} />
 
-### ListItem Props
-
-<PropsTable component={ListItem} />
-
 ## List
 
-A generic `List` component has been provided to wrap both `UnorderedList` and
-`OrderedList` components in order to provide a unified API. By default it, with
-no props provided, it will return an unstyled `UnorderedList` component
+The `List` component is a simple wrapper around both `UnorderedList` and
+`OrderedList`, defaulting to `UnorderedList`, with a boolean to render an
+`OrderedList`. It accepts all of the props each of those exposes.
 
+```jsx
 <List>
   <ListItem>List item 1</ListItem>
   <ListItem>List item 2</ListItem>
@@ -43,47 +67,29 @@ no props provided, it will return an unstyled `UnorderedList` component
   <ListItem>List item 4</ListItem>
 </List>
 
-To make it return an ordered list, provide the boolean prop `ordered`:
-
 <List ordered>
   <ListItem>List item 1</ListItem>
   <ListItem>List item 2</ListItem>
   <ListItem>List item 3</ListItem>
   <ListItem>List item 4</ListItem>
 </List>
+```
 
+### Props
 
-## Unordered List
-
-In addition to the unified `List` component, you also have direct access to the
-`UnorderedList` component. This ensures that you will receive the unordered list
-that you want, without running the risk of not passing in the right props:
-
-<UnorderedList>
-  <ListItem>List item 1</ListItem>
-  <ListItem>List item 2</ListItem>
-  <ListItem>List item 3</ListItem>
-  <ListItem>List item 4</ListItem>
-</UnorderedList>
-
-
-## OrderedList
-
-As with the `UnorderedList`, the `OrderedList` component is directly exposed as well:
-
-<OrderedList>
-  <ListItem>List item 1</ListItem>
-  <ListItem>List item 2</ListItem>
-  <ListItem>List item 3</ListItem>
-  <ListItem>List item 4</ListItem>
-</OrderedList>
-
+<PropsTable component={List} />
 
 ## ListItem
 
-The fundamental buuilding block of a list is, of course, the `ListItem`. Accepting
-no props at this stage, this component is simply a wrapper.
+The fundamental buuilding block of a list is, of course, the `ListItem`.
+Accepting no props at this stage, this component is simply a wrapper.
 
+```jsx
 <ListItem>Google</ListItem>
 <ListItem>Facebook</ListItem>
 <ListItem>Twitter</ListItem>
+```
+
+### Props
+
+<PropsTable component={ListItem} />

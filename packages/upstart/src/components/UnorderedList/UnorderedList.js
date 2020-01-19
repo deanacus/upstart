@@ -19,7 +19,15 @@ UnorderedList.propTypes = {
     PropTypes.string, // Custom marker
   ]),
 
-  indent: PropTypes.string,
+  /** How far to indent the list from the left */
+  indent: PropTypes.oneOf([
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+  ]),
 
   /** The content of the UnorderedList */
   children: PropTypes.oneOfType([
@@ -30,7 +38,7 @@ UnorderedList.propTypes = {
 
 UnorderedList.defaultProps = {
   listStyle: 'disc',
-  indent: '1.6rem',
+  indent: '4',
 };
 
 export default UnorderedList;

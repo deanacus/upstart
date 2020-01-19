@@ -1,27 +1,39 @@
 export const fonts = {
   body: 'system-ui, sans-serif',
   heading: 'inherit',
-  monospace: 'Menlo, monospace'
+  monospace: 'Menlo, monospace',
 };
 
-// Font sizes
-export const fontSizes = [ 12, 14, 16, 20, 24, 32, 48, 64, 96 ];
+export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 96];
 
-// Font size aliases
-fontSizes.xs = fontSizes[0];
-fontSizes.sm = fontSizes[1];
-fontSizes.base = fontSizes[2];
-fontSizes.md = fontSizes[3];
-fontSizes.lg = fontSizes[4];
-fontSizes.xl = fontSizes[5];
-fontSizes.xxl = fontSizes[6];
-fontSizes.title = fontSizes[7];
-fontSizes.display = fontSizes[8];
+[
+  fontSizes.xs,
+  fontSizes.sm,
+  fontSizes.base,
+  fontSizes.md,
+  fontSizes.lg,
+  fontSizes.xl,
+  fontSizes.xxl,
+  fontSizes.title,
+  fontSizes.display,
+] = fontSizes;
 
-// font weights
-export const fontWeights = [ 400, 700 ]
+export const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-// fontweight aliases
-fontWeights.body = fontWeights[0];
-fontWeights.heading = fontWeights[1];
-fontWeights.bold = fontWeights[1];
+[
+  fontWeights.thin,
+  fontWeights.extralight,
+  fontWeights.light,
+  fontWeights.regular,
+  fontWeights.medium,
+  fontWeights.semibold,
+  fontWeights.bold,
+  fontWeights.extrabold,
+  fontWeights.black,
+] = fontWeights;
+
+fontWeights.body = fontWeights.regular;
+fontWeights.heading = fontWeights.bold;
+fontWeights.display = fontWeights.black;
+
+export default fontWeights;

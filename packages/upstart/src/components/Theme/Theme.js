@@ -3,7 +3,7 @@ import { space } from '../../tokens/space';
 import { fonts, fontSizes, fontWeights } from '../../tokens/type';
 import { colors } from '../../tokens/colors';
 import { widths, breakpoints } from '../../tokens/widths';
-import { borders, borderWidths, radii } from '../../tokens';
+import { borders, borderWidths, radii } from '../../tokens/borders';
 
 const lineHeights = {
   body: 1.5,

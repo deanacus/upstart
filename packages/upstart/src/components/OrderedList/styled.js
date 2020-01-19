@@ -1,7 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { getPadding } from '../../utils/styled-utils';
 
 export const StyledList = styled.ol`
-  list-style-type: ${({ listStyle, listStyleMarker }) => listStyle};
+  ${({ indent }) => getPadding(`pl-${indent}`)};
+  ${({ listStyle }) => css`list-style-type: ${listStyle};`}
 `;
 
 export default StyledList;
