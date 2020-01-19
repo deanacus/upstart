@@ -17,7 +17,6 @@ export const Button = ({
   ...rest
 }) => {
   const isButton = href === null;
-
   return (
     <ThemeProvider>
       <StyledTag

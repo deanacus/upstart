@@ -84,3 +84,14 @@ const otherColorsNotInUse =  {
   White: "#ffffff",
   Black: "#111111"
 };
+
+
+const greys = [];
+const reds = [];
+const oranges = [];
+const yellows = [];
+const greens = [];
+const cyans = [];
+const blues = [];
+const indigos = [];
+const magentas = [];

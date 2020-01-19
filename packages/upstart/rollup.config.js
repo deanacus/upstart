@@ -14,7 +14,6 @@ const components = [...glob.sync('src/components/**/*.js')]
 
 const config = {
   input: components,
-
   output: [
     {
       exports: 'named',
