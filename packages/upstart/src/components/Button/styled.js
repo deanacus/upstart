@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import {
-  getColor, getFontFamily, getFontSize, getPadding, getRadius, getLineHeight,
+  getColor, getFontFamily, getFontSize, getPadding, getRadius, getLineHeight, getBorder,
 } from '../../utils/styled-utils';
 
 const baseStyles = css`
@@ -21,7 +21,7 @@ const primary = {
   `,
   outline: css`
     background: transparent;
-    border: .1rem solid ${getColor('primary', 5)};
+    border: ${getBorder('primary')};
     color: ${getColor('primary', 5)};
   `,
 };
@@ -32,7 +32,7 @@ const secondary = {
   `,
   outline: css`
     background: transparent;
-    border: .1rem solid ${getColor('secondary', 5)};
+    border: ${getBorder('secondary')};
     color: ${getColor('secondary', 5)};
   `,
 };
@@ -61,6 +61,10 @@ const disabledStyles = css`
   pointer-events: none;
 `;
 
+const roundedStyles = css`
+  border-radius: ${getRadius('pill')};
+`;
+
 export const StyledTag = styled.div`
   ${baseStyles}
 
@@ -79,6 +83,8 @@ export const StyledTag = styled.div`
   ${({ disabled }) => disabled && disabledStyles}
 
   ${({ size }) => sizeStyles[size]}
+
+  ${({ isRounded }) => isRounded && roundedStyles}
 `;
 
 export default StyledTag;

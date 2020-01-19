@@ -18,18 +18,6 @@ button style as a `button` or a `link`.
 <Button>
   Primary Button
 </Button>
-
-<Button isOutline>
-  Primary Outline
-</Button>
-
-<Button variant="secondary">
-  Secondary
-</Button>
-
-<Button variant="secondary" isOutline>
-  Secondary outline
-</Button>
 ```
 
 <PropsTable component={Button} />
@@ -65,8 +53,6 @@ be returned, unless another is specified.
 
 A number of sizes have been defined: `sm`, `md`, `lg`.
 
-
-
 <Flex margin="mx-1">  
   <Button size="sm">
     Small
@@ -81,7 +67,6 @@ A number of sizes have been defined: `sm`, `md`, `lg`.
   </Button>
 </Flex>
 
-
 ## Disabled
 
 Disabled buttons need to look different, too.
@@ -93,5 +78,16 @@ Disabled buttons need to look different, too.
 
   <Button size="md" variant="secondary" isDisabled isOutline>
     Disabled Secondary Outline
+  </Button>
+</Flex>
+
+## Rounded
+
+<Flex margin="mx-1">
+  <Button isRounded>
+    Rounded Primary
+  </Button>
+  <Button isOutline isRounded>
+    Rounded Primary Outline
   </Button>
 </Flex>
