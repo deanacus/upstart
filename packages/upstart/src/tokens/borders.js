@@ -31,13 +31,13 @@ export const borders = [
 borders.separator = borders.grey;
 borders.thin = borders.grey;
 
-export const radii = [3, 5, 7];
+export const radii = [3, 5, 7, 20];
 
 [
   radii.sm,
   radii.md,
   radii.lg,
+  radii.pill,
 ] = radii;
 
-radii.pill = 20;
 radii.circle = 50;
