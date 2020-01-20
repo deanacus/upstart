@@ -14,20 +14,18 @@ const baseStyles = css`
 
 export const StyledBadge = styled.span`
   ${baseStyles}
-  background: ${({ variant }) => (
-    variant === 'default'
-      ? getColor('grey', 1)
-      : getColor(variant, 0)
-  )};
-  border: ${({ variant }) => (
-    variant === 'default'
-      ? getBorder('grey')
-      : getBorder(variant)
-  )};
-  color: ${({ variant }) => (
-    variant === 'default'
-      ? getColor('grey', 8)
-      : getColor(variant, 8)
+  ${({ variant }) => (
+    variant !== 'default'
+      ? css`
+        background: ${getColor(variant, 0)};
+        border: ${getBorder(variant)};
+        color: ${getColor(variant, 8)};
+      `
+      : css`
+        background: ${getColor('grey', 1)};
+        border: ${getBorder('grey')};
+        color: ${getColor('grey', 8)};
+      `
   )};
 `;
 

@@ -7,7 +7,6 @@ describe('<Blockquote />', () => {
     const { container } = render(<Blockquote><p>lorem ipsume</p></Blockquote>);
 
     const blockquote = container.querySelector('blockquote');
-
     expect(blockquote).not.toBe(undefined);
   });
 
@@ -20,7 +19,6 @@ describe('<Blockquote />', () => {
     );
 
     const children = container.querySelectorAll('blockquote p');
-
     expect(children).toHaveLength(2);
     expect(children[0].innerHTML).toBe('This is a test blockquote');
   });
