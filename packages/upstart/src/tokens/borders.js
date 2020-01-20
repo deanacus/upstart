@@ -31,6 +31,12 @@ export const borders = [
 borders.separator = borders.grey;
 borders.thin = borders.grey;
 
+export const borderStyles = [
+  'solid',
+  'dashed',
+  'dotted',
+];
+
 export const radii = [3, 5, 7, 20];
 
 [

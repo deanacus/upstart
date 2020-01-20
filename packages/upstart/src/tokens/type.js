@@ -21,8 +21,8 @@ export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 96];
 export const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
 [
+  fontWeights.hairline,
   fontWeights.thin,
-  fontWeights.extralight,
   fontWeights.light,
   fontWeights.regular,
   fontWeights.medium,
