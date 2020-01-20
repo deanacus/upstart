@@ -19,7 +19,7 @@ module.exports = {
   plugins: [
     'react',
   ],
-  ignorePatterns: ["/dist", "/esm"],
+  ignorePatterns: ["/dist", "/esm", "setupTests.js"],
   rules: {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-one-expression-per-line": 0,

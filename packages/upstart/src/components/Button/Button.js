@@ -24,6 +24,7 @@ export const Button = ({
         href={isButton ? null : href}
         variant={variant}
         size={size}
+        type={type}
         onClick={handleClick}
         disabled={isDisabled}
         isOutline={isOutline}
