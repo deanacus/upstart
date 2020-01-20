@@ -963,6 +963,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@deanacus/upstart@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@deanacus/upstart/-/upstart-0.0.9.tgz#562f00a1c2a2039ccc311b496ba6ce21adf96adf"
+  integrity sha512-rlJPSjfSD7C4SGGmlqqDU9lB24d5MW3unsYJXIkH4R/kfwm3IhajNgD9fo5fiG6cHRNRTVu8FvQepK8LQzzf7A==
+
 "@emotion/is-prop-valid@^0.8.3":
   version "0.8.6"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.6.tgz#4757646f0a58e9dec614c47c838e7147d88c263c"
