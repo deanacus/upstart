@@ -9,7 +9,7 @@
     "dev": "rollup -c rollup.config.js -w",
     "start": "yarn dev",
     "lint": "eslint -c ./.eslintrc.js ./**/*.js",
-    "test": "jest --watch"
+    "test": "jest --watchAll"
   },
   "main": "dist/index.js",
   "module": "esm/index.js",
@@ -17,14 +17,9 @@
     "setupFilesAfterEnv": [
       "<rootDir>/setupTests.js"
     ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 75,
-        "functions": 75,
-        "lines": 75,
-        "statements": 75
-      }
-    }
+    "collectCoverageFrom": [
+      "src/components/**/*.{js,}"
+    ]
   },
   "sideEffects": false,
   "devDependencies": {
