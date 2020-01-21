@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledBadge } from './styled';
 
 export const Badge = ({ variant, children }) => (
-  <StyledBadge variant={variant}>{children}</StyledBadge>
+  <ThemeProvider>
+    <StyledBadge variant={variant}>
+      {children}
+    </StyledBadge>
+  </ThemeProvider>
 );
 
 Badge.propTypes = {
