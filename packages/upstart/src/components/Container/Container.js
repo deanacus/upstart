@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledContainer } from './styled';
 
 export const Container = ({
   fixed, size, children, className,
 }) => (
-  <StyledContainer className={className} fixed={fixed} size={size}>
-    {children}
-  </StyledContainer>
+  <ThemeProvider>
+    <StyledContainer className={className} fixed={fixed} size={size}>
+      {children}
+    </StyledContainer>
+  </ThemeProvider>
 );
 
 Container.propTypes = {
