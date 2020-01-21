@@ -1,19 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 
 export const Link = ({
-  children, href, newTab, isExternal,
+  children, href, newTab, isExternal, className,
 }) => (
-  <a
-    href={href}
-    target={newTab || isExternal ? '_blank' : ''}
-  >
-    {children}
-    {isExternal && <small>ext</small>}
-  </a>
+  <ThemeProvider>
+    <a
+      href={href}
+      target={newTab || isExternal ? '_blank' : ''}
+    >
+      {children}
+      {isExternal && <small>ext</small>}
+    </a>
+  </ThemeProvider>
 );
 
 Link.propTypes = {
+
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
 
   /** The content of the Link */
   children: PropTypes.oneOfType([
@@ -32,6 +38,7 @@ Link.propTypes = {
 };
 
 Link.defaultProps = {
+  className: null,
   isExternal: false,
   newTab: false,
 };

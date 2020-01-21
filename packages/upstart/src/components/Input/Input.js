@@ -1,18 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledLabel, TextInput } from './styled';
 
 export const Input = ({
-  id, isInline, type, label, placeholder, ...props
+  id, isInline, type, label, placeholder, className, ...props
 }) => (
-  <StyledLabel isInline={isInline} htmlFor={id}>
-    {label}
-    <TextInput type={type} name={id} id={id} placeholder={placeholder} />
-  </StyledLabel>
+  <ThemeProvider>
+    <StyledLabel isInline={isInline} htmlFor={id}>
+      {label}
+      <TextInput type={type} name={id} id={id} placeholder={placeholder} />
+    </StyledLabel>
+  </ThemeProvider>
 );
 
 Input.propTypes = {
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
   /** The unique identifier for the Input */
   id: PropTypes.string.isRequired,
 
@@ -38,6 +42,7 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
+  className: null,
   type: 'text',
   isInline: false,
   placeholder: null,

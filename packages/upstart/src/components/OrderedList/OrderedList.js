@@ -1,15 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledList } from './styled';
 
-export const OrderedList = ({ children, listStyle, indent }) => (
-  <StyledList listStyle={listStyle} indent={indent}>
-    {children}
-  </StyledList>
+export const OrderedList = ({
+  children, listStyle, indent, className,
+}) => (
+  <ThemeProvider>
+    <StyledList listStyle={listStyle} indent={indent}>
+      {children}
+    </StyledList>
+  </ThemeProvider>
 );
 
 OrderedList.propTypes = {
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
+
   /** The style of list marker to be used. */
   listStyle: PropTypes.oneOf([
     'none',
@@ -38,6 +45,7 @@ OrderedList.propTypes = {
 };
 
 OrderedList.defaultProps = {
+  className: null,
   listStyle: 'decimal',
   indent: '4',
 };

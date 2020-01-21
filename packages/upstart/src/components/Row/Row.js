@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledRow } from './styled';
 
 export const Row = ({
-  align, canWrap, justify, padding, reverse, children,
+  align, canWrap, justify, padding, reverse, children, className,
 }) => (
-  <StyledRow
-    alignItems={align}
-    justifyContent={justify}
-    padding={padding}
-    reverse={reverse}
-    canWrap={canWrap}
-  >
-    {children}
-  </StyledRow>
+  <ThemeProvider>
+    <StyledRow
+      alignItems={align}
+      justifyContent={justify}
+      padding={padding}
+      reverse={reverse}
+      canWrap={canWrap}
+    >
+      {children}
+    </StyledRow>
+  </ThemeProvider>
 );
 
 Row.propTypes = {
@@ -29,6 +31,9 @@ Row.propTypes = {
 
   /** The state of whether or not the row can wrap its children onto a second or third line */
   canWrap: PropTypes.bool,
+
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
 
   /** The justify-content value, mapped internally to the correct CSS value */
   justify: PropTypes.oneOf([
@@ -57,6 +62,7 @@ Row.propTypes = {
 
 Row.defaultProps = {
   canWrap: false,
+  className: null,
   reverse: false,
   padding: null,
   justify: 'start',
