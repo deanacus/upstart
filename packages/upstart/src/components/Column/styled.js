@@ -11,7 +11,7 @@ export const StyledColumn = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-basis: ${({ flexBasis }) => flexBasis};
-  flex-direction: ${({ reverse }) => (reverse ? 'column-reverse' : 'column')};
+  flex-direction: ${({ isReverse }) => (isReverse ? 'column-reverse' : 'column')};
   max-width: ${({ flexBasis }) => flexBasis};
 
   ${({ alignItems }) => getAlignItems(alignItems)};
