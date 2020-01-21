@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { StyledColumn } from './styled';
 
 export const Column = ({
-  cols, reverse, align, justify, padding, children,
+  cols, reverse, align, justify, padding, className, children,
 }) => {
   const flexBasis = cols ? `${cols / 12 * 100}%` : 'auto';
 
@@ -15,6 +15,7 @@ export const Column = ({
       justifyContent={justify}
       padding={padding}
       reverse={reverse}
+      className={className}
     >
       {children}
     </StyledColumn>
@@ -34,6 +35,9 @@ Column.propTypes = {
 
   /** The number of grid columns the current column should render in */
   cols: PropTypes.number,
+
+  /** A custom className you would like to pass to the Column */
+  className: PropTypes.string,
 
   /** Whether or not to reverse the flex direction of the Column */
   reverse: PropTypes.bool,
@@ -66,6 +70,7 @@ Column.defaultProps = {
   justify: 'start',
   align: 'stretch',
   padding: null,
+  className: null,
 };
 
 export default Column;
