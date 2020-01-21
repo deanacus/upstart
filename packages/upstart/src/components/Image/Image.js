@@ -5,7 +5,7 @@ import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledCaption, StyledFigure, StyledImage } from './styled';
 
 export const Image = ({
-  src, alt, title, caption,
+  src, alt, title, caption, className,
 }) => (
   <ThemeProvider>
     <StyledFigure>
@@ -16,6 +16,8 @@ export const Image = ({
 );
 
 Image.propTypes = {
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
   /** The source path of the image */
   src: PropTypes.string.isRequired,
   /** The alternative text for the image */
@@ -27,6 +29,7 @@ Image.propTypes = {
 };
 
 Image.defaultProps = {
+  className: null,
   title: null,
   caption: null,
 };

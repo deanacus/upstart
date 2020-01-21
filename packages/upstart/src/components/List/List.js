@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { UnorderedList } from '../UnorderedList/UnorderedList';
 import { OrderedList } from '../OrderedList/OrderedList';
 
@@ -7,19 +8,27 @@ export const List = ({
   children,
   ordered,
   indent,
+  className,
   ...rest
 }) => (ordered
   ? (
-    <OrderedList indent={indent} listStyle={rest.listStyle}>
-      {children}
-    </OrderedList>
+    <ThemeProvider>
+      <OrderedList indent={indent} listStyle={rest.listStyle}>
+        {children}
+      </OrderedList>
+    </ThemeProvider>
   ) : (
-    <UnorderedList indent={indent} listStyle={rest.listStyle}>
-      {children}
-    </UnorderedList>
+    <ThemeProvider>
+      <UnorderedList indent={indent} listStyle={rest.listStyle}>
+        {children}
+      </UnorderedList>
+    </ThemeProvider>
   ));
 
 List.propTypes = {
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
+
   /** How far to indent the list from the left */
   indent: PropTypes.oneOf([
     0,
@@ -41,6 +50,7 @@ List.propTypes = {
 };
 
 List.defaultProps = {
+  className: null,
   ordered: false,
   indent: '4',
 };

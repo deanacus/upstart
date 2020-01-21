@@ -1,21 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { VerticalSeparator, HorizontalSeparator } from './styled';
 
-export const Separator = ({ vertical }) => {
-  if (vertical) {
-    return <VerticalSeparator />;
-  }
-  return <HorizontalSeparator />;
-};
+export const Separator = ({ isVertical, className }) => (
+  <ThemeProvider>
+    { isVertical ? <VerticalSeparator /> : <HorizontalSeparator />}
+  </ThemeProvider>
+);
 
 Separator.propTypes = {
-  vertical: PropTypes.bool,
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
+  isVertical: PropTypes.bool,
 };
 
 Separator.defaultProps = {
-  vertical: false,
+  className: null,
+  isVertical: false,
 };
 
 export default Separator;

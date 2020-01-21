@@ -26,7 +26,7 @@ describe('<Container />', () => {
 
   it('should have a max-width matching the theme value if fixed is a true and a size is set', () => {
     const { container } = render(
-      <Container className="test-container" size="sm" fixed>
+      <Container className="test-container" size="sm" isFixed>
         Children
       </Container>,
     );

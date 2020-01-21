@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledTRow } from './styled';
 
-export const TableRow = ({ children, padding }) => (
-  <StyledTRow padding={padding}>
-    {children}
-  </StyledTRow>
+export const TableRow = ({ children, padding, className }) => (
+  <ThemeProvider>
+    <StyledTRow padding={padding}>
+      {children}
+    </StyledTRow>
+  </ThemeProvider>
 );
 
 TableRow.propTypes = {
@@ -18,10 +20,14 @@ TableRow.propTypes = {
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
+
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
 };
 
 TableRow.defaultProps = {
   padding: null,
+  className: null,
 };
 
 export default TableRow;

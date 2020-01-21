@@ -25,7 +25,6 @@ const GlobalStyleCSS = css`
   body {
     background: ${getColor('background')};
     color: ${getColor('foreground')};
-    ${getLineHeight('body')}
     margin: 0;
     min-height: 100%;
     padding: 0;
@@ -36,9 +35,10 @@ const GlobalStyleCSS = css`
 
   /* TODO: Get these values off a theme */
   body {
-    color: #333;
+    color: ${getColor('foreground')};
     ${getFontFamily('body')};
     ${getFontSize('base')};
+    ${getLineHeight('body')}
     font-variant-ligatures: common-ligatures;
   }
 
