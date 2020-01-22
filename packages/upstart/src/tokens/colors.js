@@ -1,5 +1,5 @@
 const grey = [
-  '#F1F3F5',
+  '#f1f1f1',
   '#D5DCE1',
   '#B7C2CC',
   '#93A1B0',
