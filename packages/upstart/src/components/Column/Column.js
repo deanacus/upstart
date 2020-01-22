@@ -70,7 +70,7 @@ Column.defaultProps = {
   cols: null,
   isReverse: false,
   justify: 'start',
-  align: 'stretch',
+  align: 'start',
   padding: null,
   className: null,
 };

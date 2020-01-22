@@ -13,6 +13,7 @@ export const StyledColumn = styled.div`
   flex-basis: ${({ flexBasis }) => flexBasis};
   flex-direction: ${({ isReverse }) => (isReverse ? 'column-reverse' : 'column')};
   max-width: ${({ flexBasis }) => flexBasis};
+  width: 100%;
 
   ${({ alignItems }) => getAlignItems(alignItems)};
   ${({ justifyContent }) => getJustifyContent(justifyContent)};

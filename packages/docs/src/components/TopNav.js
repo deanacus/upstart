@@ -9,7 +9,7 @@ export const TopNav = () => (
     <Column padding="p-4">
       <div><span role="img" aria-label="Pointing up emoji">☝️</span>Upstart</div>
     </Column>
-    <Column padding="p-4">
+    <Column padding="p-4" align="end">
       <Button href="https://github.com/deanacus/upstart" size="sm" isOutline>Github</Button>
     </Column>
   </Row>
