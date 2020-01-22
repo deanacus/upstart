@@ -14,6 +14,7 @@ export const Button = ({
   isOutline,
   isRounded,
   handleClick,
+  className,
   ...rest
 }) => {
   const isButton = href === null;
@@ -29,6 +30,7 @@ export const Button = ({
         disabled={isDisabled}
         isOutline={isOutline}
         isRounded={isRounded}
+        className={className}
       >
         {children}
       </StyledTag>
@@ -37,6 +39,9 @@ export const Button = ({
 };
 
 Button.propTypes = {
+
+  /** A custom className you would like to pass to the Column */
+  className: PropTypes.string,
 
   /** The HTML type attribute for the button */
   type: PropTypes.oneOf(['button', 'submit']),
@@ -70,6 +75,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  className: null,
   variant: 'primary',
   href: null,
   handleClick: null,

@@ -13,6 +13,7 @@ export const Row = ({
       padding={padding}
       reverse={reverse}
       canWrap={canWrap}
+      className={className}
     >
       {children}
     </StyledRow>

@@ -5,7 +5,7 @@ import { StyledTHead } from './styled';
 
 export const TableHead = ({ children, padding, className }) => (
   <ThemeProvider>
-    <StyledTHead padding={padding}>
+    <StyledTHead padding={padding} className={className}>
       <tr>
         {children}
       </tr>

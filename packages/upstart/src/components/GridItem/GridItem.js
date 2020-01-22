@@ -7,7 +7,7 @@ export const GridItem = ({
   span, start, end, children, className,
 }) => (
   <ThemeProvider>
-    <Item span={span} start={start} end={end}>
+    <Item span={span} start={start} end={end} className={className}>
       {children}
     </Item>
   </ThemeProvider>

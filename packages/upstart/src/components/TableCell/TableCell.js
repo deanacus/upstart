@@ -5,7 +5,7 @@ import { StyledTCell } from './styled';
 
 export const TableCell = ({ children, align, className }) => (
   <ThemeProvider>
-    <StyledTCell alignment={align}>
+    <StyledTCell alignment={align} className={className}>
       {children}
     </StyledTCell>
   </ThemeProvider>
