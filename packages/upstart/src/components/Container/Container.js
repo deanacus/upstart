@@ -18,7 +18,13 @@ export const Container = ({
 );
 
 Container.propTypes = {
-  /** A custom className you would like to pass to the Column */
+  /** The children of the grid container */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+
+  /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
 
   /** Whether or not the grid container has a fixed max-width or not */
@@ -34,12 +40,6 @@ Container.propTypes = {
     'xxl',
     'xxxl',
   ]),
-
-  /** The children of the grid container */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
 };
 
 Container.defaultProps = {

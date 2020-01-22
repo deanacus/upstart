@@ -18,14 +18,12 @@ export const UnorderedList = ({
 );
 
 UnorderedList.propTypes = {
-  /** The style of list marker to be used. */
-  listStyle: PropTypes.oneOf([
-    'none',
-    'disc',
-    'circle',
-    'square',
-    PropTypes.string, // Custom marker
-  ]),
+
+  /** The content of the UnorderedList */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
 
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
@@ -40,17 +38,20 @@ UnorderedList.propTypes = {
     5,
   ]),
 
-  /** The content of the UnorderedList */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
+  /** The style of list marker to be used. */
+  listStyle: PropTypes.oneOf([
+    'none',
+    'disc',
+    'circle',
+    'square',
+    PropTypes.string, // Custom marker
+  ]),
 };
 
 UnorderedList.defaultProps = {
-  listStyle: 'disc',
-  indent: 4,
   className: null,
+  indent: 4,
+  listStyle: 'disc',
 };
 
 export default UnorderedList;

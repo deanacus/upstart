@@ -17,7 +17,10 @@ export const Badge = ({ variant, children, className }) => (
 
 Badge.propTypes = {
 
-  /** A custom className you would like to pass to the Column */
+  /** Content of the Badge */
+  children: PropTypes.node.isRequired,
+
+  /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
 
   /** The color variant of the Button */
@@ -29,9 +32,6 @@ Badge.propTypes = {
     'primary',
     'secondary',
   ]),
-
-  /** Content of the Badge */
-  children: PropTypes.node.isRequired,
 };
 
 Badge.defaultProps = {

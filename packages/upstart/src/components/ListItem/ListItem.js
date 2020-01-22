@@ -11,14 +11,15 @@ export const ListItem = ({ children, className }) => (
 );
 
 ListItem.propTypes = {
-  /** A custom className you would like to pass to the Component */
-  className: PropTypes.string,
 
   /** The content of the ListItem */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
+
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
 };
 
 ListItem.defaultProps = {
