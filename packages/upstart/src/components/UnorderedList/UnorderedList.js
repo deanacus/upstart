@@ -7,7 +7,11 @@ export const UnorderedList = ({
   children, listStyle, indent, className,
 }) => (
   <ThemeProvider>
-    <StyledList listStyle={listStyle} indent={indent} className={className}>
+    <StyledList
+      listStyle={listStyle}
+      indent={indent}
+      className={className}
+    >
       {children}
     </StyledList>
   </ThemeProvider>
@@ -45,7 +49,7 @@ UnorderedList.propTypes = {
 
 UnorderedList.defaultProps = {
   listStyle: 'disc',
-  indent: '4',
+  indent: 4,
   className: null,
 };
 

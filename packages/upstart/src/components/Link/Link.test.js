@@ -5,7 +5,7 @@ import { Link } from './Link';
 describe('<Link />', () => {
   it('should render', () => {
     const { container } = render(
-      <Link className="test-link">
+      <Link className="test-link" href="https://upstart.deanacus.com">
         Children
       </Link>,
     );

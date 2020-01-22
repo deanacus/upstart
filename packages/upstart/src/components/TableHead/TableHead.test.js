@@ -5,9 +5,11 @@ import { TableHead } from './TableHead';
 describe('<TableHead />', () => {
   it('should render', () => {
     const { container } = render(
-      <TableHead className="test-row">
-        Children
-      </TableHead>,
+      <table>
+        <TableHead className="test-row">
+          <th>Test</th>
+        </TableHead>
+      </table>,
     );
     const row = container.querySelector('.test-row');
     expect(row).not.toBe(undefined);

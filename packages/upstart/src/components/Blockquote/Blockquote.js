@@ -8,7 +8,10 @@ export const Blockquote = ({
   children, cite, rightBorder, className,
 }) => (
   <ThemeProvider>
-    <StyledQuote rightBorder={rightBorder} className={className}>
+    <StyledQuote
+      rightBorder={rightBorder}
+      className={className}
+    >
       {children}
       {cite && <cite>&mdash; {cite}</cite>}
     </StyledQuote>

@@ -5,7 +5,7 @@ import { Input } from './Input';
 describe('<Input />', () => {
   it('should render', () => {
     const { container } = render(
-      <Input className="test-input">
+      <Input className="test-input" id="test-input" label="Test input">
         Children
       </Input>,
     );

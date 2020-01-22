@@ -9,8 +9,19 @@ export const Image = ({
 }) => (
   <ThemeProvider>
     <StyledFigure className={className}>
-      <StyledImage src={src} alt={alt} title={title} className={className && `${className} ${className}-image`} />
-      { caption && <StyledCaption className={className && `${className} ${className}-caption`}>{caption}</StyledCaption>}
+      <StyledImage
+        src={src}
+        alt={alt}
+        title={title}
+        className={className && `${className} ${className}-image`}
+      />
+      {
+      caption && (
+        <StyledCaption className={className && `${className} ${className}-caption`}>
+          {caption}
+        </StyledCaption>
+      )
+      }
     </StyledFigure>
   </ThemeProvider>
 );

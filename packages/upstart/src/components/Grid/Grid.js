@@ -7,7 +7,11 @@ export const Grid = ({
   cols, gap, children, className,
 }) => (
   <ThemeProvider>
-    <GridContainer cols={cols} gap={gap} className={className}>
+    <GridContainer
+      cols={cols}
+      gap={gap}
+      className={className}
+    >
       {children}
     </GridContainer>
   </ThemeProvider>

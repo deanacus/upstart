@@ -13,13 +13,21 @@ export const List = ({
 }) => (ordered
   ? (
     <ThemeProvider>
-      <OrderedList indent={indent} listStyle={rest.listStyle} className={className}>
+      <OrderedList
+        indent={indent}
+        listStyle={rest.listStyle}
+        className={className}
+      >
         {children}
       </OrderedList>
     </ThemeProvider>
   ) : (
     <ThemeProvider>
-      <UnorderedList indent={indent} listStyle={rest.listStyle} className={className}>
+      <UnorderedList
+        indent={indent}
+        listStyle={rest.listStyle}
+        className={className}
+      >
         {children}
       </UnorderedList>
     </ThemeProvider>
@@ -52,7 +60,7 @@ List.propTypes = {
 List.defaultProps = {
   className: null,
   ordered: false,
-  indent: '4',
+  indent: 4,
 };
 
 export default List;
