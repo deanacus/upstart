@@ -6,7 +6,10 @@ import { StyledBadge } from './styled';
 
 export const Badge = ({ variant, children, className }) => (
   <ThemeProvider>
-    <StyledBadge variant={variant} className={className}>
+    <StyledBadge
+      variant={variant}
+      className={className}
+    >
       {children}
     </StyledBadge>
   </ThemeProvider>

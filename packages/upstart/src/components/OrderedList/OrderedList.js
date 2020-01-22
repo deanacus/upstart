@@ -7,7 +7,11 @@ export const OrderedList = ({
   children, listStyle, indent, className,
 }) => (
   <ThemeProvider>
-    <StyledList listStyle={listStyle} indent={indent} className={className}>
+    <StyledList
+      listStyle={listStyle}
+      indent={indent}
+      className={className}
+    >
       {children}
     </StyledList>
   </ThemeProvider>
@@ -47,7 +51,7 @@ OrderedList.propTypes = {
 OrderedList.defaultProps = {
   className: null,
   listStyle: 'decimal',
-  indent: '4',
+  indent: 4,
 };
 
 export default OrderedList;

@@ -5,7 +5,7 @@ import { Image } from './Image';
 describe('<Image />', () => {
   it('should render', () => {
     const { container } = render(
-      <Image className="test-image">
+      <Image className="test-image" src="" alt="">
         Children
       </Image>,
     );

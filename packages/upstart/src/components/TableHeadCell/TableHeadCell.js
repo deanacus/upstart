@@ -7,7 +7,11 @@ export const TableHeadCell = ({
   children, align, width, className,
 }) => (
   <ThemeProvider>
-    <StyledTHeadCell width={width} alignment={align} className={className}>
+    <StyledTHeadCell
+      width={width}
+      alignment={align}
+      className={className}
+    >
       {children}
     </StyledTHeadCell>
   </ThemeProvider>

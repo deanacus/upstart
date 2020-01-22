@@ -7,7 +7,11 @@ export const Container = ({
   isFixed, size, children, className,
 }) => (
   <ThemeProvider>
-    <StyledContainer className={className} isFixed={isFixed} size={size}>
+    <StyledContainer
+      className={className}
+      isFixed={isFixed}
+      size={size}
+    >
       {children}
     </StyledContainer>
   </ThemeProvider>
