@@ -9,6 +9,7 @@ export const Link = ({
     <a
       href={href}
       target={newTab || isExternal ? '_blank' : ''}
+      className={className}
     >
       {children}
       {isExternal && <small>ext</small>}

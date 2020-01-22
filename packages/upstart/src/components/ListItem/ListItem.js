@@ -4,7 +4,7 @@ import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 
 export const ListItem = ({ children, className }) => (
   <ThemeProvider>
-    <li>
+    <li className={className}>
       {children}
     </li>
   </ThemeProvider>

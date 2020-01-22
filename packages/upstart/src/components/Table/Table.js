@@ -5,7 +5,7 @@ import { StyledTable } from './styled';
 
 export const Table = ({ children, className }) => (
   <ThemeProvider>
-    <StyledTable>
+    <StyledTable className={className}>
       {children}
     </StyledTable>
   </ThemeProvider>

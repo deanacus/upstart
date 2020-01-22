@@ -5,7 +5,7 @@ import { StyledTRow } from './styled';
 
 export const TableRow = ({ children, padding, className }) => (
   <ThemeProvider>
-    <StyledTRow padding={padding}>
+    <StyledTRow padding={padding} className={className}>
       {children}
     </StyledTRow>
   </ThemeProvider>

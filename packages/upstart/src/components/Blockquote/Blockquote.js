@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledQuote } from './styled';
 
-export const Blockquote = ({ children, cite, rightBorder }) => (
+export const Blockquote = ({
+  children, cite, rightBorder, className,
+}) => (
   <ThemeProvider>
-    <StyledQuote rightBorder={rightBorder}>
+    <StyledQuote rightBorder={rightBorder} className={className}>
       {children}
       {cite && <cite>&mdash; {cite}</cite>}
     </StyledQuote>
@@ -14,6 +16,9 @@ export const Blockquote = ({ children, cite, rightBorder }) => (
 );
 
 Blockquote.propTypes = {
+  /** A custom className you would like to pass to the Column */
+  className: PropTypes.string,
+
   /** Whether or not to render the border on the right */
   rightBorder: PropTypes.bool,
 
@@ -28,6 +33,7 @@ Blockquote.propTypes = {
 };
 
 Blockquote.defaultProps = {
+  className: null,
   cite: null,
   rightBorder: false,
 };

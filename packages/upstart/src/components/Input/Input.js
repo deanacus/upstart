@@ -7,9 +7,19 @@ export const Input = ({
   id, isInline, type, label, placeholder, className, ...props
 }) => (
   <ThemeProvider>
-    <StyledLabel isInline={isInline} htmlFor={id}>
+    <StyledLabel
+      isInline={isInline}
+      htmlFor={id}
+      className={className && `${className} ${className}-label`}
+    >
       {label}
-      <TextInput type={type} name={id} id={id} placeholder={placeholder} />
+      <TextInput
+        type={type}
+        name={id}
+        id={id}
+        placeholder={placeholder}
+        className={className && `${className} ${className}-input`}
+      />
     </StyledLabel>
   </ThemeProvider>
 );

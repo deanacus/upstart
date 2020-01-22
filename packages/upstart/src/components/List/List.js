@@ -13,13 +13,13 @@ export const List = ({
 }) => (ordered
   ? (
     <ThemeProvider>
-      <OrderedList indent={indent} listStyle={rest.listStyle}>
+      <OrderedList indent={indent} listStyle={rest.listStyle} className={className}>
         {children}
       </OrderedList>
     </ThemeProvider>
   ) : (
     <ThemeProvider>
-      <UnorderedList indent={indent} listStyle={rest.listStyle}>
+      <UnorderedList indent={indent} listStyle={rest.listStyle} className={className}>
         {children}
       </UnorderedList>
     </ThemeProvider>

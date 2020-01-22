@@ -5,7 +5,13 @@ import { VerticalSeparator, HorizontalSeparator } from './styled';
 
 export const Separator = ({ isVertical, className }) => (
   <ThemeProvider>
-    { isVertical ? <VerticalSeparator /> : <HorizontalSeparator />}
+    {
+      isVertical ? (
+        <VerticalSeparator className={className} />
+      ) : (
+        <HorizontalSeparator className={className} />
+      )
+    }
   </ThemeProvider>
 );
 
