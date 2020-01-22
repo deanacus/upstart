@@ -19,20 +19,20 @@ export const Link = ({
 
 Link.propTypes = {
 
-  /** A custom className you would like to pass to the Component */
-  className: PropTypes.string,
-
   /** The content of the Link */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
 
-  /** Whether or not the Link points to an external site */
-  isExternal: PropTypes.bool,
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
 
   /** The URL the Link points to. */
   href: PropTypes.string.isRequired,
+
+  /** Whether or not the Link points to an external site */
+  isExternal: PropTypes.bool,
 
   /** Whether or not to launch the Link in a new tab/window */
   newTab: PropTypes.bool,

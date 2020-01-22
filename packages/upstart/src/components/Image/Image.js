@@ -27,22 +27,27 @@ export const Image = ({
 );
 
 Image.propTypes = {
-  /** A custom className you would like to pass to the Component */
-  className: PropTypes.string,
-  /** The source path of the image */
-  src: PropTypes.string.isRequired,
-  /** The alternative text for the image */
-  alt: PropTypes.string.isRequired,
-  /** An optional title for the image */
-  title: PropTypes.string,
+
   /** An optional caption to be rendered on top of the image */
   caption: PropTypes.string,
+
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
+
+  /** The source path of the image */
+  src: PropTypes.string.isRequired,
+
+  /** The alternative text for the image */
+  alt: PropTypes.string.isRequired,
+
+  /** An optional title for the image */
+  title: PropTypes.string,
 };
 
 Image.defaultProps = {
+  caption: null,
   className: null,
   title: null,
-  caption: null,
 };
 
 export default Image;

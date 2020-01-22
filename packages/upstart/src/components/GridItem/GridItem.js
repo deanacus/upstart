@@ -19,8 +19,18 @@ export const GridItem = ({
 );
 
 GridItem.propTypes = {
+
+  /** The children of the Grid */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
+
+  /** The grid line the item will end on */
+  end: PropTypes.number,
 
   /** How many grid tracks the item will span */
   span: PropTypes.number,
@@ -28,21 +38,13 @@ GridItem.propTypes = {
   /** The grid line the item will start on */
   start: PropTypes.number,
 
-  /** The grid line the item will end on */
-  end: PropTypes.number,
-
-  /** The children of the Grid */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
 };
 
 GridItem.defaultProps = {
   className: null,
+  end: null,
   span: null,
   start: null,
-  end: null,
 };
 
 export default GridItem;

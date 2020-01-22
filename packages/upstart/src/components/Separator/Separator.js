@@ -18,6 +18,8 @@ export const Separator = ({ isVertical, className }) => (
 Separator.propTypes = {
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
+
+  /** Whether or not to render a vertical separator */
   isVertical: PropTypes.bool,
 };
 

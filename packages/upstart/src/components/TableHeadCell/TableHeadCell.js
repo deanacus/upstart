@@ -26,9 +26,6 @@ TableHeadCell.propTypes = {
     'right',
   ]),
 
-  /** Width of the cell/column */
-  width: PropTypes.string,
-
   /** The content of the TableHeadCell */
   children: PropTypes.oneOfType([
     PropTypes.node,
@@ -37,6 +34,9 @@ TableHeadCell.propTypes = {
 
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
+
+  /** Width of the cell/column */
+  width: PropTypes.string,
 };
 
 TableHeadCell.defaultProps = {

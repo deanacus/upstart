@@ -6,11 +6,11 @@ import { OrderedList } from '../OrderedList/OrderedList';
 
 export const List = ({
   children,
-  ordered,
+  isOrdered,
   indent,
   className,
   ...rest
-}) => (ordered
+}) => (isOrdered
   ? (
     <ThemeProvider>
       <OrderedList
@@ -34,6 +34,13 @@ export const List = ({
   ));
 
 List.propTypes = {
+
+  /** The content of the List */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
 
@@ -47,19 +54,13 @@ List.propTypes = {
     5,
   ]),
 
-  /** The content of the List */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
-
   /** Render an ordered list */
-  ordered: PropTypes.bool,
+  isOrdered: PropTypes.bool,
 };
 
 List.defaultProps = {
   className: null,
-  ordered: false,
+  isOrdered: false,
   indent: 4,
 };
 

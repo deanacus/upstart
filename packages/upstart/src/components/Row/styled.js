@@ -10,7 +10,7 @@ export const StyledRow = styled.div`
   align-content: stretch;
   box-sizing: border-box;
   display: flex;
-  flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+  flex-direction: ${({ isReverse }) => (isReverse ? 'row-reverse' : 'row')};
   flex-wrap: ${({ canWrap }) => (canWrap ? 'wrap' : 'no-wrap')};
   width: 100%;
 
