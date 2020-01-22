@@ -6,7 +6,11 @@ describe('<Table />', () => {
   it('should render', () => {
     const { container } = render(
       <Table className="test-table">
-        Children
+        <tbody>
+          <tr>
+            <td>Test</td>
+          </tr>
+        </tbody>
       </Table>,
     );
     const table = container.querySelector('.test-table');

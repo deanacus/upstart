@@ -6,11 +6,7 @@ import { StyledTable } from './styled';
 export const Table = ({ children, className }) => (
   <ThemeProvider>
     <StyledTable className={className}>
-      <tbody>
-        <tr>
-          <td>Test</td>
-        </tr>
-      </tbody>
+      {children}
     </StyledTable>
   </ThemeProvider>
 );
