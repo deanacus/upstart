@@ -19,12 +19,6 @@ export const Blockquote = ({
 );
 
 Blockquote.propTypes = {
-  /** A custom className you would like to pass to the Column */
-  className: PropTypes.string,
-
-  /** Whether or not to render the border on the right */
-  rightBorder: PropTypes.bool,
-
   /** Content of the blockquote */
   children: PropTypes.oneOfType([
     PropTypes.node,
@@ -33,11 +27,17 @@ Blockquote.propTypes = {
 
   /** The author or work to be cited in the blockquote */
   cite: PropTypes.string,
+
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
+
+  /** Whether or not to render the border on the right */
+  rightBorder: PropTypes.bool,
 };
 
 Blockquote.defaultProps = {
-  className: null,
   cite: null,
+  className: null,
   rightBorder: false,
 };
 

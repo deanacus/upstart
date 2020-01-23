@@ -18,6 +18,13 @@ export const OrderedList = ({
 );
 
 OrderedList.propTypes = {
+
+  /** The content of the UnorderedList */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
 
@@ -40,12 +47,6 @@ OrderedList.propTypes = {
     4,
     5,
   ]),
-
-  /** The content of the UnorderedList */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
 };
 
 OrderedList.defaultProps = {

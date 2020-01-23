@@ -12,13 +12,14 @@ export const Table = ({ children, className }) => (
 );
 
 Table.propTypes = {
-  /** A custom className you would like to pass to the Component */
-  className: PropTypes.string,
   /** The content of the Table */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
+
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
 };
 
 Table.defaultProps = {

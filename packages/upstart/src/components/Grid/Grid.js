@@ -19,6 +19,12 @@ export const Grid = ({
 
 Grid.propTypes = {
 
+  /** The children of the Grid */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
 
@@ -27,12 +33,6 @@ Grid.propTypes = {
 
   /** The size of the gap between columns and rows */
   gap: PropTypes.number,
-
-  /** The children of the Grid */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
 };
 
 Grid.defaultProps = {

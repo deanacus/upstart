@@ -35,6 +35,13 @@ Column.propTypes = {
     'baseline',
   ]),
 
+
+  /** The contents of the column */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+
   /** The number of grid columns the current column should render in */
   cols: PropTypes.number,
 
@@ -58,21 +65,15 @@ Column.propTypes = {
 
   /** The padding value to be used on the Row. Based on the bootstrap padding classes */
   padding: PropTypes.string,
-
-  /** The contents of the column */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
 };
 
 Column.defaultProps = {
+  align: 'start',
+  className: null,
   cols: null,
   isReverse: false,
   justify: 'start',
-  align: 'start',
   padding: null,
-  className: null,
 };
 
 export default Column;

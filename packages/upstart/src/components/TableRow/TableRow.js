@@ -12,8 +12,6 @@ export const TableRow = ({ children, padding, className }) => (
 );
 
 TableRow.propTypes = {
-  /** The padding string to be applied to the TableRow. */
-  padding: PropTypes.string,
 
   /** The content of the TableRow */
   children: PropTypes.oneOfType([
@@ -23,11 +21,14 @@ TableRow.propTypes = {
 
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
+
+  /** The padding string to be applied to the TableRow. */
+  padding: PropTypes.string,
 };
 
 TableRow.defaultProps = {
-  padding: null,
   className: null,
+  padding: null,
 };
 
 export default TableRow;

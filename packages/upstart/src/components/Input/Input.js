@@ -27,17 +27,18 @@ export const Input = ({
 Input.propTypes = {
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
+
   /** The unique identifier for the Input */
   id: PropTypes.string.isRequired,
+
+  /** If the label should be alongside the Input */
+  isInline: PropTypes.bool,
 
   /** The text for the Input label */
   label: PropTypes.string.isRequired,
 
   /** The placeholder text for the Input */
   placeholder: PropTypes.string,
-
-  /** If the label should be alongside the Input */
-  isInline: PropTypes.bool,
 
   /** The type of input field */
   type: PropTypes.oneOf([
@@ -53,9 +54,9 @@ Input.propTypes = {
 
 Input.defaultProps = {
   className: null,
-  type: 'text',
   isInline: false,
   placeholder: null,
+  type: 'text',
 };
 
 export default Input;
