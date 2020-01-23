@@ -52,7 +52,7 @@ const Menu = ({ allSitePage: { nodes }, site: { siteMetadata: { menu } } }) => {
               <UnorderedList listStyle="none" indent="0">
                 {
                   children.map(
-                    ({ childLabel, route }) => (
+                    ({ label: childLabel, route }) => (
                       activeItems.includes(route) ? (
                         <ListItem key={route}><Link to={route}>{childLabel}</Link></ListItem>
                       ) : (
