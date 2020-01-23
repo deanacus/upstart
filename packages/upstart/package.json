@@ -73,5 +73,5 @@
     "prepublishOnly": "rm -rf /esm /dist && yarn build"
   },
   "sideEffects": false,
-  "version": "0.0.11"
+  "version": "0.0.12"
 }
