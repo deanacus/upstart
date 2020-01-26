@@ -1,26 +1,58 @@
 {
   "name": "@deanacus/upstart-hooks",
-  "version": "0.0.2",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "private": false,
   "scripts": {
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "prepublishOnly": "rm -rf /esm /dist && yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deanacus/upstart.git"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 75,
+        "functions": 75,
+        "lines": 75,
+        "statements": 75
+      }
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-react": "^7.7.4",
+    "@testing-library/react-hooks": "^3.2.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-app": "^6.1.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
     "jest": "^24.9.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-testing-library": "^8.0.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.0"
   },
   "peerDependencies": {
+    "prop-types": "^15.7.2",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
-    "prop-types": "^15.7.2",
     "styled-components": "^4.4.1"
   }
 }

@@ -1,25 +1,49 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { UnorderedList } from '../UnorderedList/UnorderedList';
 import { OrderedList } from '../OrderedList/OrderedList';
 
 export const List = ({
   children,
-  ordered,
+  isOrdered,
   indent,
+  className,
   ...rest
-}) => (ordered
+}) => (isOrdered
   ? (
-    <OrderedList indent={indent} listStyle={rest.listStyle}>
-      {children}
-    </OrderedList>
+    <ThemeProvider>
+      <OrderedList
+        indent={indent}
+        listStyle={rest.listStyle}
+        className={className}
+      >
+        {children}
+      </OrderedList>
+    </ThemeProvider>
   ) : (
-    <UnorderedList indent={indent} listStyle={rest.listStyle}>
-      {children}
-    </UnorderedList>
+    <ThemeProvider>
+      <UnorderedList
+        indent={indent}
+        listStyle={rest.listStyle}
+        className={className}
+      >
+        {children}
+      </UnorderedList>
+    </ThemeProvider>
   ));
 
 List.propTypes = {
+
+  /** The content of the List */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
+
   /** How far to indent the list from the left */
   indent: PropTypes.oneOf([
     0,
@@ -30,19 +54,14 @@ List.propTypes = {
     5,
   ]),
 
-  /** The content of the List */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
-
   /** Render an ordered list */
-  ordered: PropTypes.bool,
+  isOrdered: PropTypes.bool,
 };
 
 List.defaultProps = {
-  ordered: false,
-  indent: '4',
+  className: null,
+  isOrdered: false,
+  indent: 4,
 };
 
 export default List;

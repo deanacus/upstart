@@ -11,9 +11,9 @@ export const StyledColumn = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-basis: ${({ flexBasis }) => flexBasis};
-  flex-direction: ${({ reverse }) => (reverse ? 'column-reverse' : 'column')};
-  min-width: ${({ flexBasis }) => flexBasis};
-  width: ${({ flexBasis }) => flexBasis};
+  flex-direction: ${({ isReverse }) => (isReverse ? 'column-reverse' : 'column')};
+  max-width: ${({ flexBasis }) => flexBasis};
+  width: 100%;
 
   ${({ alignItems }) => getAlignItems(alignItems)};
   ${({ justifyContent }) => getJustifyContent(justifyContent)};

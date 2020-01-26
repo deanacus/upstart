@@ -1,19 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledQuote } from './styled';
 
-export const Blockquote = ({ children, cite, rightBorder }) => (
-  <StyledQuote rightBorder={rightBorder}>
-    {children}
-    {cite && <cite>&mdash; {cite}</cite>}
-  </StyledQuote>
+export const Blockquote = ({
+  children, cite, rightBorder, className,
+}) => (
+  <ThemeProvider>
+    <StyledQuote
+      rightBorder={rightBorder}
+      className={className}
+    >
+      {children}
+      {cite && <cite>&mdash; {cite}</cite>}
+    </StyledQuote>
+  </ThemeProvider>
 );
 
 Blockquote.propTypes = {
-  /** Whether or not to render the border on the right */
-  rightBorder: PropTypes.bool,
-
   /** Content of the blockquote */
   children: PropTypes.oneOfType([
     PropTypes.node,
@@ -22,10 +27,17 @@ Blockquote.propTypes = {
 
   /** The author or work to be cited in the blockquote */
   cite: PropTypes.string,
+
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
+
+  /** Whether or not to render the border on the right */
+  rightBorder: PropTypes.bool,
 };
 
 Blockquote.defaultProps = {
   cite: null,
+  className: null,
   rightBorder: false,
 };
 

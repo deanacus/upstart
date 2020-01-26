@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledTCell } from './styled';
 
-export const TableCell = ({ children, align }) => (
-  <StyledTCell alignment={align}>
-    {children}
-  </StyledTCell>
+export const TableCell = ({ children, align, className }) => (
+  <ThemeProvider>
+    <StyledTCell alignment={align} className={className}>
+      {children}
+    </StyledTCell>
+  </ThemeProvider>
 );
 
 TableCell.propTypes = {
@@ -22,10 +24,14 @@ TableCell.propTypes = {
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
+
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
 };
 
 TableCell.defaultProps = {
   align: 'left',
+  className: null,
 };
 
 export default TableCell;

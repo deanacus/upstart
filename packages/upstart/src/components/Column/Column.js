@@ -1,23 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledColumn } from './styled';
 
 export const Column = ({
-  cols, reverse, align, justify, padding, children,
+  cols, isReverse, align, justify, padding, className, children,
 }) => {
   const flexBasis = cols ? `${cols / 12 * 100}%` : 'auto';
 
   return (
-    <StyledColumn
-      flexBasis={flexBasis}
-      alignItems={align}
-      justifyContent={justify}
-      padding={padding}
-      reverse={reverse}
-    >
-      {children}
-    </StyledColumn>
+    <ThemeProvider>
+      <StyledColumn
+        flexBasis={flexBasis}
+        alignItems={align}
+        justifyContent={justify}
+        padding={padding}
+        isReverse={isReverse}
+        className={className}
+      >
+        {children}
+      </StyledColumn>
+    </ThemeProvider>
   );
 };
 
@@ -32,11 +35,21 @@ Column.propTypes = {
     'baseline',
   ]),
 
+
+  /** The contents of the column */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+
   /** The number of grid columns the current column should render in */
   cols: PropTypes.number,
 
+  /** A custom className you would like to pass to the Column */
+  className: PropTypes.string,
+
   /** Whether or not to reverse the flex direction of the Column */
-  reverse: PropTypes.bool,
+  isReverse: PropTypes.bool,
 
   /** The justify-content value, mapped internally to the correct CSS value */
   justify: PropTypes.oneOf([
@@ -52,19 +65,14 @@ Column.propTypes = {
 
   /** The padding value to be used on the Row. Based on the bootstrap padding classes */
   padding: PropTypes.string,
-
-  /** The contents of the column */
-  children: PropTypes.oneOfType([
-    PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
 };
 
 Column.defaultProps = {
+  align: 'start',
+  className: null,
   cols: null,
-  reverse: false,
+  isReverse: false,
   justify: 'start',
-  align: 'stretch',
   padding: null,
 };
 

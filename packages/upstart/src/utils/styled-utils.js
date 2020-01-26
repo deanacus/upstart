@@ -66,21 +66,21 @@ export const getPadding = (alias) => getSpacing(alias);
 
 export const getMargin = (alias) => getSpacing(alias);
 
-export const getFontFamily = (family) => `font-family: ${Theme.fonts[family]}`;
+export const getFontFamily = (family) => `font-family: ${Theme.fonts[family]};`;
 
-export const getFontSize = (size) => `font-size: ${getUnit(Theme.fontSizes[size])}`;
+export const getFontSize = (size) => `font-size: ${getUnit(Theme.fontSizes[size])};`;
 
-export const getFontWeight = (weight) => `font-weight: ${Theme.fontWeights[weight]}`;
+export const getFontWeight = (weight) => `font-weight: ${Theme.fontWeights[weight]};`;
 
-export const getLineHeight = (height) => `line-height: ${Theme.lineHeights[height]}`;
+export const getLineHeight = (height) => `line-height: ${Theme.lineHeights[height]};`;
 
 export const getColor = (name, strength) => Theme.colors[name][strength] || Theme.colors[name];
 
-export const alignItems = (align) => `align-items: ${alignmentMap[align]}`;
+export const alignItems = (align) => `align-items: ${alignmentMap[align]};`;
 
-export const alignContent = (align) => `align-content: ${alignmentMap[align]}`;
+export const alignContent = (align) => `align-content: ${alignmentMap[align]};`;
 
-export const justifyContent = (justify) => `justify-content: ${justifyMap[justify]}`;
+export const justifyContent = (justify) => `justify-content: ${justifyMap[justify]};`;
 
 export const getWidth = (widthIndex) => getUnit(Theme.widths[widthIndex]);
 

@@ -3,3 +3,7 @@ node_modules
 packages/docs/public/
 packages/upstart/dist/
 packages/upstart/esm/
+packages/upstart/coverage/
+packages/hooks/dist/
+packages/hooks/esm/
+packages/hooks/coverage/
