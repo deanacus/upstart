@@ -1,5 +1,5 @@
-import { useTheme } from './useTheme';
-import { usePreferredUnit } from './usePreferredUnit';
+import { useTheme } from '../useTheme/useTheme';
+import { usePreferredUnit } from '../usePreferredUnit/usePreferredUnit';
 
 export const useWidth = (width) => {
   const { widths } = useTheme();

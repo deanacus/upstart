@@ -1,4 +1,4 @@
-import { useTheme } from './useTheme';
+import { useTheme } from '../useTheme/useTheme';
 
 export const useElevation = (layer) => {
   const { zIndices } = useTheme();

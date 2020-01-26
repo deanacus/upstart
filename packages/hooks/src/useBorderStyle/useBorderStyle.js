@@ -1,4 +1,4 @@
-import { useTheme } from './useTheme';
+import { useTheme } from '../useTheme/useTheme';
 
 export const useBorderStyle = (style) => {
   const { borderStyles } = useTheme();
