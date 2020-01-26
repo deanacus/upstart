@@ -88,6 +88,35 @@ export const getBreakpoint = (bp) => getUnit(Theme.breakpoints[bp]);
 
 export const getBorder = (borderIndex) => Theme.borders[borderIndex];
 
+export const getBorderFromString = (alias) => {
+  const [key, index] = alias.split('-');
+
+  switch (key) {
+    case 'b':
+      return `border: ${Theme.borders[index]}`;
+    case 'bx':
+      return `
+        border-right: ${Theme.border[index]};
+        border-left: ${Theme.border[index]};
+      `;
+    case 'by':
+      return `
+        border-top: ${Theme.border[index]};
+        border-bottom: ${Theme.border[index]};
+      `;
+    case 'bt':
+      return `border-top: ${Theme.border[index]};`;
+    case 'br':
+      return `border-right: ${Theme.border[index]};`;
+    case 'bb':
+      return `border-bottom: ${Theme.border[index]};`;
+    case 'bl':
+      return `border-left: ${Theme.border[index]};`;
+    default:
+      return null;
+  }
+};
+
 export const getBorderWidth = (borderWidthIndex) => getUnit(Theme.borderWidths[borderWidthIndex]);
 
 export const getBorderStyle = (style) => Theme.borderStyles[style];
