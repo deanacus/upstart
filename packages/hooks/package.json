@@ -1,8 +1,33 @@
 {
   "name": "@deanacus/upstart-hooks",
   "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "private": false,
   "scripts": {
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "prepublishOnly": "rm -rf /esm /dist && yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deanacus/upstart.git"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 75,
+        "functions": 75,
+        "lines": 75,
+        "statements": 75
+      }
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
