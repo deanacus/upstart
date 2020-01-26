@@ -1,11 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ListItem, UnorderedList } from '@deanacus/upstart';
+import styled from 'styled-components';
+import {
+  ListItem, UnorderedList, getFontSize, getFontFamily,
+} from '@deanacus/upstart';
 import { Link } from 'gatsby';
+
+const GroupTitle = styled.h2`
+  ${getFontFamily('body')}
+  ${getFontSize('md')}
+  text-transform: uppercase;
+`;
 
 export const MenuGroup = ({ group, title }) => (
   <ListItem>
-    <h2>{title}</h2>
+    <GroupTitle>{title}</GroupTitle>
     <UnorderedList indent={0} listStyle="none">
       {
         group.map((node) => (
