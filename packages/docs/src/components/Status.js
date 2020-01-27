@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { getColor, getRadius } from '@deanacus/upstart';
+import { getRem } from '@deanacus/upstart';
 
 const Circle = styled.div`
-  background: ${({ status }) => getColor(status)};
-  border-radius: ${getRadius('circle')};
+  background: ${({ status, theme }) => theme.colors[status]};
+  border-radius: ${({ theme }) => getRem(theme.radii.circle, theme.rootVal)};
   height: 1rem;
   width: 1rem;
 `;

@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {
-  ListItem, UnorderedList, getFontSize, getFontFamily,
-} from '@deanacus/upstart';
+import { ListItem, UnorderedList } from '@deanacus/upstart';
 import { Link } from 'gatsby';
 
 const GroupTitle = styled.h2`
-  ${getFontFamily('body')}
-  ${getFontSize('md')}
+  font-family: ${({ theme }) => theme.fonts.body};
+  font-size: ${({ theme }) => theme.fontSizes.md};
   text-transform: uppercase;
 `;
 
