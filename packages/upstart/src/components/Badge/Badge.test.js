@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render } from '../../utils/test-utils';
 import { Theme } from '../Theme/Theme';
 import { Badge } from './Badge';
 
@@ -15,7 +15,7 @@ describe('<Badge />', () => {
     const { container } = render(<Badge>lorem ipsum</Badge>);
 
     const badge = container.querySelector('span');
-    expect(badge).toHaveStyleRule('background', Theme.colors.grey[1]);
+    expect(badge).toHaveStyleRule('background', Theme.colors.grey[0]);
   });
 
   it('should render a success variant', () => {

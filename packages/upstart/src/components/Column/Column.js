@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledColumn } from './styled';
 
 export const Column = ({
@@ -9,18 +9,16 @@ export const Column = ({
   const flexBasis = cols ? `${cols / 12 * 100}%` : 'auto';
 
   return (
-    <ThemeProvider>
-      <StyledColumn
-        flexBasis={flexBasis}
-        alignItems={align}
-        justifyContent={justify}
-        padding={padding}
-        isReverse={isReverse}
-        className={className}
-      >
-        {children}
-      </StyledColumn>
-    </ThemeProvider>
+    <StyledColumn
+      flexBasis={flexBasis}
+      alignItems={align}
+      justifyContent={justify}
+      padding={padding}
+      isReverse={isReverse}
+      className={className}
+    >
+      {children}
+    </StyledColumn>
   );
 };
 

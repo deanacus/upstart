@@ -1,29 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledCaption, StyledFigure, StyledImage } from './styled';
 
 export const Image = ({
   src, alt, title, caption, className,
 }) => (
-  <ThemeProvider>
-    <StyledFigure className={className}>
-      <StyledImage
-        src={src}
-        alt={alt}
-        title={title}
-        className={className && `${className} ${className}-image`}
-      />
-      {
+  <StyledFigure className={className}>
+    <StyledImage
+      src={src}
+      alt={alt}
+      title={title}
+      className={className && `${className} ${className}-image`}
+    />
+    {
       caption && (
         <StyledCaption className={className && `${className} ${className}-caption`}>
           {caption}
         </StyledCaption>
       )
       }
-    </StyledFigure>
-  </ThemeProvider>
+  </StyledFigure>
 );
 
 Image.propTypes = {

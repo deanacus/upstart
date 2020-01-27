@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledTHead } from './styled';
 
 export const TableHead = ({ children, padding, className }) => (
-  <ThemeProvider>
-    <StyledTHead padding={padding} className={className}>
-      <tr>
-        {children}
-      </tr>
-    </StyledTHead>
-  </ThemeProvider>
+  <StyledTHead padding={padding} className={className}>
+    <tr>
+      {children}
+    </tr>
+  </StyledTHead>
 );
 
 TableHead.propTypes = {

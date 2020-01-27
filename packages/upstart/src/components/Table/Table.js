@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledTable } from './styled';
 
 export const Table = ({ children, className }) => (
-  <ThemeProvider>
-    <StyledTable className={className}>
-      {children}
-    </StyledTable>
-  </ThemeProvider>
+  <StyledTable className={className}>
+    {children}
+  </StyledTable>
 );
 
 Table.propTypes = {

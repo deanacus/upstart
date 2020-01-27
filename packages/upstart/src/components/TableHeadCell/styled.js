@@ -5,7 +5,7 @@ import { getPadding } from '../../utils/styled-utils';
 export const StyledTHeadCell = styled.th`
   font-weight: bold;
   text-align: ${({ alignment }) => alignment};
-  ${({ padding }) => padding && getPadding(padding)};
+  ${({ padding, theme }) => padding && getPadding(padding, theme)};
 `;
 
 export default StyledTHeadCell;

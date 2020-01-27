@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledTRow } from './styled';
 
 export const TableRow = ({ children, padding, className }) => (
-  <ThemeProvider>
-    <StyledTRow padding={padding} className={className}>
-      {children}
-    </StyledTRow>
-  </ThemeProvider>
+  <StyledTRow padding={padding} className={className}>
+    {children}
+  </StyledTRow>
 );
 
 TableRow.propTypes = {

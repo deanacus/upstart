@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 
 export const ListItem = ({ children, className }) => (
-  <ThemeProvider>
-    <li className={className}>
-      {children}
-    </li>
-  </ThemeProvider>
+  <li className={className}>
+    {children}
+  </li>
 );
 
 ListItem.propTypes = {

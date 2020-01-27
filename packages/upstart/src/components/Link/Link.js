@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 
 export const Link = ({
   children, href, newTab, isExternal, className,
 }) => (
-  <ThemeProvider>
-    <a
-      href={href}
-      target={newTab || isExternal ? '_blank' : ''}
-      className={className}
-    >
-      {children}
-      {isExternal && <small>ext</small>}
-    </a>
-  </ThemeProvider>
+  <a
+    href={href}
+    target={newTab || isExternal ? '_blank' : ''}
+    className={className}
+  >
+    {children}
+    {isExternal && <small>ext</small>}
+  </a>
 );
 
 Link.propTypes = {

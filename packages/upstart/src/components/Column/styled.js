@@ -17,7 +17,7 @@ export const StyledColumn = styled.div`
 
   ${({ alignItems }) => getAlignItems(alignItems)};
   ${({ justifyContent }) => getJustifyContent(justifyContent)};
-  ${({ padding }) => padding && getPadding(padding)};
+  ${({ padding, theme }) => padding && getPadding(padding, theme)}
 `;
 
 export default StyledColumn;

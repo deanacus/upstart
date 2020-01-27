@@ -1,18 +1,16 @@
 import styled, { css } from 'styled-components';
 
-import {
-  getMargin, getPadding, getColor, getFontSize,
-} from '../../utils/styled-utils';
+import { getPadding, getMargin } from '../../utils/styled-utils';
 
 export const StyledQuote = styled.blockquote`
   ${({ rightBorder }) => (
     rightBorder
-      ? css`border-right: 3px solid ${getColor('grey', 3)}`
-      : css`border-left: 3px solid ${getColor('grey', 3)}`
+      ? css`border-right: 3px solid ${({ theme }) => theme.colors.primary[3]}`
+      : css`border-left: 3px solid ${({ theme }) => theme.colors.primary[3]}`
   )};
-  ${getMargin('mx-3')};
-  ${getPadding('p-3')};
-  ${getFontSize('md')}
+  font-size: ${({ theme }) => theme.fontSizes.md};
+  ${({ theme }) => getMargin('mx-3', theme)};
+  ${({ theme }) => getPadding('p-3', theme)};
 
   > :last-child {
     margin: 0;
@@ -21,7 +19,7 @@ export const StyledQuote = styled.blockquote`
   cite {
     display: block;
     text-align: right;
-    ${getFontSize('sm')}
+    font-size: ${({ theme }) => theme.fontSizes.sm};
   }
 `;
 

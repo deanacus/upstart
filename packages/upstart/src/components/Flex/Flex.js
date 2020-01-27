@@ -1,25 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledFlex } from './styled';
 
 export const Flex = ({
   direction, margin, justify, align, canWrap, children, isReverse, className,
 }) => (
-  <ThemeProvider>
-    <StyledFlex
-      direction={direction}
-      margin={margin}
-      justifyContent={justify}
-      alignment={align}
-      canWrap={canWrap}
-      isReverse={isReverse}
-      classname={className}
-    >
-      {children}
-    </StyledFlex>
-  </ThemeProvider>
+  <StyledFlex
+    direction={direction}
+    margin={margin}
+    justifyContent={justify}
+    alignment={align}
+    canWrap={canWrap}
+    isReverse={isReverse}
+    classname={className}
+  >
+    {children}
+  </StyledFlex>
 );
 
 Flex.propTypes = {
