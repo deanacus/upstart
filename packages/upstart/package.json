@@ -41,6 +41,10 @@
     "collectCoverageFrom": [
       "src/components/**/*.{js,}"
     ],
+    "moduleDirectories": [
+      "node_modules",
+      "src/utils"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 75,

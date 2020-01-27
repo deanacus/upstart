@@ -1,21 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledQuote } from './styled';
 
 export const Blockquote = ({
   children, cite, rightBorder, className,
 }) => (
-  <ThemeProvider>
-    <StyledQuote
-      rightBorder={rightBorder}
-      className={className}
-    >
-      {children}
-      {cite && <cite>&mdash; {cite}</cite>}
-    </StyledQuote>
-  </ThemeProvider>
+  <StyledQuote
+    rightBorder={rightBorder}
+    className={className}
+  >
+    {children}
+    {cite && <cite>&mdash; {cite}</cite>}
+  </StyledQuote>
 );
 
 Blockquote.propTypes = {

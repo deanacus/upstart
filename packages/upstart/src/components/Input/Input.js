@@ -1,27 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledLabel, TextInput } from './styled';
 
 export const Input = ({
   id, isInline, type, label, placeholder, className, ...props
 }) => (
-  <ThemeProvider>
-    <StyledLabel
-      isInline={isInline}
-      htmlFor={id}
-      className={className && `${className} ${className}-label`}
-    >
-      {label}
-      <TextInput
-        type={type}
-        name={id}
-        id={id}
-        placeholder={placeholder}
-        className={className && `${className} ${className}-input`}
-      />
-    </StyledLabel>
-  </ThemeProvider>
+  <StyledLabel
+    isInline={isInline}
+    htmlFor={id}
+    className={className && `${className} ${className}-label`}
+  >
+    {label}
+    <TextInput
+      type={type}
+      name={id}
+      id={id}
+      placeholder={placeholder}
+      className={className && `${className} ${className}-input`}
+    />
+  </StyledLabel>
 );
 
 Input.propTypes = {

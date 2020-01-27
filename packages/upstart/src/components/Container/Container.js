@@ -1,20 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledContainer } from './styled';
 
 export const Container = ({
-  isFixed, size, children, className,
+  size, children, className,
 }) => (
-  <ThemeProvider>
-    <StyledContainer
-      className={className}
-      isFixed={isFixed}
-      size={size}
-    >
-      {children}
-    </StyledContainer>
-  </ThemeProvider>
+  <StyledContainer
+    className={className}
+    size={size}
+  >
+    {children}
+  </StyledContainer>
 );
 
 Container.propTypes = {
@@ -27,9 +24,6 @@ Container.propTypes = {
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
 
-  /** Whether or not the grid container has a fixed max-width or not */
-  isFixed: PropTypes.bool,
-
   /** The max-width to apply to the container if it is fixed */
   size: PropTypes.oneOf([
     'xs',
@@ -38,14 +32,12 @@ Container.propTypes = {
     'lg',
     'xl',
     'xxl',
-    'xxxl',
   ]),
 };
 
 Container.defaultProps = {
   className: null,
-  isFixed: false,
-  size: null,
+  size: 'xxl',
 };
 
 export default Container;

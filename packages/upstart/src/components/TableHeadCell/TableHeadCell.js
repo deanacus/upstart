@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledTHeadCell } from './styled';
 
 export const TableHeadCell = ({
   children, align, width, className,
 }) => (
-  <ThemeProvider>
-    <StyledTHeadCell
-      width={width}
-      alignment={align}
-      className={className}
-    >
-      {children}
-    </StyledTHeadCell>
-  </ThemeProvider>
+  <StyledTHeadCell
+    width={width}
+    alignment={align}
+    className={className}
+  >
+    {children}
+  </StyledTHeadCell>
 );
 
 TableHeadCell.propTypes = {

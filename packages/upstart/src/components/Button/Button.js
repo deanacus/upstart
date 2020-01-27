@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledTag } from './styled';
 
 export const Button = ({
@@ -19,22 +19,20 @@ export const Button = ({
 }) => {
   const isButton = href === null;
   return (
-    <ThemeProvider>
-      <StyledTag
-        as={isButton ? 'button' : 'a'}
-        href={isButton ? null : href}
-        variant={variant}
-        size={size}
-        type={type}
-        onClick={handleClick}
-        disabled={isDisabled}
-        isOutline={isOutline}
-        isRounded={isRounded}
-        className={className}
-      >
-        {children}
-      </StyledTag>
-    </ThemeProvider>
+    <StyledTag
+      as={isButton ? 'button' : 'a'}
+      href={isButton ? null : href}
+      variant={variant}
+      size={size}
+      type={type}
+      onClick={handleClick}
+      disabled={isDisabled}
+      isOutline={isOutline}
+      isRounded={isRounded}
+      className={className}
+    >
+      {children}
+    </StyledTag>
   );
 };
 

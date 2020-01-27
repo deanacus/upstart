@@ -1,23 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledRow } from './styled';
 
 export const Row = ({
   align, canWrap, justify, padding, isReverse, children, className,
 }) => (
-  <ThemeProvider>
-    <StyledRow
-      alignItems={align}
-      justifyContent={justify}
-      padding={padding}
-      isReverse={isReverse}
-      canWrap={canWrap}
-      className={className}
-    >
-      {children}
-    </StyledRow>
-  </ThemeProvider>
+  <StyledRow
+    alignItems={align}
+    justifyContent={justify}
+    padding={padding}
+    isReverse={isReverse}
+    canWrap={canWrap}
+    className={className}
+  >
+    {children}
+  </StyledRow>
 );
 
 Row.propTypes = {

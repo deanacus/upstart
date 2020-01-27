@@ -1,20 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 import { StyledList } from './styled';
 
 export const UnorderedList = ({
   children, listStyle, indent, className,
 }) => (
-  <ThemeProvider>
-    <StyledList
-      listStyle={listStyle}
-      indent={indent}
-      className={className}
-    >
-      {children}
-    </StyledList>
-  </ThemeProvider>
+  <StyledList
+    listStyle={listStyle}
+    indent={indent}
+    className={className}
+  >
+    {children}
+  </StyledList>
 );
 
 UnorderedList.propTypes = {

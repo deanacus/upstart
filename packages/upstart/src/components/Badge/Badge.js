@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledBadge } from './styled';
 
 export const Badge = ({ variant, children, className }) => (
-  <ThemeProvider>
-    <StyledBadge
-      variant={variant}
-      className={className}
-    >
-      {children}
-    </StyledBadge>
-  </ThemeProvider>
+  <StyledBadge
+    variant={variant}
+    className={className}
+  >
+    {children}
+  </StyledBadge>
 );
 
 Badge.propTypes = {
@@ -25,7 +23,7 @@ Badge.propTypes = {
 
   /** The color variant of the Button */
   variant: PropTypes.oneOf([
-    'default',
+    'grey',
     'success',
     'error',
     'warning',
@@ -36,7 +34,7 @@ Badge.propTypes = {
 
 Badge.defaultProps = {
   className: null,
-  variant: 'default',
+  variant: 'grey',
 };
 
 export default Badge;

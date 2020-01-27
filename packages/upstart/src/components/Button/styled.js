@@ -1,57 +1,43 @@
 import styled, { css } from 'styled-components';
 
-import {
-  getColor, getFontFamily, getFontSize, getPadding, getRadius, getLineHeight, getBorder,
-} from '../../utils/styled-utils';
+import { getPadding } from '../../utils/styled-utils';
 
 const baseStyles = css`
   border: none;
-  border-radius: ${getRadius('sm')};
-  color: ${getColor('background')};
+  border-radius: ${({ theme }) => theme.radii.sm}px;
+  color: ${({ theme }) => theme.colors.background};
   cursor: pointer;
   display: inline-flex;
   text-align: center;
-  ${getFontFamily('body')};
-  ${getLineHeight('body')};
+  font-family: ${({ theme }) => theme.fonts.body};
+  line-height: ${({ theme }) => theme.lineHeights.body};
 `;
 
-const primary = {
-  fill: css`
-    background: ${getColor('primary', 5)};
-  `,
-  outline: css`
-    background: transparent;
-    border: ${getBorder('primary')};
-    color: ${getColor('primary', 5)};
-  `,
-};
+const filledStyles = css`
+  background: ${({ theme, variant }) => theme.colors[variant][5]};
+`;
 
-const secondary = {
-  fill: css`
-    background: ${getColor('secondary', 5)};
-  `,
-  outline: css`
-    background: transparent;
-    border: ${getBorder('secondary')};
-    color: ${getColor('secondary', 5)};
-  `,
-};
+const outlineStyles = css`
+  background: transparent;
+  border: ${({ theme, variant }) => theme.borders[variant]};
+  color: ${({ theme, variant }) => theme.colors[variant][5]};
+`;
 
 const sizeStyles = {
   sm: css`
-    ${getFontSize('xs')}
-    ${getPadding('py-1')}
-    ${getPadding('px-2')}
+    font-size: ${({ theme }) => theme.fonts.xs};
+    ${({ theme }) => getPadding('py-1', theme)};
+    ${({ theme }) => getPadding('px-2', theme)};
   `,
   md: css`
-    ${getFontSize('sm')}
-    ${getPadding('py-2')}
-    ${getPadding('px-3')}
+    font-size: ${({ theme }) => theme.fonts.sm};
+    ${({ theme }) => getPadding('py-2', theme)};
+    ${({ theme }) => getPadding('px-3', theme)};
   `,
   lg: css`
-    ${getFontSize('base')}
-    ${getPadding('py-3')}
-    ${getPadding('px-4')}
+    font-size: ${({ theme }) => theme.fonts.base};
+    ${({ theme }) => getPadding('py-3', theme)};
+    ${({ theme }) => getPadding('px-4', theme)};
   `,
 };
 
@@ -62,7 +48,7 @@ const disabledStyles = css`
 `;
 
 const roundedStyles = css`
-  border-radius: ${getRadius('pill')};
+  border-radius: ${({ theme }) => theme.radii.pill}px;
 `;
 
 export const StyledTag = styled.div`
@@ -70,15 +56,7 @@ export const StyledTag = styled.div`
 
   text-decoration: none;
 
-  ${({ variant, isOutline }) => {
-    switch (variant) {
-      case 'secondary':
-        return isOutline ? secondary.outline : secondary.fill;
-      case 'primary':
-      default:
-        return isOutline ? primary.outline : primary.fill;
-    }
-  }}
+  ${({ isOutline }) => (isOutline ? outlineStyles : filledStyles)}
 
   ${({ disabled }) => disabled && disabledStyles}
 

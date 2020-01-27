@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { GridContainer } from './styled';
 
 export const Grid = ({
   cols, gap, children, className,
 }) => (
-  <ThemeProvider>
-    <GridContainer
-      cols={cols}
-      gap={gap}
-      className={className}
-    >
-      {children}
-    </GridContainer>
-  </ThemeProvider>
+  <GridContainer
+    cols={cols}
+    gap={gap}
+    className={className}
+  >
+    {children}
+  </GridContainer>
 );
 
 Grid.propTypes = {

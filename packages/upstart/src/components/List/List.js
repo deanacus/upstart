@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { UnorderedList } from '../UnorderedList/UnorderedList';
 import { OrderedList } from '../OrderedList/OrderedList';
 
@@ -12,25 +12,21 @@ export const List = ({
   ...rest
 }) => (isOrdered
   ? (
-    <ThemeProvider>
-      <OrderedList
-        indent={indent}
-        listStyle={rest.listStyle}
-        className={className}
-      >
-        {children}
-      </OrderedList>
-    </ThemeProvider>
+    <OrderedList
+      indent={indent}
+      listStyle={rest.listStyle}
+      className={className}
+    >
+      {children}
+    </OrderedList>
   ) : (
-    <ThemeProvider>
-      <UnorderedList
-        indent={indent}
-        listStyle={rest.listStyle}
-        className={className}
-      >
-        {children}
-      </UnorderedList>
-    </ThemeProvider>
+    <UnorderedList
+      indent={indent}
+      listStyle={rest.listStyle}
+      className={className}
+    >
+      {children}
+    </UnorderedList>
   ));
 
 List.propTypes = {

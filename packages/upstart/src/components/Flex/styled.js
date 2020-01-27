@@ -17,7 +17,7 @@ export const StyledFlex = styled.div`
   ${({ justify }) => getJustifyContent(justify)};
 
   > * {
-    ${({ margin }) => margin && getMargin(margin)};
+    ${({ margin, theme }) => margin && getMargin(margin, theme)}
   }
 `;
 

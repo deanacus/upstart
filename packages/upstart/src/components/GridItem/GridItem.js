@@ -1,21 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { Item } from './styled';
 
 export const GridItem = ({
   span, start, end, children, className,
 }) => (
-  <ThemeProvider>
-    <Item
-      span={span}
-      start={start}
-      end={end}
-      className={className}
-    >
-      {children}
-    </Item>
-  </ThemeProvider>
+  <Item
+    span={span}
+    start={start}
+    end={end}
+    className={className}
+  >
+    {children}
+  </Item>
 );
 
 GridItem.propTypes = {

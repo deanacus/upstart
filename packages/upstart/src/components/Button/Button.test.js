@@ -1,9 +1,9 @@
 import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent } from '../../utils/test-utils';
 import { Theme } from '../Theme/Theme';
 import { Button } from './Button';
 
-describe('<Blockquote />', () => {
+describe('<Button />', () => {
   it('should render', () => {
     const { container } = render(<Button>Test</Button>);
     const button = container.querySelector('button');
@@ -65,7 +65,7 @@ describe('<Blockquote />', () => {
   it('should render a pill shape when isRounded is true', () => {
     const { container } = render(<Button isRounded>Test</Button>);
     const button = container.querySelector('button');
-    expect(button).toHaveStyle(`border-radius: ${Theme.radii.pill / Theme.rootVal}rem`);
+    expect(button).toHaveStyle(`border-radius: ${Theme.radii.pill}px`);
   });
 
   it('renders a primary color background when no variant passed', () => {

@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
+
 import { StyledTCell } from './styled';
 
 export const TableCell = ({ children, align, className }) => (
-  <ThemeProvider>
-    <StyledTCell alignment={align} className={className}>
-      {children}
-    </StyledTCell>
-  </ThemeProvider>
+  <StyledTCell alignment={align} className={className}>
+    {children}
+  </StyledTCell>
 );
 
 TableCell.propTypes = {

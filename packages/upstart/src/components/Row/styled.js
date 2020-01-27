@@ -13,10 +13,10 @@ export const StyledRow = styled.div`
   flex-direction: ${({ isReverse }) => (isReverse ? 'row-reverse' : 'row')};
   flex-wrap: ${({ canWrap }) => (canWrap ? 'wrap' : 'no-wrap')};
   width: 100%;
+  ${({ padding, theme }) => padding && getPadding(padding, theme)}
 
   ${({ alignment }) => getAlignItems(alignment)};
   ${({ justifyContent }) => getJustifyContent(justifyContent)};
-  ${({ padding }) => padding && getPadding(padding)}
 `;
 
 export default StyledRow;

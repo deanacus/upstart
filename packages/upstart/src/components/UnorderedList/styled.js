@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
+
 import { getPadding } from '../../utils/styled-utils';
 
 export const StyledList = styled.ul`
-  ${({ indent }) => getPadding(`pl-${indent}`)};
+  ${({ indent, theme }) => getPadding(`pl-${indent}`, theme)};
   ${({ listStyle }) => css`list-style-type: ${listStyle};`}
 `;
 

@@ -1,15 +1,14 @@
 import styled, { css } from 'styled-components';
 
-import {
-  getColor, getBorder, getFontSize, space,
-} from '../../utils/styled-utils';
+import { getPadding } from '../../utils/styled-utils';
 
 const baseStyles = css`
-  background: ${getColor('background')};
-  border: ${getBorder('thin')};
+  background: ${({ theme }) => theme.colors.background};
+  border: ${({ theme }) => theme.borders.thin}px;
   border-radius: 3px;
-  ${getFontSize('base')};
-  padding: ${space('xs')} ${space('sm')};
+  ${({ theme }) => theme.fontSizes.base};
+  ${({ theme }) => getPadding('py-xs', theme)};
+  ${({ theme }) => getPadding('px-sm', theme)};
   transition: 0.2s border-color;
 
   &:focus {

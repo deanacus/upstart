@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { css, createGlobalStyle } from 'styled-components';
 import { ThemeProvider } from '../ThemeProvider/ThemeProvider';
 
-import {
-  getColor, getFontFamily, getFontSize, getFontWeight, getLineHeight, getPadding, getMargin,
-} from '../../utils/styled-utils';
+import { getPadding, getMargin, getRem } from '../../utils/styled-utils';
 
 const GlobalStyleCSS = css`
 
@@ -19,12 +17,12 @@ const GlobalStyleCSS = css`
   }
 
   html {
-    font-size: 10px;
+    font-size: ${({ theme }) => theme.rootVal}px;
   }
 
   body {
-    background: ${getColor('background')};
-    color: ${getColor('foreground')};
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.foreground};
     margin: 0;
     min-height: 100%;
     padding: 0;
@@ -35,48 +33,48 @@ const GlobalStyleCSS = css`
 
   /* TODO: Get these values off a theme */
   body {
-    color: ${getColor('foreground')};
-    ${getFontFamily('body')};
-    ${getFontSize('base')};
-    ${getLineHeight('body')}
+    color: ${({ theme }) => theme.colors.foreground};
+    font-family: ${({ theme }) => theme.fonts.body};
+    font-size: ${({ theme }) => getRem(theme.fontSizes.base, theme.rootVal)};
+    line-height: ${({ theme }) => theme.lineHeights.body};
     font-variant-ligatures: common-ligatures;
   }
 
   h1 {
-    ${getFontSize('title')};
-    ${getMargin('mb-3')};
-    ${getMargin('mt-5')};
+    font-size: ${({ theme }) => getRem(theme.fontSizes.title, theme.rootVal)};
+    ${({ theme }) => getMargin('mb-3', theme)};
+    ${({ theme }) => getMargin('mt-5', theme)};
   }
 
   h2 {
-    ${getFontSize('xxl')};
-    ${getMargin('mb-3')};
-    ${getMargin('mt-4')};
+    font-size: ${({ theme }) => getRem(theme.fontSizes.xxl, theme.rootVal)};
+    ${({ theme }) => getMargin('mb-3', theme)};
+    ${({ theme }) => getMargin('mt-4', theme)};
   }
 
   h3 {
-    ${getFontSize('xl')};
-    ${getMargin('mb-3')};
-    ${getMargin('mt-4')};
+    font-size: ${({ theme }) => getRem(theme.fontSizes.xl, theme.rootVal)};
+    ${({ theme }) => getMargin('mb-3', theme)};
+    ${({ theme }) => getMargin('mt-4', theme)};
   }
 
   h4 {
-    ${getFontSize('lg')};
-    ${getMargin('my-3')};
+    font-size: ${({ theme }) => getRem(theme.fontSizes.lg, theme.rootVal)};
+    ${({ theme }) => getMargin('my-3', theme)};
   }
 
   h5 {
-    ${getFontSize('md')};
-    ${getMargin('my-3')};
+    font-size: ${({ theme }) => getRem(theme.fontSizes.md, theme.rootVal)};
+    ${({ theme }) => getMargin('my-3', theme)};
   }
 
   p {
-    ${getMargin('my-3')};
+    ${({ theme }) => getMargin('my-3', theme)};
   }
 
   strong,
   b {
-    ${getFontWeight('bold')};
+    font-weight: ${({ theme }) => theme.fontWeights.bold};
   }
 
   em,
@@ -86,18 +84,18 @@ const GlobalStyleCSS = css`
 
   a:link:not(.btn-link),
   a:visited:not(.btn-link) {
-    color: ${getColor('primary', 5)};
+    color: ${({ theme }) => theme.colors.primary[5]};
     text-decoration: none;
   }
 
   a:active:not(.btn-link) {
-    color: ${getColor('primary', 6)};
+    color: ${({ theme }) => theme.colors.primary[6]};
     text-decoration: underline;
   }
 
   a:hover:not(.btn-link),
   a:focus:not(.btn-link) {
-    color: ${getColor('primary', 7)};
+    color: ${({ theme }) => theme.colors.primary[7]};
     text-decoration: underline;
     outline: none;
   }
@@ -108,27 +106,27 @@ const GlobalStyleCSS = css`
     width: 100%;
   }
 
-  tr {
-    border-bottom: 1px solid ${getColor('grey', 3)};
-    max-width: 100%;
-    width: 100%;
-  }
-
-  td {
-    text-align: ${({ alignment }) => alignment};
-    ${getPadding('py-2')};
-  }
-
   thead {
-    border-bottom: 2px solid ${getColor('grey', 4)};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.grey[4]};
     max-width: 100%;
     width: 100%;
   }
 
   th {
     font-weight: bold;
-    text-align: ${({ alignment }) => alignment};
-    ${getPadding('py-2')};
+    text-align: left;
+    ${({ theme }) => getPadding('py-2', theme)};
+  }
+
+  tr {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.grey[3]};
+    max-width: 100%;
+    width: 100%;
+  }
+
+  td {
+    text-align: left;
+    ${({ theme }) => getPadding('py-2', theme)};
   }
 
 `;
