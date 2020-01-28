@@ -10,6 +10,7 @@ const Nav = styled.div`
   position: relative;
   width: 100%;
   border-right: ${({ theme }) => theme.borders.separator};
+  border-color: ${({ theme }) => theme.colors.grey[1]};
   height: 100%;
 `;
 

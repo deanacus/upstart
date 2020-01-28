@@ -1,16 +1,14 @@
-export const widths = [320, 480, 768, 1024, 1200, 1440, 1680];
+export const widths = [440, 730, 950, 1200, 1400];
 
 [
-  widths.xxs,
   widths.xs,
   widths.sm,
   widths.md,
   widths.lg,
   widths.xl,
-  widths.xxl,
 ] = widths;
 
-export const breakpoints = [320, 480, 768, 992, 1200, 1680];
+export const breakpoints = [480, 768, 992, 1226, 1440];
 
 [
   breakpoints.xs,
@@ -18,5 +16,4 @@ export const breakpoints = [320, 480, 768, 992, 1200, 1680];
   breakpoints.md,
   breakpoints.lg,
   breakpoints.xl,
-  breakpoints.xxl,
 ] = breakpoints;
