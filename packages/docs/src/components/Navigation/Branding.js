@@ -6,7 +6,7 @@ import {
 } from '@deanacus/upstart';
 
 const LinksBox = styled.div`
-  ${getPadding('py-3')}
+  ${({ theme }) => getPadding('py-3', theme)}
 `;
 
 const Logo = () => (

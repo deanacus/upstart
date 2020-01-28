@@ -31,4 +31,15 @@ export const typeFaces = {
   poppins,
 };
 
-export default typeFaces;
+export const fonts = {
+  body: '"Plex Sans", Helvetica, Arial, system-ui, sans-serif',
+  heading: '"Poppins", Helvetica, Arial, system-ui, sans-serif',
+  monospace: 'Menlo, monospace',
+};
+
+export const customTheme = {
+  typeFaces,
+  fonts,
+};
+
+export default customTheme;

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { getRem } from '@deanacus/upstart';
 
 const Circle = styled.div`
-  background: ${({ status, theme }) => theme.colors[status]};
+  background: ${({ status, theme }) => theme.colors[status][5]};
   border-radius: ${({ theme }) => getRem(theme.radii.circle, theme.rootVal)};
   height: 1rem;
   width: 1rem;
@@ -26,9 +26,10 @@ export const Status = ({ status }) => (
 Status.propTypes = {
   status: PropTypes.oneOf([
     'complete',
-    'inprogress',
+    'progress',
     'planned',
     'retired',
+    'review',
   ]).isRequired,
 };
 

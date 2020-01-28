@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
 
 import { Row } from '@deanacus/upstart';
@@ -18,5 +19,8 @@ export const Colors = ({ color }) => {
   );
 };
 
+Colors.propTypes = {
+  color: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Colors;

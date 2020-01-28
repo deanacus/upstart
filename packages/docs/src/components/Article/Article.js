@@ -33,7 +33,11 @@ export const Article = ({
 Article.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
+};
+
+Article.defaultProps = {
+  description: null,
 };
 
 export default Article;

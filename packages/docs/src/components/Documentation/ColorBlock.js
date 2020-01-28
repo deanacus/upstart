@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { Column } from '@deanacus/upstart';
@@ -15,3 +16,9 @@ export const ColorBlock = ({ color }) => (
     {color}
   </Column>
 );
+
+ColorBlock.propTypes = {
+  color: PropTypes.string.isRequired,
+};
+
+export default ColorBlock;
