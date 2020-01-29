@@ -6,7 +6,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 const hooks = [...glob.sync('src/**/*.js')].filter(
-  (file) => !file.includes('index') && !file.includes('.test.js')
+  (file) => !file.includes('index') && !file.includes('.test.js') && !file.includes('test-utils')
 ).reduce(
   (acc, file) => {
     acc[file.replace('src/', '').replace(/([\w]+)\/([\w]+).js/, '$2')] = file;
