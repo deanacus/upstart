@@ -4,12 +4,15 @@ import { ThemeContext } from 'styled-components';
 
 export const useColor = (color, strength = 'default') => {
   const { colors } = useContext(ThemeContext);
-  if( !colors[color] ) {
-    throw new Error('That color don\'t exist, yo')
+
+  if (!colors[color]) {
+    throw new Error('That color don\'t exist, yo');
   }
-  if ( typeof colors[color] === 'string') {
-    return colors[color]
+
+  if (typeof colors[color] === 'string') {
+    return colors[color];
   }
+
   return colors[color][strength];
 };
 

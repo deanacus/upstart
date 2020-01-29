@@ -1,19 +1,19 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-const copyToClipboard = async value => {
-  let success = true;
+const copyToClipboard = async (value) => {
+  let success = false;
+
   try {
     await navigator.clipboard.writeText(value);
+    success = true;
+  } catch (err) {
+    success = false;
   }
-  catch (err) {
-    success = false
-  }
-  finally {
-    return success;
-  }
+
+  return success;
 };
 
-const useClipboard = value => {
+export const useClipboard = (value) => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const onCopy = () => {

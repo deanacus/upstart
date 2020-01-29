@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'react-hooks',
   ],
   ignorePatterns: ["/dist", "/esm", "setupTests.js"],
   rules: {
