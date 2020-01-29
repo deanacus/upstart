@@ -9,7 +9,10 @@
     "upstart": "yarn workspace @deanacus/upstart",
     "docs": "yarn workspace @deanacus/upstart-docs",
     "hooks": "yarn workspace @deanacus/upstart-hooks",
-    "prebuild": "yarn"
+    "prebuild": "yarn",
+    "publish-patch": "yarn workspace @deanacus/upstart publish --patch && yarn workspace @deanacus/upstart-hooks publish --patch",
+    "publish-minor": "yarn workspace @deanacus/upstart publish --minor && yarn workspace @deanacus/upstart-hooks publish --minor",
+    "publish-major": "yarn workspace @deanacus/upstart publish --major && yarn workspace @deanacus/upstart-hooks publish --major"
   },
   "workspaces": [
     "packages/*"
