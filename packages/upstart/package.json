@@ -70,14 +70,13 @@
     "url": "https://github.com/deanacus/upstart.git"
   },
   "scripts": {
-    "build": "yarn clean && rollup -c rollup.config.js",
+    "build": "rollup -c rollup.config.js",
+    "clean": "rm -rf /esm /dist",
     "dev": "rollup -c rollup.config.js -w",
     "start": "yarn dev",
-    "lint": "eslint ./src",
-    "test": "jest",
-    "ci": "jest --coverage",
-    "prepublishOnly": "yarn clean && yarn build",
-    "clean": "rm -rf ./esm ./dist"
+    "lint": "eslint -c ./.eslintrc.js ./src/**/*.js",
+    "test": "jest --watchAll",
+    "prepublishOnly": "yarn clean && yarn build"
   },
   "sideEffects": false,
   "version": "0.0.15"
