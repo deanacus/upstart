@@ -1,9 +1,7 @@
 import { useTheme } from '../useTheme/useTheme';
-import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
 
 export const usePreferredUnit = (value) => {
-  const { rootVal, preferredUnit } = useContext(ThemeContext);
+  const { rootVal, preferredUnit } = useTheme();
 
   if (preferredUnit !== 'rem') {
     return `${value}px`;
