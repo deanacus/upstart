@@ -74,6 +74,7 @@
     "start": "yarn dev",
     "lint": "eslint -c ./.eslintrc.js ./src/**/*.js",
     "test": "jest --watchAll",
+    "ci": "jest --coverage",
     "prepublishOnly": "rm -rf /esm /dist && yarn build"
   },
   "sideEffects": false,
