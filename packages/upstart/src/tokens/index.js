@@ -1,4 +1,4 @@
-const breakpoints = {
+export const breakpoints = {
   xxs: 320,
   xs: 480,
   sm: 768,
@@ -7,9 +7,9 @@ const breakpoints = {
   xl: 1440,
   xxl: 1680,
   xxxl: 1920,
-}
+};
 
-const widths = {
+export const widths = {
   xs: 320,
   sm: 480,
   md: 768,
@@ -17,4 +17,4 @@ const widths = {
   xl: 1200,
   xxl: 1440,
   xxxl: 1680,
-}
+};
