@@ -73,7 +73,7 @@
     "dev": "rollup -c rollup.config.js -w",
     "start": "yarn dev",
     "lint": "eslint -c ./.eslintrc.js ./src/**/*.js",
-    "test": "jest --watchAll",
+    "test": "jest",
     "ci": "jest --coverage",
     "prepublishOnly": "rm -rf /esm /dist && yarn build"
   },
