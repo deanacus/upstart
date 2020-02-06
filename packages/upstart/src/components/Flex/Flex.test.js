@@ -2,6 +2,9 @@ import React from 'react';
 import { render } from '../../utils/test-utils';
 import { Flex } from './Flex';
 
+import { Theme } from '../Theme/Theme';
+import { getRem } from '../../utils/styled-utils';
+
 describe('<Flex />', () => {
   it('should render', () => {
     const { container } = render(
@@ -73,8 +76,47 @@ describe('<Flex />', () => {
     expect(flex).toHaveStyle('flex-direction: column-reverse');
   });
 
-  xit('should have a margin value that matches the passed in string', () => {});
-  xit('should have the correct justify-content value from the passed in string', () => {});
-  xit('should have the correct align-content value from the passed in string', () => {});
-  xit('should have the correct align-items value from the passed in string', () => {});
+  it('should add margin to children when margin is passed in.', () => {
+    const { container } = render(
+      <Flex className="test-flex" margin="mx-2">
+        <div className="child" />
+      </Flex>,
+    );
+
+    const flex = container.querySelector('.child');
+    expect(flex).toHaveStyle(`margin-left: ${getRem(Theme.space[2], Theme.rootVal)}`);
+  });
+
+  it('should have the correct justify-content value from the passed in string', () => {
+    const { container } = render(
+      <Flex className="test-flex" justify="end">
+        Children
+      </Flex>,
+    );
+
+    const flex = container.querySelector('.test-flex');
+    expect(flex).toHaveStyle('justify-content: flex-end');
+  });
+
+  it('should have the correct align-items value from the passed in string', () => {
+    const { container } = render(
+      <Flex className="test-flex" align="stretch">
+        Children
+      </Flex>,
+    );
+
+    const flex = container.querySelector('.test-flex');
+    expect(flex).toHaveStyle('align-items: stretch');
+  });
+
+  it('should have the correct align-content value from the passed in string', () => {
+    const { container } = render(
+      <Flex className="test-flex" align="baseline">
+        Children
+      </Flex>,
+    );
+
+    const flex = container.querySelector('.test-flex');
+    expect(flex).toHaveStyle('align-content: baseline');
+  });
 });

@@ -46,4 +46,14 @@ describe('<Image />', () => {
     const caption = container.querySelector('caption');
     expect(caption).not.toBe(undefined);
   });
+
+  it('should pass the className to the caption', () => {
+    const { container } = render(
+      <Image caption="Test caption" alt="" src="" className="test-caption">
+        Content
+      </Image>,
+    );
+    const caption = container.querySelector('.test-caption-caption');
+    expect(caption).not.toBe(undefined);
+  });
 });

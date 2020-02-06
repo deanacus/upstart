@@ -11,7 +11,7 @@ export const Link = ({
     className={className}
   >
     {children}
-    {isExternal && <small>ext</small>}
+    {isExternal && <small className="ext-link-icon">ext</small>}
   </a>
 );
 

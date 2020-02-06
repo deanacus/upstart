@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 import { StyledTCell } from './styled';
 
-export const TableCell = ({ children, align, className }) => (
-  <StyledTCell alignment={align} className={className}>
+export const TableCell = ({
+  children, padding, align, className,
+}) => (
+  <StyledTCell textAlign={align} padding={padding} className={className}>
     {children}
   </StyledTCell>
 );
@@ -25,11 +27,15 @@ TableCell.propTypes = {
 
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
+
+  /** The padding value to be used on the Row. Based on the bootstrap padding classes */
+  padding: PropTypes.string,
 };
 
 TableCell.defaultProps = {
   align: 'left',
   className: null,
+  padding: null,
 };
 
 export default TableCell;
