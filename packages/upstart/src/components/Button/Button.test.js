@@ -22,6 +22,18 @@ describe('<Button />', () => {
     expect(submit).toHaveAttribute('type', 'submit');
   });
 
+  it('should not render an id if none passed', () => {
+    const { container } = render(<Button>Test</Button>);
+    const submit = container.querySelector('button');
+    expect(submit).not.toHaveAttribute('id');
+  });
+
+  it('should render the passed id', () => {
+    const { container } = render(<Button id="test">Test</Button>);
+    const submit = container.querySelector('button');
+    expect(submit).toHaveAttribute('id', 'test');
+  });
+
   it('should render children', () => {
     const { container } = render(<Button>Test</Button>);
     const button = container.querySelector('button');

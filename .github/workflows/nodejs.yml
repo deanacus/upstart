@@ -1,6 +1,10 @@
 name: Node.js CI
 
-on: [push]
+on:
+  push:
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
@@ -23,7 +27,7 @@ jobs:
       working-directory: ./packages/upstart
     - run: npm run test
       working-directory: ./packages/upstart
-    # Test Coverage Collection. Need to get collection up to snuff first
+    # Test Coverage. Need to get coverage up to snuff first
     # - run: npm run ci
     #   working-directory: ./packages/upstart
     - run: npm run lint

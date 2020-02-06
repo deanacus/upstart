@@ -15,7 +15,7 @@ export const Button = ({
   isRounded,
   handleClick,
   className,
-  ...rest
+  id,
 }) => {
   const isButton = href === null;
   return (
@@ -23,6 +23,7 @@ export const Button = ({
       as={isButton ? 'button' : 'a'}
       href={isButton ? null : href}
       variant={variant}
+      id={id}
       size={size}
       type={type}
       onClick={handleClick}
@@ -53,6 +54,9 @@ Button.propTypes = {
   /** The href for Button to point to. Renders an anchor tag */
   href: PropTypes.string,
 
+  /** The HTML id for the button */
+  id: PropTypes.string,
+
   /** Whether or not the Button is disabled */
   isDisabled: PropTypes.bool,
 
@@ -77,6 +81,7 @@ Button.defaultProps = {
   className: null,
   handleClick: null,
   href: null,
+  id: null,
   isDisabled: false,
   isOutline: false,
   isRounded: false,
