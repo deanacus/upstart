@@ -24,4 +24,16 @@ describe('<Separator />', () => {
     expect(hr).not.toBe(null);
     expect(div).toBe(null);
   });
+
+  it('should render a div when isVertical is passed in', () => {
+    const { container } = render(
+      <Separator className="test-separator" isVertical>
+        Children
+      </Separator>,
+    );
+    const hr = container.querySelector('hr.test-separator');
+    const div = container.querySelector('div.test-separator');
+    expect(hr).toBe(null);
+    expect(div).not.toBe(null);
+  });
 });
