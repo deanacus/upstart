@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { getPadding } from '../../utils/styled-utils';
+import { getPadding, getRem } from '../../utils/styled-utils';
 
 const baseStyles = css`
   border: none;
@@ -25,17 +25,17 @@ const outlineStyles = css`
 
 const sizeStyles = {
   sm: css`
-    font-size: ${({ theme }) => theme.fonts.xs};
+    font-size: ${({ theme }) => getRem(theme.fontSizes.xs, theme.rootVal)};
     ${({ theme }) => getPadding('py-1', theme)};
     ${({ theme }) => getPadding('px-2', theme)};
   `,
   md: css`
-    font-size: ${({ theme }) => theme.fonts.sm};
+    font-size: ${({ theme }) => getRem(theme.fontSizes.sm, theme.rootVal)};
     ${({ theme }) => getPadding('py-2', theme)};
     ${({ theme }) => getPadding('px-3', theme)};
   `,
   lg: css`
-    font-size: ${({ theme }) => theme.fonts.base};
+    font-size: ${({ theme }) => getRem(theme.fontSizes.base, theme.rootVal)};
     ${({ theme }) => getPadding('py-3', theme)};
     ${({ theme }) => getPadding('px-4', theme)};
   `,

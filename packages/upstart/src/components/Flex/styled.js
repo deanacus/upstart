@@ -10,11 +10,11 @@ import {
 export const StyledFlex = styled.div`
   display: flex;
   flex-wrap: ${({ canWrap }) => (canWrap ? 'wrap' : 'no-wrap')};
-  flex-direction: ${({ direction, isReverse }) => (isReverse ? `${direction}-reverse` : direction)};
+  flex-direction: ${({ flexDirection, isReverse }) => (isReverse ? `${flexDirection}-reverse` : flexDirection)};
 
   ${({ alignment }) => getAlignContent(alignment)};
   ${({ alignment }) => getAlignItems(alignment)};
-  ${({ justify }) => getJustifyContent(justify)};
+  ${({ justifyContent }) => getJustifyContent(justifyContent)};
 
   > * {
     ${({ margin, theme }) => margin && getMargin(margin, theme)}

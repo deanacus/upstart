@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 import { StyledTag } from './styled';
 
 export const Button = ({
