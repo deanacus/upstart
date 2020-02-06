@@ -1,20 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 import { StyledFlex } from './styled';
 
 export const Flex = ({
   direction, margin, justify, align, canWrap, children, isReverse, className,
 }) => (
   <StyledFlex
-    direction={direction}
+    flexDirection={direction}
     margin={margin}
     justifyContent={justify}
     alignment={align}
     canWrap={canWrap}
     isReverse={isReverse}
-    classname={className}
+    className={className}
   >
     {children}
   </StyledFlex>

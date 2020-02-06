@@ -10,6 +10,30 @@ describe('<Button />', () => {
     expect(button).not.toBe(null);
   });
 
+  it('should render a medium button by default', () => {
+    const { container } = render(<Button>Test</Button>);
+    const button = container.querySelector('button');
+    expect(button).toHaveStyle(`font-size: ${Theme.fontSizes.sm / Theme.rootVal}rem;`);
+  });
+
+  it('should render a small button when size is sm', () => {
+    const { container } = render(<Button size="sm">Test</Button>);
+    const button = container.querySelector('button');
+    expect(button).toHaveStyle(`font-size: ${Theme.fontSizes.xs / Theme.rootVal}rem;`);
+  });
+
+  it('should render a medium button when size is md', () => {
+    const { container } = render(<Button size="md">Test</Button>);
+    const button = container.querySelector('button');
+    expect(button).toHaveStyle(`font-size: ${Theme.fontSizes.sm / Theme.rootVal}rem;`);
+  });
+
+  it('should render a large button when size is lg', () => {
+    const { container } = render(<Button size="lg">Test</Button>);
+    const button = container.querySelector('button');
+    expect(button).toHaveStyle(`font-size: ${Theme.fontSizes.base / Theme.rootVal}rem;`);
+  });
+
   it('should use the default button type', () => {
     const { container } = render(<Button>Test</Button>);
     const button = container.querySelector('button');

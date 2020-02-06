@@ -15,7 +15,7 @@ export const StyledRow = styled.div`
   width: 100%;
   ${({ padding, theme }) => padding && getPadding(padding, theme)}
 
-  ${({ alignment }) => getAlignItems(alignment)};
+  ${({ alignItems }) => getAlignItems(alignItems)};
   ${({ justifyContent }) => getJustifyContent(justifyContent)};
 `;
 

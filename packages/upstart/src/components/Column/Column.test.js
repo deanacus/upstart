@@ -7,7 +7,7 @@ describe('<Column />', () => {
   it('should render', () => {
     const { container } = render(<Column className="test-column">Content</Column>);
 
-    const column = container.querySelector('div');
+    const column = container.querySelector('.test-column');
     expect(column).not.toBe(undefined);
   });
 
