@@ -10,7 +10,6 @@ export { GridItem } from './GridItem/GridItem';
 export { Image } from './Image/Image';
 export { Input } from './Input/Input';
 export { Link } from './Link/Link';
-export { List } from './List/List';
 export { ListItem } from './ListItem/ListItem';
 export { OrderedList } from './OrderedList/OrderedList';
 export { Row } from './Row/Row';

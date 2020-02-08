@@ -1,25 +1,63 @@
-// import React from 'react';
-import styled, { css } from 'styled-components';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { getPadding, getMargin } from '../../utils/styled-utils';
+import { StyledCard } from './styled';
 
-export const Card = styled.div`
-  ${({ darkMode }) => darkMode && css`
-    background: ${({ theme }) => theme.colors.grey[8]};
-    color: ${({ theme }) => theme.colors.grey[1]};
-  `}
+export const Card = ({
+  isDarkMode,
+  isBordered,
+  isRounded,
+  padding,
+  margin,
+  className,
+  children,
+}) => (
+  <StyledCard
+    isDarkMode={isDarkMode}
+    isBordered={isBordered}
+    isRounded={isRounded}
+    padding={padding}
+    margin={margin}
+    className={className}
+  >
+    {children}
+  </StyledCard>
+);
 
-  ${({ border, darkMode }) => border && (darkMode ? css`
-    border: .1rem solid ${({ theme }) => theme.colors.grey[7]};
-  ` : css`
-    border: .1rem solid ${({ theme }) => theme.colors.grey[3]};
-  `)}
+Card.propTypes = {
 
-  ${({ rounded }) => rounded && css`border-radius: ${({ theme }) => theme.radii.md};`}
+  /** The children nodes of the Component */
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
 
-  ${({ padding, theme }) => padding && getPadding(padding, theme)}
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
 
-  ${({ margin, theme }) => margin && getMargin(margin, theme)}
-`;
+  /** Whether or not the card should have a border */
+  isBordered: PropTypes.bool,
+
+  /** Whether or not the card is being rendered in darkMode */
+  isDarkMode: PropTypes.bool,
+
+  /** Whether or not the corners of the card should be rounded off */
+  isRounded: PropTypes.bool,
+
+  /** The margin alias to be applied to flex children */
+  margin: PropTypes.string,
+
+  /** The padding value to be used on the Row. Based on the bootstrap padding classes */
+  padding: PropTypes.string,
+};
+
+Card.defaultProps = {
+  className: null,
+  isBordered: false,
+  isDarkMode: false,
+  isRounded: false,
+  margin: null,
+  padding: null,
+};
 
 export default Card;
