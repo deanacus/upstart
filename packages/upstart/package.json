@@ -42,7 +42,7 @@
     ],
     "moduleDirectories": [
       "node_modules",
-      "src/utils"
+      "<rootDir>/src/utils"
     ],
     "coverageThreshold": {
       "global": {
@@ -68,13 +68,14 @@
     "url": "https://github.com/deanacus/upstart.git"
   },
   "scripts": {
-    "build": "rollup -c rollup.config.js",
+    "build": "yarn clean && rollup -c rollup.config.js",
     "dev": "rollup -c rollup.config.js -w",
     "start": "yarn dev",
-    "lint": "eslint -c ./.eslintrc.js ./src/**/*.js",
+    "lint": "eslint ./src",
     "test": "jest",
     "ci": "jest --coverage",
-    "prepublishOnly": "rm -rf /esm /dist && yarn build"
+    "prepublishOnly": "yarn clean && yarn build",
+    "clean": "rm -rf ./esm ./dist"
   },
   "sideEffects": false,
   "version": "0.0.14"
