@@ -24,4 +24,11 @@ module.exports = {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/jsx-one-expression-per-line": 0,
   },
+  settings: {
+    "import/resolver": {
+      node: {
+        paths: ["src/utils"]
+      }
+    }
+  }
 }

@@ -1,6 +1,5 @@
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 const glob = require('glob');
@@ -18,19 +17,8 @@ const config = {
     {
       exports: 'named',
       dir: 'dist',
-      format: 'cjs',
-    },
-    {
-      exports: 'named',
-      dir: 'esm',
       format: 'esm',
     },
-  ],
-  external: [
-    'react',
-    'react-dom',
-    'prop-types',
-    'styled-components',
   ],
   plugins: [
     peerDepsExternal(),
@@ -38,7 +26,6 @@ const config = {
       exclude: 'node_modules/**',
     }),
     resolve(),
-    commonjs(),
   ],
 };
 
