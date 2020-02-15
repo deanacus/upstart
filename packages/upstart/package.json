@@ -41,7 +41,8 @@
       "src/components/**/*.{js,}"
     ],
     "moduleDirectories": [
-      "node_modules"
+      "node_modules",
+      "<rootDir>/src/utils"
     ],
     "coverageThreshold": {
       "global": {
@@ -74,7 +75,7 @@
     "clean": "rm -rf /esm /dist",
     "dev": "rollup -c rollup.config.js -w",
     "start": "yarn dev",
-    "lint": "eslint -c ./.eslintrc.js ./src/**/*.js",
+    "lint": "eslint ./src",
     "test": "jest",
     "ci": "jest --coverage",
     "prepublishOnly": "yarn clean && yarn build"
