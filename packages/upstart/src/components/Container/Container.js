@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 import { StyledContainer } from './styled';
 
 export const Container = ({
-  size, children, className,
+  size, children, isCentered, className,
 }) => (
   <StyledContainer
     className={className}
     size={size}
+    isCentered={isCentered}
   >
     {children}
   </StyledContainer>
@@ -20,6 +21,9 @@ Container.propTypes = {
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
+
+  /** Whether or not the container should be rendered centrally in the page */
+  isCentered: PropTypes.bool,
 
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
@@ -38,6 +42,7 @@ Container.propTypes = {
 Container.defaultProps = {
   className: null,
   size: 'xxl',
+  isCentered: false,
 };
 
 export default Container;
