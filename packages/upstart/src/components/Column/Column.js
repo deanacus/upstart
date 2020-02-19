@@ -6,7 +6,7 @@ import { StyledColumn } from './styled';
 export const Column = ({
   cols, isReverse, align, justify, padding, className, children,
 }) => {
-  const flexBasis = cols ? `${cols / 12 * 100}%` : 'auto';
+  const flexBasis = cols ? `${cols / 12 * 100}%` : '100%';
 
   return (
     <StyledColumn

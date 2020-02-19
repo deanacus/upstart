@@ -41,8 +41,7 @@
       "src/components/**/*.{js,}"
     ],
     "moduleDirectories": [
-      "node_modules",
-      "<rootDir>/src/utils"
+      "node_modules"
     ],
     "coverageThreshold": {
       "global": {
@@ -51,7 +50,10 @@
         "lines": 75,
         "statements": 75
       }
-    }
+    },
+    "testPathIgnorePatterns": [
+      "/__tests__/helpers/"
+    ]
   },
   "license": "MIT",
   "main": "dist/index.js",
@@ -78,5 +80,8 @@
     "clean": "rm -rf ./esm ./dist"
   },
   "sideEffects": false,
-  "version": "0.0.15"
+  "version": "0.0.15",
+  "dependencies": {
+    "@deanacus/dfhscripts": "^0.0.10"
+  }
 }
