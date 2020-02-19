@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import * as tlr from '@testing-library/react';
-import { Upstart } from '../components/GlobalStyle/GlobalStyle';
+import { Upstart } from '../../components/GlobalStyle/GlobalStyle';
 
 const Wrapper = ({ children }) => (
   <Upstart>

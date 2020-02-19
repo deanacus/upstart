@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'test-utils';
+import { render } from '../../helpers/test-utils';
 import { Image } from '../../../components';
 
 describe('<Image />', () => {
