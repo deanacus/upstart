@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Row, Column, Upstart } from '@deanacus/upstart';
-import Base from './base';
+import { Base } from './Base';
 
 import { SideMenu } from './SideMenu';
 import { TopNav } from './TopNav';
