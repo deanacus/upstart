@@ -2,9 +2,7 @@ import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-// eslint-disable-next-line
 import glob from 'glob';
-
 
 const hooks = [...glob.sync('src/**/*.js')].filter(
   (file) => !file.includes('index') && !file.includes('.test.js') && !file.includes('test-utils'),
@@ -18,11 +16,6 @@ const hooks = [...glob.sync('src/**/*.js')].filter(
 const config = {
   input: hooks,
   output: [
-    {
-      exports: 'named',
-      dir: 'dist',
-      format: 'cjs',
-    },
     {
       exports: 'named',
       dir: 'esm',
