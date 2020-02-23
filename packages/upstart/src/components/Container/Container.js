@@ -35,13 +35,12 @@ Container.propTypes = {
     'md',
     'lg',
     'xl',
-    'xxl',
   ]),
 };
 
 Container.defaultProps = {
   className: null,
-  size: 'xxl',
+  size: 'xl',
   isCentered: false,
 };
 
