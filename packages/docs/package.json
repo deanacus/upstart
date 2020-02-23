@@ -19,7 +19,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "start": "rm -rf ./.cache/ && npm run develop"
+    "clean": "rimraf ./.cache ./public",
+    "start": "yarn clean && npm run develop"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.6",
@@ -30,6 +31,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-app": "^6.1.0",
     "eslint-plugin-react-hooks": "^2.3.0",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "rimraf": "^3.0.2"
   }
 }

@@ -17,11 +17,7 @@ const alignmentMap = {
   baseline: 'baseline',
 };
 
-export const getRem = (value, rootValue) => `${value / rootValue}rem`;
-
-export const getEm = (value, rootValue) => `${value / rootValue}em`;
-
-export const getPx = (value) => `${value}px`;
+export const getRem = (value, rootValue = 10) => `${value / rootValue}rem`;
 
 export const getSpacing = (alias, theme) => {
   const [key, index] = alias.split('-');
@@ -99,8 +95,6 @@ const styledUtils = {
   getPadding,
   getMargin,
   getRem,
-  getEm,
-  getPx,
   alignItems,
   alignContent,
   justifyContent,
