@@ -80,8 +80,5 @@
     "prepublishOnly": "yarn clean && yarn build"
   },
   "sideEffects": false,
-  "version": "0.0.15",
-  "dependencies": {
-    "@deanacus/dfhscripts": "^0.0.10"
-  }
+  "version": "0.0.15"
 }

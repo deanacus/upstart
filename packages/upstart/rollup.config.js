@@ -20,6 +20,13 @@ const config = {
       format: 'esm',
     },
   ],
+  external: [
+    'react',
+    'react-dom',
+    'prop-types',
+    'styled-components',
+  ],
+
   plugins: [
     peerDepsExternal(),
     babel({
