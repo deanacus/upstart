@@ -1,11 +1,10 @@
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import glob from 'glob';
 
 const hooks = [...glob.sync('src/**/*.js')].filter(
-  (file) => !file.includes('index') && !file.includes('.test.js') && !file.includes('test-utils'),
+  (file) => !file.includes('index') && !file.includes('__tests__') && !file.includes('test-utils'),
 ).reduce(
   (acc, file) => {
     acc[file.replace('src/', '').replace(/([\w]+)\/([\w]+).js/, '$2')] = file;
@@ -18,15 +17,9 @@ const config = {
   output: [
     {
       exports: 'named',
-      dir: 'esm',
+      dir: 'dist',
       format: 'esm',
     },
-  ],
-  external: [
-    'react',
-    'react-dom',
-    'prop-types',
-    'styled-components',
   ],
   plugins: [
     peerDepsExternal(),
@@ -34,7 +27,6 @@ const config = {
       exclude: 'node_modules/**',
     }),
     resolve(),
-    commonjs(),
   ],
 };
 

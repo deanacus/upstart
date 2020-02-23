@@ -20,6 +20,8 @@ const renderHook = (callback, options) => (
   tlrh.renderHook(callback, { wrapper: Wrapper, ...options })
 );
 
+const { act, cleanup } = tlrh;
+
 export * from '@testing-library/react-hooks';
 
-export { renderHook };
+export { renderHook, act, cleanup };

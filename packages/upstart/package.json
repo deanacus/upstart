@@ -57,7 +57,7 @@
   },
   "license": "MIT",
   "main": "dist/index.js",
-  "module": "esm/index.js",
+  "module": "dist/index.js",
   "peerDependencies": {
     "prop-types": ">=15.7.0",
     "react": ">=16.8.0",
@@ -80,8 +80,5 @@
     "clean": "rm -rf ./esm ./dist"
   },
   "sideEffects": false,
-  "version": "0.0.15",
-  "dependencies": {
-    "@deanacus/dfhscripts": "^0.0.10"
-  }
+  "version": "0.0.15"
 }

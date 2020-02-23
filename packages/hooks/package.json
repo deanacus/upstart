@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "license": "MIT",
   "main": "dist/index.js",
-  "module": "esm/index.js",
+  "module": "dist/index.js",
   "private": false,
   "scripts": {
     "build": "rollup -c rollup.config.js",
@@ -18,9 +18,6 @@
     "url": "https://github.com/deanacus/upstart.git"
   },
   "jest": {
-    "setupFilesAfterEnv": [
-      "<rootDir>/setupTests.js"
-    ],
     "collectCoverageFrom": [
       "src/**/*.{js,}"
     ],
@@ -31,14 +28,18 @@
         "lines": 75,
         "statements": 75
       }
-    }
+    },
+    "testPathIgnorePatterns": [
+      "/__tests__/helpers/"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
     "@babel/preset-react": "^7.7.4",
-    "@deanacus/upstart": "^0.0.12",
+    "@deanacus/upstart": "^0.0.15",
     "@testing-library/react-hooks": "^3.2.1",
+    "babel-jest": "^25.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.19.1",

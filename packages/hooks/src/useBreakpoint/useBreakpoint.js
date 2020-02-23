@@ -6,15 +6,12 @@ function throttle(callback) {
     cancelAnimationFrame(timeout);
   }
   timeout = requestAnimationFrame(() => {
-    callback(this.args);
+    callback();
   });
 }
 
 export const useBreakpoint = ({ breakpoints }) => {
   const getBreakpoint = () => {
-    if (window.innerWidth > breakpoints.xxl) {
-      return 'xxxl';
-    }
     if (window.innerWidth > breakpoints.xl) {
       return 'xxl';
     }
@@ -30,11 +27,7 @@ export const useBreakpoint = ({ breakpoints }) => {
     if (window.innerWidth > breakpoints.xs) {
       return 'sm';
     }
-    if (window.innerWidth > breakpoints.xxs) {
-      return 'xs';
-    }
-
-    return 'xxs';
+    return 'xs';
   };
 
   const [breakpoint, setBreakpoint] = useState(getBreakpoint(window.innerWidth));

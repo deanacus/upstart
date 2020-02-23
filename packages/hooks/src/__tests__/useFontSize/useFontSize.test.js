@@ -3,7 +3,8 @@ import { renderHook } from '../helpers/test-utils';
 import { useFontSize } from '../../useFontSize/useFontSize';
 
 describe(' hook', () => {
-  test('', () => {
-
+  test('Should return the correct value', () => {
+    const { result } = renderHook(() => useFontSize(0));
+    expect(result.current).toBe(`font-size: ${Theme.fontSizes[0] / Theme.rootVal}rem`);
   });
 });

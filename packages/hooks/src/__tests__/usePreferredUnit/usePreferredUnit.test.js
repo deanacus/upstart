@@ -3,7 +3,8 @@ import { renderHook } from '../helpers/test-utils';
 import { usePreferredUnit } from '../../usePreferredUnit/usePreferredUnit';
 
 describe(' hook', () => {
-  test('', () => {
-
+  test('Should return the correct value', () => {
+    const { result } = renderHook(() => usePreferredUnit(16));
+    expect(result.current).toBe(`${16 / Theme.rootVal}rem`);
   });
 });

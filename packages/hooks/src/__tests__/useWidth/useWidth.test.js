@@ -3,7 +3,8 @@ import { renderHook } from '../helpers/test-utils';
 import { useWidth } from '../../useWidth/useWidth';
 
 describe(' hook', () => {
-  test('', () => {
-
+  test('Should return the correct value', () => {
+    const { result } = renderHook(() => useWidth(0));
+    expect(result.current).toBe(`${Theme.widths[0] / Theme.rootVal}rem`);
   });
 });
