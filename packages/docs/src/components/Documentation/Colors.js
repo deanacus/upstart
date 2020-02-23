@@ -20,7 +20,7 @@ export const Colors = ({ color }) => {
 };
 
 Colors.propTypes = {
-  color: PropTypes.arrayOf(PropTypes.string).isRequired,
+  color: PropTypes.string.isRequired,
 };
 
 export default Colors;

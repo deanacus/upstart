@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Row, Column, Upstart } from '@deanacus/upstart';
+import { Upstart } from '@deanacus/upstart';
 import { Base } from './Base';
 import { customTheme } from './theme';
 
@@ -23,21 +23,15 @@ export default function Layout({
     <Upstart customTheme={customTheme}>
       <DocsStyles />
       <Base>
-        <Row>
-          <Column cols={2} padding="px-3">
-            <Navigation />
-          </Column>
-          <Column cols={10}>
-            <Article
-              title={title}
-              body={body}
-              description={description}
-              menu={menu}
-              packageName={packageName}
-              importName={importName}
-            />
-          </Column>
-        </Row>
+        <Navigation />
+        <Article
+          title={title}
+          body={body}
+          description={description}
+          menu={menu}
+          packageName={packageName}
+          importName={importName}
+        />
       </Base>
     </Upstart>
   );

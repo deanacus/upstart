@@ -1,6 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
-import { UnorderedList } from '@deanacus/upstart';
+import { UnorderedList, Separator } from '@deanacus/upstart';
 
 import { MenuGroup } from './MenuGroup';
 
@@ -15,6 +16,10 @@ const query = graphql`{
     }
   }
 }`;
+
+const Nav = styled.nav`
+  overflow: scroll;
+`;
 
 export const Menu = () => {
   const { allMdx: { nodes } } = useStaticQuery(query);
@@ -31,15 +36,18 @@ export const Menu = () => {
   }, {});
 
   return (
-    <nav>
+    <Nav>
       <UnorderedList indent={0} listStyle="none">
         {
-          Object.keys(groupedNodes).map((group) => (
-            <MenuGroup group={groupedNodes[group]} key={group} title={group} />
+          Object.keys(groupedNodes).map((group, ind) => (
+            <React.Fragment key={group}>
+              {ind !== 0 && <Separator />}
+              <MenuGroup group={groupedNodes[group]} title={group} />
+            </React.Fragment>
           ))
         }
       </UnorderedList>
-    </nav>
+    </Nav>
   );
 };
 

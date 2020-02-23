@@ -2,18 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { getPadding, getMargin } from '@deanacus/upstart';
+import { Hero } from './Hero';
+
+const StyledArticle = styled.article`
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+`;
 
 const ArticleBody = styled.div`
-  margin: ${({ theme }) => theme.space[5] / 10}rem 0;
-`;
-
-const Title = styled.h1`
-  margin-top: 0;
-`;
-
-const Hero = styled.div`
-  background: ${({ theme }) => theme.colors.grey[7]};
-  color: ${({ theme }) => theme.colors.grey[1]};
+  ${({ theme }) => getMargin('my-5', theme)};
+  width: 50%;
+  ${({ theme }) => getPadding('pl-5', theme)}
 `;
 
 export const Article = ({
@@ -23,10 +24,15 @@ export const Article = ({
   packageName,
   importName,
 }) => (
-  <article>
-    <Hero>
-      <Title>{title}</Title>
-      {importName && <code>import {`{ ${importName} }`} from &apos;@{packageName}&apos;</code>}
+  <StyledArticle>
+    <Hero
+      title={title}
+      description={description}
+      packageName={packageName}
+      importName={importName}
+    >
+      <h1>{title}</h1>
+      {/* <code>{importString}</code> */}
       <p>{description}</p>
     </Hero>
     <ArticleBody>
@@ -34,7 +40,7 @@ export const Article = ({
         {body}
       </MDXRenderer>
     </ArticleBody>
-  </article>
+  </StyledArticle>
 );
 
 Article.propTypes = {

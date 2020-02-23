@@ -74,22 +74,22 @@ export const getBorder = (alias, theme) => {
       return `border: ${theme.borders[index]}`;
     case 'bx':
       return `
-        border-right: ${theme.border[index]};
-        border-left: ${theme.border[index]};
+        border-right: ${theme.borders[index]};
+        border-left: ${theme.borders[index]};
       `;
     case 'by':
       return `
-        border-top: ${theme.border[index]};
-        border-bottom: ${theme.border[index]};
+        border-top: ${theme.borders[index]};
+        border-bottom: ${theme.borders[index]};
       `;
     case 'bt':
-      return `border-top: ${theme.border[index]};`;
+      return `border-top: ${theme.borders[index]};`;
     case 'br':
-      return `border-right: ${theme.border[index]};`;
+      return `border-right: ${theme.borders[index]};`;
     case 'bb':
-      return `border-bottom: ${theme.border[index]};`;
+      return `border-bottom: ${theme.borders[index]};`;
     case 'bl':
-      return `border-left: ${theme.border[index]};`;
+      return `border-left: ${theme.borders[index]};`;
     default:
       return null;
   }

@@ -1,14 +1,13 @@
 import React from 'react';
-import { Column, Link } from '@deanacus/upstart';
-
-const Logo = () => (
-  <Link href="/"><span role="img" aria-label="Pointing up emoji">☝️</span>Upstart</Link>
-);
+import { Flex, Link, Input } from '@deanacus/upstart';
 
 export const Branding = () => (
-  <Column align="center" padding="py-3">
-    <Logo />
-  </Column>
+  <Flex justify="center" direction="column">
+    <Link href="/">
+      <span role="img" aria-label="Pointing up emoji">☝️</span>Upstart
+    </Link>
+    <Input type="search" label="Search" id="search" />
+  </Flex>
 );
 
 export default Branding;

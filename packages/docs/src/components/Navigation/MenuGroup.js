@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { ListItem, UnorderedList, getRem } from '@deanacus/upstart';
+import {
+  ListItem,
+  UnorderedList,
+  getRem,
+} from '@deanacus/upstart';
 import { Link } from 'gatsby';
 
 const GroupTitle = styled.h2`
   font-size: ${({ theme }) => getRem(theme.fontSizes.md, theme.rootVal)};
+  margin: 0;
   text-transform: uppercase;
 `;
 

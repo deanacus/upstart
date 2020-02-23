@@ -1,34 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
-import { getBorder } from '@deanacus/upstart';
+import { getBorder, getPadding, Separator } from '@deanacus/upstart';
 import { Branding } from './Branding';
 import { Menu } from './Menu';
-import { SocialLinks } from './SocialLinks';
+import { Links } from './Links';
 
 const Nav = styled.div`
-  border-right: ${getBorder('grey')};
-  position: relative;
-  width: 100%;
-  border-right: ${({ theme }) => theme.borders.separator};
-  border-color: ${({ theme }) => theme.colors.grey[1]};
-  min-height: 100%;
-`;
-
-const FixedWrapper = styled.div`
+  ${({ theme }) => getBorder('br-grey', theme)};
+  ${({ theme }) => getPadding('px-3', theme)}
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
-  overflow: scroll;
+  height: 100vh;
+  position: fixed;
+  width: 250px;
 `;
 
 export const Navigation = () => (
   <Nav>
-    <FixedWrapper>
-      <Branding />
-      <Menu />
-      <SocialLinks />
-    </FixedWrapper>
+    <Branding />
+    <Separator />
+    <Menu />
+    <Separator />
+    <Links />
   </Nav>
 );
 
