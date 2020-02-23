@@ -11,7 +11,7 @@ const Nav = styled.div`
   width: 100%;
   border-right: ${({ theme }) => theme.borders.separator};
   border-color: ${({ theme }) => theme.colors.grey[1]};
-  height: 100%;
+  min-height: 100%;
 `;
 
 const FixedWrapper = styled.div`
@@ -19,7 +19,7 @@ const FixedWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  position: fixed;
+  overflow: scroll;
 `;
 
 export const Navigation = () => (

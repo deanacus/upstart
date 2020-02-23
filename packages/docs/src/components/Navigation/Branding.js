@@ -6,7 +6,7 @@ const Logo = () => (
 );
 
 export const Branding = () => (
-  <Column align="center" padding="py-5">
+  <Column align="center" padding="py-3">
     <Logo />
   </Column>
 );

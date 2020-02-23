@@ -24,3 +24,4 @@ export { UnorderedList } from './UnorderedList/UnorderedList';
 export { Upstart } from './GlobalStyle/GlobalStyle';
 export { Theme } from './Theme/Theme';
 export { ThemeProvider } from './ThemeProvider/ThemeProvider';
+export * from '../utils/styled-utils';

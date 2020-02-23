@@ -22,9 +22,9 @@ const getValues = (type) => {
 export const Prop = ({
   name, description, type, defaultValue,
 }) => {
-  console.log({
-    name, description, type, defaultValue,
-  });
+  // console.log({
+  //   name, description, type, defaultValue,
+  // });
   const title = getValues(type);
   return (
     <TableRow>
