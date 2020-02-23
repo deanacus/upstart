@@ -2,7 +2,7 @@
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
-export const useColor = (color, strength = 'default') => {
+export const useColor = (color, strength = 5) => {
   const { colors } = useContext(ThemeContext);
 
   if (!colors[color]) {

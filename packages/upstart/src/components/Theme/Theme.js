@@ -3,7 +3,9 @@ import { space } from '../../tokens/space';
 import { fonts, fontSizes, fontWeights } from '../../tokens/type';
 import { colors } from '../../tokens/colors';
 import { widths, breakpoints } from '../../tokens/widths';
-import { borders, borderWidths, radii } from '../../tokens/borders';
+import {
+  borders, borderWidths, radii, borderStyles,
+} from '../../tokens/borders';
 
 const lineHeights = {
   body: 1.5,
@@ -59,6 +61,7 @@ export const Theme = {
   breakpoints,
   borders,
   borderWidths,
+  borderStyles,
   radii,
   zIndices,
   shadows,
