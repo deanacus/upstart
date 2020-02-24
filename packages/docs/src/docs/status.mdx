@@ -1,16 +1,16 @@
 ---
 title: Status Definitions
 description: What do the component statuses mean
-menu: 
+menu: Upstart
 route: /component-status
 ---
 
-import Status from '../components/Status';
+import Status from '../components/Documentation/Status';
 import { Separator } from '@deanacus/upstart';
 
 ## Planned
 
-<Status planned />
+<Status status="planned" />
 
 * A need for this component has been determined.
 * The components purpose and usage is understood.
@@ -22,7 +22,7 @@ import { Separator } from '@deanacus/upstart';
 
 ## In Progress
 
-<Status progress />
+<Status status="progress" />
 
 * Development is underway.
 * It may or may not be available through NPM.
@@ -32,7 +32,7 @@ import { Separator } from '@deanacus/upstart';
 
 ## In Review
 
-<Status review />
+<Status status="review" />
 
 * The default implementation has been implemented to render with no (or minimal) props.
 * The identified variants have been implemented.
@@ -47,6 +47,6 @@ import { Separator } from '@deanacus/upstart';
 
 ## Complete
 
-<Status complete />
+<Status status="complete" />
 
 * The component has passed review

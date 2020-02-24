@@ -6,14 +6,6 @@
     "@deanacus/upstart": "^0.0.12",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
-    "babel-plugin-styled-components": "^1.10.6",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-react-app": "^6.1.0",
-    "eslint-plugin-react-hooks": "^2.3.0",
     "gatsby": "^2.18.12",
     "gatsby-plugin-mdx": "^1.0.62",
     "gatsby-plugin-styled-components": "^3.1.16",
@@ -27,9 +19,19 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "start": "npm run develop"
+    "clean": "rimraf ./.cache ./public",
+    "start": "yarn clean && npm run develop"
   },
   "devDependencies": {
-    "prop-types": "^15.7.2"
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-app": "^6.1.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "prop-types": "^15.7.2",
+    "rimraf": "^3.0.2"
   }
 }

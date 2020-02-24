@@ -1,0 +1,45 @@
+import plexSansLight from '../../static/fonts/IBMPlexSans-Light.woff2';
+import plexSansRegular from '../../static/fonts/IBMPlexSans-Regular.woff2';
+import plexSansItalic from '../../static/fonts/IBMPlexSans-Italic.woff2';
+import plexSansBold from '../../static/fonts/IBMPlexSans-Bold.woff2';
+import poppinsBlack from '../../static/fonts/Poppins-Bold.ttf';
+
+const plexSans = [
+  plexSansLight,
+  plexSansRegular,
+  plexSansItalic,
+  plexSansBold,
+];
+
+[
+  plexSans.light,
+  plexSans.regular,
+  plexSans.italic,
+  plexSans.bold,
+] = plexSans;
+
+const poppins = [
+  poppinsBlack,
+];
+
+[
+  poppins.black,
+] = poppins;
+
+export const typeFaces = {
+  plexSans,
+  poppins,
+};
+
+export const fonts = {
+  body: '"Plex Sans", Helvetica, Arial, system-ui, sans-serif',
+  heading: '"Poppins", Helvetica, Arial, system-ui, sans-serif',
+  monospace: 'Menlo, monospace',
+};
+
+export const customTheme = {
+  typeFaces,
+  fonts,
+};
+
+export default customTheme;

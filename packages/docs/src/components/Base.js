@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { MDXProvider } from '@mdx-js/react';
 import * as Upstart from '@deanacus/upstart';
-import { Preview } from './Preview';
+import { Preview } from './Documentation/Preview';
 import { Pre } from './MDX/Pre';
 
 const components = {

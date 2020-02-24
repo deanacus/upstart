@@ -1,19 +1,34 @@
 # Upstart
 
-Upstart is an attempt to create yet another react component library. This one is
-really only for my personal use, but, well, it's out there for anyone to use if 
-they should so desite.
+Upstart is yet another component library for React.
 
-Install:
+It's built with styled-components, and is rather opinionated - it's based around
+the way I think a component library should work.
 
-```bash
-yarn install @deanacus/upstart
-```
+It's very much a work in progress.
 
-then just import the components into your application like so:
+## Usage
 
-```javascript
-import { Button } from '@deanacus/upstart';
-```
+Check out the [documentation site][docs] for details on how to get started with Upstart
 
-And you're good to go.
+## Development
+
+This is a monorepo, powered by Yarn Workspaces (v1). There are 4 packages (currently):
+
+* upstart - the component library
+* hooks - a library of hooks that support the component library
+* tokens - where all the design tokens live
+* docs - the documentation site.
+
+Each of these has their own npm package, dependencies, scripts, and more.
+
+Contributions are more than welcome, no matter how big or small.
+
+### Contributors:
+
+* [Dean Harris][deanacus]
+* [Patrick Jones][psjgit]
+
+[docs]: https://upstart.deanacus.com/
+[deanacus]: https://github.com/deanacus/
+[psjgit]: https://github.com/psjgit/
