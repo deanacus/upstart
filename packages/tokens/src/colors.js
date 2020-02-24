@@ -75,7 +75,7 @@ const error = [
   "#c92a2a",
 ];
 
-const foreground = grey[6];
+const foreground = grey[8];
 const background = grey[0];
 
 export const colors = {
