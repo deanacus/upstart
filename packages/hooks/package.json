@@ -7,11 +7,12 @@
   "private": false,
   "scripts": {
     "build": "rollup -c rollup.config.js",
+    "clean": "rm -rf /esm /dist",
     "dev": "rollup -c rollup.config.js -w",
     "start": "yarn dev",
     "lint": "eslint -c ./.eslintrc.js ./src/**/*.js",
-    "test": "jest",
-    "prepublishOnly": "rm -rf /esm /dist && yarn build"
+    "test": "jest --watchAll",
+    "prepublishOnly": "yarn clean && yarn build"
   },
   "repository": {
     "type": "git",

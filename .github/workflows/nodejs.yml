@@ -25,8 +25,11 @@ jobs:
       working-directory: ./packages/upstart
     - run: npm run build --if-present
       working-directory: ./packages/upstart
-    - run: npm run ci
+    - run: npm run test
       working-directory: ./packages/upstart
+    # Test Coverage Collection. Need to get collection up to snuff first
+    # - run: npm run ci
+    #   working-directory: ./packages/upstart
     - run: npm run lint
       working-directory: ./packages/upstart
       env:

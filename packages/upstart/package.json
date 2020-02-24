@@ -45,10 +45,10 @@
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 75,
-        "functions": 75,
-        "lines": 75,
-        "statements": 75
+        "branches": 95,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
       }
     },
     "testPathIgnorePatterns": [
@@ -70,14 +70,14 @@
     "url": "https://github.com/deanacus/upstart.git"
   },
   "scripts": {
-    "build": "yarn clean && rollup -c rollup.config.js",
+    "build": "rollup -c rollup.config.js",
+    "clean": "rm -rf /esm /dist",
     "dev": "rollup -c rollup.config.js -w",
     "start": "yarn dev",
     "lint": "eslint ./src",
     "test": "jest",
     "ci": "jest --coverage",
-    "prepublishOnly": "yarn clean && yarn build",
-    "clean": "rm -rf ./esm ./dist"
+    "prepublishOnly": "yarn clean && yarn build"
   },
   "sideEffects": false,
   "version": "0.0.15"

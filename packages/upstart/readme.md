@@ -1,5 +1,7 @@
 # Upstart
 
+![](https://badgen.net/bundlephobia/minzip/@deanacus/upstart)
+
 Upstart is an attempt to create yet another react component library. This one is
 really only for my personal use, but, well, it's out there for anyone to use if 
 they should so desite.
