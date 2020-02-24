@@ -17,21 +17,26 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repo
+      uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
+    - name: Install dependencies
+      run: npm install
       working-directory: ./packages/upstart
-    - run: npm run build --if-present
+    - name: Build the package
+      run: npm run build
       working-directory: ./packages/upstart
-    - run: npm run test
+    - name: Run the tests
+      run: npm run test
       working-directory: ./packages/upstart
     # Test Coverage Collection. Need to get collection up to snuff first
     # - run: npm run ci
     #   working-directory: ./packages/upstart
-    - run: npm run lint
+    - name: Run the linter
+      run: npm run lint
       working-directory: ./packages/upstart
       env:
         CI: true

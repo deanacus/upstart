@@ -17,18 +17,23 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repo
+      uses: actions/checkout@v2
     - name: Set up Node
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
+    - name: Install dependencies
+      run: npm install
       working-directory: ./packages/tokens
-    - run: npm run build
+    - name: Build the package
+      run: npm run build
       working-directory: ./packages/tokens
-    - run: npm run test
+    - name: Run the tests
+      run: npm run test
       working-directory: ./packages/tokens
-    - run: npm run lint
+    - name: Run the linter
+      run: npm run lint
       working-directory: ./packages/tokens
       env:
         CI: true
