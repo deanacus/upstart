@@ -1,0 +1,19 @@
+---
+title: Audio
+description: 
+menu: Media
+route: /media/audio
+---
+
+import { PropsTable } from '../../components/PropsTable';
+import { Audio } from '@deanacus/upstart';
+
+This is (currently) a simple wrapper around the HTML audio element.
+
+```jsx
+<Audio>
+  <source src="/media/sample.mp3" type="audio/mpeg" />
+</Audio>
+```
+
+<PropsTable component={Audio} />

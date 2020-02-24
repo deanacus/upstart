@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Audio = ({
+export const Audio = ({
   shouldAutoplay, hideControls, shouldLoop, className, children,
 }) => (
   <audio
     autoPlay={shouldAutoplay}
     className={className}
-    controls={hideControls}
+    controls={!hideControls}
     loop={shouldLoop}
   >
     {children}
@@ -33,7 +33,7 @@ Audio.propTypes = {
    * The content of the Audio component. Should be a <source> element or React
    * component that ultimately resolves in a <source> element
    */
-  children: PropTypes.oneOf([
+  children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(
       PropTypes.node,
