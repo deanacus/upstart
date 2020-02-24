@@ -1,0 +1,33 @@
+# name: Validate Tokens
+
+# on:
+#   pull_request:
+#     branches:
+#       - master
+#     paths:
+#       - 'packages/tokens/**'
+
+# jobs:
+#   build:
+
+#     runs-on: ubuntu-latest
+
+#     strategy:
+#       matrix:
+#         node-version: [12.x]
+
+#     steps:
+#     - name: Checkout code
+#     - uses: actions/checkout@v2
+#     - name: Set up Node
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: ${{ matrix.node-version }}
+#     - run: npm install
+#       working-directory: ./packages/tokens
+#     - run: npm run build
+#       working-directory: ./packages/tokens
+#     - run: npm run test
+#       working-directory: ./packages/tokens
+#     - run: npm run lint
+#       working-directory: ./packages/tokens

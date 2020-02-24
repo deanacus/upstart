@@ -5,6 +5,6 @@ import { useTheme } from '../../useTheme/useTheme';
 describe(' hook', () => {
   test('Should return the correct value', () => {
     const { result } = renderHook(() => useTheme());
-    expect(result.current).toBe(Theme);
+    expect(result.current).toStrictEqual(Theme);
   });
 });

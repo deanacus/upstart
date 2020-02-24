@@ -8,35 +8,35 @@ afterEach(() => {
 
 describe('useBreakpoint hook', () => {
   it('should return the correct value for 1300px', () => {
-    global.window.innerWidth = 1300;
+    global.window.innerWidth = 1500;
     const { result, unmount } = renderHook(() => useBreakpoint(Theme));
     expect(result.current.breakpoint).toBe('xxl');
     unmount();
   });
 
   it('should return the correct value', () => {
-    global.window.innerWidth = 1024;
+    global.window.innerWidth = 1300;
     const { result, unmount } = renderHook(() => useBreakpoint(Theme));
     expect(result.current.breakpoint).toBe('xl');
     unmount();
   });
 
   it('should return the correct value', () => {
-    global.window.innerWidth = 800;
+    global.window.innerWidth = 1000;
     const { result, unmount } = renderHook(() => useBreakpoint(Theme));
     expect(result.current.breakpoint).toBe('lg');
     unmount();
   });
 
   it('should return the correct value', () => {
-    global.window.innerWidth = 500;
+    global.window.innerWidth = 800;
     const { result, unmount } = renderHook(() => useBreakpoint(Theme));
     expect(result.current.breakpoint).toBe('md');
     unmount();
   });
 
   it('should return the correct value', () => {
-    global.window.innerWidth = 400;
+    global.window.innerWidth = 600;
     const { result, unmount } = renderHook(() => useBreakpoint(Theme));
     expect(result.current.breakpoint).toBe('sm');
     unmount();
