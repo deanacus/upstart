@@ -4,9 +4,10 @@ import styled from 'styled-components';
 
 import { getRem } from '@deanacus/upstart';
 
-const Circle = styled.div`
+const Circle = styled.span`
   background: ${({ status, theme }) => theme.colors[status][5]};
   border-radius: ${({ theme }) => getRem(theme.radii.circle, theme.rootVal)};
+  display: inline-block;
   height: 1rem;
   width: 1rem;
 `;

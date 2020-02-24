@@ -5,6 +5,13 @@ route: /
 ---
 
 import Status from '../components/Documentation/Status';
+import { 
+  Table,
+  TableRow,
+  TableCell,
+  TableHeadCell,
+  TableHead,
+} from '@deanacus/upstart'
 
 Why create another component library when there are so many out there? Simple - I want to.
 
@@ -28,38 +35,151 @@ In addition to basing the theme on System UI, I've also built a bunch of hooks t
 
 ### Foundation
 
-| Component       | Implementation               | Documentation                |
-| :-------------- | :--------------------------: | :--------------------------: |
-| Color           | <Status status="review" />   | <Status status="planned" />  |
-| Core Typography | <Status status="complete" /> | <Status status="progress" /> |
+<Table>
+  <TableHead>
+    <TableHeadCell>Component</TableHeadCell>
+    <TableHeadCell>Implementation</TableHeadCell>
+    <TableHeadCell>Documentation</TableHeadCell>
+  </TableHead>
+  <tbody>
+  <TableRow>
+    <TableCell>Color</TableCell>
+    <TableCell><Status status="review" /> <small>In Review</small></TableCell>
+    <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>Core Typography</TableCell>
+    <TableCell><Status status="complete" /> <small>Complete</small></TableCell>
+    <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+  </TableRow>
+  </tbody>
+</Table>
 
 ### Containers
 
-| Component  | Implementation               | Documentation |
-| :--------- | :--------------------------: | :-----------: |
-| Flex       | <Status status="progress" /> |               |
-| Grid       | <Status status="progress" /> |               |
+<Table>
+  <TableHead>
+    <TableHeadCell>Component</TableHeadCell>
+    <TableHeadCell>Implementation</TableHeadCell>
+    <TableHeadCell>Documentation</TableHeadCell>
+  </TableHead>
+  <tbody>
+  <TableRow>
+    <TableCell>Flex</TableCell>
+    <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+    <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+  </TableRow>
+  <TableRow>
+    <TableCell>Grid</TableCell>
+    <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+    <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+  </TableRow>
+  </tbody>
+</Table>
 
 ### Components
 
-| Component  | Implementation               | Documentation |
-| :--------- | :--------------------------: | :-----------: |
-| Alert      |                              |               |
-| Audio      |                              |               |
-| Badge      | <Status status="progress" /> |               |
-| Blockquote | <Status status="complete" /> |               |
-| Button     | <Status status="complete" /> |               |
-| Card       |                              |               |
-| Checkbox   |                              |               |
-| Image      | <Status status="progress" /> |               |
-| Input      | <Status status="progress" /> |               |
-| Link       | <Status status="progress" /> |               |
-| List       | <Status status="progress" /> |               |
-| Modal      |                              |               |
-| Progress   |                              |               |
-| Radio      |                              |               |
-| Separator  | <Status status="progress" /> |               |
-| Select     |                              |               |
-| Table      |                              |               |
-| Textarea   |                              |               |
-| Video      |                              |               |
+<Table>
+  <TableHead>
+    <TableHeadCell>Component</TableHeadCell>
+    <TableHeadCell>Implementation</TableHeadCell>
+    <TableHeadCell>Documentation</TableHeadCell>
+  </TableHead>
+  <tbody>
+    <TableRow>
+      <TableCell>Alert</TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Audio</TableCell>
+      <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Badge</TableCell>
+      <TableCell><Status status="review" /> <small>In Review</small></TableCell>
+      <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Blockquote</TableCell>
+      <TableCell><Status status="review" /> <small>In Review</small></TableCell>
+      <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Button</TableCell>
+      <TableCell><Status status="complete" /> <small>Complete</small></TableCell>
+      <TableCell><Status status="review" /> <small>In Review</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Card</TableCell>
+      <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Checkbox</TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Image</TableCell>
+      <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+      <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Input</TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Link</TableCell>
+      <TableCell><Status status="review" /> <small>In Review</small></TableCell>
+      <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>List</TableCell>
+      <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+      <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Modal</TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Progress</TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Radio</TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Separator</TableCell>
+      <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Select</TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Table</TableCell>
+      <TableCell><Status status="progress" /> <small>In Progress</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Textarea</TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Video</TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+      <TableCell><Status status="planned" /> <small>Planned</small></TableCell>
+    </TableRow>
+  </tbody>
+</Table>
