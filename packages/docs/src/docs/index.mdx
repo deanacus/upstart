@@ -5,49 +5,42 @@ route: /
 ---
 
 import Status from '../components/Documentation/Status';
-import { 
+import {
   Table,
   TableRow,
   TableCell,
   TableHeadCell,
   TableHead,
-} from '@deanacus/upstart'
+} from '@deanacus/upstart';
 
-Why create another 
-component
-library when there are so many out there? Simple - I want to.
+Why create another component library when there are so many out there? Simple -
+I want to.
 
-Using the 
-component
-library that is being implemented at work has been illuminating on the issues that face people building a 
-component
-library. I thought that perhaps by building my own, I may be able to better understand the issues that can lead to less than ideal 
-implementations
-.
+Using the component library that is being implemented at work has been
+illuminating on the issues that face people building a component library. I
+thought that perhaps by building my own, I may be able to better understand the
+issues that can lead to less than ideal implementations.
 
-Also, I've never built a proper library before, so I thought it would be a good excuse to do so.
+Also, I've never built a proper library before, so I thought it would be a good
+excuse to do so.
 
 ## What it isn't
 
-It's not a design system, nor is it particularly beautiful. It's not _really_ intended for anyone other than myself to use in earnest, however, seeing it in use would be awesome.
+It's not a design system, nor is it particularly beautiful. It's not _really_
+intended for anyone other than myself to use in earnest, however, seeing it in
+use would be awesome.
 
 ## What it is
 
-It's a pretty simple UI 
-component
-library built with React and styled-
-components
-. It's intended to be completely themeable, with the theme having been (loosely) based on the System-UI theme specification.
+It's a pretty simple UI component library built with React and
+styled-components. It's intended to be completely themeable, with the theme
+having been (loosely) based on the System-UI theme specification.
 
-It doesn't include complex 
-components
-, mostly just a range of base UI 
-components
-.
+It doesn't include complex components, mostly just a range of base UI
+components.
 
-In addition to basing the theme on System UI, I've also built a bunch of hooks to simplify retrieval of theme values within 
-components
-.
+In addition to basing the theme on System UI, I've also built a bunch of hooks
+to simplify retrieval of theme values within components.
 
 ## What's included
 
@@ -55,39 +48,29 @@ components
 
 <Table>
   <TableHead>
-    <TableHeadCell>
-      Component
-    </TableHeadCell>
-    <TableHeadCell>
-      Implementation
-    </TableHeadCell>
-    <TableHeadCell>
-      Documentation
-    </TableHeadCell>
+    <TableHeadCell>Component</TableHeadCell>
+    <TableHeadCell>Implementation</TableHeadCell>
+    <TableHeadCell>Documentation</TableHeadCell>
   </TableHead>
   <tbody>
-  <TableRow>
-    <TableCell>
-      Color
-    </TableCell>
-    <TableCell>
-      <Status status="review" /> <small>In Review</small>
-    </TableCell>
-    <TableCell>
-      <Status status="progress" /> <small>In Progress</small>
-    </TableCell>
-  </TableRow>
-  <TableRow>
-    <TableCell>
-      Core Typography
-    </TableCell>
-    <TableCell>
-      <Status status="complete" /> <small>Complete</small>
-    </TableCell>
-    <TableCell>
-      <Status status="progress" /> <small>In Progress</small>
-    </TableCell>
-  </TableRow>
+    <TableRow>
+      <TableCell>Color</TableCell>
+      <TableCell>
+        <Status status="review" /> <small>In Review</small>
+      </TableCell>
+      <TableCell>
+        <Status status="progress" /> <small>In Progress</small>
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Core Typography</TableCell>
+      <TableCell>
+        <Status status="complete" /> <small>Complete</small>
+      </TableCell>
+      <TableCell>
+        <Status status="progress" /> <small>In Progress</small>
+      </TableCell>
+    </TableRow>
   </tbody>
 </Table>
 
@@ -95,63 +78,45 @@ components
 
 <Table>
   <TableHead>
-    <TableHeadCell>
-      Component
-    </TableHeadCell>
-    <TableHeadCell>
-      Implementation
-    </TableHeadCell>
-    <TableHeadCell>
-      Documentation
-    </TableHeadCell>
+    <TableHeadCell>Component</TableHeadCell>
+    <TableHeadCell>Implementation</TableHeadCell>
+    <TableHeadCell>Documentation</TableHeadCell>
   </TableHead>
   <tbody>
-  <TableRow>
-    <TableCell>
-      Flex
-    </TableCell>
-    <TableCell>
-      <Status status="progress" /> <small>In Progress</small>
-    </TableCell>
-    <TableCell>
-      <Status status="planned" /> <small>Planned</small>
-    </TableCell>
-  </TableRow>
-  <TableRow>
-    <TableCell>
-      Grid
-    </TableCell>
-    <TableCell>
-      <Status status="progress" /> <small>In Progress</small>
-    </TableCell>
-    <TableCell>
-      <Status status="planned" /> <small>Planned</small>
-    </TableCell>
-  </TableRow>
+    <TableRow>
+      <TableCell>Flex</TableCell>
+      <TableCell>
+        <Status status="progress" /> <small>In Progress</small>
+      </TableCell>
+      <TableCell>
+        <Status status="planned" /> <small>Planned</small>
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Grid</TableCell>
+      <TableCell>
+        <Status status="progress" /> <small>In Progress</small>
+      </TableCell>
+      <TableCell>
+        <Status status="planned" /> <small>Planned</small>
+      </TableCell>
+    </TableRow>
   </tbody>
 </Table>
 
-### 
-Components
+###
 
+Components
 
 <Table>
   <TableHead>
-    <TableHeadCell>
-      Component
-    </TableHeadCell>
-    <TableHeadCell>
-      Implementation
-    </TableHeadCell>
-    <TableHeadCell>
-      Documentation
-    </TableHeadCell>
+    <TableHeadCell>Component</TableHeadCell>
+    <TableHeadCell>Implementation</TableHeadCell>
+    <TableHeadCell>Documentation</TableHeadCell>
   </TableHead>
   <tbody>
     <TableRow>
-      <TableCell>
-        Alert
-      </TableCell>
+      <TableCell>Alert</TableCell>
       <TableCell>
         <Status status="planned" /> <small>Planned</small>
       </TableCell>
@@ -160,9 +125,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Audio
-      </TableCell>
+      <TableCell>Audio</TableCell>
       <TableCell>
         <Status status="progress" /> <small>In Progress</small>
       </TableCell>
@@ -171,9 +134,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Badge
-      </TableCell>
+      <TableCell>Badge</TableCell>
       <TableCell>
         <Status status="review" /> <small>In Review</small>
       </TableCell>
@@ -182,9 +143,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Blockquote
-      </TableCell>
+      <TableCell>Blockquote</TableCell>
       <TableCell>
         <Status status="review" /> <small>In Review</small>
       </TableCell>
@@ -193,9 +152,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Button
-      </TableCell>
+      <TableCell>Button</TableCell>
       <TableCell>
         <Status status="complete" /> <small>Complete</small>
       </TableCell>
@@ -204,9 +161,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Card
-      </TableCell>
+      <TableCell>Card</TableCell>
       <TableCell>
         <Status status="progress" /> <small>In Progress</small>
       </TableCell>
@@ -215,9 +170,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Checkbox
-      </TableCell>
+      <TableCell>Checkbox</TableCell>
       <TableCell>
         <Status status="planned" /> <small>Planned</small>
       </TableCell>
@@ -226,9 +179,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Image
-      </TableCell>
+      <TableCell>Image</TableCell>
       <TableCell>
         <Status status="progress" /> <small>In Progress</small>
       </TableCell>
@@ -237,9 +188,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Input
-      </TableCell>
+      <TableCell>Input</TableCell>
       <TableCell>
         <Status status="planned" /> <small>Planned</small>
       </TableCell>
@@ -248,9 +197,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Link
-      </TableCell>
+      <TableCell>Link</TableCell>
       <TableCell>
         <Status status="review" /> <small>In Review</small>
       </TableCell>
@@ -259,9 +206,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        List
-      </TableCell>
+      <TableCell>List</TableCell>
       <TableCell>
         <Status status="progress" /> <small>In Progress</small>
       </TableCell>
@@ -270,9 +215,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Modal
-      </TableCell>
+      <TableCell>Modal</TableCell>
       <TableCell>
         <Status status="planned" /> <small>Planned</small>
       </TableCell>
@@ -281,9 +224,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Progress
-      </TableCell>
+      <TableCell>Progress</TableCell>
       <TableCell>
         <Status status="planned" /> <small>Planned</small>
       </TableCell>
@@ -292,9 +233,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Radio
-      </TableCell>
+      <TableCell>Radio</TableCell>
       <TableCell>
         <Status status="planned" /> <small>Planned</small>
       </TableCell>
@@ -303,9 +242,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Separator
-      </TableCell>
+      <TableCell>Separator</TableCell>
       <TableCell>
         <Status status="progress" /> <small>In Progress</small>
       </TableCell>
@@ -314,9 +251,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Select
-      </TableCell>
+      <TableCell>Select</TableCell>
       <TableCell>
         <Status status="planned" /> <small>Planned</small>
       </TableCell>
@@ -325,9 +260,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Table
-      </TableCell>
+      <TableCell>Table</TableCell>
       <TableCell>
         <Status status="progress" /> <small>In Progress</small>
       </TableCell>
@@ -336,9 +269,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Textarea
-      </TableCell>
+      <TableCell>Textarea</TableCell>
       <TableCell>
         <Status status="planned" /> <small>Planned</small>
       </TableCell>
@@ -347,9 +278,7 @@ Components
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Video
-      </TableCell>
+      <TableCell>Video</TableCell>
       <TableCell>
         <Status status="planned" /> <small>Planned</small>
       </TableCell>
