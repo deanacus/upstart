@@ -35,5 +35,3 @@ export const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 fontWeights.body = fontWeights.regular;
 fontWeights.heading = fontWeights.bold;
 fontWeights.display = fontWeights.black;
-
-export default fontWeights;

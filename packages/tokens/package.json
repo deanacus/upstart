@@ -12,5 +12,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/deanacus/upstart.git"
+  },
+  "devDependencies": {
+    "chroma-js": "^2.1.0"
   }
 }
