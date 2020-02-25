@@ -1,3 +1,4 @@
+export { Audio } from './Audio/Audio';
 export { Badge } from './Badge/Badge';
 export { Blockquote } from './Blockquote/Blockquote';
 export { Button } from './Button/Button';

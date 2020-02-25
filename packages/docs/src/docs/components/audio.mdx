@@ -1,0 +1,32 @@
+---
+title: Audio
+description: A wrapper around the HTML audio element
+packageName: deanacus/upstart
+importName: Audio
+menu: Components
+route: /components/audio
+---
+
+import { PropsTable } from '../../components/Documentation/PropsTable';
+import { Audio } from '@deanacus/upstart';
+
+This is (currently) a simple wrapper around the HTML audio element.
+
+It inverts a couple of the standards that the raw element has, such as
+showing controls by default.
+
+You can provide either a `src` prop with a path to a single file, or multiple 
+child `<source>` elements. If you provide both, the `src` prop will be ignored.
+
+```jsx
+<Audio>
+  <source
+    src="/media/sample.mp3"
+    type="audio/mpeg"
+  />
+</Audio>
+```
+
+### Props
+
+<PropsTable component={Audio} />

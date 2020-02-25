@@ -25,14 +25,9 @@ export const Article = ({
   importName,
 }) => (
   <StyledArticle>
-    <Hero
-      title={title}
-      description={description}
-      packageName={packageName}
-      importName={importName}
-    >
+    <Hero>
       <h1>{title}</h1>
-      {/* <code>{importString}</code> */}
+      {importName && <code>import { `{ ${importName} }` } from &apos;{packageName}&apos;</code>}
       <p>{description}</p>
     </Hero>
     <ArticleBody>
