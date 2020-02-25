@@ -33,7 +33,7 @@ jobs:
       run: npm run test --if-present
       working-directory: ./packages/docs
     - name: Run the linter
-      run: npm run lint
+      run: npm run lint --if-present
       working-directory: ./packages/docs
       env:
         CI: true
