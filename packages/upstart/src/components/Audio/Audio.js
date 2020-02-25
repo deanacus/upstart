@@ -30,7 +30,7 @@ Audio.propTypes = {
     PropTypes.arrayOf(
       PropTypes.node,
     ),
-  ]).isRequired,
+  ]),
 
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
@@ -49,6 +49,7 @@ Audio.propTypes = {
 };
 
 Audio.defaultProps = {
+  children: null,
   className: null,
   hideControls: false,
   shouldAutoplay: false,

@@ -36,13 +36,12 @@ describe('<Container />', () => {
   });
 
   it('should have a max-width matching the theme value if a size is set', () => {
-    const { container, debug } = render(
+    const { container } = render(
       <Container className="test-container" size="sm">
         Children
       </Container>,
     );
 
-    debug();
     const containerDiv = container.querySelector('.test-container');
     expect(containerDiv).toHaveStyleRule('max-width', `${Theme.widths.sm}px`);
   });
