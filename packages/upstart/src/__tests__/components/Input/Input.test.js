@@ -43,14 +43,14 @@ describe('<Input />', () => {
     expect(input).toBe('email');
   });
 
-  it('should render a phone input', () => {
+  it('should render a tel input', () => {
     const { container } = render(
-      <Input className="test-input" id="test-input" type="phone">
+      <Input className="test-input" id="test-input" type="tel">
         Test input
       </Input>,
     );
     const input = container.querySelector('.test-input-input').getAttribute('type');
-    expect(input).toBe('phone');
+    expect(input).toBe('tel');
   });
 
   it('should render a number input', () => {
@@ -61,16 +61,6 @@ describe('<Input />', () => {
     );
     const input = container.querySelector('.test-input-input').getAttribute('type');
     expect(input).toBe('number');
-  });
-
-  it('should render a currency input', () => {
-    const { container } = render(
-      <Input className="test-input" id="test-input" type="currency">
-        Test input
-      </Input>,
-    );
-    const input = container.querySelector('.test-input-input').getAttribute('type');
-    expect(input).toBe('currency');
   });
 
   it('should render a date input', () => {

@@ -43,9 +43,8 @@ Input.propTypes = {
   type: PropTypes.oneOf([
     'text',
     'email',
-    'phone',
+    'tel',
     'number',
-    'currency',
     'date',
     'search',
   ]),
