@@ -2,7 +2,7 @@
 title: Grid
 description: A very simple, naive CSS Grid implementation
 packageName: deanacus/upstart
-importName: Grid
+importName: Grid, GridItem
 menu: Layout
 route: /layout/grid
 ---
@@ -10,165 +10,209 @@ route: /layout/grid
 import { PropsTable } from '../../components/Documentation/PropsTable';
 import { Grid, GridItem } from '@deanacus/upstart';
 
-The Upstart Grid is a naïve implementation of CSS grid, that allows an arbitrary
-number of grid columns, each `1fr` in width. There is no grid-row handling, due
-to the added complexity that would add, plus the fact that if you need a specific
-number of rows and columns, you are probably better off defining your own grid.
+The Upstart Grid is a minimal implementation of CSS Grid. It allows for an 
+arbitrary number of grid columns, each of which is `1fr` in width.
 
-## Default Grid
+There is no accounting for rows, due to the added complexity that would 
+introduce, plus the 'fact that if you need something more specific, you are 
+probably better of defining your own grid implementation.
 
-By default, the Grid has 4 columns, and a grid-gap of 1.6rem. Here it is:
+The Upstart Grid is made up of two components:
 
+1. A grid container; and
+2. A grid item - a grid specific content wrapper that provides a grid specific API
+
+## Grid Container
+
+The grid container is the `<Grid>` component. It defines your grid, the number
+of grid columns, and the size of any gap between your grid components. It is set
+to a width of 100%, so it will fill all available width wherever you put it.
+
+By default, it has 6 columns, and a grid gap of `space[3]` from the theme 
+(1.6rem by default).
+
+It expects content in the form of `children`, and can take any component or HTML
+element you would like to pass to it, however they will explicitly be constrained
+to a single column.
+
+```jsx
 <Grid>
-  <GridItem>
-    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
-      Auto
-    </div>
-  </GridItem>
-  <GridItem>
-    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
-      Auto
-    </div>
-  </GridItem>
-  <GridItem>
-    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
-      Auto
-    </div>
-  </GridItem>
-  <GridItem>
-    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
-      Auto
-    </div>
-  </GridItem>
-  <GridItem span={2}>
-    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
-      Span 2
-    </div>
-  </GridItem>
-  <GridItem span={3}>
-    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
-      Span 3
-    </div>
-  </GridItem>
-  <GridItem>
-    <div style={{ padding: '2rem 0',background: '#111',textAlign:'center',color: '#eaeaea'}}>
-      Auto
-    </div>
-  </GridItem>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
+  <div style={{
+    padding: '2rem 0',
+    background: '#253642',
+    textAlign:'center',
+    color: '#eaeaea'
+  }}>
+    Auto
+  </div>
 </Grid>
+```
+
+### Props
 
 <PropsTable component={Grid} />
 
-## 6 Column Grid
+## Grid Item
 
-<Grid cols={6}>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 6',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 6
-  </div>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 5',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 5
-  </div>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 1',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 1
-  </div>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 4',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 4
-  </div>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 2',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 2
-  </div>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 3',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 3
-  </div>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 3',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 3
-  </div>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 2',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 2
-  </div>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 4',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 4
-  </div>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 1',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 1
-  </div>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 5',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 5
-  </div>
-  <div style={{ 
-    padding: '2rem 0',
-    gridColumn: 'span 6',
-    textAlign:'center',
-    background: '#111',
-    color: '#eaeaea'
-  }}>
-    Span 6
-  </div>
+The grid item is the `<GridItem>` component, and is intended specifically for use
+with the `<Grid>` component, and exposes an API that will allow you to specify
+how many columns wide it should be, as well as which grid line it should start
+and/or end at.
+
+<Grid>
+  <GridItem span={6}>
+    <div style={{
+      padding: '2rem 0',
+      background: '#253642',
+      textAlign:'center',
+      color: '#eaeaea'
+    }}>
+      Span 6
+    </div>
+  </GridItem>
+  
+  <GridItem start={1} end={3}>
+    <div style={{
+      padding: '2rem 0',
+      background: '#253642',
+      textAlign:'center',
+      color: '#eaeaea'
+    }}>
+      Start 1, End 3
+    </div>
+  </GridItem>
+  
+  <GridItem start={3} span={4}>
+    <div style={{
+      padding: '2rem 0',
+      background: '#253642',
+      textAlign:'center',
+      color: '#eaeaea'
+    }}>
+      Start 3, Span 4
+    </div>
+  </GridItem>
+  
+  <GridItem start={1} end={4}>
+    <div style={{
+      padding: '2rem 0',
+      background: '#253642',
+      textAlign:'center',
+      color: '#eaeaea'
+    }}>
+      Start 1, End 4
+    </div>
+  </GridItem>
+  <GridItem>
+    <div style={{
+      padding: '2rem 0',
+      background: '#253642',
+      textAlign:'center',
+      color: '#eaeaea'
+    }}>
+      Auto
+    </div>
+  </GridItem>
+  <GridItem end={7} span={2}>
+    <div style={{
+      padding: '2rem 0',
+      background: '#253642',
+      textAlign:'center',
+      color: '#eaeaea'
+    }}>
+      End 7, Span 2
+    </div>
+  </GridItem>
 </Grid>
 
+### Props
+
+<PropsTable component={GridItem} />

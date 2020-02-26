@@ -21,7 +21,7 @@ describe('<GridItem />', () => {
       </GridItem>,
     );
     const gridItem = container.querySelector('.test-grid-item');
-    expect(gridItem).toHaveStyle(`grid-column-end: ${end}`);
+    expect(gridItem).toHaveStyle(`grid-column: auto / ${end}`);
   });
 
   it('should have a grid-column-start matching the start value', () => {
@@ -32,7 +32,7 @@ describe('<GridItem />', () => {
       </GridItem>,
     );
     const gridItem = container.querySelector('.test-grid-item');
-    expect(gridItem).toHaveStyle(`grid-column-start: ${start}`);
+    expect(gridItem).toHaveStyle(`grid-column: ${start} / auto`);
   });
 
   it('should have a grid-column-end matching the span value', () => {
@@ -43,6 +43,6 @@ describe('<GridItem />', () => {
       </GridItem>,
     );
     const gridItem = container.querySelector('.test-grid-item');
-    expect(gridItem).toHaveStyle(`grid-column-end: span ${span}`);
+    expect(gridItem).toHaveStyle(`grid-column: auto / span ${span}`);
   });
 });

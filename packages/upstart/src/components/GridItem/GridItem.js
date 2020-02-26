@@ -28,13 +28,22 @@ GridItem.propTypes = {
   className: PropTypes.string,
 
   /** The grid line the item will end on */
-  end: PropTypes.number,
+  end: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
 
   /** How many grid tracks the item will span */
-  span: PropTypes.number,
+  span: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
 
   /** The grid line the item will start on */
-  start: PropTypes.number,
+  start: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
 
 };
 
