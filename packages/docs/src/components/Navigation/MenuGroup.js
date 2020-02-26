@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
   ListItem,
-  UnorderedList,
+  List,
   getRem,
 } from '@deanacus/upstart';
 import { Link } from 'gatsby';
@@ -17,7 +17,7 @@ const GroupTitle = styled.h2`
 export const MenuGroup = ({ group, title }) => (
   <ListItem>
     <GroupTitle>{title}</GroupTitle>
-    <UnorderedList indent={0} listStyle="none">
+    <List marker="none">
       {
         group.map((node) => (
           <ListItem key={node.route}>
@@ -25,7 +25,7 @@ export const MenuGroup = ({ group, title }) => (
           </ListItem>
         ))
       }
-    </UnorderedList>
+    </List>
   </ListItem>
 );
 

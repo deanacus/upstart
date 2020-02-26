@@ -6,51 +6,42 @@ route: /components/list
 ---
 
 import { PropsTable } from '../../components/Documentation/PropsTable';
-import { UnorderedList, OrderedList, ListItem } from '@deanacus/upstart';
-
-There are 3 components that make up Lists in Upstart:
-
-<UnorderedList>
-  <ListItem>UnorderedList</ListItem>
-  <ListItem>OrderedList</ListItem>
-  <ListItem>ListItem</ListItem>
-</UnorderedList>
-
-## Unordered List
-
-The `UnorderedList` provides a simple interface to an unordered list, as well as
-an option to use a custom list icon, and indentation width.
+import { List, ListItem } from '@deanacus/upstart';
 
 ```jsx
-<UnorderedList>
+<List>
   <ListItem>List item 1</ListItem>
   <ListItem>List item 2</ListItem>
   <ListItem>List item 3</ListItem>
   <ListItem>List item 4</ListItem>
-</UnorderedList>
+</List>
 ```
 
 ### Props
 
-<PropsTable component={UnorderedList} />
+<PropsTable component={List} />
 
-## OrderedList
-
-As with the `UnorderedList`, the `OrderedList` component provides an interface
-to an ordered list, a way to define the ordering scheme, and indentation width.
+## Numbers
 
 ```jsx
-<OrderedList>
+<List isNumbered marker="lower-alpha">
   <ListItem>List item 1</ListItem>
   <ListItem>List item 2</ListItem>
   <ListItem>List item 3</ListItem>
   <ListItem>List item 4</ListItem>
-</OrderedList>
+</List>
 ```
 
-### Props
+## No Marker
 
-<PropsTable component={OrderedList} />
+```jsx
+<List marker="none">
+  <ListItem>List item 1</ListItem>
+  <ListItem>List item 2</ListItem>
+  <ListItem>List item 3</ListItem>
+  <ListItem>List item 4</ListItem>
+</List>
+```
 
 ## ListItem
 

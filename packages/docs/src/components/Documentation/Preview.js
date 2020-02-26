@@ -10,6 +10,7 @@ const ayuLight = {
     color: '#6c7680',
     backgroundColor: Theme.colors.grey[1],
     fontSize: Theme.fontSizes.sm,
+    fontFamily: Theme.fonts.monospace,
   },
   styles: [
     {
@@ -108,11 +109,7 @@ export const Preview = ({ children }) => {
     >
       <PreviewContainer>
         <StyledPreview />
-        <LiveEditor style={{
-          fontFamily: Theme.fonts.monospace,
-          padding: getRem(Theme.space[3]),
-        }}
-        />
+        <LiveEditor />
       </PreviewContainer>
     </LiveProvider>
   );
