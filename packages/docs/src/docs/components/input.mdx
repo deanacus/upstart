@@ -3,14 +3,20 @@ title: Input
 description: A flexible component to deliver the most common types of input fields
 route: /components/input
 menu: Components
+packageName: deanacus/upstart
+importName: Input
 ---
 
 import { PropsTable } from '../../components/Documentation/PropsTable';
 import { Input } from '@deanacus/upstart';
 
-<Input id="test-input" placeholder="Input placeholder">
+```jsx
+<Input id="default-input" placeholder="Input placeholder">
   Input
 </Input>
+```
+
+### Props
 
 <PropsTable component={Input} />
 
@@ -18,65 +24,77 @@ import { Input } from '@deanacus/upstart';
 
 ### Text
 
+```jsx
 <Input
-  id="test-input"
+  id="text-input"
   placeholder="Placeholder text"
   type="text"
 >
   Text
 </Input>
+```
 
 ### Email
 
+```jsx
 <Input
-  id="test-input"
+  id="email-input"
   label="Input"
   placeholder="test@example.com"
   type="email"
 >
   Email
 </Input>
+```
 
 ### Phone
 
+```jsx
 <Input
-  id="test-input"
+  id="tel-input"
   label="Input"
   placeholder="867-5309"
   type="tel"
 >
   Phone
 </Input>
+```
 
 ### Number
 
+```jsx
 <Input
-  id="test-input"
+  id="number-input"
   label="Input"
   placeholder="123456789"
   type="number"
 >
   Number
 </Input>
+```
 
 ### Date
 
+```jsx
 <Input
-  id="test-input"
+  id="date-input"
   label="Input"
   placeholder="26/12/1984"
   type="date"
 >
   Date
 </Input>
+```
 
 ### Search
 
+```jsx
 <Input
-  id="test-input"
+  id="search-input"
   label="Input"
   placeholder="Search..."
   type="search"
 >
   Search
 </Input>
+```

@@ -14,7 +14,24 @@ As well as simple links, we have created a component that will return a range of
 differently styled and behaving link elements.
 
 ```jsx
-  <Link href="http://google.com" target="_blank">Google</Link>
+<p>Lorem ipsum dolor <Link href="/components/link">sit amet</Link>, consectetur
+adipisicing elit.</p>
 ```
 
+### Props
+
 <PropsTable component={Link} />
+
+## External
+
+```jsx
+<p>Lorem ipsum dolor <Link href="https://google.com" isExternal>sit amet</Link>, consectetur
+adipisicing elit.</p>
+```
+
+## Open in New Tab
+
+```jsx
+<p>Lorem ipsum dolor <Link href="https://google.com" newTab>sit amet</Link>, consectetur
+adipisicing elit.</p>
+```

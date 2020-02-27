@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from '../../helpers/test-utils';
-import { UnorderedList } from '../../../components';
+import { List } from '../../../components';
 
-describe('<UnorderedList />', () => {
+describe('<List />', () => {
   it('should render', () => {
     const { container } = render(
-      <UnorderedList className="test-list">
+      <List className="test-list">
         Children
-      </UnorderedList>,
+      </List>,
     );
     const list = container.querySelector('.test-list');
     expect(list).not.toBe(undefined);
