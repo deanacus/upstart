@@ -2,6 +2,89 @@
 title: Table
 description: Tables are bad. Except when they're not. Use it to display tabular data
 packageName: deanacus/upstart
+importName: Table, TableHead, TableHeadCell, TableRow, TableCell
 menu: Components
 route: /components/table
 ---
+
+import {
+  Table,
+  TableHead,
+  TableHeadCell,
+  TableRow,
+  TableCell,
+} from '@deanacus/upstart';
+import { PropsTable } from '../../components/Documentation/PropsTable';
+
+```jsx
+<Table>
+  <TableHead>
+    <TableHeadCell>
+      Heading
+    </TableHeadCell>
+    <TableHeadCell>
+      Heading
+    </TableHeadCell>
+    <TableHeadCell>
+      Heading
+    </TableHeadCell>
+  </TableHead>
+  <tbody>
+    <TableRow>
+      <TableCell>
+        Content
+      </TableCell>
+      <TableCell>
+        Content
+      </TableCell>
+      <TableCell>
+        Content
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>
+        Content
+      </TableCell>
+      <TableCell>
+        Content
+      </TableCell>
+      <TableCell>
+        Content
+      </TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>
+        Content
+      </TableCell>
+      <TableCell>
+        Content
+      </TableCell>
+      <TableCell>
+        Content
+      </TableCell>
+    </TableRow>
+  </tbody>
+</Table>
+```
+
+## Props 
+
+### Table
+
+<PropsTable component={Table} />
+
+### TableHead
+
+<PropsTable component={TableHead} />
+
+### TableHeadCell
+
+<PropsTable component={TableHeadCell} />
+
+### TableRow
+
+<PropsTable component={TableRow} />
+
+### TableCell
+
+<PropsTable component={TableCell} />

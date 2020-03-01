@@ -17,25 +17,40 @@ export const Grid = ({
 
 Grid.propTypes = {
 
-  /** The children of the Grid */
+  /**
+   * The children of the Grid
+   */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
 
-  /** A custom className you would like to pass to the Component */
+  /**
+   * A custom className you would like to pass to the Component
+   */
   className: PropTypes.string,
 
-  /** The number of columns in the Grid */
-  cols: PropTypes.number,
+  /**
+   * The number of columns in the Grid
+   */
+  cols: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
 
-  /** The size of the gap between columns and rows */
-  gap: PropTypes.number,
+  /**
+   * The the index of the value in the space array to use as the size of the gap
+   * between columns and rows
+   */
+  gap: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
 };
 
 Grid.defaultProps = {
   className: null,
-  cols: 4,
+  cols: 6,
   gap: 3,
 };
 

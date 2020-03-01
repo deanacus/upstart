@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
-import { UnorderedList, Separator } from '@deanacus/upstart';
+import { List, Separator } from '@deanacus/upstart';
 
 import { MenuGroup } from './MenuGroup';
 
@@ -37,7 +37,7 @@ export const Menu = () => {
 
   return (
     <Nav>
-      <UnorderedList indent={0} listStyle="none">
+      <List marker="none">
         {
           Object.keys(groupedNodes).map((group, ind) => (
             <React.Fragment key={group}>
@@ -46,7 +46,7 @@ export const Menu = () => {
             </React.Fragment>
           ))
         }
-      </UnorderedList>
+      </List>
     </Nav>
   );
 };

@@ -3,21 +3,23 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
   ListItem,
-  UnorderedList,
+  List,
   getRem,
 } from '@deanacus/upstart';
 import { Link } from 'gatsby';
 
 const GroupTitle = styled.h2`
-  font-size: ${({ theme }) => getRem(theme.fontSizes.md, theme.rootVal)};
+  font-size: ${({ theme }) => getRem(theme.fontSizes.sm, theme.rootVal)};
+  font-weight: normal;
+  letter-spacing: .5rem;
   margin: 0;
   text-transform: uppercase;
 `;
 
 export const MenuGroup = ({ group, title }) => (
-  <ListItem>
+  <ListItem padding="py-3">
     <GroupTitle>{title}</GroupTitle>
-    <UnorderedList indent={0} listStyle="none">
+    <List marker="none" padding="pt-3">
       {
         group.map((node) => (
           <ListItem key={node.route}>
@@ -25,7 +27,7 @@ export const MenuGroup = ({ group, title }) => (
           </ListItem>
         ))
       }
-    </UnorderedList>
+    </List>
   </ListItem>
 );
 

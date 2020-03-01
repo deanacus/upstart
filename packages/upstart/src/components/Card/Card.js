@@ -47,7 +47,10 @@ Card.propTypes = {
   /** The margin alias to be applied to flex children */
   margin: PropTypes.string,
 
-  /** The padding value to be used on the Row. Based on the bootstrap padding classes */
+  /**
+   * The padding value to be used on the Card. Based on the bootstrap
+   * padding classes
+   */
   padding: PropTypes.string,
 };
 
