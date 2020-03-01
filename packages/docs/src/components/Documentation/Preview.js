@@ -97,18 +97,19 @@ const StyledPreview = styled(LivePreview)`
   ${({ theme }) => getPadding('p-4', theme)};
 `;
 
-export const Preview = ({ children }) => {
+export const Preview = ({ children, className }) => {
   const components = useMDXComponents();
+  const language = className.replace('language-', '');
   return (
     <LiveProvider
-      language="jsx"
+      language={language}
       code={children.trim()}
       transformCode={(code) => `<>${code}</>`}
       scope={components}
       theme={ayuLight}
     >
       <PreviewContainer>
-        <StyledPreview />
+        {language === 'jsx' && <StyledPreview />}
         <LiveEditor />
       </PreviewContainer>
     </LiveProvider>
@@ -120,6 +121,11 @@ Preview.propTypes = {
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
+  className: PropTypes.string,
+};
+
+Preview.defaultProps = {
+  className: 'language-jsx',
 };
 
 export default Preview;
