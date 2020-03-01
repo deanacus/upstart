@@ -1,0 +1,740 @@
+[
+  {
+    "name": "type",
+    "aliases": [
+      "font"
+    ],
+    "values": [
+      {
+        "name": "size",
+        "values": [
+          {
+            "name": "xs",
+            "value": 12
+          },
+          {
+            "name": "sm",
+            "aliases": [
+              "small"
+            ],
+            "value": 14
+          },
+          {
+            "name": "base",
+            "aliases": [
+              "default",
+              "regular",
+              "body"
+            ],
+            "value": 16
+          },
+          {
+            "name": "md",
+            "value": 20
+          },
+          {
+            "name": "lg",
+            "value": 24
+          },
+          {
+            "name": "xl",
+            "value": 32
+          },
+          {
+            "name": "xxl",
+            "value": 48
+          },
+          {
+            "name": "title",
+            "value": 64
+          },
+          {
+            "name": "display",
+            "value": 96
+          }
+        ]
+      },
+      {
+        "name": "weight",
+        "values": [
+          {
+            "name": "hairline",
+            "value": 100
+          },
+          {
+            "name": "thin",
+            "value": 200
+          },
+          {
+            "name": "light",
+            "value": 300
+          },
+          {
+            "name": "regular",
+            "aliases": [
+              "normal",
+              "body"
+            ],
+            "value": 400
+          },
+          {
+            "name": "medium",
+            "value": 500
+          },
+          {
+            "name": "semibold",
+            "value": 600
+          },
+          {
+            "name": "bold",
+            "aliases": [
+              "heading"
+            ],
+            "value": 700
+          },
+          {
+            "name": "extrabold",
+            "value": 800
+          },
+          {
+            "name": "black",
+            "aliases": [
+              "display"
+            ],
+            "value": 900
+          }
+        ]
+      },
+      {
+        "name": "family",
+        "aliases": [
+          "face",
+          "stack"
+        ],
+        "values": [
+          {
+            "name": "body",
+            "aliases": [
+              "base",
+              "default",
+              "text"
+            ],
+            "value": "system-ui, sans-serif"
+          },
+          {
+            "name": "heading",
+            "aliases": [
+              "display"
+            ],
+            "value": "system-ui, sans-serif"
+          },
+          {
+            "name": "monospace",
+            "aliases": [
+              "mono",
+              "code"
+            ],
+            "value": "Menlo, monospace"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "lineHeight",
+    "values": [
+      {
+        "name": "base",
+        "value": 1.5
+      },
+      {
+        "name": "tight",
+        "value": 1.3
+      },
+      {
+        "name": "loose",
+        "value": 1.8
+      }
+    ]
+  },
+  {
+    "name": "letterSpacing",
+    "values": [
+      {
+        "name": "loose",
+        "value": 1
+      },
+      {
+        "name": "tight",
+        "value": -1
+      },
+      {
+        "name": "extraTight",
+        "value": -2
+      }
+    ]
+  },
+  {
+    "name": "color",
+    "values": [
+      {
+        "name": "grey",
+        "aliases": [
+          "neutral"
+        ],
+        "values": [
+          {
+            "name": "white",
+            "value": "#F0F2F4"
+          },
+          {
+            "name": "subtle",
+            "value": "#DEE3E7"
+          },
+          {
+            "name": "lightest",
+            "value": "#BCC5CE"
+          },
+          {
+            "name": "lighter",
+            "value": "#9AA8B6"
+          },
+          {
+            "name": "light",
+            "value": "#8999A9"
+          },
+          {
+            "name": "base",
+            "value": "#778A9C"
+          },
+          {
+            "name": "dark",
+            "value": "#677A8E"
+          },
+          {
+            "name": "darker",
+            "value": "#495765"
+          },
+          {
+            "name": "darkest",
+            "value": "#2F3841"
+          },
+          {
+            "name": "black",
+            "value": "#08090B"
+          }
+        ]
+      },
+      {
+        "name": "red",
+        "aliases": [
+          "danger",
+          "error"
+        ],
+        "values": [
+          {
+            "name": "subtle",
+            "value": "#FDB5B5"
+          },
+          {
+            "name": "lightest",
+            "value": "#FB7979"
+          },
+          {
+            "name": "lighter",
+            "value": "#FA5252"
+          },
+          {
+            "name": "light",
+            "value": "#F93434"
+          },
+          {
+            "name": "base",
+            "value": "#F81616"
+          },
+          {
+            "name": "dark",
+            "value": "#E90707"
+          },
+          {
+            "name": "darker",
+            "value": "#AC0404"
+          },
+          {
+            "name": "darkest",
+            "value": "#710303"
+          },
+          {
+            "name": "black",
+            "value": "#530202"
+          }
+        ]
+      },
+      {
+        "name": "yellow",
+        "aliases": [
+          "warning"
+        ],
+        "values": [
+          {
+            "name": "subtle",
+            "value": "#FCF2D5"
+          },
+          {
+            "name": "lightest",
+            "value": "#FDE59B"
+          },
+          {
+            "name": "lighter",
+            "value": "#FDD55E"
+          },
+          {
+            "name": "light",
+            "value": "#FCCD40"
+          },
+          {
+            "name": "base",
+            "value": "#FCC522"
+          },
+          {
+            "name": "dark",
+            "value": "#D39F03"
+          },
+          {
+            "name": "darker",
+            "value": "#977202"
+          },
+          {
+            "name": "darkest",
+            "value": "#584300"
+          },
+          {
+            "name": "black",
+            "value": "#3B2C00"
+          }
+        ]
+      },
+      {
+        "name": "green",
+        "aliases": [
+          "success"
+        ],
+        "values": [
+          {
+            "name": "subtle",
+            "value": "#E2F4E5"
+          },
+          {
+            "name": "lightest",
+            "value": "#B5E6BE"
+          },
+          {
+            "name": "lighter",
+            "value": "#88D896"
+          },
+          {
+            "name": "light",
+            "value": "#71D182"
+          },
+          {
+            "name": "base",
+            "value": "#51C666"
+          },
+          {
+            "name": "dark",
+            "value": "#3CBC54"
+          },
+          {
+            "name": "darker",
+            "value": "#277736"
+          },
+          {
+            "name": "darkest",
+            "value": "#174820"
+          },
+          {
+            "name": "black",
+            "value": "#0F3115"
+          }
+        ]
+      },
+      {
+        "name": "blue",
+        "aliases": [
+          "primary"
+        ],
+        "values": [
+          {
+            "name": "subtle",
+            "value": "#D6F2F7"
+          },
+          {
+            "name": "lightest",
+            "value": "#A2E5EF"
+          },
+          {
+            "name": "lighter",
+            "value": "#6ED7E7"
+          },
+          {
+            "name": "light",
+            "value": "#3AC9DF"
+          },
+          {
+            "name": "base",
+            "value": "#22B8CF"
+          },
+          {
+            "name": "dark",
+            "value": "#1DA0B4"
+          },
+          {
+            "name": "darker",
+            "value": "#156F7D"
+          },
+          {
+            "name": "darkest",
+            "value": "#0C414A"
+          },
+          {
+            "name": "black",
+            "value": "#082B30"
+          }
+        ]
+      },
+      {
+        "name": "orange",
+        "aliases": [
+          "secondary"
+        ],
+        "values": [
+          {
+            "name": "subtle",
+            "value": "#FEE4CB"
+          },
+          {
+            "name": "lightest",
+            "value": "#FFC58F"
+          },
+          {
+            "name": "lighter",
+            "value": "#FFA552"
+          },
+          {
+            "name": "light",
+            "value": "#FF9633"
+          },
+          {
+            "name": "base",
+            "value": "#FF810A"
+          },
+          {
+            "name": "dark",
+            "value": "#EB7100"
+          },
+          {
+            "name": "darker",
+            "value": "#AD5400"
+          },
+          {
+            "name": "darkest",
+            "value": "#6F3500"
+          },
+          {
+            "name": "black",
+            "value": "#512600"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "space",
+    "aliases": [
+      "padding",
+      "margin"
+    ],
+    "values": [
+      {
+        "name": "xxxs",
+        "value": 0
+      },
+      {
+        "name": "xxs",
+        "value": 4
+      },
+      {
+        "name": "xs",
+        "value": 8
+      },
+      {
+        "name": "sm",
+        "value": 16
+      },
+      {
+        "name": "md",
+        "value": 32
+      },
+      {
+        "name": "lg",
+        "value": 64
+      },
+      {
+        "name": "xl",
+        "value": 128
+      },
+      {
+        "name": "xxl",
+        "value": 256
+      },
+      {
+        "name": "xxxl",
+        "value": 512
+      }
+    ]
+  },
+  {
+    "name": "shadows",
+    "values": [
+      {
+        "name": "none",
+        "value": "none"
+      },
+      {
+        "name": "sm",
+        "aliases": [
+          "low"
+        ],
+        "value": "0px 1px 3px rgba(0, 0, 0, 0.1)"
+      },
+      {
+        "name": "md",
+        "aliases": [
+          "medium"
+        ],
+        "value": "0px 2px 4px rgba(0, 0, 0, 0.15)"
+      },
+      {
+        "name": "lg",
+        "aliases": [
+          "high"
+        ],
+        "value": "0px 2px 7px rgba(0, 0, 0, 0.15)"
+      },
+      {
+        "name": "xl",
+        "aliases": [
+          "extraHigh"
+        ],
+        "value": "0px 2px 10px rgba(0, 0, 0, 0.2)"
+      }
+    ]
+  },
+  {
+    "name": "zIndex",
+    "values": [
+      {
+        "name": "",
+        "value": -10
+      },
+      {
+        "name": "",
+        "value": 0
+      },
+      {
+        "name": "",
+        "value": 10
+      },
+      {
+        "name": "",
+        "value": 20
+      },
+      {
+        "name": "",
+        "value": 30
+      },
+      {
+        "name": "",
+        "value": 40
+      },
+      {
+        "name": "",
+        "value": 50
+      },
+      {
+        "name": "",
+        "value": 60
+      },
+      {
+        "name": "",
+        "value": 70
+      },
+      {
+        "name": "",
+        "value": 80
+      },
+      {
+        "name": "",
+        "value": 90
+      },
+      {
+        "name": "",
+        "value": 100
+      }
+    ]
+  },
+  {
+    "name": "radius",
+    "values": [
+      {
+        "name": "sm",
+        "value": 3
+      },
+      {
+        "name": "md",
+        "value": 5
+      },
+      {
+        "name": "lg",
+        "value": 7
+      },
+      {
+        "name": "pill",
+        "value": 20
+      },
+      {
+        "name": "circle",
+        "value": "50%"
+      }
+    ]
+  },
+  {
+    "name": "border",
+    "values": [
+      {
+        "name": "width",
+        "values": []
+      },
+      {
+        "name": "style",
+        "values": []
+      }
+    ]
+  },
+  {
+    "name": "width",
+    "values": [
+      {
+        "name": "xs",
+        "value": 480
+      },
+      {
+        "name": "sm",
+        "value": 768
+      },
+      {
+        "name": "md",
+        "value": 1024
+      },
+      {
+        "name": "lg",
+        "value": 1440
+      },
+      {
+        "name": "xl",
+        "value": 1680
+      }
+    ]
+  },
+  {
+    "name": "breakpoints",
+    "values": [
+      {
+        "name": "xs",
+        "value": 0
+      },
+      {
+        "name": "sm",
+        "value": 480
+      },
+      {
+        "name": "md",
+        "value": 768
+      },
+      {
+        "name": "lg",
+        "value": 1024
+      },
+      {
+        "name": "xl",
+        "value": 1440
+      },
+      {
+        "name": "xxl",
+        "value": 1680
+      }
+    ]
+  },
+  {
+    "name": "roolValue",
+    "aliases": [
+      "baseSize"
+    ],
+    "values": "10"
+  },
+  {
+    "name": "unit",
+    "aliases": [
+      "preferredUnit"
+    ],
+    "value": "rem"
+  },
+  {
+    "name": "motion",
+    "aliases": [
+      "animation"
+    ],
+    "values": [
+      {
+        "name": "duration",
+        "aliases": [
+          "speed"
+        ],
+        "values": [
+          {
+            "name": "fast",
+            "values": ".15s"
+          },
+          {
+            "name": "medium",
+            "values": ".3s"
+          },
+          {
+            "name": "slow",
+            "values": ".6s"
+          }
+        ]
+      },
+      {
+        "name": "ease",
+        "aliases": [
+          "timing"
+        ],
+        "values": [
+          {
+            "name": "in",
+            "values": "cubic-bezier(.4, 0, .7, .2)"
+          },
+          {
+            "name": "out",
+            "values": "cubic-bezier(0, 0, .2, 1)"
+          },
+          {
+            "name": "inOut",
+            "values": "cubic-bezier(.4, 0, .2, 1)"
+          }
+        ]
+      }
+    ]
+  }
+]
