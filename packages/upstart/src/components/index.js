@@ -21,7 +21,7 @@ export { TableCell } from './TableCell/TableCell';
 export { TableHeadCell } from './TableHeadCell/TableHeadCell';
 export { TableHead } from './TableHead/TableHead';
 
-export { Upstart } from './GlobalStyle/GlobalStyle';
+export { UpstartProvider } from './UpstartProvider/UpstartProvider';
 export { Theme } from './Theme/Theme';
 export { ThemeProvider } from './ThemeProvider/ThemeProvider';
 export * from '../utils/styled-utils';

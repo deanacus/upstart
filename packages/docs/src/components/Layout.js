@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Upstart } from '@deanacus/upstart';
+import { UpstartProvider } from '@deanacus/upstart';
 import { Base } from './Base';
 import { customTheme } from './theme';
 
@@ -20,7 +20,7 @@ export default function Layout({
   },
 }) {
   return (
-    <Upstart customTheme={customTheme}>
+    <UpstartProvider customTheme={customTheme}>
       <DocsStyles />
       <Base>
         <Navigation />
@@ -33,7 +33,7 @@ export default function Layout({
           importName={importName}
         />
       </Base>
-    </Upstart>
+    </UpstartProvider>
   );
 }
 

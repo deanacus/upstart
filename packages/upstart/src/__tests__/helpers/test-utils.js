@@ -2,12 +2,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as tlr from '@testing-library/react';
-import { Upstart } from '../../components/GlobalStyle/GlobalStyle';
+import { UpstartProvider } from '../../components/UpstartProvider/UpstartProvider';
 
 const Wrapper = ({ children }) => (
-  <Upstart>
+  <UpstartProvider>
     {children}
-  </Upstart>
+  </UpstartProvider>
 );
 
 Wrapper.propTypes = {
