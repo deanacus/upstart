@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StyledList } from './styled';
 
 export const List = ({
-  children, marker, className, isNumbered,
+  children, marker, className, isNumbered, padding,
 }) => {
   const listType = isNumbered ? 'ol' : 'ul';
   const listStyle = marker;
@@ -12,6 +12,7 @@ export const List = ({
       as={listType}
       listStyle={listStyle}
       className={className}
+      padding={padding}
     >
       {children}
     </StyledList>
@@ -38,12 +39,16 @@ List.propTypes = {
    * used, or a custom marker, if required
    */
   marker: PropTypes.string,
+
+  /** The padding value to be applied to the List. */
+  padding: PropTypes.string,
 };
 
 List.defaultProps = {
   className: null,
-  marker: null,
   isNumbered: false,
+  marker: null,
+  padding: null,
 };
 
 export default List;

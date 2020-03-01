@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StyledListItem } from './styled';
 
-
-export const ListItem = ({ children, className }) => (
-  <li className={className}>
+export const ListItem = ({ children, padding, className }) => (
+  <StyledListItem padding={padding} className={className}>
     {children}
-  </li>
+  </StyledListItem>
 );
 
 ListItem.propTypes = {
@@ -18,10 +18,13 @@ ListItem.propTypes = {
 
   /** A custom className you would like to pass to the Component */
   className: PropTypes.string,
+
+  padding: PropTypes.string,
 };
 
 ListItem.defaultProps = {
   className: null,
+  padding: null,
 };
 
 export default ListItem;

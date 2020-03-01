@@ -9,15 +9,17 @@ import {
 import { Link } from 'gatsby';
 
 const GroupTitle = styled.h2`
-  font-size: ${({ theme }) => getRem(theme.fontSizes.md, theme.rootVal)};
+  font-size: ${({ theme }) => getRem(theme.fontSizes.sm, theme.rootVal)};
+  font-weight: normal;
+  letter-spacing: .5rem;
   margin: 0;
   text-transform: uppercase;
 `;
 
 export const MenuGroup = ({ group, title }) => (
-  <ListItem>
+  <ListItem padding="py-3">
     <GroupTitle>{title}</GroupTitle>
-    <List marker="none">
+    <List marker="none" padding="pt-3">
       {
         group.map((node) => (
           <ListItem key={node.route}>
