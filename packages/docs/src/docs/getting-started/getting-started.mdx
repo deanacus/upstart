@@ -1,0 +1,54 @@
+---
+title: Getting Started
+description: Get up and running with Upstart
+menu: Getting Started
+route: /getting-started/getting-started
+---
+
+## Installation
+
+Install Upstart in your project with your package manager of choice:
+
+NPM:
+
+```bash
+npm install @deanacus/upstart
+```
+
+Yarn: 
+
+```bash
+yarn add @deanacus/upstart
+```
+
+## UpstartProvider
+
+Then wrap your application in the `UpstartProvider` component:
+
+```javascript
+import { UpstartProvider } from '@deanacus/upstart';
+
+const App = () => (
+  <UpstartProvider>
+    {/*... your app code here*/}
+  </UpstartProvider>
+);
+```
+
+You can also pass a custom theme to Upstart, by passing it to the `customTheme`
+prop on the `Upstart` component:
+
+
+```javascript
+import { UpstartProvider } from '@deanacus/upstart';
+import { myTheme } from './myTheme';
+
+const App = () => (
+  <UpstartProvider customTheme={myTheme}>
+    {/*... your app code here*/}
+  </UpstartProvider>
+);
+```
+
+Upstart will then merge your theme with the default theme, and set that as the
+global theme available to your components via `themeContext`.

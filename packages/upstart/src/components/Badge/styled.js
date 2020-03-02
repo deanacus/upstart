@@ -14,8 +14,8 @@ const baseStyles = css`
 
 const variantStyles = css`
   background: ${({ theme, variant }) => theme.colors[variant][0]};
-  border: 1px solid ${({ theme, variant }) => theme.colors[variant][9]};
-  color: ${({ theme, variant }) => theme.colors[variant][9]};
+  border: 1px solid ${({ theme, variant }) => theme.colors[variant][7]};
+  color: ${({ theme, variant }) => theme.colors[variant][7]};
 `;
 
 export const StyledBadge = styled.div`
