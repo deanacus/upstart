@@ -1,0 +1,51 @@
+{
+  "name": "typography",
+  "values": [
+    {
+      "name": "fontSize",
+      "values": [
+        {
+          "name": "default",
+          "value": "base"
+        },
+        {
+          "name": "regular",
+          "value": "base"
+        },
+        {
+          "name": "body",
+          "value": "base"
+        }
+      ]
+    },
+    {
+      "name": "fontFamily",
+      "values": [
+        {
+          "name": "base",
+          "value": "body"
+        },
+        {
+          "name": "default",
+          "value": "body"
+        },
+        {
+          "name": "text",
+          "value": "body"
+        },
+        {
+          "name": "display",
+          "value": "heading"
+        },
+        {
+          "name": "mono",
+          "value": "monospace"
+        },
+        {
+          "name": "code",
+          "value": "monospace"
+        }
+      ]
+    }
+  ]
+}
