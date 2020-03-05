@@ -1,0 +1,33 @@
+{
+  "name": "color",
+  "values": [
+    {
+      "name": "neutral",
+      "value": "grey"
+    },
+    {
+      "name": "error",
+      "value": "red"
+    },
+    {
+      "name": "danger",
+      "value": "red"
+    },
+    {
+      "name": "warning",
+      "value": "yellow"
+    },
+    {
+      "name": "success",
+      "value": "green"
+    },
+    {
+      "name": "primary",
+      "value": "blue"
+    },
+    {
+      "name": "secondary",
+      "value": "orange"
+    }
+  ]
+}
