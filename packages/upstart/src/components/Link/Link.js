@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { getRem } from '../../utils/styled-utils';
 
 const StyledIcon = styled.svg`
-  height: ${({ theme, size }) => `${size ? theme.fontSizes[size] : theme.fontSizes.sm}px`};
-  width: ${({ theme, size }) => `${size ? theme.fontSizes[size] : theme.fontSizes.sm}px`};
+  height: ${({ theme, size }) => getRem(theme.fontSizes[size])};
+  width: ${({ theme, size }) => getRem(theme.fontSizes[size])};
   margin-left: .5rem;
 `;
 
