@@ -3,6 +3,7 @@ export { Badge } from './Badge/Badge';
 export { Blockquote } from './Blockquote/Blockquote';
 export { Button } from './Button/Button';
 export { Card } from './Card/Card';
+export { Collapsible } from './Collapsible/Collapsible';
 export { Column } from './Column/Column';
 export { Container } from './Container/Container';
 export { Flex } from './Flex/Flex';
