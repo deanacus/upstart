@@ -3,9 +3,13 @@ import { getRem } from '../../utils/styled-utils';
 
 export const StyledStack = styled.div`
   display: flex;
-  flex-direction: ${({ horizontal }) => (horizontal ? 'row' : 'column')};
   flex-wrap: nowrap;
   width: 100%;
+  ${({ horizontal }) => (horizontal ? css`
+    flex-direction: row;
+  ` : css`
+    flex-direction: column;
+  `)};
 
   & > * {
     margin: 0;

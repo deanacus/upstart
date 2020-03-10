@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Column } from '@deanacus/upstart';
-
 const ColorChip = styled.div`
   background: ${({ color }) => color};
   height: 5rem;
@@ -11,10 +9,10 @@ const ColorChip = styled.div`
 `;
 
 export const ColorBlock = ({ color }) => (
-  <Column cols={2} padding="p-2" align="center">
+  <div>
     <ColorChip color={color} />
     {color}
-  </Column>
+  </div>
 );
 
 ColorBlock.propTypes = {
