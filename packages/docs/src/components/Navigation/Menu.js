@@ -10,8 +10,10 @@ const query = graphql`{
     nodes {
       frontmatter {
         title
+      }
+      fields {
         menu
-        route
+        slug
       }
     }
   }
@@ -24,14 +26,14 @@ const Nav = styled.nav`
 export const Menu = () => {
   const { allMdx: { nodes } } = useStaticQuery(query);
   const groupedNodes = nodes.reduce((acc, cur) => {
-    const group = cur.frontmatter.menu !== null ? cur.frontmatter.menu : 'Getting Started';
+    const group = cur.fields.menu;
 
     if (!acc[group]) {
-      acc[group] = [cur.frontmatter];
+      acc[group] = [{ ...cur.frontmatter, ...cur.fields }];
       return acc;
     }
 
-    acc[group].push(cur.frontmatter);
+    acc[group].push({ ...cur.frontmatter, ...cur.fields });
     return acc;
   }, {});
 
