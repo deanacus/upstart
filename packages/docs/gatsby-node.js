@@ -6,8 +6,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const createSlug = (item) => {
     const pathPrefix = getNode(item.parent).relativeDirectory;
     const slug = item.frontmatter.title;
+
     if (!pathPrefix) {
-      return `${slug}`.replace(' ', '-').toLowerCase();
+      return '/';
     }
 
     return `${pathPrefix}/${slug}`.replace(' ', '-').toLowerCase();
