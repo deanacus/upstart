@@ -1,5 +1,33 @@
 const path = require('path');
 
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  const createSlug = (item) => {
+    const pathPrefix = getNode(item.parent).relativeDirectory;
+    const slug = item.frontmatter.title;
+    if (!pathPrefix) {
+      return `${slug}`.replace(' ', '-').toLowerCase();
+    }
+
+    return `${pathPrefix}/${slug}`.replace(' ', '-').toLowerCase();
+  };
+
+  if (node.internal.type === 'Mdx') {
+    createNodeField({
+      name: 'slug',
+      node,
+      value: createSlug(node),
+    });
+
+    createNodeField({
+      name: 'menu',
+      node,
+      value: getNode(node.parent).relativeDirectory.replace('-', ' '),
+    });
+  }
+};
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   // Destructure the createPage function from the actions object
   const { createPage } = actions;
@@ -33,32 +61,4 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { id: node.id },
     });
   });
-};
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-
-  const createSlug = (item) => {
-    const parent = getNode(item.parent).relativeDirectory;
-    const file = item.frontmatter.title;
-    if (!parent) {
-      return `${file}`.replace(' ', '-').toLowerCase();
-    }
-
-    return `${parent}/${file}`.replace(' ', '-').toLowerCase();
-  };
-
-  if (node.internal.type === 'Mdx') {
-    createNodeField({
-      name: 'slug',
-      node,
-      value: createSlug(node),
-    });
-    // Add it to a collection
-    createNodeField({
-      name: 'menu',
-      node,
-      value: getNode(node.parent).relativeDirectory.replace('-', ' '),
-    });
-  }
 };
