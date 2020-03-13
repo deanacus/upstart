@@ -6,7 +6,9 @@ import { List, Separator } from '@deanacus/upstart';
 import { MenuGroup } from './MenuGroup';
 
 const query = graphql`{
-  allMdx {
+  allMdx(
+    sort: {order: ASC, fields: frontmatter___title}
+  ) {
     nodes {
       frontmatter {
         title
@@ -33,21 +35,28 @@ export const Menu = () => {
       return acc;
     }
 
-    acc[group].push({ ...cur.frontmatter, ...cur.fields });
+    acc[group] = [...acc[group], { ...cur.frontmatter, ...cur.fields }].sort();
+    // .push({ ...cur.frontmatter, ...cur.fields });
     return acc;
   }, {});
+
+  /**
+   * getting started
+   * foundations
+   * layout
+   * components
+   */
 
   return (
     <Nav>
       <List marker="none">
-        {
-          Object.keys(groupedNodes).map((group, ind) => (
-            <React.Fragment key={group}>
-              {ind !== 0 && <Separator />}
-              <MenuGroup group={groupedNodes[group]} title={group} />
-            </React.Fragment>
-          ))
-        }
+        <MenuGroup group={groupedNodes['getting started']} title="Getting Started" />
+        <Separator />
+        <MenuGroup group={groupedNodes.tokens} title="Tokens" />
+        <Separator />
+        <MenuGroup group={groupedNodes.layout} title="Layout" />
+        <Separator />
+        <MenuGroup group={groupedNodes.components} title="Components" />
       </List>
     </Nav>
   );

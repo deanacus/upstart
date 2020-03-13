@@ -13,7 +13,7 @@ export const StyledStack = styled.div`
 
   & > * {
     margin: 0;
-    flex: 1;
+    flex: ${({ horizontal }) => (horizontal ? '0 0 auto' : '1 1 auto')};
   }
 
   & > * + * {
