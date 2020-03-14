@@ -22,8 +22,8 @@ export const MenuGroup = ({ group, title }) => (
     <List marker="none" padding="pt-3">
       {
         group.map((node) => (
-          <ListItem key={node.route}>
-            <Link to={node.route}>{node.title}</Link>
+          <ListItem key={node.slug}>
+            <Link to={`/${node.slug}`}>{node.title}</Link>
           </ListItem>
         ))
       }

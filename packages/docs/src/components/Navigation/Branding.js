@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex, Link } from '@deanacus/upstart';
+import { Stack, Link } from '@deanacus/upstart';
 import { Logo } from '../Logo';
 
 const StyledLink = styled(Link)`
@@ -8,11 +8,11 @@ const StyledLink = styled(Link)`
 `;
 
 export const Branding = () => (
-  <Flex justify="center" direction="column" margin="my-3">
+  <Stack>
     <StyledLink href="/">
       <Logo />
     </StyledLink>
-  </Flex>
+  </Stack>
 );
 
 export default Branding;

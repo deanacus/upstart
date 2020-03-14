@@ -1,14 +1,17 @@
 ---
 title: Table
 description: Tables are bad. Except when they're not. Use it to display tabular data
-packageName: deanacus/upstart
-importName: Table, TableHead, TableHeadCell, TableRow, TableCell
-menu: Components
-route: /components/table
+imports: 
+  - Table
+  - TableHead
+  - TableHeadCell
+  - TableRow
+  - TableCell
 ---
 
 import {
   Table,
+  TableBody,
   TableHead,
   TableHeadCell,
   TableRow,
@@ -19,51 +22,27 @@ import { PropsTable } from '../../components/Documentation/PropsTable';
 ```jsx
 <Table>
   <TableHead>
-    <TableHeadCell>
-      Heading
-    </TableHeadCell>
-    <TableHeadCell>
-      Heading
-    </TableHeadCell>
-    <TableHeadCell>
-      Heading
-    </TableHeadCell>
+    <TableHeadCell>Heading</TableHeadCell>
+    <TableHeadCell>Heading</TableHeadCell>
+    <TableHeadCell>Heading</TableHeadCell>
   </TableHead>
-  <tbody>
+  <TableBody>
     <TableRow>
-      <TableCell>
-        Content
-      </TableCell>
-      <TableCell>
-        Content
-      </TableCell>
-      <TableCell>
-        Content
-      </TableCell>
+      <TableCell>Content</TableCell>
+      <TableCell>Content</TableCell>
+      <TableCell>Content</TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Content
-      </TableCell>
-      <TableCell>
-        Content
-      </TableCell>
-      <TableCell>
-        Content
-      </TableCell>
+      <TableCell>Content</TableCell>
+      <TableCell>Content</TableCell>
+      <TableCell>Content</TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>
-        Content
-      </TableCell>
-      <TableCell>
-        Content
-      </TableCell>
-      <TableCell>
-        Content
-      </TableCell>
+      <TableCell>Content</TableCell>
+      <TableCell>Content</TableCell>
+      <TableCell>Content</TableCell>
     </TableRow>
-  </tbody>
+  </TableBody>
 </Table>
 ```
 
@@ -76,6 +55,10 @@ import { PropsTable } from '../../components/Documentation/PropsTable';
 ### TableHead
 
 <PropsTable component={TableHead} />
+
+### TableBody
+
+<PropsTable component={TableBody} />
 
 ### TableHeadCell
 

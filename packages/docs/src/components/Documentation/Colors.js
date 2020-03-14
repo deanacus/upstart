@@ -2,20 +2,20 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
 
-import { Row } from '@deanacus/upstart';
+import { Stack } from '@deanacus/upstart';
 import { ColorBlock } from './ColorBlock';
 
 
 export const Colors = ({ color }) => {
   const { colors } = useContext(ThemeContext);
   return (
-    <Row canWrap>
+    <Stack horizontal>
       {
         colors[color].map((clr) => (
           <ColorBlock color={clr} key={clr} />
         ))
       }
-    </Row>
+    </Stack>
   );
 };
 

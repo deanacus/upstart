@@ -166,5 +166,12 @@ module.exports = {
         path: `${__dirname}/src/docs/`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'component-docs',
+        path: `${__dirname}/src/docs/components/`,
+      },
+    },
   ],
 };

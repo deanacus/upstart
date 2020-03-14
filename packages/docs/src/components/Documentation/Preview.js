@@ -90,10 +90,6 @@ const PreviewContainer = styled.div`
 `;
 
 const StyledPreview = styled(LivePreview)`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
   ${({ theme }) => getPadding('p-4', theme)};
 `;
 
