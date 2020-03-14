@@ -6,7 +6,7 @@ imports:
   - GridItem
 ---
 
-import { PropsTable } from '../../components/Documentation/PropsTable';
+import { PropsTable, DemoBox } from '../../components/Documentation';
 import { Grid, GridItem } from '@deanacus/upstart';
 
 The Upstart Grid is a minimal implementation of CSS Grid. It allows for an 
@@ -36,102 +36,42 @@ to a single column.
 
 ```jsx
 <Grid>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  <DemoBox>
     Auto
-  </div>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  </DemoBox>
+  <DemoBox>
     Auto
-  </div>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  </DemoBox>
+  <DemoBox>
     Auto
-  </div>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  </DemoBox>
+  <DemoBox>
     Auto
-  </div>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  </DemoBox>
+  <DemoBox>
     Auto
-  </div>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  </DemoBox>
+  <DemoBox>
     Auto
-  </div>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  </DemoBox>
+  <DemoBox>
     Auto
-  </div>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  </DemoBox>
+  <DemoBox>
     Auto
-  </div>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  </DemoBox>
+  <DemoBox>
     Auto
-  </div>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  </DemoBox>
+  <DemoBox>
     Auto
-  </div>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  </DemoBox>
+  <DemoBox>
     Auto
-  </div>
-  <div style={{
-    padding: '2rem 0',
-    background: '#253642',
-    textAlign:'center',
-    color: '#eaeaea'
-  }}>
+  </DemoBox>
+  <DemoBox>
     Auto
-  </div>
+  </DemoBox>
 </Grid>
 ```
 
@@ -148,67 +88,37 @@ and/or end at.
 
 <Grid>
   <GridItem span={6}>
-    <div style={{
-      padding: '2rem 0',
-      background: '#253642',
-      textAlign:'center',
-      color: '#eaeaea'
-    }}>
+    <DemoBox>
       Span 6
-    </div>
+    </DemoBox>
   </GridItem>
   
   <GridItem start={1} end={3}>
-    <div style={{
-      padding: '2rem 0',
-      background: '#253642',
-      textAlign:'center',
-      color: '#eaeaea'
-    }}>
+    <DemoBox>
       Start 1, End 3
-    </div>
+    </DemoBox>
   </GridItem>
   
   <GridItem start={3} span={4}>
-    <div style={{
-      padding: '2rem 0',
-      background: '#253642',
-      textAlign:'center',
-      color: '#eaeaea'
-    }}>
+    <DemoBox>
       Start 3, Span 4
-    </div>
+    </DemoBox>
   </GridItem>
   
   <GridItem start={1} end={4}>
-    <div style={{
-      padding: '2rem 0',
-      background: '#253642',
-      textAlign:'center',
-      color: '#eaeaea'
-    }}>
+    <DemoBox>
       Start 1, End 4
-    </div>
+    </DemoBox>
   </GridItem>
   <GridItem>
-    <div style={{
-      padding: '2rem 0',
-      background: '#253642',
-      textAlign:'center',
-      color: '#eaeaea'
-    }}>
+    <DemoBox>
       Auto
-    </div>
+    </DemoBox>
   </GridItem>
   <GridItem end={7} span={2}>
-    <div style={{
-      padding: '2rem 0',
-      background: '#253642',
-      textAlign:'center',
-      color: '#eaeaea'
-    }}>
+    <DemoBox>
       End 7, Span 2
-    </div>
+    </DemoBox>
   </GridItem>
 </Grid>
 

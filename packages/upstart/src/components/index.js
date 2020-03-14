@@ -14,6 +14,7 @@ export { ListItem } from './ListItem/ListItem';
 export { Separator } from './Separator/Separator';
 export { Stack } from './Stack/Stack';
 export { Table } from './Table/Table';
+export { TableBody } from './TableBody/TableBody';
 export { TableRow } from './TableRow/TableRow';
 export { TableCell } from './TableCell/TableCell';
 export { TableHeadCell } from './TableHeadCell/TableHeadCell';

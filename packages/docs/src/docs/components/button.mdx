@@ -1,13 +1,10 @@
 ---
 title: Button
 description: A clickable element that signifies that something will happen when it's interacted with.
-imports:
-  - Button
+imports: Button
 ---
 
-import { DemoBox } from '../../components/Documentation/DemoBox';
-import { Preview } from '../../components/Documentation/Preview';
-import { PropsTable } from '../../components/Documentation/PropsTable'
+import { PropsTable } from '../../components/Documentation'
 import { Button, Stack } from '@deanacus/upstart'
 
 Buttons are an incredibly frequently used UI component. Too often, people use
@@ -30,26 +27,29 @@ be returned, unless another is specified.
 
 ### Primary
 
+<Stack horizontal>
   <Button>
     Primary
   </Button>
   <Button isOutline>
     Primary Outline
   </Button>
+</Stack>
 
 ### Secondary
 
+<Stack horizontal>
   <Button variant="secondary">
     Secondary
   </Button>
   <Button variant="secondary" isOutline>
     Secondary outline
   </Button>
+</Stack>
 
 ## Sizes
-
-A number of sizes have been defined: `sm`, `md`, `lg`.
   
+<Stack horizontal>
   <Button size="sm">
     Small
   </Button>
@@ -59,23 +59,28 @@ A number of sizes have been defined: `sm`, `md`, `lg`.
   <Button size="lg">
     Large
   </Button>
+</Stack>
 
 ## Disabled
 
 Disabled buttons need to look different, too.
 
+<Stack horizontal>
   <Button size="md" isDisabled>
     Disabled Primary
   </Button>
   <Button size="md" variant="secondary" isDisabled isOutline>
     Disabled Secondary Outline
   </Button>
+</Stack>
 
 ## Rounded
 
+<Stack horizontal>
   <Button isRounded>
     Rounded Primary
   </Button>
   <Button isOutline isRounded>
     Rounded Primary Outline
   </Button>
+</Stack>

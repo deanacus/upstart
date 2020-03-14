@@ -6,6 +6,7 @@ export const StyledStack = styled.div`
   flex-wrap: nowrap;
   width: 100%;
   ${({ horizontal }) => (horizontal ? css`
+    align-items: flex-start;
     flex-direction: row;
   ` : css`
     flex-direction: column;
