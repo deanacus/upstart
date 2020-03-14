@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from '../../helpers/test-utils';
-import { Column, Theme } from '../../../components';
+import { Column } from '../../../components/Column/Column';
+import { Theme } from '../../../components';
 
 
 describe('<Column />', () => {

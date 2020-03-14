@@ -12,10 +12,6 @@ export const Dot = styled.span`
   width: ${({ size, theme }) => getRem(theme.space[size], theme.rootVal)};
 `;
 
-// export const Dot = ({ variant, size }) => (
-//   <Circle variant={variant} size={size} />
-// );
-
 Dot.propTypes = {
   variant: PropTypes.oneOf([
     'grey',

@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from '../../helpers/test-utils';
 
-import { Row, Theme } from '../../../components';
+import { Row } from '../../../components/Row/Row';
+import { Theme } from '../../../components';
 import { getRem } from '../../../utils/styled-utils';
 
 describe('<Row />', () => {
@@ -14,7 +15,6 @@ describe('<Row />', () => {
     const row = container.querySelector('.test-row');
     expect(row).not.toBe(undefined);
   });
-
 
   it('should not allow row-items to wrap by default', () => {
     const { container } = render(
