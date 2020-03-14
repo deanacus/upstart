@@ -1,9 +1,15 @@
 import React from 'react';
-import { Stack, Link } from '@deanacus/upstart';
+import styled from 'styled-components';
+import { Stack, Link, getMargin } from '@deanacus/upstart';
+
+const StyledLink = styled(Link)`
+  margin: auto;
+  ${({ theme }) => getMargin('my-3', theme)}
+`;
 
 export const Links = () => (
-  <Stack justify="center">
-    <Link isExternal href="https://github.com/deanacus/upstart">Github</Link>
+  <Stack>
+    <StyledLink isExternal href="https://github.com/deanacus/upstart">Github</StyledLink>
   </Stack>
 );
 

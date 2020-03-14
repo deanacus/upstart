@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Stack, Link } from '@deanacus/upstart';
+import { Stack, Link, getMargin } from '@deanacus/upstart';
 import { Logo } from '../Logo';
 
 const StyledLink = styled(Link)`
-  width: 10rem;
+  max-width: 10rem;
+  margin: auto;
+  ${({ theme }) => getMargin('my-3', theme)}
 `;
 
 export const Branding = () => (
