@@ -4,6 +4,7 @@ export { Blockquote } from './Blockquote/Blockquote';
 export { Button } from './Button/Button';
 export { Card } from './Card/Card';
 export { Collapsible } from './Collapsible/Collapsible';
+export { Dot } from './Dot/Dot';
 export { Grid } from './Grid/Grid';
 export { GridItem } from './GridItem/GridItem';
 export { Image } from './Image/Image';

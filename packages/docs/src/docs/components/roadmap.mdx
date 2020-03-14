@@ -3,8 +3,6 @@ title: Roadmap
 description: A snapshot of where Upstart is, and where it's going
 ---
 
-
-import {Status} from '../../components/Documentation';
 import {
   Table,
   TableBody,
@@ -12,16 +10,17 @@ import {
   TableCell,
   TableHeadCell,
   TableHead,
-  Stack
+  Stack,
+  Dot,
 } from '@deanacus/upstart';
 
 Legend: 
 
 <Stack horizontal>
-  <span><Status variant="grey" /> Planned</span>
-  <span><Status variant="secondary" /> In Progress</span>
-  <span><Status variant="warning" /> Beta/In Review</span>
-  <span><Status variant="success" /> Complete</span>
+  <span><Dot variant="grey" /> Planned</span>
+  <span><Dot variant="secondary" /> In Progress</span>
+  <span><Dot variant="warning" /> Beta/In Review</span>
+  <span><Dot variant="success" /> Complete</span>
 </Stack>
 
 ## Tokens
@@ -34,22 +33,34 @@ Legend:
   </TableHead>
   <TableBody>
     <TableRow>
-      <TableCell>Color</TableCell>
-      <TableCell>
-        <Status variant="warning" />
-      </TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
+      <TableCell>Border</TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>Core Typography</TableCell>
-      <TableCell>
-        <Status variant="success" />
-      </TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
+      <TableCell>Color</TableCell>
+      <TableCell><Dot variant="warning" /></TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Elevation</TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Size</TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Space</TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Type</TableCell>
+      <TableCell><Dot variant="success" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
   </TableBody>
 </Table>
@@ -64,22 +75,14 @@ Legend:
   </TableHead>
   <TableBody>
     <TableRow>
-      <TableCell>Flex</TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell>Grid</TableCell>
+      <TableCell><Dot variant="success" /></TableCell>
+      <TableCell><Dot variant="success" /></TableCell>
     </TableRow>
     <TableRow>
-      <TableCell>Grid</TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell>Stack</TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
   </TableBody>
 </Table>
@@ -95,174 +98,103 @@ Legend:
   <TableBody>
     <TableRow>
       <TableCell>Alert</TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Audio</TableCell>
-      <TableCell>
-        <Status variant="success" />
-      </TableCell>
-      <TableCell>
-        <Status variant="success" />
-      </TableCell>
+      <TableCell><Dot variant="success" /></TableCell>
+      <TableCell><Dot variant="success" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Badge</TableCell>
-      <TableCell>
-        <Status variant="warning" />
-      </TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
+      <TableCell><Dot variant="warning" /></TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Blockquote</TableCell>
-      <TableCell>
-        <Status variant="warning" />
-      </TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
+      <TableCell><Dot variant="warning" /></TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Button</TableCell>
-      <TableCell>
-        <Status variant="success" />
-      </TableCell>
-      <TableCell>
-        <Status variant="warning" />
-      </TableCell>
+      <TableCell><Dot variant="success" /></TableCell>
+      <TableCell><Dot variant="warning" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Card</TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Checkbox</TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Dot</TableCell>
+      <TableCell><Dot variant="success" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Image</TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Input</TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Link</TableCell>
-      <TableCell>
-        <Status variant="warning" />
-      </TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
+      <TableCell><Dot variant="warning" /></TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>List</TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Modal</TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Progress</TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Radio</TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Separator</TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Select</TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Table</TableCell>
-      <TableCell>
-        <Status variant="secondary" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="secondary" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Textarea</TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
     <TableRow>
       <TableCell>Video</TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
-      <TableCell>
-        <Status variant="grey" />
-      </TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
+      <TableCell><Dot variant="grey" /></TableCell>
     </TableRow>
   </TableBody>
 </Table>
