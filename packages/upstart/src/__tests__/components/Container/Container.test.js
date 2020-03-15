@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from '../../helpers/test-utils';
-import { Theme, Container } from '../../../components';
+import { Container } from '../../../components/Container/Container';
+import { Theme } from '../../../components';
 
 
 describe('<Container />', () => {

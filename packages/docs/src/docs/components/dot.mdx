@@ -1,0 +1,52 @@
+---
+title: Dot
+description: A simple colored dot. Useful for things like status indicators.
+---
+
+import { PropsTable } from '../../components/Documentation';
+import { Dot, Stack } from '@deanacus/upstart';
+
+A simple little dot of a given color. Usefule for things like status indicators,
+flashing beacons, and quite possibly other things.
+
+```jsx
+<Dot />
+```
+
+### Colors
+
+<Stack>
+  <span>
+    <Dot color="primary" /> Primary
+  </span>
+  <span>
+    <Dot color="secondary" /> Secondary
+  </span>
+  <span>
+    <Dot color="success" /> Success
+  </span>
+  <span>
+    <Dot color="warning" /> Warning
+  </span>
+  <span>
+    <Dot color="error" /> Error
+  </span>
+</Stack>
+
+### Sizes
+
+<Stack>
+<span>
+  <Dot color="primary" size="xs" /> XS
+</span>
+<span>
+  <Dot color="secondary" size="sm" /> SM
+</span>
+<span>
+  <Dot color="success" size="md" /> MD
+</span>
+</Stack>
+
+### Props
+
+<PropsTable component={Dot}/>

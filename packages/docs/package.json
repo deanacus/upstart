@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "license": "MIT",
   "dependencies": {
-    "@deanacus/upstart": "^0.0.18",
+    "@deanacus/upstart": "^0.0.20",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
     "gatsby": "^2.18.12",
@@ -19,6 +19,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "refresh": "gatsby clean",
     "clean": "rimraf ./.cache ./public",
     "start": "yarn clean && npm run develop"
   },

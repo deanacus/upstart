@@ -14,8 +14,12 @@ export default function Layout({
   data: {
     mdx: {
       frontmatter: {
-        title, menu, description, packageName, importName,
+        title, description,
       }, body,
+      fields: {
+        slug,
+        menu,
+      },
     },
   },
 }) {
@@ -29,8 +33,6 @@ export default function Layout({
           body={body}
           description={description}
           menu={menu}
-          packageName={packageName}
-          importName={importName}
         />
       </Base>
     </UpstartProvider>
@@ -46,8 +48,10 @@ Layout.propTypes = {
         title: PropTypes.string,
         description: PropTypes.string,
         menu: PropTypes.string,
-        packageName: PropTypes.string,
-        importName: PropTypes.string,
+      }),
+      fields: PropTypes.shape({
+        menu: PropTypes.string,
+        slug: PropTypes.string,
       }),
     }),
   }).isRequired,
@@ -60,11 +64,11 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
-        menu
-        route
         description
-        packageName
-        importName
+      }
+      fields {
+        slug,
+        menu
       }
     }
   }

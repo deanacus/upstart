@@ -21,13 +21,10 @@ export const Article = ({
   title,
   body,
   description,
-  packageName,
-  importName,
 }) => (
   <StyledArticle>
     <Hero>
       <h1>{title}</h1>
-      {importName && <code>import { `{ ${importName} }` } from &apos;{packageName}&apos;</code>}
       <p>{description}</p>
     </Hero>
     <ArticleBody>
@@ -42,14 +39,10 @@ Article.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   description: PropTypes.string,
-  packageName: PropTypes.string,
-  importName: PropTypes.string,
 };
 
 Article.defaultProps = {
   description: null,
-  packageName: null,
-  importName: null,
 };
 
 export default Article;

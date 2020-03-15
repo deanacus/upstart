@@ -6,12 +6,16 @@ import { List, Separator } from '@deanacus/upstart';
 import { MenuGroup } from './MenuGroup';
 
 const query = graphql`{
-  allMdx {
+  allMdx(
+    sort: {order: ASC, fields: frontmatter___title}
+  ) {
     nodes {
       frontmatter {
         title
+      }
+      fields {
         menu
-        route
+        slug
       }
     }
   }
@@ -24,28 +28,37 @@ const Nav = styled.nav`
 export const Menu = () => {
   const { allMdx: { nodes } } = useStaticQuery(query);
   const groupedNodes = nodes.reduce((acc, cur) => {
-    const group = cur.frontmatter.menu !== null ? cur.frontmatter.menu : 'Getting Started';
+    const group = cur.fields.menu;
 
     if (!acc[group]) {
-      acc[group] = [cur.frontmatter];
+      acc[group] = [{ ...cur.frontmatter, ...cur.fields }];
       return acc;
     }
 
-    acc[group].push(cur.frontmatter);
+    acc[group] = [...acc[group], { ...cur.frontmatter, ...cur.fields }].sort();
+    // .push({ ...cur.frontmatter, ...cur.fields });
     return acc;
   }, {});
+
+  /**
+   * getting started
+   * foundations
+   * layout
+   * components
+   */
 
   return (
     <Nav>
       <List marker="none">
-        {
-          Object.keys(groupedNodes).map((group, ind) => (
-            <React.Fragment key={group}>
-              {ind !== 0 && <Separator />}
-              <MenuGroup group={groupedNodes[group]} title={group} />
-            </React.Fragment>
-          ))
-        }
+        <MenuGroup group={groupedNodes['getting started']} title="Getting Started" />
+        <Separator />
+        <MenuGroup group={groupedNodes.guides} title="Guides and Recipes" />
+        <Separator />
+        <MenuGroup group={groupedNodes.tokens} title="Tokens" />
+        <Separator />
+        <MenuGroup group={groupedNodes.layout} title="Layout" />
+        <Separator />
+        <MenuGroup group={groupedNodes.components} title="Components" />
       </List>
     </Nav>
   );
