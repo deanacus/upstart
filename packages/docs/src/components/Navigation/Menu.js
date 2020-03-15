@@ -52,6 +52,8 @@ export const Menu = () => {
       <List marker="none">
         <MenuGroup group={groupedNodes['getting started']} title="Getting Started" />
         <Separator />
+        <MenuGroup group={groupedNodes.guides} title="Guides and Recipes" />
+        <Separator />
         <MenuGroup group={groupedNodes.tokens} title="Tokens" />
         <Separator />
         <MenuGroup group={groupedNodes.layout} title="Layout" />
