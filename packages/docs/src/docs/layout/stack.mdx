@@ -1,0 +1,34 @@
+---
+title: Stack
+description: A layout component to stack things vertically or horizontally
+imports: 
+  - Stack
+---
+
+import { PropsTable, DemoBox } from '../../components/Documentation';
+import { Stack } from '@deanacus/upstart';
+
+The Stack component is a layour component that allows you to stack things in a 
+vertical or horizontal manner, with an even amount of space between them.
+
+## Vertical
+
+```jsx
+  <Stack>
+    <DemoBox>Item</DemoBox>
+    <DemoBox>Item</DemoBox>
+    <DemoBox>Item</DemoBox>
+    <DemoBox>Item</DemoBox>
+  </Stack>
+```
+
+## Horizontal
+
+```jsx
+  <Stack horizontal>
+    <DemoBox>Item</DemoBox>
+    <DemoBox>Item</DemoBox>
+    <DemoBox>Item</DemoBox>
+    <DemoBox>Item</DemoBox>
+  </Stack>
+```

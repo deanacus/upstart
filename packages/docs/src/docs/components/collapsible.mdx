@@ -1,0 +1,43 @@
+---
+title: Collapsible
+description: A handy way to show and hide content.
+imports:
+  - Collapsible
+---
+
+import { useState } from 'react';
+import { PropsTable, DemoBox } from '../../components/Documentation';
+import { Collapsible, Button } from '@deanacus/upstart';
+
+export const Demo = () => {
+  const [collapsed, toggleCollapsed] = useState(true);
+  return (
+    <div style={{margin: '3.2rem 0'}}>
+      <Button 
+        handleClick={() => toggleCollapsed(!collapsed)}
+        size="sm"
+        isOutline
+      >
+        Toggle
+      </Button>
+      <Collapsible collapsed={collapsed}>
+        <DemoBox>Item</DemoBox>
+      </Collapsible>
+    </div>
+  )
+}
+
+Collapsible is a simple wrapper for children that allows itself to be either
+collapsed or expanded. It does not provide any method of toggling it's own
+state, instead it relies on the props passed to it to determine this.
+
+```jsx
+<Collapsible collapsed>
+  <DemoBox>Item</DemoBox>
+</Collapsible>
+<Collapsible>
+  <DemoBox>Item</DemoBox>
+</Collapsible>
+```
+
+<Demo />
