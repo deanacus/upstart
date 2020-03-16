@@ -11,8 +11,6 @@ import { Stack } from '@deanacus/upstart';
 The Stack component is a layour component that allows you to stack things in a 
 vertical or horizontal manner, with an even amount of space between them.
 
-## Vertical
-
 ```jsx
   <Stack>
     <DemoBox>Item</DemoBox>
@@ -22,13 +20,15 @@ vertical or horizontal manner, with an even amount of space between them.
   </Stack>
 ```
 
+### Props
+
+<PropsTable component={Stack} />
+
 ## Horizontal
 
-```jsx
-  <Stack horizontal>
-    <DemoBox>Item</DemoBox>
-    <DemoBox>Item</DemoBox>
-    <DemoBox>Item</DemoBox>
-    <DemoBox>Item</DemoBox>
-  </Stack>
-```
+<Stack horizontal>
+  <DemoBox>Item</DemoBox>
+  <DemoBox>Item</DemoBox>
+  <DemoBox>Item</DemoBox>
+  <DemoBox>Item</DemoBox>
+</Stack>
