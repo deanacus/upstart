@@ -1,0 +1,18 @@
+{
+  "group": "curve",
+  "category": "motion",
+  "tokens": [
+    {
+      "name": "in",
+      "value": "cubic-bezier(.4, 0, .7, .2)"
+    },
+    {
+      "name": "out",
+      "value": "cubic-bezier(0, 0, .2, 1)"
+    },
+    {
+      "name": "inOut",
+      "value": "cubic-bezier(.4, 0, .2, 1)"
+    }
+  ]
+}

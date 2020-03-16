@@ -1,0 +1,42 @@
+{
+  "group": "orange",
+  "category": "color",
+  "tokens": [
+    {
+      "name": "10",
+      "value": "#FEE4CB"
+    },
+    {
+      "name": "20",
+      "value": "#FFC58F"
+    },
+    {
+      "name": "30",
+      "value": "#FFA552"
+    },
+    {
+      "name": "40",
+      "value": "#FF9633"
+    },
+    {
+      "name": "50",
+      "value": "#FF810A"
+    },
+    {
+      "name": "60",
+      "value": "#EB7100"
+    },
+    {
+      "name": "70",
+      "value": "#AD5400"
+    },
+    {
+      "name": "80",
+      "value": "#6F3500"
+    },
+    {
+      "name": "90",
+      "value": "#512600"
+    }
+  ]
+}

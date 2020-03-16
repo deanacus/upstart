@@ -1,0 +1,18 @@
+{
+  "group": "duration",
+  "category": "motion",
+  "tokens": [
+    {
+      "name": "fast",
+      "value": ".15s"
+    },
+    {
+      "name": "medium",
+      "value": ".3s"
+    },
+    {
+      "name": "slow",
+      "value": ".6s"
+    }
+  ]
+}

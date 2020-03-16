@@ -1,0 +1,26 @@
+{
+  "group": "shadows",
+  "category": "global",
+  "tokens": [
+    {
+      "name": "none",
+      "value": "none"
+    },
+    {
+      "name": "sm",
+      "value": "0px 1px 3px rgba(0, 0, 0, 0.1)"
+    },
+    {
+      "name": "md",
+      "value": "0px 2px 4px rgba(0, 0, 0, 0.15)"
+    },
+    {
+      "name": "lg",
+      "value": "0px 2px 7px rgba(0, 0, 0, 0.15)"
+    },
+    {
+      "name": "xl",
+      "value": "0px 2px 10px rgba(0, 0, 0, 0.2)"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "group": "zIndex",
+  "category": "global",
+  "tokens": [
+    {
+      "name":"Modal",
+      "value": 9999
+    },
+    {
+      "name":"Sticky",
+      "value": 100
+    }
+  ]
+}

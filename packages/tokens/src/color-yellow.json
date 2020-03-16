@@ -1,0 +1,45 @@
+{
+  "group": "yellow",
+  "category": "color",
+  "aliases": [
+    "warning"
+  ],
+  "tokens": [
+    {
+      "name": "10",
+      "value": "#FCF2D5"
+    },
+    {
+      "name": "20",
+      "value": "#FDE59B"
+    },
+    {
+      "name": "30",
+      "value": "#FDD55E"
+    },
+    {
+      "name": "40",
+      "value": "#FCCD40"
+    },
+    {
+      "name": "50",
+      "value": "#FCC522"
+    },
+    {
+      "name": "60",
+      "value": "#D39F03"
+    },
+    {
+      "name": "70",
+      "value": "#977202"
+    },
+    {
+      "name": "80",
+      "value": "#584300"
+    },
+    {
+      "name": "90",
+      "value": "#3B2C00"
+    }
+  ]
+}

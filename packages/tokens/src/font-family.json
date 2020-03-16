@@ -1,0 +1,21 @@
+{
+  "group": "family",
+  "category": "font",
+  "tokens": [
+    {
+      "name": "body",
+      "aliases": ["base", "default", "text"],
+      "value": "system-ui, sans-serif"
+    },
+    {
+      "name": "heading",
+      "aliases": ["display"],
+      "value": "system-ui, sans-serif"
+    },
+    {
+      "name": "monospace",
+      "aliases": ["mono", "code"],
+      "value": "Menlo, monospace"
+    }
+  ]
+}
