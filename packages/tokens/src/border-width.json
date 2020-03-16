@@ -1,0 +1,22 @@
+{
+  "group": "width",
+  "category": "border",
+  "tokens": [
+    {
+      "name": "sm",
+      "value": 1
+    },
+    {
+      "name": "md",
+      "value": 2
+    },
+    {
+      "name": "lg",
+      "value": 3
+    },
+    {
+      "name": "xl",
+      "value": 5
+    }
+  ]
+}

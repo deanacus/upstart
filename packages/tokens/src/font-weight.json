@@ -1,0 +1,42 @@
+{
+  "group": "weight",
+  "category": "font",
+  "tokens": [
+    {
+      "name": "hairline",
+      "value": 100
+    },
+    {
+      "name": "thin",
+      "value": 200
+    },
+    {
+      "name": "40",
+      "value": 300
+    },
+    {
+      "name": "regular",
+      "value": 400
+    },
+    {
+      "name": "medium",
+      "value": 500
+    },
+    {
+      "name": "semibold",
+      "value": 600
+    },
+    {
+      "name": "bold",
+      "value": 700
+    },
+    {
+      "name": "extrabold",
+      "value": 800
+    },
+    {
+      "name": "black",
+      "value": 900
+    }
+  ]
+}

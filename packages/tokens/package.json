@@ -5,15 +5,12 @@
   "author": "Dean Harris",
   "private": false,
   "scripts": {
-    "build": "echo build",
+    "build": "node .",
     "test": "echo test"
   },
   "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/deanacus/upstart.git"
-  },
-  "devDependencies": {
-    "chroma-js": "^2.1.0"
   }
 }

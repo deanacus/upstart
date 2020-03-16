@@ -1,0 +1,26 @@
+{
+  "group": "radii",
+  "category": "border",
+  "tokens": [
+    {
+      "name": "sm",
+      "value": 3
+    },
+    {
+      "name": "md",
+      "value": 5
+    },
+    {
+      "name": "lg",
+      "value": 7
+    },
+    {
+      "name": "pill",
+      "value": 9999
+    },
+    {
+      "name": "circle",
+      "value": "50%"
+    }
+  ]
+}

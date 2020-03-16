@@ -1,0 +1,18 @@
+{
+  "group": "letterSpacing",
+  "category": "global",
+  "tokens": [
+    {
+      "name": "loose",
+      "value": 1
+    },
+    {
+      "name": "tight",
+      "value": -1
+    },
+    {
+      "name": "extraTight",
+      "value": -2
+    }
+  ]
+}

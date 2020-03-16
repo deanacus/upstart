@@ -1,0 +1,26 @@
+{
+  "group": "width",
+  "category": "global",
+  "tokens": [
+    {
+      "name": "xs",
+      "value": 480
+    },
+    {
+      "name": "sm",
+      "value": 768
+    },
+    {
+      "name": "md",
+      "value": 1024
+    },
+    {
+      "name": "lg",
+      "value": 1440
+    },
+    {
+      "name": "xl",
+      "value": 1680
+    }
+  ]
+}

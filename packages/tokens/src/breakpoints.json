@@ -1,0 +1,30 @@
+{
+  "group": "breakpoints",
+  "category": "global",
+  "tokens": [
+    {
+      "name": "xs",
+      "value": 0
+    },
+    {
+      "name": "sm",
+      "value": 480
+    },
+    {
+      "name": "md",
+      "value": 768
+    },
+    {
+      "name": "lg",
+      "value": 1024
+    },
+    {
+      "name": "xl",
+      "value": 1440
+    },
+    {
+      "name": "xxl",
+      "value": 1680
+    }
+  ]
+}

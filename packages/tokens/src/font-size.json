@@ -1,0 +1,43 @@
+{
+  "group": "size",
+  "category": "font",
+  "tokens": [
+    {
+      "name": "xs",
+      "value": 12
+    },
+    {
+      "name": "sm",
+      "value": 14
+    },
+    {
+      "name": "base",
+      "aliases": ["default", "regular", "body"],
+      "value": 16
+    },
+    {
+      "name": "md",
+      "value": 20
+    },
+    {
+      "name": "lg",
+      "value": 24
+    },
+    {
+      "name": "xl",
+      "value": 32
+    },
+    {
+      "name": "xxl",
+      "value": 48
+    },
+    {
+      "name": "title",
+      "value": 64
+    },
+    {
+      "name": "display",
+      "value": 96
+    }
+  ]
+}

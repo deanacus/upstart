@@ -1,6 +1,7 @@
 {
-  "name": "space",
-  "values": [
+  "group": "space",
+  "category": "global",
+  "tokens": [
     {
       "name": "xxxs",
       "value": 0
