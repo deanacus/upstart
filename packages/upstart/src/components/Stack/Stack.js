@@ -14,12 +14,20 @@ export const Stack = ({
 );
 
 Stack.propTypes = {
+
+  /** The content of the Stack */
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]),
+
+  /** Optional className to pass to the Stack */
   className: PropTypes.string,
+
+  /** Whether or not to render the stack horizontally */
   horizontal: PropTypes.bool,
+
+  /** The spacing to apply between the children. */
   spacing: PropTypes.oneOf([
     'xxxs',
     'xxs',

@@ -7,22 +7,31 @@ imports:
 
 import { useState } from 'react';
 import { PropsTable, DemoBox } from '../../components/Documentation';
-import { Collapsible, Button } from '@deanacus/upstart';
+import { Collapsible, Button, Stack } from '@deanacus/upstart';
 
 export const Demo = () => {
   const [collapsed, toggleCollapsed] = useState(true);
   return (
-    <div style={{margin: '3.2rem 0'}}>
-      <Button 
-        handleClick={() => toggleCollapsed(!collapsed)}
-        size="sm"
-        isOutline
-      >
-        Toggle
-      </Button>
+    <div style={{
+      margin: '3.2rem 0',
+      border: '1px solid #ccc',
+      borderRadius: '.5rem',
+      padding: '1.6rem',
+    }}>
+    <Stack>
+      <div>
+        <Button 
+          handleClick={() => toggleCollapsed(!collapsed)}
+          size="sm"
+          isOutline
+        >
+          Toggle
+        </Button>
+      </div>
       <Collapsible collapsed={collapsed}>
         <DemoBox>Item</DemoBox>
       </Collapsible>
+      </Stack>
     </div>
   )
 }
@@ -39,5 +48,11 @@ state, instead it relies on the props passed to it to determine this.
   <DemoBox>Item</DemoBox>
 </Collapsible>
 ```
+
+### Props
+
+<PropsTable component={Collapsible} />
+
+## Togglable Demo
 
 <Demo />
