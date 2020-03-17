@@ -22,7 +22,7 @@ const query = graphql`{
 }`;
 
 const Nav = styled.nav`
-  overflow: scroll;
+  overflow-y: scroll;
 `;
 
 export const Menu = () => {
@@ -36,16 +36,8 @@ export const Menu = () => {
     }
 
     acc[group] = [...acc[group], { ...cur.frontmatter, ...cur.fields }].sort();
-    // .push({ ...cur.frontmatter, ...cur.fields });
     return acc;
   }, {});
-
-  /**
-   * getting started
-   * foundations
-   * layout
-   * components
-   */
 
   return (
     <Nav>
