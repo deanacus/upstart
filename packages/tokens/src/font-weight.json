@@ -1,5 +1,5 @@
 {
-  "group": "fontWeight",
+  "group": "fontWeights",
   "tokens": [
     {
       "name": "hairline",
@@ -10,7 +10,7 @@
       "value": 200
     },
     {
-      "name": "40",
+      "name": "light",
       "value": 300
     },
     {

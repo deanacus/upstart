@@ -13,15 +13,18 @@ const compileTokensToObj = (raw) => raw.tokens.reduce((result, {name, value, ali
 }, {})
 
 const compileToJS = (raw) => {
+  // TODO: Include the group aliases, too
   const tokens = JSON.stringify(compileTokensToObj(raw));
   return `export const ${raw.group} = ${tokens}`
 };
 
 const compileToJSON = (raw) => {
+  // TODO: Include the group aliases, too
   return JSON.stringify(compileTokensToObj(raw));
 };
 
 const compileToCSS = (raw) => {
+  // TODO: Include the group aliases, too
   const prefix = raw.group;
   const tokens = compileTokensToObj(raw);
   const compiled = Object.entries(tokens).map(([name, value]) => `  --${prefix}${capitaliseWord(name)}: ${value};\n`).join('')
@@ -29,6 +32,7 @@ const compileToCSS = (raw) => {
 }
 
 const compileToSCSS = (raw) => {
+  // TODO: Include the group aliases, too
   const prefix = `$${raw.group}`;
   const tokens = compileTokensToObj(raw);
   return Object.entries(tokens).map(([name, value]) => `${prefix}${capitaliseWord(name)}: ${value};\n`).join('')
