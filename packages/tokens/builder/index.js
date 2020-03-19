@@ -34,7 +34,7 @@ const compileToSCSS = (raw) => {
   return Object.entries(tokens).map(([name, value]) => `${prefix}${capitaliseWord(name)}: ${value};\n`).join('')
 };
 
-const compile = ({
+const compile = (
   inputFilePath = null,
   outputFilePath = null,
   targetFormats = [
@@ -42,26 +42,28 @@ const compile = ({
     'scss',
     'javascript',
     'json',
-  ],
-}) => {
-  console.log(inputFilePath, outputFilePath, targetFormats);
-
-  const rawData = fs.readFileSync(inputFilePath, 'utf-8');
+  ]
+) => {
+  const rawData = JSON.parse(fs.readFileSync(inputFilePath, 'utf-8'));
 
   targetFormats.map(format => {
     switch (format) {
       case 'css':
-        const output = compileToCSS(rawData);
-        fs.writeFileSync(`${outputFilePath}.css`, output, 'utf-8');
+        const outputCSS = compileToCSS(rawData);
+        fs.writeFileSync(`${outputFilePath}.css`, outputCSS, 'utf-8');
+        break;
       case 'scss':
-        const output = compileToSCSS(rawData);
-        fs.writeFileSync(`${outputFilePath}.scss`, output, 'utf-8');
+        const outputSCSS = compileToSCSS(rawData);
+        fs.writeFileSync(`${outputFilePath}.scss`, outputSCSS, 'utf-8');
+        break;
       case 'javascript':
-        const output = compileToJS(rawData);
-        fs.writeFileSync(`${outputFilePath}.js`, output, 'utf-8');
+        const outputJS = compileToJS(rawData);
+        fs.writeFileSync(`${outputFilePath}.js`, outputJS, 'utf-8');
+        break;
       case 'json':
-        const output = compileToJSON(rawData);
-        fs.writeFileSync(`${outputFilePath}.json`, output, 'utf-8');
+        const outputJSON = compileToJSON(rawData);
+        fs.writeFileSync(`${outputFilePath}.json`, outputJSON, 'utf-8');
+        break;
       default:
         break;
     }
