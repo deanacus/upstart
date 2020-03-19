@@ -1,6 +1,6 @@
 {
   "name": "@deanacus/upstart-tokens",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "license": "MIT",
   "author": "Dean Harris",
   "private": false,
@@ -12,5 +12,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/deanacus/upstart.git"
-  }
+  },
+  "files": [
+    "dist/*"
+  ]
 }
