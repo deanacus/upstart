@@ -12,9 +12,13 @@ export const StyledDot = styled.span`
   width: ${({ size, theme }) => getRem(theme.space[size], theme.rootVal)};
 `;
 
-export const Dot = ({ color, size }) => <StyledDot color={color} size={size} />;
+export const Dot = ({ color, size, className }) => (
+  <StyledDot className={className} color={color} size={size} />
+);
 
 Dot.propTypes = {
+  /** A custom className you would like to pass to the Component */
+  className: PropTypes.string,
 
   /** The color to use for the Dot */
   color: PropTypes.oneOf([
@@ -27,16 +31,13 @@ Dot.propTypes = {
   ]),
 
   /** The size of the Dot */
-  size: PropTypes.oneOf([
-    'xs',
-    'sm',
-    'md',
-  ]),
+  size: PropTypes.oneOf(['xs', 'sm', 'md']),
 };
 
 Dot.defaultProps = {
   size: 'sm',
   color: 'grey',
+  className: null,
 };
 
 export default Dot;
