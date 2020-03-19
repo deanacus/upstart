@@ -7,7 +7,7 @@ const outputPath = path.resolve('./dist/');
 const formats = ['javascript', 'css'];
 
 fs.readdirSync(inputPath).map(file => {
-  const input = `${inputPath}/${file}`;
-  const output = `${outputPath}/${file.slice(0,-5)}`
+  const input = path.join(inputPath, file);
+  const output = path.join(outputPath, file.slice(0,-5));
   compile(input, output, formats);
 });
