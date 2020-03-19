@@ -1,5 +1,5 @@
 {
-  "group": "fontSize",
+  "group": "fontSizes",
   "tokens": [
     {
       "name": "xs",
