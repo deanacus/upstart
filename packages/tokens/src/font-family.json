@@ -1,6 +1,5 @@
 {
-  "group": "family",
-  "category": "font",
+  "group": "fontFamily",
   "tokens": [
     {
       "name": "body",

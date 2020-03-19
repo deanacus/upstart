@@ -1,6 +1,5 @@
 {
-  "group": "weight",
-  "category": "font",
+  "group": "fontWeight",
   "tokens": [
     {
       "name": "hairline",

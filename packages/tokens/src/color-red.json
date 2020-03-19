@@ -1,45 +1,44 @@
 {
   "group": "red",
-  "category": "color",
   "aliases": [
     "danger",
     "error"
   ],
   "tokens": [
     {
-      "name": "10",
+      "name": "100",
       "value": "#FDB5B5"
     },
     {
-      "name": "20",
+      "name": "200",
       "value": "#FB7979"
     },
     {
-      "name": "30",
+      "name": "300",
       "value": "#FA5252"
     },
     {
-      "name": "40",
+      "name": "400",
       "value": "#F93434"
     },
     {
-      "name": "50",
+      "name": "500",
       "value": "#F81616"
     },
     {
-      "name": "60",
+      "name": "600",
       "value": "#E90707"
     },
     {
-      "name": "70",
+      "name": "700",
       "value": "#AC0404"
     },
     {
-      "name": "80",
+      "name": "800",
       "value": "#710303"
     },
     {
-      "name": "90",
+      "name": "900",
       "value": "#530202"
     }
   ]

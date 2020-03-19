@@ -1,6 +1,5 @@
 {
-  "group": "duration",
-  "category": "motion",
+  "group": "motionDuration",
   "tokens": [
     {
       "name": "fast",

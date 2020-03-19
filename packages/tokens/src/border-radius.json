@@ -1,6 +1,5 @@
 {
-  "group": "radii",
-  "category": "border",
+  "group": "borderRadius",
   "tokens": [
     {
       "name": "sm",
