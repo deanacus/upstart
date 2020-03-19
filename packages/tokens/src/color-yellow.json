@@ -1,44 +1,43 @@
 {
   "group": "yellow",
-  "category": "color",
   "aliases": [
     "warning"
   ],
   "tokens": [
     {
-      "name": "10",
+      "name": "100",
       "value": "#FCF2D5"
     },
     {
-      "name": "20",
+      "name": "200",
       "value": "#FDE59B"
     },
     {
-      "name": "30",
+      "name": "300",
       "value": "#FDD55E"
     },
     {
-      "name": "40",
+      "name": "400",
       "value": "#FCCD40"
     },
     {
-      "name": "50",
+      "name": "500",
       "value": "#FCC522"
     },
     {
-      "name": "60",
+      "name": "600",
       "value": "#D39F03"
     },
     {
-      "name": "70",
+      "name": "700",
       "value": "#977202"
     },
     {
-      "name": "80",
+      "name": "800",
       "value": "#584300"
     },
     {
-      "name": "90",
+      "name": "900",
       "value": "#3B2C00"
     }
   ]

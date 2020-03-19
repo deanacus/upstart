@@ -1,6 +1,5 @@
 {
-  "group": "shadows",
-  "category": "global",
+  "group": "shadow",
   "tokens": [
     {
       "name": "none",

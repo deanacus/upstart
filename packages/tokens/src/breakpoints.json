@@ -1,6 +1,5 @@
 {
   "group": "breakpoints",
-  "category": "global",
   "tokens": [
     {
       "name": "xs",

@@ -1,6 +1,5 @@
 {
   "group": "zIndex",
-  "category": "global",
   "tokens": [
     {
       "name":"Modal",

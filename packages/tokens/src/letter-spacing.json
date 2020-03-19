@@ -1,6 +1,5 @@
 {
   "group": "letterSpacing",
-  "category": "global",
   "tokens": [
     {
       "name": "loose",
