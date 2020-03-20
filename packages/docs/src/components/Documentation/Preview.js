@@ -8,7 +8,7 @@ import { Theme, getRem, getPadding } from '@deanacus/upstart';
 const ayuLight = {
   plain: {
     color: '#6c7680',
-    backgroundColor: Theme.colors.grey[1],
+    backgroundColor: Theme.colors.grey['100'],
     fontSize: Theme.fontSize.sm,
     fontFamily: Theme.fonts.monospace,
   },
@@ -84,7 +84,7 @@ const ayuLight = {
 };
 
 const PreviewContainer = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.grey[2]};
+  border: 1px solid ${({ theme }) => theme.colors.grey['200']};
   border-radius: ${({ theme }) => getRem(theme.borderRadius.lg)};
   overflow: hidden;
 `;

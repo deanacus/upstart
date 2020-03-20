@@ -8,14 +8,14 @@ const baseStyles = css`
   display: inline-block;
   font-size: ${({ theme }) => getRem(theme.fontSize.xs)};
   line-height: 1;
-  ${({ theme }) => getPadding('px-xs', theme)}
-  ${({ theme }) => getPadding('py-xxs', theme)}
+  ${({ theme }) => getPadding('px-2', theme)}
+  ${({ theme }) => getPadding('py-1', theme)}
 `;
 
 const variantStyles = css`
-  background: ${({ theme, variant }) => theme.colors[variant][0]};
-  border: 1px solid ${({ theme, variant }) => theme.colors[variant][7]};
-  color: ${({ theme, variant }) => theme.colors[variant][7]};
+  background: ${({ theme, variant }) => theme.colors[variant]['100']};
+  border: 1px solid ${({ theme, variant }) => theme.colors[variant]['800']};
+  color: ${({ theme, variant }) => theme.colors[variant]['800']};
 `;
 
 export const StyledBadge = styled.div`

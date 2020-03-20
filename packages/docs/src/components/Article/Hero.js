@@ -5,8 +5,8 @@ import { getPadding } from '@deanacus/upstart';
 
 
 const StyledHeader = styled.header`
-  background: ${({ theme }) => theme.colors.grey[7]};
-  color: ${({ theme }) => theme.colors.grey[1]};
+  background: ${({ theme }) => theme.colors.grey['800']};
+  color: ${({ theme }) => theme.colors.grey['100']};
   display: flex;
   flex-direction: column;
   ${({ theme }) => getPadding('py-5', theme)};

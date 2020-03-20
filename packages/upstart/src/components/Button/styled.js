@@ -10,7 +10,7 @@ const baseStyles = css`
   display: inline-flex;
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.body};
-  line-height: ${({ theme }) => theme.lineHeights.body};
+  line-height: ${({ theme }) => theme.lineHeight.body};
 `;
 
 const filledStyles = css`

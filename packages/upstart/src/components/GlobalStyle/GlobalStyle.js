@@ -33,7 +33,7 @@ const GlobalStyleCSS = css`
     color: ${({ theme }) => theme.colors.foreground};
     font-family: ${({ theme }) => theme.fonts.body};
     font-size: ${({ theme }) => getRem(theme.fontSize.base, theme.rootVal)};
-    line-height: ${({ theme }) => theme.lineHeights.body};
+    line-height: ${({ theme }) => theme.lineHeight.body};
     font-variant-ligatures: common-ligatures;
   }
 
@@ -86,18 +86,18 @@ const GlobalStyleCSS = css`
 
   a:link:not(.btn-link),
   a:visited:not(.btn-link) {
-    color: ${({ theme }) => theme.colors.primary[5]};
+    color: ${({ theme }) => theme.colors.primary['500']};
     text-decoration: none;
   }
 
   a:active:not(.btn-link) {
-    color: ${({ theme }) => theme.colors.primary[6]};
+    color: ${({ theme }) => theme.colors.primary['600']};
     text-decoration: underline;
   }
 
   a:hover:not(.btn-link),
   a:focus:not(.btn-link) {
-    color: ${({ theme }) => theme.colors.primary[7]};
+    color: ${({ theme }) => theme.colors.primary['700']};
     text-decoration: underline;
     outline: none;
   }

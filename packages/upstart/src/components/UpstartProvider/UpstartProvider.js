@@ -52,7 +52,7 @@ UpstartProvider.propTypes = {
 
 
     /** The various line-heights to use for type throughout your theme */
-    lineHeights: PropTypes.shape({ body: PropTypes.number, heading: PropTypes.number }),
+    lineHeight: PropTypes.shape({ body: PropTypes.number, heading: PropTypes.number }),
 
 
     /** The colors used throughout your theme */
