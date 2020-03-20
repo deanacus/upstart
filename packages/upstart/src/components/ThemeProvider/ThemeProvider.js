@@ -32,11 +32,11 @@ ThemeProvider.propTypes = {
 
 
     /** The various sizes of type (in pixels) to be used throughout your theme */
-    fontSizes: PropTypes.arrayOf(PropTypes.number),
+    fontSize: PropTypes.arrayOf(PropTypes.number),
 
 
     /** The array of CSS font-weights to be used throughout your theme */
-    fontWeights: PropTypes.arrayOf(PropTypes.number),
+    fontWeight: PropTypes.arrayOf(PropTypes.number),
 
 
     /** THe various type face imports you would like to use in your font-stacks */
@@ -82,7 +82,7 @@ ThemeProvider.propTypes = {
       background: PropTypes.string,
     }),
 
-    widths: PropTypes.arrayOf(PropTypes.number),
+    width: PropTypes.arrayOf(PropTypes.number),
 
     /** The min-width and max-width values (in pixels) to be used in media-queries */
     breakpoints: PropTypes.arrayOf(PropTypes.number),
@@ -91,10 +91,10 @@ ThemeProvider.propTypes = {
     borders: PropTypes.arrayOf(PropTypes.string),
 
     /** The border-width values (in pixels) you would like to make available in your theme */
-    borderWidths: PropTypes.arrayOf(PropTypes.number),
+    borderWidth: PropTypes.arrayOf(PropTypes.number),
 
     /** The border-radius values (in pixels) you would like to make available in your theme */
-    radii: PropTypes.arrayOf(PropTypes.number),
+    borderRadius: PropTypes.arrayOf(PropTypes.number),
 
     /** The z-index values you would like to make available in your theme */
     zIndices: PropTypes.arrayOf(PropTypes.number),

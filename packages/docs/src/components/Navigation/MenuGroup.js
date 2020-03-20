@@ -9,7 +9,7 @@ import {
 import { Link } from 'gatsby';
 
 const GroupTitle = styled.h2`
-  font-size: ${({ theme }) => getRem(theme.fontSizes.sm, theme.rootVal)};
+  font-size: ${({ theme }) => getRem(theme.fontSize.sm, theme.rootVal)};
   font-weight: normal;
   letter-spacing: .5rem;
   margin: 0;

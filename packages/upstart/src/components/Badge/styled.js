@@ -4,9 +4,9 @@ import { getPadding, getRem } from '../../utils/styled-utils';
 
 const baseStyles = css`
   align-content: center;
-  border-radius: ${({ theme }) => getRem(theme.radii.sm)};
+  border-radius: ${({ theme }) => getRem(theme.borderRadius.sm)};
   display: inline-block;
-  font-size: ${({ theme }) => getRem(theme.fontSizes.xs)};
+  font-size: ${({ theme }) => getRem(theme.fontSize.xs)};
   line-height: 1;
   ${({ theme }) => getPadding('px-xs', theme)}
   ${({ theme }) => getPadding('py-xxs', theme)}

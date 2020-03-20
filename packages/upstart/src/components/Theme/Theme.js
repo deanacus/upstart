@@ -1,11 +1,11 @@
 import { space } from '@deanacus/upstart-tokens/dist/space';
 import { fonts } from '@deanacus/upstart-tokens/dist/font-family';
-import { fontSizes } from '@deanacus/upstart-tokens/dist/font-size';
-import { fontWeights } from '@deanacus/upstart-tokens/dist/font-weight';
-import { width as widths } from '@deanacus/upstart-tokens/dist/width';
+import { fontSize } from '@deanacus/upstart-tokens/dist/font-size';
+import { fontWeight } from '@deanacus/upstart-tokens/dist/font-weight';
+import { width } from '@deanacus/upstart-tokens/dist/width';
 import { breakpoints } from '@deanacus/upstart-tokens/dist/breakpoints';
-import { borderWidth as borderWidths } from '@deanacus/upstart-tokens/dist/border-width';
-import { borderRadius as radii } from '@deanacus/upstart-tokens/dist/border-radius';
+import { borderWidth } from '@deanacus/upstart-tokens/dist/border-width';
+import { borderRadius } from '@deanacus/upstart-tokens/dist/border-radius';
 import { shadow } from '@deanacus/upstart-tokens/dist/shadows';
 import { zIndex } from '@deanacus/upstart-tokens/dist/zindex';
 // import { lineHeight as lineHeights } from '@deanacus/upstart-tokens/dist/line-height';
@@ -16,6 +16,8 @@ import {
   borders, borderStyles,
 } from '../../tokens/borders';
 
+import defaultTheme from '../../tokens';
+
 const lineHeights = {
   body: 1.5,
   heading: 1.125,
@@ -23,44 +25,26 @@ const lineHeights = {
 
 const headingStyle = {
   fontFamily: fonts.heading,
-  fontWeight: fontWeights.heading,
+  fontWeight: fontWeight.heading,
 };
 
 const fontStyles = {
   title: {
-    fontSize: fontSizes.title,
+    fontSize: fontSize.title,
     ...headingStyle,
   },
   subtitle: {
-    fontSize: fontSizes.xxl,
+    fontSize: fontSize.xxl,
     ...headingStyle,
   },
   sectionTitle: {
-    fontSize: fontSizes.xl,
+    fontSize: fontSize.xl,
     ...headingStyle,
   },
 };
 
 export const Theme = {
-  preferredUnit,
-  rootVal,
-  fonts,
-  fontSizes,
-  fontWeights,
-  lineHeights,
-  colors,
-  widths,
-  breakpoints,
-  borders,
-  borderWidths,
-  borderStyles,
-  radii,
-  zIndex,
-  shadow,
-  space,
-  variants: {
-    ...fontStyles,
-  },
+  ...defaultTheme,
 };
 
 export default Theme;

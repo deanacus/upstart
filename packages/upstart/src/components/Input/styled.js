@@ -5,8 +5,8 @@ import { getPadding, getRem } from '../../utils/styled-utils';
 const baseStyles = css`
   background: ${({ theme }) => theme.colors.background};
   border: ${({ theme }) => theme.borders.thin};
-  border-radius: ${({ theme }) => getRem(theme.radii.md)};
-  ${({ theme }) => theme.fontSizes.base};
+  border-radius: ${({ theme }) => getRem(theme.borderRadius.md)};
+  ${({ theme }) => theme.fontSize.base};
   ${({ theme }) => getPadding('py-xs', theme)};
   ${({ theme }) => getPadding('px-sm', theme)};
   transition: 0.2s border-color;

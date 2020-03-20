@@ -15,7 +15,7 @@ export const StyledCard = styled.div`
     border: .1rem solid ${({ theme }) => theme.colors.grey[3]};
   `)}
 
-  ${({ isRounded }) => isRounded && css`border-radius: ${({ theme }) => theme.radii.md};`}
+  ${({ isRounded }) => isRounded && css`border-radius: ${({ theme }) => theme.borderRadius.md};`}
 
   ${({ padding, theme }) => padding && getPadding(padding, theme)}
 
