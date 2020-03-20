@@ -6,7 +6,7 @@ const inputPath = path.resolve('./src/');
 const outputPath = path.resolve('./dist/');
 const formats = ['javascript', 'css'];
 
-fs.readdirSync(inputPath).map(file => {
+const build = fs.readdirSync(inputPath).map(file => {
   const input = path.join(inputPath, file);
   const output = path.join(outputPath, file.slice(0,-5));
   compile(input, output, formats);

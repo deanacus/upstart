@@ -1,41 +1,48 @@
 {
   "group": "orange",
+  "aliases": [
+    "secondary"
+  ],
   "tokens": [
     {
       "name": "100",
-      "value": "#FEE4CB"
+      "value": "#fff4e6"
     },
     {
       "name": "200",
-      "value": "#FFC58F"
+      "value": "#ffe8cc"
     },
     {
       "name": "300",
-      "value": "#FFA552"
+      "value": "#ffd8a8"
     },
     {
       "name": "400",
-      "value": "#FF9633"
+      "value": "#ffc078"
     },
     {
       "name": "500",
-      "value": "#FF810A"
+      "value": "#ffa94d"
     },
     {
       "name": "600",
-      "value": "#EB7100"
+      "value": "#ff922b"
     },
     {
       "name": "700",
-      "value": "#AD5400"
+      "value": "#fd7e14"
     },
     {
       "name": "800",
-      "value": "#6F3500"
+      "value": "#f76707"
     },
     {
       "name": "900",
-      "value": "#512600"
+      "value": "#e8590c"
+    },
+    {
+      "name": "1000",
+      "value": "#d9480f"
     }
   ]
 }

@@ -1,41 +1,48 @@
 {
   "group": "blue",
+  "aliases": [
+    "primary"
+  ],
   "tokens": [
     {
       "name": "100",
-      "value": "#D6F2F7"
+      "value": "#e3fafc"
     },
     {
       "name": "200",
-      "value": "#A2E5EF"
+      "value": "#c5f6fa"
     },
     {
       "name": "300",
-      "value": "#6ED7E7"
+      "value": "#99e9f2"
     },
     {
       "name": "400",
-      "value": "#3AC9DF"
+      "value": "#66d9e8"
     },
     {
       "name": "500",
-      "value": "#22B8CF"
+      "value": "#3bc9db"
     },
     {
       "name": "600",
-      "value": "#1DA0B4"
+      "value": "#22b8cf"
     },
     {
       "name": "700",
-      "value": "#156F7D"
+      "value": "#15aabf"
     },
     {
       "name": "800",
-      "value": "#0C414A"
+      "value": "#1098ad"
     },
     {
       "name": "900",
-      "value": "#082B30"
+      "value": "#0c8599"
+    },
+    {
+      "name": "1000",
+      "value": "#0b7285"
     }
   ]
 }

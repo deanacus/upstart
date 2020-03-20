@@ -5,7 +5,7 @@ import { getPadding } from '@deanacus/upstart';
 
 
 const StyledHeader = styled.header`
-  background: ${({ theme }) => theme.colors.grey['800']};
+  background: ${({ theme }) => theme.colors.grey['900']};
   color: ${({ theme }) => theme.colors.grey['100']};
   display: flex;
   flex-direction: column;

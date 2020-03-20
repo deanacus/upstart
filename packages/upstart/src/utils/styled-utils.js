@@ -18,6 +18,7 @@ const alignmentMap = {
 };
 
 const spaceMap = {
+  0: 'xxxs',
   1: 'xxs',
   2: 'xs',
   3: 'sm',

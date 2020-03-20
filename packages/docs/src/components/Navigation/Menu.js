@@ -22,7 +22,7 @@ const query = graphql`{
 }`;
 
 const Nav = styled.nav`
-  overflow-y: scroll;
+  overflow-y: auto;
 `;
 
 export const Menu = () => {
