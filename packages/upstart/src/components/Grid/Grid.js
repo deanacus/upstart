@@ -51,7 +51,7 @@ Grid.propTypes = {
 Grid.defaultProps = {
   className: null,
   cols: 6,
-  gap: 3,
+  gap: 'sm',
 };
 
 export default Grid;

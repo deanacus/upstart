@@ -17,6 +17,17 @@ const alignmentMap = {
   baseline: 'baseline',
 };
 
+const spaceMap = {
+  1: 'xxs',
+  2: 'xs',
+  3: 'sm',
+  4: 'md',
+  5: 'lg',
+  6: 'xl',
+  7: 'xxl',
+  8: 'xxxl',
+};
+
 export const getRem = (value, rootValue = 10) => `${value / rootValue}rem`;
 
 export const getSpacing = (alias, theme) => {
@@ -24,7 +35,7 @@ export const getSpacing = (alias, theme) => {
   const propID = key.charAt(0);
   const prop = propID === 'm' ? 'margin' : 'padding';
   const root = theme.rootVal;
-  const value = theme.space[index];
+  const value = theme.space[spaceMap[index]];
 
   switch (key) {
     case `${propID}`:

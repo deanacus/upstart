@@ -3,10 +3,12 @@
   "tokens": [
     {
       "name": "base",
+      "aliases": ["body"],
       "value": 1.5
     },
     {
       "name": "tight",
+      "aliases": ["heading"],
       "value": 1.3
     },
     {
