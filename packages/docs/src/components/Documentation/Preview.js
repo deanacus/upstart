@@ -8,8 +8,8 @@ import { Theme, getRem, getPadding } from '@deanacus/upstart';
 const ayuLight = {
   plain: {
     color: '#6c7680',
-    backgroundColor: Theme.colors.grey[1],
-    fontSize: Theme.fontSizes.sm,
+    backgroundColor: Theme.colors.grey['100'],
+    fontSize: Theme.fontSize.sm,
     fontFamily: Theme.fonts.monospace,
   },
   styles: [
@@ -84,8 +84,8 @@ const ayuLight = {
 };
 
 const PreviewContainer = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.grey[2]};
-  border-radius: ${({ theme }) => getRem(theme.radii.lg)};
+  border: 1px solid ${({ theme }) => theme.colors.grey['200']};
+  border-radius: ${({ theme }) => getRem(theme.borderRadius.lg)};
   overflow: hidden;
 `;
 

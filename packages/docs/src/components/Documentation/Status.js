@@ -5,8 +5,8 @@ import styled from 'styled-components';
 import { getRem } from '@deanacus/upstart';
 
 const Circle = styled.span`
-  background: ${({ variant, theme }) => theme.colors[variant][5]};
-  border-radius: ${({ theme }) => getRem(theme.radii.circle, theme.rootVal)};
+  background: ${({ variant, theme }) => theme.colors[variant]['500']};
+  border-radius: ${({ theme }) => getRem(theme.borderRadius.circle, theme.rootVal)};
   display: inline-block;
   height: ${({ size, theme }) => getRem(theme.space[size], theme.rootVal)};
   width: ${({ size, theme }) => getRem(theme.space[size], theme.rootVal)};

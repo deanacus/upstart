@@ -8,7 +8,7 @@ export const StyledQuote = styled.blockquote`
       ? css`border-right: 3px solid ${({ theme }) => theme.colors.primary[3]}`
       : css`border-left: 3px solid ${({ theme }) => theme.colors.primary[3]}`
   )};
-  font-size: ${({ theme }) => theme.fontSizes.md};
+  font-size: ${({ theme }) => theme.fontSize.md};
   ${({ theme }) => getMargin('mx-3', theme)};
   ${({ theme }) => getPadding('p-3', theme)};
 
@@ -19,7 +19,7 @@ export const StyledQuote = styled.blockquote`
   cite {
     display: block;
     text-align: right;
-    font-size: ${({ theme }) => theme.fontSizes.sm};
+    font-size: ${({ theme }) => theme.fontSize.sm};
   }
 `;
 

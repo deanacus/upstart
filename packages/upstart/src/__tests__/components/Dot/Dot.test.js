@@ -12,7 +12,7 @@ describe('<Dot />', () => {
   });
 
   it('should render the right color', () => {
-    const { container } = render(<Dot className="test-dot" variant="success" />);
+    const { container } = render(<Dot className="test-dot" color="success" />);
 
     const dot = container.querySelector('.test-dot');
     expect(dot).toHaveStyleRule('background', Theme.colors.success[5]);

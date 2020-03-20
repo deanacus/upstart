@@ -32,41 +32,41 @@ const GlobalStyleCSS = css`
   body {
     color: ${({ theme }) => theme.colors.foreground};
     font-family: ${({ theme }) => theme.fonts.body};
-    font-size: ${({ theme }) => getRem(theme.fontSizes.base, theme.rootVal)};
-    line-height: ${({ theme }) => theme.lineHeights.body};
+    font-size: ${({ theme }) => getRem(theme.fontSize.base, theme.rootVal)};
+    line-height: ${({ theme }) => theme.lineHeight.body};
     font-variant-ligatures: common-ligatures;
   }
 
   h1 {
     font-family: ${({ theme }) => theme.fonts.heading};
-    font-size: ${({ theme }) => getRem(theme.fontSizes.title, theme.rootVal)};
+    font-size: ${({ theme }) => getRem(theme.fontSize.title, theme.rootVal)};
     ${({ theme }) => getMargin('mb-3', theme)};
     ${({ theme }) => getMargin('mt-5', theme)};
   }
 
   h2 {
     font-family: ${({ theme }) => theme.fonts.heading};
-    font-size: ${({ theme }) => getRem(theme.fontSizes.xxl, theme.rootVal)};
+    font-size: ${({ theme }) => getRem(theme.fontSize.xxl, theme.rootVal)};
     ${({ theme }) => getMargin('mb-3', theme)};
     ${({ theme }) => getMargin('mt-4', theme)};
   }
 
   h3 {
     font-family: ${({ theme }) => theme.fonts.heading};
-    font-size: ${({ theme }) => getRem(theme.fontSizes.xl, theme.rootVal)};
+    font-size: ${({ theme }) => getRem(theme.fontSize.xl, theme.rootVal)};
     ${({ theme }) => getMargin('mb-3', theme)};
     ${({ theme }) => getMargin('mt-4', theme)};
   }
 
   h4 {
     font-family: ${({ theme }) => theme.fonts.heading};
-    font-size: ${({ theme }) => getRem(theme.fontSizes.lg, theme.rootVal)};
+    font-size: ${({ theme }) => getRem(theme.fontSize.lg, theme.rootVal)};
     ${({ theme }) => getMargin('my-3', theme)};
   }
 
   h5 {
     font-family: ${({ theme }) => theme.fonts.heading};
-    font-size: ${({ theme }) => getRem(theme.fontSizes.md, theme.rootVal)};
+    font-size: ${({ theme }) => getRem(theme.fontSize.md, theme.rootVal)};
     ${({ theme }) => getMargin('my-3', theme)};
   }
 
@@ -76,7 +76,7 @@ const GlobalStyleCSS = css`
 
   strong,
   b {
-    font-weight: ${({ theme }) => theme.fontWeights.bold};
+    font-weight: ${({ theme }) => theme.fontWeight.bold};
   }
 
   em,
@@ -86,18 +86,18 @@ const GlobalStyleCSS = css`
 
   a:link:not(.btn-link),
   a:visited:not(.btn-link) {
-    color: ${({ theme }) => theme.colors.primary[5]};
+    color: ${({ theme }) => theme.colors.primary['500']};
     text-decoration: none;
   }
 
   a:active:not(.btn-link) {
-    color: ${({ theme }) => theme.colors.primary[6]};
+    color: ${({ theme }) => theme.colors.primary['600']};
     text-decoration: underline;
   }
 
   a:hover:not(.btn-link),
   a:focus:not(.btn-link) {
-    color: ${({ theme }) => theme.colors.primary[7]};
+    color: ${({ theme }) => theme.colors.primary['700']};
     text-decoration: underline;
     outline: none;
   }

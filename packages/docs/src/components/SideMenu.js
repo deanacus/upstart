@@ -32,8 +32,8 @@ const Section = styled.section`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: ${({ theme }) => css`${theme.fontSizes.sm / theme.rootVal}${theme.preferredUnit}`};
-  font-weight: ${({ theme }) => theme.fontWeights.body};
+  font-size: ${({ theme }) => css`${theme.fontSize.sm / theme.rootVal}${theme.preferredUnit}`};
+  font-weight: ${({ theme }) => theme.fontWeight.body};
   letter-spacing: .25rem;
   margin: 0 0 .8rem;
   text-transform: uppercase;

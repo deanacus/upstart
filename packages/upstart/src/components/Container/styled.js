@@ -5,7 +5,7 @@ export const StyledContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
   `}
-  max-width: ${({ theme, size }) => theme.widths[size]}px;
+  max-width: ${({ theme, size }) => theme.width[size]}px;
 `;
 
 export default StyledContainer;

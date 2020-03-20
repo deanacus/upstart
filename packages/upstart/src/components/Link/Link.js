@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { getRem } from '../../utils/styled-utils';
 
 const StyledIcon = styled.svg`
-  height: ${({ theme, size }) => getRem(theme.fontSizes[size])};
-  width: ${({ theme, size }) => getRem(theme.fontSizes[size])};
+  height: ${({ theme, size }) => getRem(theme.fontSize[size])};
+  width: ${({ theme, size }) => getRem(theme.fontSize[size])};
   margin-left: .5rem;
 `;
 
