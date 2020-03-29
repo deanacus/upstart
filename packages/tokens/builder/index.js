@@ -14,7 +14,7 @@ const compileTokensToObj = (raw) => raw.tokens.reduce((result, {name, value, ali
 
 const compileToJS = (raw) => {
   // TODO: Include the group aliases, too
-  const tokens = JSON.stringify(compileTokensToObj(raw));
+  const tokens = JSON.stringify(compileTokensToObj(raw), null, 2);
   return `export const ${raw.group} = ${tokens}`
 };
 

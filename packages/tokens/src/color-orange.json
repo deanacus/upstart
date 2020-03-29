@@ -5,43 +5,43 @@
   ],
   "tokens": [
     {
-      "name": "100",
+      "name": "50",
       "value": "#fff4e6"
     },
     {
-      "name": "200",
+      "name": "100",
       "value": "#ffe8cc"
     },
     {
-      "name": "300",
+      "name": "200",
       "value": "#ffd8a8"
     },
     {
-      "name": "400",
+      "name": "300",
       "value": "#ffc078"
     },
     {
-      "name": "500",
+      "name": "400",
       "value": "#ffa94d"
     },
     {
-      "name": "600",
+      "name": "500",
       "value": "#ff922b"
     },
     {
-      "name": "700",
+      "name": "600",
       "value": "#fd7e14"
     },
     {
-      "name": "800",
+      "name": "700",
       "value": "#f76707"
     },
     {
-      "name": "900",
+      "name": "800",
       "value": "#e8590c"
     },
     {
-      "name": "1000",
+      "name": "900",
       "value": "#d9480f"
     }
   ]

@@ -5,8 +5,7 @@
   "author": "Dean Harris",
   "private": false,
   "scripts": {
-    "build": "node .",
-    "test": "echo test"
+    "build": "node index.js"
   },
   "sideEffects": false,
   "repository": {

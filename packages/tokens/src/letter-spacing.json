@@ -2,6 +2,10 @@
   "group": "letterSpacing",
   "tokens": [
     {
+      "name": "extraLoose",
+      "value": 2
+    },
+    {
       "name": "loose",
       "value": 1
     },
