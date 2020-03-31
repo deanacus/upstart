@@ -2,6 +2,10 @@
   "group": "borderRadius",
   "tokens": [
     {
+      "name": "none",
+      "value": 0
+    },
+    {
       "name": "sm",
       "value": 3
     },
