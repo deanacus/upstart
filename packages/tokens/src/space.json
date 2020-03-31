@@ -19,23 +19,23 @@
     },
     {
       "name": "md",
-      "value": 32
+      "value": 24
     },
     {
       "name": "lg",
-      "value": 64
+      "value": 32
     },
     {
       "name": "xl",
-      "value": 128
+      "value": 48
     },
     {
       "name": "xxl",
-      "value": 256
+      "value": 64
     },
     {
       "name": "xxxl",
-      "value": 512
+      "value": 96
     }
   ]
 }

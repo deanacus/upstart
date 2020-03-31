@@ -20,10 +20,6 @@
     {
       "name": "pill",
       "value": 9999
-    },
-    {
-      "name": "circle",
-      "value": "50%"
     }
   ]
 }
